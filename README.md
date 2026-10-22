@@ -3,6 +3,7 @@
 Apuntes y material de la asignatura (máster). Contenido:
 
 - "03-analisis-del-oleaje/apuntes/AN\303\201LISIS DEL OLEAJE.pdf"
+- "01-introduccion/anki/Oceanografia - Dia 1 - Introduccion.apkg"
 - "01-introduccion/resumenes/Resumen Dia 1 - Introduccion.pdf"
 - 01-introduccion/Oceanografia - Bloque 1 - Introduccion (1de2).pdf
 - 01-introduccion/Oceanografia - Bloque 1 - Introduccion (2de2).pdf
