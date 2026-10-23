@@ -1,6 +1,10 @@
 # Oceanografía (83000111, plan 2023)
 
-Apuntes y material de la asignatura (máster). Contenido:
+Apuntes y material de la asignatura (máster).
+
+**Por dónde empezar:** la carpeta [`planing/`](planing/) tiene el plan día a día del 1er parcial (28/10), en el orden en que hay que estudiar, con enlaces a todo el material.
+
+Contenido:
 
 - "03-analisis-del-oleaje/apuntes/AN\303\201LISIS DEL OLEAJE.pdf"
 - "01-introduccion/anki/Oceanografia - Dia 1 - Introduccion.apkg"
@@ -21,3 +25,5 @@ Apuntes y material de la asignatura (máster). Contenido:
 - ejercicios-teoria-de-ondas/Ejercicio_3 - Teoria de ondas.pdf
 - ejercicios-teoria-de-ondas/Ejercicio_4 - Teoria de ondas.pdf
 - ejercicios-teoria-de-ondas/Ejercicio_5 - Teoria de ondas.pdf
+- planing/ (plan general + un archivo por día, numerados en orden de estudio)
+- "02-mecanica-de-ondas/audios/Guion audio Dia 2b - Sabado - Trayectorias, estacionarias y grupos.md"
