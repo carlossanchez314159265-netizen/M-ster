@@ -144,6 +144,77 @@ Una superficie esférica shell no es un sólido macizo. Comprueba qué tipo de e
 
 **Capturas pendientes:** menú de revolución, selección de generatriz, eje/ángulo y ventana de radio/límites de esfera. La imagen del apartado 2 corresponde a esfera y no sustituye a una captura del comando Revolve.
 
+### 4.4. Cortar una esfera con un plano
+
+**Objetivo:** dividir geométricamente la esfera, o recortarla para conservar una semiesfera/casquete. Un plano de recorte de la **vista** sólo oculta parte del dibujo y no sirve para cambiar la geometría que vas a mallar.
+
+Primero distingue tres operaciones:
+
+- **Intersección:** obtiene la curva donde plano y esfera se cruzan; no necesariamente divide la esfera.
+- **División / Slice:** separa la geometría en regiones; normalmente puedes conservar ambos lados.
+- **Recorte / Trim:** elimina la región que no quieres conservar, según las opciones de la herramienta.
+
+La ruta exacta de corte de Femap 2412 queda pendiente de ver el menú: depende de si has creado superficies, un cuerpo de superficies o un sólido. Busca la operación de división/recorte mediante plano adecuada al tipo de entidad; no se presupone que un comando que pida sólidos acepte una superficie aislada.
+
+#### Ejemplo A: obtener una semiesfera
+
+Supongamos centro `(0,0,0)` y radio `500 mm`.
+
+1. Guarda una copia del modelo antes del corte.
+2. Activa la operación de **corte geométrico mediante plano** y selecciona la esfera o las superficies que la componen, según lo que solicite el cuadro.
+3. Define el plano **XY por el centro**, es decir, **Z = 0**.
+4. Si el cuadro pide **un punto del plano y su normal**, utiliza punto `(0,0,0)` y dirección normal `(0,0,1)` en coordenadas globales.
+5. **Sólo si ese paso pide la normal mediante Base/Tip**, introduce Base `(0,0,0)` y Tip `(0,0,1)`. Lee el título: un cuadro que pida otra dirección no se rellena automáticamente igual.
+6. Si puedes elegir, conserva inicialmente ambos lados para verificar el corte. Para quedarte con la semiesfera superior, conserva la región **Z ≥ 0**; para la inferior, **Z ≤ 0**. Usa la previsualización o selecciona un punto claramente situado en el lado deseado; no deduzcas el lado conservado sólo del signo de la normal.
+7. Acepta y comprueba que el borde resultante es una circunferencia de radio **500 mm** situada en Z=0.
+8. Si hiciste sólo una división, elimina después únicamente la región que no necesites. Si quieres conservar dos regiones, no borres ninguna.
+
+La **normal es perpendicular al plano**: para un plano horizontal XY, apunta a Z. No es una dirección contenida en el plano.
+
+#### Ejemplo B: cortar a Z = 250 mm para crear un casquete
+
+Para la misma esfera de radio 500 mm:
+
+- Punto del plano: `(0,0,250)`.
+- Normal: `(0,0,1)`.
+- Si se introduce mediante Base/Tip: **Base `(0,0,250)` y Tip `(0,0,251)`**.
+- Para conservar el casquete superior, mantén la región **Z ≥ 250**.
+
+El radio de la circunferencia del corte será:
+
+$$
+r_{corte}=\sqrt{R^2-d^2}=\sqrt{500^2-250^2}\approx433.013\ \mathrm{mm}.
+$$
+
+Aquí d es la distancia del centro al plano. El casquete superior tiene altura `500 − 250 = 250 mm`. Si el centro no está en el origen, mide la distancia respecto al centro real, no respecto a Z=0.
+
+#### Si el cuadro pide tres puntos del plano
+
+Para Z=250 puedes usar:
+
+- P1 `(0,0,250)`.
+- P2 `(1000,0,250)`.
+- P3 `(0,1000,250)`.
+
+Deben ser tres puntos **no alineados**. Para Z=0, cambia las tres coordenadas Z a cero. El orden puede invertir la normal y el lado positivo, pero no cambia el plano geométrico. No confundas estos tres puntos con Base/Tip de una normal.
+
+| Plano que pasa por el origen | Normal global |
+|---|---|
+| XY: Z=0 | (0,0,1) |
+| YZ: X=0 | (1,0,0) |
+| XZ: Y=0 | (0,1,0) |
+
+#### Comprobaciones y pasos posteriores
+
+- Si la distancia del centro al plano es mayor que el radio, no hay intersección. Si es igual, el plano es tangente y no produce una circunferencia de corte de radio positivo.
+- Dibujar un plano encima de la esfera no la corta por sí solo: ejecuta la operación geométrica correspondiente.
+- Si la herramienta exige una **superficie cortante finita**, ésta debe cubrir toda la sección; no necesita esa extensión si el comando utiliza un plano matemático infinito.
+- En una lámina, cortar deja un borde. No aparece necesariamente una tapa de chapa: créala y conéctala sólo si existe en el problema. Un corte de sólido puede generar una cara plana de cierre; no es el mismo modelo físico.
+- Si ya había malla, comprueba qué ocurre con los elementos anteriores. Cortar geometría no garantiza que se eliminen o adapten todos los elementos. Remalla las superficies conservadas y revisa apoyos/cargas y conexiones.
+- Si el corte representa un **borde físico**, aplica las condiciones reales de ese borde. Si sólo modelas media esfera por **simetría** y geometría/cargas/apoyos lo permiten, aplica condiciones de simetría. Para shells en Z=0 y ejes globales, son TZ=0, RX=0 y RY=0; no equivalen a un borde libre ni a un empotramiento.
+
+**Capturas pendientes:** menú de corte, selección de entidad, definición del plano y elección del lado conservado. La captura de creación de esfera del apartado 2 no demuestra cuál es el cuadro de corte.
+
 ## 5. Material y espesor
 
 **Rutas orientativas:** `Model → Material` y `Model → Property`.
