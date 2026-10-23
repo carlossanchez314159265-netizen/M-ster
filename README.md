@@ -6,6 +6,7 @@ Apuntes y material de la asignatura (máster). Contenido:
 
 ## Guía práctica de Femap
 
-- [Nueva guía de Femap Student 2412 — milímetros, N y MPa](guias/femap/guia-visual-femap-2412.md).
+- [Guía Femap Student 2412 — milímetros, N y MPa](guias/femap/guia-visual-femap-2412.md).
+- [PDF provisional de la guía](guias/femap/guia-visual-femap-2412.pdf).
 
-La guía anterior y su PDF se han retirado. La nueva versión está **en preparación: pendiente de capturas reales de los menús y cuadros de Femap 2412** para indicar cada clic. Incluye la explicación del cuadro `Vector Locate` aportado en clase, los valores en milímetros y los pasos de geometría, mallado, apoyos, cargas y resultados.
+Incluye un mapa de comandos contrastado con las capturas de clase: geometría, materiales, cargas, apoyos y malla. Explica también Vector Locate, View Options y el corte de esfera mediante plano. Siguen pendientes la ruta exacta del corte, varios formularios y la incorporación de los archivos originales de las capturas; el documento no es todavía la guía fotográfica completa. La guía anterior en metros está retirada.

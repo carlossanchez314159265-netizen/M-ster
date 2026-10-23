@@ -2,9 +2,64 @@
 
 **Menús en inglés · Geometría en mm · Fuerzas en N · Tensiones y presiones en MPa**
 
-**Estado: borrador de la nueva guía visual.** Sustituye a la guía anterior en metros. Los pasos y valores están preparados; faltan capturas reales de los demás menús y cuadros de Femap 2412 para señalar cada clic. La captura aportada de `Vector Locate` permite explicar ese cuadro, pero no identificar las otras ventanas. No se ha ejecutado Femap en el entorno de elaboración.
+**Estado: guía en desarrollo, con rutas contrastadas con las capturas de clase.** Se han revisado las imágenes de `Geometry → Surface`, `Geometry → Midsurface`, `Model → Load`, `Model → Constraint`, `Mesh → Mesh Control`, `Mesh → Geometry` y `View Options`. Las rutas de la tabla siguiente sí se leen en esas imágenes. Los formularios posteriores, el comando de corte y los resultados todavía requieren comprobar sus propias ventanas. No se ha ejecutado Femap en el entorno de elaboración.
 
-Cada ficha tendrá una captura, indicaciones numeradas, valores de entrada y una comprobación. Hasta disponer de las imágenes, las rutas de menú de los demás apartados son **orientativas**, no una transcripción verificada de Femap 2412. Se supone Simcenter/NX Nastran; comprueba qué solver y soluciones permite la licencia de clase.
+Las capturas se han podido leer en el chat, pero sus archivos originales no están disponibles en el repositorio. Por eso esta revisión incorpora sus rutas e instrucciones, sin sustituir las fotos por interfaces recreadas. La ilustración de Vector Locate ya existente se identifica expresamente como ilustración. Se supone Simcenter/NX Nastran; comprueba el solver y soluciones disponibles en clase.
+
+## 0. Dónde pinchar: rutas verificadas en tus capturas
+
+Pulsa primero el menú de la barra superior y después cada opción de la ruta. Los puntos suspensivos `…` indican que se abre un cuadro; un triángulo a la derecha indica otro submenú.
+
+| Quiero… | Ruta que aparece en tus capturas | Atajo visible |
+|---|---|---|
+| Crear un punto geométrico | **Geometry → Point…** | — |
+| Crear líneas | **Geometry → Curve - Line → …**; falta ver ese submenú | — |
+| Crear superficie por esquinas | **Geometry → Surface → Corners…** | — |
+| Crear superficie por bordes | **Geometry → Surface → Edge Curves…** | **Shift + F9** |
+| Crear superficie por extrusión | **Geometry → Surface → Extrude…** | — |
+| Crear superficie por revolución | **Geometry → Surface → Revolve…** | — |
+| Crear una superficie plana | **Geometry → Surface → Plane…** | — |
+| Crear una superficie cilíndrica | **Geometry → Surface → Cylinder…** | — |
+| Crear una superficie esférica | **Geometry → Surface → Sphere…** | — |
+| Crear/editar material | **Model → Material…** | — |
+| Crear/editar propiedad y espesor | **Model → Property…** | — |
+| Gestionar conjuntos de cargas | **Model → Load → Create/Manage Set…** | **Ctrl + F2** |
+| Aplicar carga sobre punto geométrico | **Model → Load → On Point…** | — |
+| Aplicar carga sobre curva | **Model → Load → On Curve…** | — |
+| Aplicar carga sobre superficie | **Model → Load → On Surface…** | — |
+| Gestionar conjuntos de apoyos | **Model → Constraint → Create/Manage Set…** | **Shift + F2** |
+| Apoyar un punto geométrico | **Model → Constraint → On Point…** | — |
+| Apoyar un borde geométrico | **Model → Constraint → On Curve…** | — |
+| Restringir una superficie | **Model → Constraint → On Surface…** | — |
+| Abrir la definición del análisis | **Model → Analysis…** | — |
+| Definir tamaño general de malla | **Mesh → Mesh Control → Default Size…** | — |
+| Definir divisiones/tamaño en una curva | **Mesh → Mesh Control → Size Along Curve…** | **Shift + F10** |
+| Definir tamaño en una superficie | **Mesh → Mesh Control → Size On Surface…** | — |
+| Generar malla sobre una superficie | **Mesh → Geometry → Surface…** | **Shift + F11** |
+| Acceder al remallado | **Mesh → Remesh → …**; falta ver ese submenú | — |
+
+**Tamaño y generación son dos operaciones distintas:** `Mesh Control → Size On Surface…` fija el tamaño; `Mesh → Geometry → Surface…` crea nodos y elementos. En las capturas repetidas, el submenú con `Point…`, `Curve…`, `Surface…` y `Solids…` corresponde a las operaciones de mallado de geometría, aunque el resaltado amarillo haya quedado sobre otra fila al capturar.
+
+### Lo que significa que una opción esté gris
+
+En tus capturas, `Model → Load → Nodal… / Elemental…` y `Model → Constraint → Nodal…` aparecen deshabilitados, mientras que las opciones sobre geometría están disponibles. Es compatible con un modelo que todavía no tiene nodos/elementos utilizables o con el estado actual de sus conjuntos. Comprueba malla y conjunto activo; la imagen sola no permite atribuirlo a una única causa.
+
+Si quieres aplicar apoyos antes de mallar, utiliza **On Curve…** sobre los bordes geométricos. Si quieres aplicarlos directamente a nodos, genera primero la malla, comprueba el conjunto y utiliza **Nodal…** cuando esté habilitado. Un punto geométrico y un nodo no son la misma entidad.
+
+### La ventana View Options de tu primera captura
+
+Esa ventana configura **cómo se muestran** las entidades. No crea materiales, cargas, apoyos ni cortes geométricos.
+
+1. Selecciona la categoría de la izquierda: **Labels, Entities and Color**, **Tools and View Style** o **PostProcessing**.
+2. En **Options**, selecciona la entidad/función que quieras ajustar: por ejemplo, `Surface`, `Node`, `Element`, `Element - Shell` o `Load Vectors`.
+3. Cambia sus opciones a la derecha. Los controles disponibles dependen de la fila seleccionada.
+4. **Apply** aplica los cambios sin cerrar; **OK** los acepta y cierra; **Cancel** cierra sin aceptar cambios pendientes, pero no necesariamente deshace lo ya aplicado con Apply.
+
+En la captura está seleccionado **Label Parameters**. Se ven fuente, tamaño, color de vista y profundidad de texto: son ajustes de etiquetas. Para estudiar opciones de resultados, selecciona **PostProcessing**; eso no sustituye a elegir el caso y vector calculado.
+
+### Midsurface y el corte de tu esfera
+
+La captura de **Geometry → Midsurface** muestra `Single in Solid…`, `Single…`, `Trim to Solid…`, `Trim with Curve…`, etc. Son herramientas del flujo de superficies medias. El nombre `Trim` por sí solo no demuestra que sea la operación apropiada para cortar tu esfera con un plano. La captura de **Geometry → Surface** muestra `Plane…`, pero **crear un plano tampoco ejecuta por sí solo el corte**. Hace falta ver **Geometry → Solid** para identificar las opciones de corte disponibles y después comprobar qué entidades admite el comando.
 
 ## 1. Preparar las unidades
 
@@ -95,7 +150,7 @@ Las opciones desplegadas de **Methods** dependen de la selección y operación. 
 
 **Datos en mm:** A `(0,0,0)`, B `(1000,0,0)`, C `(1000,1000,0)`. Son valores de práctica; no son medidas deducidas de tu fotografía.
 
-**Rutas orientativas:** `Geometry → Point`, `Geometry → Curve → Line` y `Geometry → Surface → Edge Curves` o la operación equivalente de superficie delimitada por curvas.
+**Rutas confirmadas:** `Geometry → Point…`, `Geometry → Curve - Line → …` y `Geometry → Surface → Edge Curves…` (**Shift + F9**). Falta ver el submenú de Curve - Line para indicar su opción concreta.
 
 1. Crea los puntos A, B y C introduciendo sus coordenadas.
 2. Crea las líneas A–B, B–C y C–A.
@@ -111,7 +166,7 @@ Para un rectángulo, utiliza cuatro esquinas o cuatro curvas cerradas. Para un a
 
 ### 4.1. Cilindro: línea paralela al eje + revolución
 
-**Ruta orientativa:** `Geometry → Surface → Revolve`.
+**Ruta confirmada:** `Geometry → Surface → Revolve…`. También existe el comando directo `Geometry → Surface → Cylinder…`; su cuadro de parámetros aún no se ha mostrado. El procedimiento siguiente utiliza la revolución de una generatriz.
 
 1. Crea P1 `(500,0,0)` y P2 `(500,0,1000)`.
 2. Únelos con una línea: la **generatriz**.
@@ -134,6 +189,8 @@ Para un cono completo, P2 es `(0,0,1000)`. La punta concentra las generatrices y
 
 ### 4.3. Esfera: cómo continuar desde tu ventana
 
+**Dónde pinchar, confirmado:** `Geometry → Surface → Sphere…`. El cuadro Vector Locate del apartado 2 pide el centro y la dirección polar.
+
 1. Define Base como centro, por ejemplo `(0,0,0)`.
 2. Define Tip para orientar el eje polar, por ejemplo `(0,0,1)`.
 3. Comprueba CSys y pulsa **OK**.
@@ -142,7 +199,7 @@ Para un cono completo, P2 es `(0,0,1000)`. La punta concentra las generatrices y
 
 Una superficie esférica shell no es un sólido macizo. Comprueba qué tipo de entidad crea la operación.
 
-**Capturas pendientes:** menú de revolución, selección de generatriz, eje/ángulo y ventana de radio/límites de esfera. La imagen del apartado 2 corresponde a esfera y no sustituye a una captura del comando Revolve.
+**Menú de revolución/esfera recibido. Cuadros pendientes:** selección de generatriz, eje/ángulo y ventana de radio/límites de esfera. La imagen del apartado 2 corresponde a esfera y no sustituye a una captura del comando Revolve.
 
 ### 4.4. Cortar una esfera con un plano
 
@@ -217,7 +274,7 @@ Deben ser tres puntos **no alineados**. Para Z=0, cambia las tres coordenadas Z 
 
 ## 5. Material y espesor
 
-**Rutas orientativas:** `Model → Material` y `Model → Property`.
+**Dónde pinchar, confirmado:** `Model → Material…` y `Model → Property…`. Las capturas muestran las entradas de menú; faltan los formularios abiertos para marcar sus casillas.
 
 ### Material
 
@@ -240,7 +297,7 @@ Cambiar el espesor no exige remallar si no cambia la superficie media, pero **s�
 
 ## 6. Crear y modificar el mallado
 
-**Rutas orientativas:** `Mesh → Mesh Control → Size On Surface / Size On Curve`; después `Mesh → Geometry → Surface`.
+**Dónde pinchar, confirmado:** `Mesh → Mesh Control → Size On Surface…`; para curvas, `Mesh → Mesh Control → Size Along Curve…` (**Shift + F10**). Después genera la malla con `Mesh → Geometry → Surface…` (**Shift + F11**).
 
 ### Primera malla
 
@@ -267,11 +324,11 @@ En el cilindro de radio 500 y longitud 1000 mm, 48 divisiones circunferenciales 
 
 **Convergencia:** compara la flecha y esfuerzos en los mismos puntos/secciones físicos. Un pico singular en una fuerza puntual o extremo de apoyo ideal puede crecer al refinar. No uses únicamente el máximo suavizado para decidir.
 
-**Capturas pendientes:** tamaño de malla, propiedad/tipo de mallado, remallado y ventana de calidad.
+**Menús de tamaño y generación de malla recibidos. Cuadros pendientes:** tamaño de malla, propiedad/tipo de mallado, remallado y calidad.
 
 ## 7. Poner apoyos
 
-**Ruta orientativa:** `Model → Constraint`, sobre curvas, superficies o nodos.
+**Dónde pinchar, confirmado:** primero `Model → Constraint → Create/Manage Set…` (**Shift + F2**). Para un borde geométrico, `Model → Constraint → On Curve…`; para puntos, `On Point…`; para superficies, `On Surface…`. `Nodal…` aparece en gris en tu captura: revisa que haya nodos y un conjunto utilizable antes de aplicarlo a la malla.
 
 1. Crea un **Constraint Set**.
 2. Selecciona las entidades de apoyo.
@@ -318,11 +375,11 @@ En un cilindro, el apoyo radial requiere direcciones nodales cilíndricas correc
 
 Una articulación interna de viga utiliza liberaciones de extremo adecuadas. RBE2 impone una unión rígida; RBE3 distribuye/interpola movimientos y cargas y no es un apoyo por sí mismo. Un muelle requiere rigidez, dirección y conectividad correctas a la estructura y su referencia.
 
-**Capturas pendientes:** conjunto, casillas TX–RZ, selección de entidades y sistema nodal; muelles/liberaciones si se utilizan.
+**Menú de apoyos recibido. Cuadros pendientes:** conjunto, casillas TX–RZ, selección de entidades y sistema nodal; muelles/liberaciones si se utilizan.
 
 ## 8. Poner cargas
 
-**Ruta orientativa:** `Model → Load`, eligiendo entidad y tipo de carga.
+**Dónde pinchar, confirmado:** primero `Model → Load → Create/Manage Set…` (**Ctrl + F2**). Para una carga sobre la chapa, abre `Model → Load → On Surface…` y después selecciona el tipo de carga en el formulario. Para bordes, `On Curve…`; para puntos geométricos, `On Point…`. Las cargas `Nodal…` y `Elemental…` están en gris en la captura y requieren comprobar la malla/estado del modelo.
 
 1. Crea un **Load Set**.
 2. Selecciona las entidades.
@@ -365,11 +422,11 @@ Para peso propio, utiliza densidad y gravedad; no añadas también fuerzas de es
 
 Crea casos separados y combina cargas o resultados compatibles con los coeficientes correctos. No sumes máximos que aparecen en puntos diferentes ni sumes directamente von Mises de casos distintos.
 
-**Capturas pendientes:** conjunto; presión; fuerzas/momentos; carga de borde; gravedad; funciones espaciales y temperatura.
+**Menú de cargas recibido. Cuadros pendientes:** conjunto, presión, fuerzas/momentos, carga de borde, gravedad, funciones espaciales y temperatura.
 
 ## 9. Analizar
 
-**Ruta orientativa:** `Model → Analysis` / **Analysis Set Manager**.
+**Dónde pinchar, confirmado:** `Model → Analysis…`. Falta la captura del gestor abierto para indicar sus botones y campos exactos.
 
 1. Crea el conjunto para el solver instalado.
 2. Selecciona estática lineal, normalmente **SOL 101** en Nastran.
@@ -451,10 +508,12 @@ En tracción, permite contracción de Poisson y evita flexión parásita. En el 
 
 Antes de aceptar resultados, revisa: unidades, material/espesor, conectividad, apoyos, carga total, conjuntos del subcaso, deformada, equilibrio, extremos y convergencia.
 
-## 12. Capturas necesarias para terminar la versión visual
+## 12. Qué está comprobado y qué falta
 
-Faltan las ventanas indicadas al final de cada ficha, con **título, campos y botones visibles**. Un recorte sólo de la malla no permite señalar los menús. También sirve como referencia un manual/tutorial de Femap 2412 que muestre esas operaciones, identificando su origen y diferencias con la instalación de clase.
+- **Recibido y leído:** menús Surface, Midsurface, Load, Constraint, Mesh Control y Mesh Geometry; ventana View Options; cuadro Vector Locate de esfera.
+- **Corregido:** el comando de control de curva se llama `Size Along Curve…`; la entrada de creación de líneas es `Curve - Line`; tamaños y generación de malla se explican por separado.
+- **Pendiente para el corte que se está haciendo en clase:** submenú **Geometry → Solid** y ventana del comando de corte elegido. No hace falta repetir las capturas de Mesh.
+- **Pendiente para señalar las casillas de entrada:** formularios abiertos de material, propiedad, malla, restricciones, cargas, análisis y resultados, según la ficha.
+- **Pendiente para incrustar fotos originales en GitHub/PDF:** disponer de los PNG/JPG como archivos descargables, por ejemplo juntos en un ZIP. Las imágenes del chat se han utilizado para verificar rutas, pero no se han convertido en recreaciones de interfaz ni se afirma que estén ya incrustadas.
 
-Para continuar con la captura aportada, hace falta ver **Methods desplegado** y el cuadro siguiente de **radio/límites de esfera**. Eso permitirá explicar también las opciones internas, en lugar de deducirlas del nombre del botón.
-
-Se generará el PDF final cuando las capturas y sus indicaciones estén incorporadas y revisadas. El PDF antiguo en metros queda retirado.
+La ilustración de Vector Locate está identificada como ilustración. Para completar sus métodos alternativos aún falta `Methods` desplegado. La guía y el PDF son provisionales hasta completar las capturas y el corte geométrico.
