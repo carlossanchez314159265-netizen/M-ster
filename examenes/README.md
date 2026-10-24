@@ -10,4 +10,6 @@ Un PDF por examen: enunciados transcritos de las fotos y resolución paso a paso
 
 Estructura común: hoja de ejercicios con **3 ejercicios de 2 puntos** — (A) dispersión/teoría lineal, (B) Rayleigh + Hmax, (C) espectral.
 
+**Audio:** [Lo que cae en el examen — recetas y trampas](<audios/Guion audio - Lo que cae en el examen (recetas y trampas).mp3>) ([guion](<audios/Guion audio - Lo que cae en el examen (recetas y trampas).md>)), 9 min.
+
 Los PDF se generan con `scripts/examenes/` (Python + ReportLab, mismo estilo que los resúmenes).

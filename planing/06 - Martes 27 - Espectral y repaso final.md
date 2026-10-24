@@ -66,4 +66,4 @@ Autoexamen final: ¿podrías hacer ahora, sin mirar, un ejercicio de dispersión
 
 ## Antes de dormir
 
-Audio de repaso del sábado o del domingo (en sus carpetas `audios/`) si te apetece; deja el formulario y las tarjetas preparados para los 30 min del miércoles.
+[Audio del espectral](<../03-analisis-del-oleaje/audios/Guion audio Dia 4 - Analisis espectral.mp3>) (12 min) para fijar lo del día ([todos los audios](<08 - Audios de repaso.md>)); deja el formulario y las tarjetas preparados para los 30 min del miércoles.

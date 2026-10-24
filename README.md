@@ -32,3 +32,5 @@ Contenido:
 - scripts/resumenes/ (generadores de los resúmenes en PDF; cada ecuación lleva su leyenda de términos)
 - examenes/ (exámenes anteriores resueltos, un PDF por examen, y análisis de la estructura del examen)
 - scripts/examenes/ (generadores de los PDF de exámenes)
+- audios/ de cada bloque (guion .md + MP3): Día 1, Día 2a, Día 2b, Día 3, Día 4 espectral y examenes/audios (recetas y trampas); índice en planing/08
+- scripts/audios/ (generador de los MP3 a partir de los guiones)
