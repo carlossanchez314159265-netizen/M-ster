@@ -4,6 +4,8 @@
 
 > Pendiente: el resumen espectral todavía no está hecho. Hasta que esté, trabajas directamente con las diapos que se indican abajo, que son las únicas que hacen falta del PDF de 81.
 
+> **Exámenes reales:** en el bloque 2 practica con el **Ej. 3 de los dos exámenes** de [`examenes/`](<../examenes/>) (espectral: conos SEA/SWELL y S(ω) por tramos), y si te da tiempo el Ej. 2 del Parcial y el Ej. 1 del Final (dispersión). Cierra con un simulacro de 60 min de un examen entero. Los tres ejercicios de cada examen siguen siempre el mismo patrón: ver [estructura del examen](<../examenes/00 - Analisis de la estructura del examen.pdf>).
+
 **Material del día**
 
 - [Análisis del oleaje 2de3 — Espectral](<../03-analisis-del-oleaje/Oceanografia - Bloque 2 - Analisis del oleaje 2de3 - Espectral.pdf>) (en adelante, *Espectral*)

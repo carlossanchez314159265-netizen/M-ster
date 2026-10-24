@@ -4,6 +4,8 @@ Apuntes y material de la asignatura (máster).
 
 **Por dónde empezar:** la carpeta [`planing/`](planing/) tiene el plan día a día del 1er parcial (28/10), en el orden en que hay que estudiar, con enlaces a todo el material.
 
+**Exámenes anteriores:** la carpeta [`examenes/`](examenes/) tiene los exámenes resueltos (un PDF por examen) y el análisis de su estructura.
+
 Contenido:
 
 - "03-analisis-del-oleaje/apuntes/AN\303\201LISIS DEL OLEAJE.pdf"
@@ -28,3 +30,5 @@ Contenido:
 - planing/ (plan general + un archivo por día, numerados en orden de estudio)
 - "02-mecanica-de-ondas/audios/Guion audio Dia 2b - Sabado - Trayectorias, estacionarias y grupos.md"
 - scripts/resumenes/ (generadores de los resúmenes en PDF; cada ecuación lleva su leyenda de términos)
+- examenes/ (exámenes anteriores resueltos, un PDF por examen, y análisis de la estructura del examen)
+- scripts/examenes/ (generadores de los PDF de exámenes)
