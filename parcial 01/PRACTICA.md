@@ -307,4 +307,3 @@ Hipótesis 1: incompatibilidad de interfaces, como unidades o formatos distintos
 - Respuesta acertada por azar: considérala pendiente para estudiar.
 
 En el examen real, responder todas las preguntas del test es razonable porque no penaliza, según el formato indicado. La valoración de este ejercicio es solo diagnóstica: no permite asegurar una nota de examen.
-
