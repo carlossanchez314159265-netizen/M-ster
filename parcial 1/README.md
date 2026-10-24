@@ -1,4 +1,4 @@
-# Planing — 1er parcial de Oceanografía (28/10)
+# Parcial 1 — plan del 1er parcial de Oceanografía (28/10)
 
 Abre los archivos en este orden. Cada día dice qué leer, qué ejercicio hacer sin mirar y con qué objetivo cierras; los enlaces llevan al material de las carpetas de cada bloque.
 
