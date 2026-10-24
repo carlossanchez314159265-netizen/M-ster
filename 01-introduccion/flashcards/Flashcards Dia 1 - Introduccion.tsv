@@ -1,0 +1,25 @@
+¿Qué mide la PSU?	La <b>salinidad práctica</b>: adimensional, calculada a partir de la conductividad (escala PSS-78).<br>35 PSU ≈ 35 g/kg ≈ 35 ‰
+¿Qué corriente se genera por diferencias de temperatura y salinidad?	La <b>circulación termohalina</b> (termo = temperatura, halina = sal).
+¿Cómo se llama la capa donde la temperatura cae rápido con la profundidad?	<b>Termoclina</b>. Está bajo la capa de mezcla; el 90 % del océano queda por debajo (0–3 °C).<br>Haloclina = salinidad · Picnoclina = densidad
+¿Qué es σ = ρ − 1000 kg/m³?	La <b>anomalía de densidad</b>. Ej.: ρ = 1025 → σ = 25
+Densidad típica del agua de mar	≈ <b>1025 kg/m³</b> en superficie; hasta ≈ 1050 en el fondo.
+Propiedad conservativa vs no conservativa	<b>Conservativa</b> (T, S): dentro del océano solo cambia por mezcla → identifica masas de agua.<br><b>No conservativa</b> (O₂, nutrientes): cambia también por procesos químicos y biológicos.
+¿Qué es la temperatura potencial (θ)?	La temperatura que tendría el agua llevada <b>adiabáticamente a la superficie</b> (p = 0). Sirve para comparar aguas a distinta profundidad; se usa en los diagramas T-S.
+Factores que aumentan / disminuyen la salinidad	<b>Aumentan</b>: evaporación, formación de hielo.<br><b>Disminuyen</b>: lluvia, deshielo, ríos y escorrentía.
+Salinidad práctica (SP) vs absoluta (SA)	<b>SP</b>: PSU, adimensional, conductividad, PSS-78.<br><b>SA</b>: g/kg, masa de sales, TEOS-10, más precisa.
+¿Qué es la haloclina?	Capa con cambio rápido de salinidad. Permanente (desembocadura de río) o efímera (tras lluvia intensa).
+¿Qué es la picnoclina?	Capa con cambio brusco de densidad. Barrera a la mezcla vertical → <b>estratificación</b>.
+Ecuación de estado UNESCO (1983)	ρ(s,T,p) = ρ(s,T,0) / [1 − p / K(s,T,p)]<br>ρ(s,T,0) = A + B·s + C·s^1.5 + D·s²<br>K = módulo de compresibilidad secante
+¿Qué es TEOS-10?	Estándar actual de las propiedades termodinámicas del agua de mar (sustituye a EOS-80). En Matlab: toolbox GSW, p. ej. gsw_rho(SA,CT,p).
+¿Qué es la densidad potencial (σθ, σ₀, σ₂…)?	La densidad llevada adiabáticamente a una presión de referencia (normalmente 0 dbar). Quita el efecto de la presión → comparar aguas y estudiar estabilidad.
+Agua Mediterránea: ¿dónde se forma y qué la hace densa?	Mediterráneo noroccidental en invierno: el <b>Mistral</b> la evapora y la enfría.<br>Baja a ≈ 2000 m (T = 12,8 °C, S = 38,4), sale por Gibraltar bajo el agua atlántica y en el Atlántico se queda a ≈ 1000 m.
+Procesos de formación de masas de agua	<b>Convección profunda</b> (zonas polares, se densifica y se hunde) · <b>Subducción</b> (subtropicales, convergencia) · <b>Mezcla</b>
+¿Qué es un agua tipo?	Masa de agua de T y S homogéneas → un <b>punto</b> en el diagrama T-S.
+Mezcla de dos aguas tipo (m₁ de A, m₂ de B)	T = (m₁T₁ + m₂T₂)/(m₁+m₂) · S = (m₁S₁ + m₂S₂)/(m₁+m₂)<br>Queda sobre la recta A–B. %A = b/(a+b)·100
+¿Qué es el cabbeling?	Mezclar dos aguas de <b>igual densidad</b> pero distinta T y S da un agua <b>más densa</b>, porque las isopicnas son curvas.
+Estabilidad de la columna: dσθ/dz > 0, < 0, = 0	&gt; 0 → <b>estable</b> · &lt; 0 → <b>inestable</b> · = 0 → <b>neutra</b><br>En T-S: curva paralela a las isopicnas = neutra
+Ramas de la oceanografía	Física · Química · Biológica (ecología oceánica) · Geológica · Operacional
+¿Qué es la oceanografía operacional?	Observación sistemática y casi en tiempo real + modelos + difusión rápida (hindcast, nowcast, forecast). Ej.: Copernicus Marine Service (CMEMS).
+Fases del ciclo de vida de un parque eólico marino	1. Desarrollo · 2. Construcción · 3. Operación (O&amp;M) · 4. Desmantelamiento. Vida mínima ≈ 35 años.
+Datos meteo-oceánicos ideales para diseño	Alta calidad, series largas (+25 años), homogéneas, continuas y con resolución espacial y temporal adecuada (horaria).
+Esfera de titanio (Menorca): planteamiento del lastre	lastre = ρ_agua·V − m<br>V = 4,189 m³ · m ≈ 2693 kg<br>Superficie ≈ 1603 kg · 450 m ≈ 1617 kg → <b>+14 kg</b> (agua más densa: más fría y más comprimida)

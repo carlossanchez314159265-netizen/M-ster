@@ -1,0 +1,53 @@
+¿Qué periodos tienen las ondas gravitatorias generadas por el viento que interesan en ingeniería?	Entre <b>3 y 30 s</b> (en la tabla general: 1–30 s, L de 1 a 10³ m).
+¿Por qué se llama «onda gravitatoria» al oleaje de viento?	Porque la <b>fuerza restauradora</b> dominante es la <b>gravedad</b>. Si L es de pocos cm domina la tensión superficial → <b>ondas capilares</b>.
+¿De qué depende que crezca el oleaje generado por el viento?	Velocidad del viento (mayor que la de las crestas), <b>duración</b>, <b>fetch</b> y profundidad. Con fricción y rotura se llega al <b>oleaje completamente desarrollado</b>.
+Diferencia entre oleaje y onda	<b>Oleaje</b>: real, aleatorio, irregular → estadística y espectros.<br><b>Onda</b>: modelo determinista, regular y monocromático → teoría de ondas.
+¿Cuándo H = 2a?	Solo si A<sub>cresta</sub> = A<sub>seno</sub>, es decir, en <b>teoría lineal</b>. En general H = A<sub>c</sub> + A<sub>s</sub>.
+Definiciones de k, ω y C	k = 2π/L<br>ω = 2π/T<br>C = L/T = ω/k
+Onda progresiva vs estacionaria (expresión de η)	Progresiva: η = a·cos(kx − ωt) (acopladas)<br>Estacionaria: η = a·cos(kx)·cos(ωt) (desacopladas, nodos fijos)
+¿A qué distancia están un nodo y el antinodo contiguo?	<b>L/4</b> (dos nodos seguidos, L/2).
+Peralte, altura relativa y profundidad relativa	ε = H/L (ka)<br>δ = H/h<br>μ = h/L (kh)
+Límites de profundidades indefinidas, intermedias y reducidas	Indefinidas: h/L &gt; 1/2 (kh &gt; π)<br>Intermedias: 1/20 &lt; h/L &lt; 1/2<br>Reducidas: h/L &lt; 1/20 (kh &lt; π/10)
+Peralte máximo antes de rotura en profundidades indefinidas	H/L = <b>0,142 ≈ 1/7</b>
+Número de Ursell	U<sub>r</sub> = H·L²/h³ = δ/μ². Sirve para elegir la teoría: pequeño → lineal; grande → cnoidal / solitaria (umbral ≈ 26).
+Ejes del ábaco de Le Méhauté	x = h/gT² (profundidad)<br>y = H/gT² (peralte)
+Régimen de Stokes vs régimen de onda larga	<b>Stokes</b>: kh ≥ 1 (indefinidas/intermedias) → lineal (Airy = Stokes 1er orden), Stokes II, III…<br><b>Onda larga</b>: kh ≪ 1 (reducidas) → cnoidal, solitaria.
+Hipótesis de la teoría potencial de ondas	Fluido continuo, homogéneo, <b>incompresible</b> y <b>no viscoso</b>; solo gravedad; sin tensión superficial ni Coriolis; p<sub>a</sub> cte; flujo <b>irrotacional</b>; fondo impermeable.
+¿Por qué se puede despreciar la viscosidad?	Lejos de los contornos Re = UL/ν ≈ 10⁸.
+¿Por qué se puede despreciar Coriolis?	El periodo de la ola es despreciable frente a la rotación terrestre; Coriolis es ≈ 1000 veces menor que la inercia.
+¿Qué ecuación da la continuidad en función del potencial?	La <b>ecuación de Laplace</b>: ∇²φ = 0
+Condiciones de contorno del problema de ondas	Cinemática en el fondo (∂φ/∂z = 0 en z = −h), cinemática en superficie libre, dinámica en superficie libre (Bernoulli con p = p<sub>a</sub>), laterales (periodicidad) y temporal.
+¿Por qué el problema completo es no lineal y cómo se linealiza?	Las condiciones se imponen en η (incógnita) y tienen términos cuadráticos.<br>Pequeña amplitud (H/L ≪ 1): se imponen en <b>z = 0</b> y se desprecian los productos de términos pequeños.
+Ecuación de la dispersión	<b>ω² = g·k·tanh(kh)</b><br>L = (gT²/2π)·tanh(2πh/L)
+L₀ y C₀ en profundidades indefinidas	L₀ = gT²/2π = <b>1,56·T²</b><br>C₀ = gT/2π = <b>1,56·T</b>
+Celeridad en profundidades reducidas	C = √(gh): <b>no dispersiva</b>, todas las olas van igual de rápido.
+¿Qué significa que el oleaje sea dispersivo?	Que C depende del periodo: las olas de <b>mayor T viajan más rápido</b> y se separan (dispersión frecuencial).
+Si baja la profundidad con T fijo, ¿qué pasa con L y C?	Disminuyen ambas → origen de la <b>refracción</b>.
+¿Cómo se resuelve la ecuación de la dispersión?	Es trascendente: tablas, gráficos o numérico (<b>Newton-Raphson</b>, arranque k₀ = ω²/g) o explícitas (Fenton-McKee &lt; 1,5 %, Guo &lt; 0,7 %). En examen: SOLVE.
+Límites de tanh, sinh y cosh	kh → ∞: tanh → 1; sinh, cosh → e<sup>kh</sup>/2<br>kh → 0: tanh → kh; sinh → kh; cosh → 1
+Velocidades u y w en teoría lineal	u = aω·cosh k(h+z)/sinh kh·cos θ<br>w = aω·sinh k(h+z)/sinh kh·sin θ<br>(θ = kx − ωt)
+¿Dónde son máximas u y w en una onda progresiva?	u: bajo <b>crestas y senos</b> (θ = 0, π)<br>w: en los <b>pasos por cero</b> (θ = π/2, 3π/2). Desfasadas π/2.
+¿Qué pasa con u y w en el fondo?	w = 0 (condición de contorno) pero <b>u ≠ 0</b> (deslizamiento, fluido ideal). a<sub>z</sub> = 0, a<sub>x</sub> ≠ 0.
+Velocidades en profundidades reducidas	u <b>uniforme</b> en la vertical; w crece <b>linealmente</b> desde 0 en el fondo; u<sub>máx</sub>/w<sub>máx</sub> = 1/kh.
+Semiejes de la órbita de una partícula	Horizontal (mayor): A = a·cosh k(h+z)/sinh kh<br>Vertical (menor): B = a·sinh k(h+z)/sinh kh<br><b>B/A = tanh k(h+z)</b>
+Forma de las órbitas según la profundidad	Indefinidas: <b>círculos</b> de radio a·e<sup>kz</sup><br>Intermedias: <b>elipses</b> que se achatan<br>Reducidas: elipses muy planas, semieje horizontal constante
+Campo de presiones en teoría lineal	p = −ρgz + ρga·K<sub>p</sub>·cos θ<br>K<sub>p</sub> = cosh k(h+z)/cosh kh (factor de respuesta de presión)
+Ley de presiones en reducidas	K<sub>p</sub> = 1 → p = ρg(η − z): <b>hidrostática (triangular)</b>.
+Onda estacionaria: expresión y altura	η = 2a·cos(kx)·cos(ωt): <b>altura doble</b> que la incidente. Reflexión perfecta.
+Estacionaria: ¿dónde son máximas u y w?	u máxima en los <b>nodos</b>; w máxima en los <b>antinodos</b>.
+Posición de nodos y antinodos de la estacionaria	Nodos: kx = (2n+1)π/2<br>Antinodos: kx = nπ
+Envolvente de la onda cuasi-estacionaria	η<sub>máx</sub> = ½(H<sub>i</sub> + H<sub>r</sub>) (antinodos)<br>η<sub>mín</sub> = ½(H<sub>i</sub> − H<sub>r</sub>) (cuasi-nodos)<br>K<sub>r</sub> = H<sub>r</sub>/H<sub>i</sub>
+¿Qué superposición da ondas de crestas cortas?	Dos progresivas de igual T y amplitud, <b>distinta dirección (±θ)</b> y mismo sentido: progresa en x y es estacionaria en y.
+Grupo de ondas: expresión de η	η = H·cos(kx − ωt)·cos[½(Δk·x − Δω·t)]<br>portadora × envolvente
+Celeridad de grupo	C<sub>g</sub> = Δω/Δk → dω/dk = <b>n·C</b>, n = ½[1 + 2kh/sinh 2kh]
+Valor de n en profundas y reducidas	Profundas: n = ½ → C<sub>g</sub> = C/2<br>Reducidas: n = 1 → C<sub>g</sub> = C = √(gh)
+Periodo y longitud del grupo	T<sub>g</sub> = 2π/Δω = T₁T₂/(T₁ − T₂)<br>L<sub>g</sub> = 2π/Δk<br>(función modulante: 4π/Δω)
+Dispersión con corriente uniforme	σ² = (ω − U₀k cosθ − V₀k sinθ)² = gk·tanh kh<br>σ = intrínseca; ω = absoluta
+Energía total media del oleaje	<b>E = ρgH²/8</b> (J/m²); mitad cinética, mitad potencial (ρgH²/16 cada una). <b>No depende de T ni de h.</b>
+Flujo de energía	<b>F = E·C<sub>g</sub> = E·n·C</b> (W/m)<br>Profundas: F = ρg²H²T/(32π)
+¿A qué velocidad viaja la energía del oleaje y por qué?	A <b>C<sub>g</sub></b>: por los nodos del grupo no pasa energía (allí H = 0 y la presión dinámica es nula).
+¿Por qué hay transporte neto de masa si las órbitas son cerradas?	La velocidad bajo la cresta es algo mayor que bajo el seno → flujo neto en el sentido de avance: M = ρgH²/(8C).
+Ejercicio tipo: te dan L en indefinidas y L sobre la plataforma. ¿Cómo sacas h?	T de L₀ = gT²/2π; con k = 2π/L despejas: tanh(kh) = ω²/(gk) → h = atanh(…)/k. Sin iterar.<br>(312 m y 200 m → T = 14,1 s, h ≈ 24,2 m)
+Ejercicio tipo: te dan los semiejes de la órbita a una profundidad z. ¿Primer paso?	B/A = tanh k(h+z) → k. Luego T con la dispersión y H con el semieje mayor.
+Tiempo de viaje de un tsunami sobre un talud h(x)	Onda larga: C = √(gh(x)) → t = ∫ dx / √(g·h(x)).<br>(200 m, pendiente 0,005 → ≈ 30 min)
+Cómo sacar H<sub>i</sub> y H<sub>r</sub> de una envolvente medida	H<sub>i</sub> + H<sub>r</sub> = altura en el antinodo<br>H<sub>i</sub> − H<sub>r</sub> = altura en el cuasi-nodo<br>(distancia entre ambos = L/4)

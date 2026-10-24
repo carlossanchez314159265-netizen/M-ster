@@ -4,6 +4,8 @@ Apuntes y material de la asignatura (máster).
 
 **Por dónde empezar:** la carpeta [`planing/`](planing/) tiene el plan día a día del 1er parcial (28/10), en el orden en que hay que estudiar, con enlaces a todo el material.
 
+**Flashcards:** [`planing/09 - Flashcards.md`](<planing/09 - Flashcards.md>) — un mazo por día (Markdown + Anki) y otro de recetas y trampas del examen.
+
 **Exámenes anteriores:** la carpeta [`examenes/`](examenes/) tiene los exámenes resueltos (un PDF por examen) y el análisis de su estructura.
 
 Contenido:
@@ -34,3 +36,5 @@ Contenido:
 - scripts/examenes/ (generadores de los PDF de exámenes)
 - audios/ de cada bloque (guion .md + MP3): Día 1, Día 2a, Día 2b, Día 3, Día 4 espectral y examenes/audios (recetas y trampas); índice en planing/08
 - scripts/audios/ (generador de los MP3 a partir de los guiones)
+- flashcards/ de cada bloque y de examenes/ (Markdown con respuesta plegable + .tsv para Anki; 163 preguntas); índice en planing/09
+- scripts/flashcards/ (generador de las flashcards y de los mazos Anki nuevos)

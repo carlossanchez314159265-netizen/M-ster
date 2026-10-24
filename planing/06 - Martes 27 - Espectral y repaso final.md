@@ -64,6 +64,10 @@ Autoexamen final: ¿podrías hacer ahora, sin mirar, un ejercicio de dispersión
 - **Solo tienes 1 h:** formulario de memoria (20 min), ejercicio 2 analítico (25 min) y las 6 preguntas de la diapo 56 (15 min). Lo espectral se reduce a Hm0 = 4√m0 y las definiciones de Tp, Tm01 y Tm02.
 - Nunca sacrifiques la dispersión, las trayectorias, los grupos ni Rayleigh.
 
+## Flashcards del día
+
+[Flashcards Día 4 — Análisis espectral](<../03-analisis-del-oleaje/flashcards/Flashcards Dia 4 - Analisis espectral.md>) (36; las 19 primeras para el ejercicio espectral) y [recetas y trampas del examen](<../examenes/flashcards/Flashcards - Recetas y trampas del examen.md>) (15). Índice de todos los mazos: [09 - Flashcards](<09 - Flashcards.md>).
+
 ## Antes de dormir
 
 [Audio del espectral](<../03-analisis-del-oleaje/audios/Guion audio Dia 4 - Analisis espectral.mp3>) (12 min) para fijar lo del día ([todos los audios](<08 - Audios de repaso.md>)); deja el formulario y las tarjetas preparados para los 30 min del miércoles.

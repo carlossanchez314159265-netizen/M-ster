@@ -1,0 +1,34 @@
+¿Qué diferencia hay entre análisis del oleaje a corto y a largo plazo?	<b>Corto plazo</b>: propiedades ola a ola de <b>un</b> estado de mar. <b>Largo plazo</b>: propiedades de un <b>conjunto</b> de estados de mar a lo largo de años (regímenes medio y extremal).
+¿Qué significa que el oleaje sea un proceso <b>estacionario</b>?	Que sus momentos estadísticos (media, varianza…) no cambian al trasladar el origen de tiempos. Ese intervalo es el <b>estado de mar</b>.
+¿Qué significa que el oleaje sea un proceso <b>ergódico</b>?	Que sus propiedades estadísticas promedio se pueden deducir de <b>una única muestra</b> suficientemente larga.
+¿Por qué se puede suponer que el oleaje es un proceso <b>gaussiano</b>?	Por el <b>teorema central del límite</b>: es la suma de muchos trenes de onda independientes (Pierson, 1958). Media cero; queda definido por la varianza.
+¿Cuánto dura un estado de mar?	Hoy se usa <b>1 h</b>; el mínimo por información estadística es ≈ <b>20–30 min</b> (límite clásico de las boyas). Compromiso entre estacionariedad y estadística suficiente.
+¿Cuándo deja de ser gaussiana la superficie libre?	Al <b>aumentar la amplitud</b> y <b>disminuir la profundidad</b>: en profundidades reducidas el proceso no es gaussiano.
+En el análisis de paso por cero, ¿qué es una ola?	El tramo entre dos <b>pasos ascendentes por cero</b> (PAC) consecutivos. H<sub>i</sub> = distancia vertical máxima entre ellos; T<sub>i</sub> = tiempo entre ellos.
+¿Dan lo mismo el paso ascendente (PAC) y el descendente (PDC)?	Olas distintas pero <b>estadística equivalente</b> en registros largos, salvo en reducidas o rompientes: la asimetría de las crestas da periodos menores con PDC.
+¿Cuántas olas hacen falta para una estadística fiable?	Al menos <b>100</b>; recomendable <b>1000</b> (30 min – 1 h de registro; 3 h para 1000 olas con T ≈ 15 s).
+Define H<sub>1/3</sub> (H<sub>s</sub>)	Media de las alturas del <b>tercio de olas más altas</b> del registro (N/3). Propuesta por Sverdrup y Munk (1947) para casar medidas con observación visual.
+Define T<sub>1/3</sub>	Media de los periodos de las N/3 olas <b>más altas</b> (ordenadas por altura, no por periodo).
+Define H<sub>rms</sub>	H<sub>rms</sub> = √[(1/N) Σ H<sub>i</sub>²]: altura media cuadrática. Es el parámetro de la distribución de Rayleigh.
+¿Qué distribución sigue la superficie libre η en indefinidas y qué limitación tiene?	<b>Normal</b> de media cero y σ = η<sub>rms</sub>. Da igual probabilidad a crestas y senos → solo vale para oleaje <b>lineal</b>.
+¿Qué indican el sesgo y la curtosis de η?	<b>No linealidades</b>. Sesgo: crestas cortas y peraltadas, senos largos y planos (reducidas). Curtosis: apuntamiento frente a la normal. Ambos nulos → normal.
+Distribución de Rayleigh: F(H) y probabilidad de excedencia	F(H) = 1 − exp[−(H/H<sub>rms</sub>)²];  P(H > H*) = exp[−(H*/H<sub>rms</sub>)²]
+¿Cuándo es válida la distribución de Rayleigh para las alturas de ola?	Espectro de <b>banda estrecha</b> (swell), olas <b>independientes</b> y oleaje <b>lineal</b>.
+Altura superada por una fracción q de las olas (Rayleigh)	H<sub>q</sub> = H<sub>rms</sub>·√(−ln q)
+Altura superada por el 2 % de las olas con H<sub>rms</sub> = 3 m	H<sub>2%</sub> = 3·√(−ln 0,02) = 3·1,978 = <b>5,93 m</b>
+Rayleigh: H<sub>1/3</sub> en función de H<sub>rms</sub>	H<sub>1/3</sub> = <b>1,416</b>·H<sub>rms</sub>
+Rayleigh: H<sub>m</sub> (media) en función de H<sub>rms</sub>	H<sub>m</sub> = 0,886·H<sub>rms</sub> (= √π/2·H<sub>rms</sub>);  H<sub>1/3</sub>/H<sub>m</sub> = 1,597
+Rayleigh: H<sub>1/10</sub> en función de H<sub>rms</sub> y de H<sub>1/3</sub>	H<sub>1/10</sub> = 1,800·H<sub>rms</sub> = 1,271·H<sub>1/3</sub>
+Relación entre H<sub>1/3</sub> y la desviación típica de η (Rayleigh)	H<sub>1/3</sub> = 4,004·η<sub>rms</sub> = 4,004√m<sub>0</sub> (de ahí H<sub>m0</sub> = 4√m<sub>0</sub>)
+Distribución de H<sub>max</sub> en un estado de mar de N olas (Longuet-Higgins, 1952)	F(H<sub>max,N</sub>) = [F(H)]<sup>N</sup> = {1 − exp[−(H<sub>max</sub>/H<sub>rms</sub>)²]}<sup>N</sup>. Más olas (más duración) → más probable una ola mayor.
+H<sub>max</sub> <b>más probable</b> (moda) en N olas	H<sub>max,moda</sub> = H<sub>rms</sub>·√(ln N)
+H<sub>max</sub> <b>media</b> en N olas	H<sub>max,media</sub> = H<sub>rms</sub>·[√(ln N) + (C/2)(ln N)<sup>−1/2</sup>], C = 0,57722 (Euler)
+¿Cómo se calcula N para la H<sub>max</sub>?	N = duración del estado de mar / periodo medio. Ej.: 3600 s / 7,2 s = 500 olas.
+Ejemplo diapo 42: 1 h, T<sub>m</sub> = 7,2 s, H<sub>rms</sub> = 3 m. H<sub>max</sub> más probable y media	N = 500; √ln 500 = 2,493 → <b>moda 7,48 m</b>; media 2,609·3 = 7,83 m (la diapo da la media). Ojo: el enunciado dice H<sub>rms</sub> = 5 → 12,46 m.
+Regla rápida: H<sub>max</sub> frente a H<sub>s</sub> en 1–3 h	H<sub>max</sub> ≈ 1,8–2·H<sub>s</sub> (1,76 con N = 500; 1,86 con N = 1000)
+Limitaciones de Rayleigh	<b>Sobrestima</b> las olas mayores (hasta ≈ 10 % en la cola) porque supone banda estrecha, independencia entre olas (hay grupos) y no considera no linealidades (asimetrías, rotura, rompientes).
+¿Qué es una freak (rogue) wave y su criterio?	Ola anormal, muy peraltada y mucho mayor que las que la rodean. Haver (2000): <b>H<sub>max</sub>/H<sub>s</sub> > 2</b> y/o <b>η<sub>max</sub>/H<sub>s</sub> > 1,25</b>.
+¿De qué surgen las freak waves y cuándo son más probables?	Concentración por interacción entre frecuencias, interacción ola–corriente, inestabilidades no lineales. Más probables en mares <b>peraltados y de banda estrecha</b>.
+Distribución conjunta H–T de Longuet-Higgins: ¿de qué depende?	De la anchura espectral ν² = m<sub>0</sub>m<sub>2</sub>/m<sub>1</sub>² − 1; la moda de los periodos decrece al aumentar ν.
+Frecuencia acumulada empírica de N olas ordenadas de mayor a menor	F(H ≤ H<sub>i</sub>) = (N + 1 − i)/N
+¿Qué fracción de olas supera H<sub>s</sub> según Rayleigh?	exp(−1,416²) ≈ <b>13,5 %</b>

@@ -12,4 +12,6 @@ Estructura común: hoja de ejercicios con **3 ejercicios de 2 puntos** — (A) d
 
 **Audio:** [Lo que cae en el examen — recetas y trampas](<audios/Guion audio - Lo que cae en el examen (recetas y trampas).mp3>) ([guion](<audios/Guion audio - Lo que cae en el examen (recetas y trampas).md>)), 9 min.
 
+**Flashcards:** [Recetas y trampas del examen](<flashcards/Flashcards - Recetas y trampas del examen.md>) (15 tarjetas; también en [Anki](<anki/Oceanografia - Examen - Recetas y trampas.apkg>)).
+
 Los PDF se generan con `scripts/examenes/` (Python + ReportLab, mismo estilo que los resúmenes).
