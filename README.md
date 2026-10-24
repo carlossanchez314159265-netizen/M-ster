@@ -27,3 +27,4 @@ Contenido:
 - ejercicios-teoria-de-ondas/Ejercicio_5 - Teoria de ondas.pdf
 - planing/ (plan general + un archivo por día, numerados en orden de estudio)
 - "02-mecanica-de-ondas/audios/Guion audio Dia 2b - Sabado - Trayectorias, estacionarias y grupos.md"
+- scripts/resumenes/ (generadores de los resúmenes en PDF; cada ecuación lleva su leyenda de términos)
