@@ -13,6 +13,6 @@ Abre los archivos en este orden. Cada día dice qué leer, qué ejercicio hacer 
 | 06 | Mar 27 | 3 h | [Espectral mínimo y repaso final](<06 - Martes 27 - Espectral y repaso final.md>) | Planning por bloques hecho; **falta el resumen espectral** |
 | 07 | Mié 28 | 30 min | [Examen](<07 - Miercoles 28 - Examen.md>) | — |
 
-**Exámenes anteriores resueltos y análisis de su estructura:** [`examenes/`](<../examenes/>). Los dos exámenes tienen 3 ejercicios de 2 puntos: dispersión/teoría lineal, Rayleigh + Hmax y espectral.
+**Exámenes anteriores resueltos y análisis de su estructura:** [`examenes/`](<../examenes/>). Los dos exámenes tienen 3 ejercicios de 2 puntos (6 de 10 → **los ejercicios pesan ~60 %, no 40 %**): dispersión/teoría lineal, Rayleigh + Hmax y espectral. Donde el planning general dice 60 % teoría / 40 % ejercicios, es al revés.
 
 Prioridad si vas tarde: Mecánica de ondas y sus 5 ejercicios. Orden de sacrificio: Cálculo de espectros → Copernicus/masas de agua → espectros bimodales.

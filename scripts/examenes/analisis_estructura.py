@@ -12,8 +12,8 @@ bl("Hoja de <b>EJERCICIOS</b> separada, con <b>3 ejercicios de 2 puntos</b> cada
    "Se dan las fórmulas «raras» en el enunciado (ley de runup) y los datos ya masticados (L = 239,3 m, conos con área y altura): "
    "lo que puntúa es saber <b>qué fórmula toca y en qué orden</b>, no deducir.",
    "Los resultados son números redondos o casi (m₀ = 1; 0,25; 12 → H<sub>m0</sub> = 4; 2): si te sale algo raro, revisa unidades o un 2π.")
-note("<b>Lo que no sé:</b> los ejercicios suman 6 puntos en la hoja, y tú tienes apuntado 60 % teoría / 40 % ejercicios. No tengo la hoja de teoría "
-     "ni sé cómo pondera el profesor; pregúntalo o compruébalo en la guía. El análisis sale de solo 2 exámenes: el patrón es claro, pero no es una garantía.")
+note("<b>Peso real:</b> la hoja de ejercicios suma <b>6 puntos</b> (3 × 2), así que lo más probable es <b>60 % ejercicios / 40 % teoría</b>, "
+     "al revés de lo que ponía el planning inicial. No tengo la hoja de teoría para confirmarlo. El análisis sale de solo 2 exámenes: el patrón es claro, pero no es una garantía.")
 
 h2("2. Qué cae en cada ejercicio")
 figure(fx.mapa_examen(), "Figura 1. Los dos exámenes repiten los mismos tres bloques; solo cambia el orden y el «envoltorio».")
@@ -73,7 +73,7 @@ table(["Trampa", "Cómo evitarla"], [
 ], [55, 115])
 
 h2("5. Cómo cambia tu planning (lo que queda)")
-P("Hoy es sábado 24 por la noche. Con lo que queda, el orden de rentabilidad pasa a ser: <b>B (estadística) = A (dispersión) = C (espectral) &gt; grupos/estacionarias &gt; tsunami</b>.")
+P("Hoy es sábado 24 por la noche. Como los ejercicios pesan más que la teoría, practicar estos 6 ejercicios es lo más rentable que puedes hacer. Con lo que queda, el orden de rentabilidad pasa a ser: <b>B (estadística) = A (dispersión) = C (espectral) &gt; grupos/estacionarias &gt; tsunami</b>.")
 table(["Día", "Qué haces con los exámenes", "Tiempo"], [
     ["<b>Dom 25</b>", "Resumen Día 3 (Rayleigh, H<sub>max</sub>) y, en vez del ejemplo de la diapo 42, <b>Ej. 1 del Parcial 2025</b> y <b>Ej. 2 del Final</b> sin mirar.", "1,5 h"],
     ["<b>Lun 26</b>", "Solo: leer las tres recetas de la sección 3 en el transporte.", "10 min"],
