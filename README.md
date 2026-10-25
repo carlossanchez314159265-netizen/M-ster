@@ -4,6 +4,8 @@ Apuntes y material de la asignatura (máster).
 
 **Por dónde empezar:** la carpeta [`parcial 1/`](<parcial 1/>) tiene el plan día a día del 1er parcial (28/10), en el orden en que hay que estudiar, con enlaces a todo el material.
 
+**Ejercicios resueltos y formulario:** [`parcial 1/10 - Ejercicios resueltos (todos).pdf`](<parcial 1/10 - Ejercicios resueltos (todos).pdf>) (todos los ejercicios del material, explicados desde cero, + los exámenes resueltos como anexo) y [`parcial 1/11 - Formulario 1er parcial.pdf`](<parcial 1/11 - Formulario 1er parcial.pdf>).
+
 **Flashcards:** [`parcial 1/09 - Flashcards.md`](<parcial 1/09 - Flashcards.md>) — un mazo por día (Markdown + Anki) y otro de recetas y trampas del examen.
 
 **Exámenes anteriores:** la carpeta [`examenes/`](examenes/) tiene los exámenes resueltos (un PDF por examen) y el análisis de su estructura.
@@ -38,3 +40,4 @@ Contenido:
 - scripts/audios/ (generador de los MP3 a partir de los guiones)
 - flashcards/ de cada bloque y de examenes/ (Markdown con respuesta plegable + .tsv para Anki; 163 preguntas); índice en parcial 1/09
 - scripts/flashcards/ (generador de las flashcards y de los mazos Anki nuevos)
+- scripts/ejercicios/ (generadores del PDF de ejercicios resueltos, del anexo de exámenes y del formulario)

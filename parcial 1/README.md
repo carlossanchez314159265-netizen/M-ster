@@ -14,6 +14,8 @@ Abre los archivos en este orden. Cada día dice qué leer, qué ejercicio hacer 
 | 07 | Mié 28 | 30 min | [Examen](<07 - Miercoles 28 - Examen.md>) | — |
 | 08 | — | — | [Audios de repaso](<08 - Audios de repaso.md>): 6 audios de teoría (MP3 + guion), uno por bloque + recetas y trampas del examen | Hecho |
 | 09 | — | — | [Flashcards](<09 - Flashcards.md>): 163 preguntas en Markdown + Anki, un mazo por día + recetas y trampas del examen | Hecho |
+| 10 | — | — | [**Ejercicios resueltos (todos)**](<10 - Ejercicios resueltos (todos).pdf>): los 5 de teoría de ondas, ejemplos de estadística (paso por cero, Rayleigh, Hmax), los 3 espectrales, el de la esfera de titanio y, como anexo, los 2 exámenes resueltos | Hecho |
+| 11 | — | — | [**Formulario 1er parcial**](<11 - Formulario 1er parcial.pdf>): todas las fórmulas con sus términos; ★ = lo que ha caído en examen | Hecho |
 
 **Exámenes anteriores resueltos y análisis de su estructura:** [`examenes/`](<../examenes/>). Los dos exámenes tienen 3 ejercicios de 2 puntos (6 de 10 → **los ejercicios pesan ~60 %, no 40 %**): dispersión/teoría lineal, Rayleigh + Hmax y espectral. Donde el planning general dice 60 % teoría / 40 % ejercicios, es al revés.
 

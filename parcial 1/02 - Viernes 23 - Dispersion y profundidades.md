@@ -10,3 +10,5 @@
 4. **Ejercicio 3** sin mirar (tsunami sobre talud): [enunciado y solución](<../ejercicios-teoria-de-ondas/Ejercicio_3 - Teoria de ondas.pdf>) · diapo 98.
 5. Corregir con la sección 10 del resumen.
 6. Mazo Anki [Día 2](<../02-mecanica-de-ondas/anki/Oceanografia - Dia 2 - Mecanica de ondas.apkg>) + 15 min de autoexamen: clasificar por h/L y resolver ω² = gk·tanh(kh) con la calculadora.
+
+**Ejercicios 1 y 3 explicados paso a paso:** Parte A de [10 - Ejercicios resueltos (todos)](<10 - Ejercicios resueltos (todos).pdf>).

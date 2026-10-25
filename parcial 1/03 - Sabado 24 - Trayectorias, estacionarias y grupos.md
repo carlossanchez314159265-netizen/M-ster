@@ -72,3 +72,5 @@ Si vas tarde, recorta las crestas cortas y la parte de corriente uniforme. Nunca
 7. E = ρgH²/8: solo depende de H (no de T ni de h). F = E·Cg = E·n·C [W/m].
 
 </details>
+
+**Ejercicios 2, 4 y 5 explicados paso a paso:** Parte A de [10 - Ejercicios resueltos (todos)](<10 - Ejercicios resueltos (todos).pdf>).
