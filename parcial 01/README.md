@@ -6,7 +6,7 @@ Basado en los cuatro bloques de las presentaciones IINT 2026/27 de esta rama. No
 
 | Archivo | Para qué usarlo |
 |---|---|
-| [Resumen](RESUMEN.md) | Entender los conceptos y consultar ejemplos |
+| [Resumen en PDF](RESUMEN.pdf) · [Versión Markdown](RESUMEN.md) | Entender los conceptos y consultar ejemplos |
 | [Flashcards](FLASHCARDS.md) | Preguntarte sin ver la respuesta; 40 tarjetas |
 | [Flashcards para Anki](flashcards_anki.tsv) | Importar las mismas 40 tarjetas como anverso/reverso |
 | [Test y desarrollos](PRACTICA.md) | 20 preguntas tipo test y 8 desarrollos, con soluciones al final |
