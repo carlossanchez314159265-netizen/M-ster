@@ -11,6 +11,7 @@ Basado en los cuatro bloques de las presentaciones IINT 2026/27 de esta rama. No
 | [Flashcards para Anki](flashcards_anki.tsv) | Importar las mismas 40 tarjetas como anverso/reverso |
 | [Test y desarrollos](PRACTICA.md) | 20 preguntas tipo test y 8 desarrollos, con soluciones al final |
 | [Test ampliado](TEST_AMPLIADO.md) | 66 preguntas tipo test nuevas, ordenadas por bloque, con soluciones y página |
+| [Test interactivo](test_interactivo.html) | Las 86 preguntas autocorregibles: descárgalo y ábrelo en el navegador |
 
 **Mañana, 120 minutos**
 
