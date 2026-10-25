@@ -10,6 +10,7 @@ Basado en los cuatro bloques de las presentaciones IINT 2026/27 de esta rama. No
 | [Flashcards](FLASHCARDS.md) | Preguntarte sin ver la respuesta; 40 tarjetas |
 | [Flashcards para Anki](flashcards_anki.tsv) | Importar las mismas 40 tarjetas como anverso/reverso |
 | [Test y desarrollos](PRACTICA.md) | 20 preguntas tipo test y 8 desarrollos, con soluciones al final |
+| [Test ampliado](TEST_AMPLIADO.md) | 66 preguntas tipo test nuevas, ordenadas por bloque, con soluciones y página |
 
 **Mañana, 120 minutos**
 
@@ -21,7 +22,7 @@ Basado en los cuatro bloques de las presentaciones IINT 2026/27 de esta rama. No
 **Antes del examen, 120 minutos**
 
 1. 25 min: tarjetas falladas y diferencias que confundes.
-2. 25 min: test de 20 preguntas sin consultar el resumen.
+2. 25 min: test de 20 preguntas sin consultar el resumen. Si te sobra tiempo otro día, haz un bloque del test ampliado.
 3. 15 min: corrección razonada; vuelve al concepto, no memorices la letra.
 4. 35 min: cuatro desarrollos, un esquema IDEF0 y un cálculo QFD.
 5. 10 min: hoja de memoria: V, MOE/MOP/TPM, QFD, IDEF0 y arquitectura/diseño.
