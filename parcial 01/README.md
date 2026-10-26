@@ -14,6 +14,7 @@ Basado en los cuatro bloques de las presentaciones IINT 2026/27 de esta rama. No
 | [Test interactivo](test_interactivo.html) | Las 86 preguntas autocorregibles: descárgalo y ábrelo en el navegador |
 | [Test ampliado 2](TEST_AMPLIADO_2.md) | 80 preguntas tipo test más, sin repetir las anteriores, con soluciones y página |
 | [Test interactivo 2](test_interactivo_2.html) | Las 80 nuevas autocorregibles, con opción de mezclarlas con las 86 anteriores |
+| [Desarrollo: definición de conceptos](DESARROLLO_CONCEPTOS.md) | 24 preguntas largas de «define y explica», con respuesta modelo y lista para corregirte |
 
 **Mañana, 120 minutos**
 
