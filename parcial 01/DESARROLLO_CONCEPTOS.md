@@ -1,6 +1,6 @@
 # Preguntas de desarrollo · definición de conceptos
 
-24 preguntas de «define y explica», con **respuestas cortas** para repasar rápido. Preguntas originales a partir de las presentaciones, **no de exámenes anteriores**.
+25 preguntas de «define y explica», con **respuestas cortas** para repasar rápido. Preguntas originales a partir de las presentaciones, **no de exámenes anteriores**.
 
 **Cómo responder en el examen:** definición → 3 o 4 ideas clave → ejemplo → diferencia con lo que se confunde.
 
@@ -201,11 +201,29 @@ Capacidad de seguir las relaciones **necesidad → requisito → función → el
 **Ojo:** no evita cambios, ayuda a gestionarlos. *B2 pp.51–55.*
 </details>
 
+### 15. MOE, MOP y TPM
+
+<details><summary>Respuesta</summary>
+
+Son tres niveles de medida para saber si cumplimos, de la misión a la técnica:
+
+| Medida | Pregunta | Ejemplo Blue Horizon |
+|---|---|---|
+| **MOE**, efectividad | ¿Se cumple la **misión**? | % de intrusiones detectadas; tiempo de indisponibilidad del parque |
+| **MOP**, prestación | ¿El **sistema** rinde como debe? | Distancia de detección; tiempo de respuesta; cobertura |
+| **TPM**, medida técnica | ¿Qué **parámetro técnico** seguimos durante el desarrollo? | Potencia del radar; resolución de cámara; ancho de banda |
+
+- **MOE** sale de las necesidades del stakeholder. **MOP** mide el rendimiento del sistema y contribuye a las MOE. **TPM** son parámetros de ingeniería que influyen en las MOP.
+- Cadena: TPM → MOP → MOE (la potencia permite el alcance, y el alcance permite detectar intrusiones).
+
+**Ojo:** aunque B2 p.45 llama «cualitativa» a la MOE, sus ejemplos son porcentajes y tiempos. Lo que la distingue es que mide la **misión**, no que sea cualitativa. *B2 pp.28, 45; B3 p.3.*
+</details>
+
 ---
 
 ## B3 · Definición y análisis de requisitos
 
-### 15. SyRS y SRR
+### 16. SyRS y SRR
 
 <details><summary>Respuesta</summary>
 
@@ -217,7 +235,7 @@ Capacidad de seguir las relaciones **necesidad → requisito → función → el
 *B3 pp.5, 12.*
 </details>
 
-### 16. Volatilidad e isoperformance
+### 17. Volatilidad e isoperformance
 
 <details><summary>Respuesta</summary>
 
@@ -231,7 +249,7 @@ Capacidad de seguir las relaciones **necesidad → requisito → función → el
 *B3 pp.13–14.*
 </details>
 
-### 17. QFD, diseño axiomático y TRIZ
+### 18. QFD, diseño axiomático y TRIZ
 
 <details><summary>Respuesta</summary>
 
@@ -243,7 +261,7 @@ QFD prioriza, el axiomático estructura, TRIZ innova.
 *B3 pp.16–33.*
 </details>
 
-### 18. Análisis funcional
+### 19. Análisis funcional
 
 <details><summary>Respuesta</summary>
 
@@ -256,7 +274,7 @@ Traduce requisitos en **funciones** que el sistema debe realizar, sin decidir to
 **Ojo:** «cámara 8K» ya es diseño. *B3 pp.36–47.*
 </details>
 
-### 19. Lenguajes de modelado
+### 20. Lenguajes de modelado
 
 <details><summary>Respuesta</summary>
 
@@ -274,7 +292,7 @@ SysML **describe**; Modelica **simula**.
 
 ## B4 · Arquitectura y diseño conceptual
 
-### 20. Arquitectura
+### 21. Arquitectura
 
 <details><summary>Respuesta</summary>
 
@@ -287,7 +305,7 @@ SysML **describe**; Modelica **simula**.
 **Ojo:** una lista de piezas no es una arquitectura. *B4 pp.7–14.*
 </details>
 
-### 21. Función y forma
+### 22. Función y forma
 
 <details><summary>Respuesta</summary>
 
@@ -299,7 +317,7 @@ SysML **describe**; Modelica **simula**.
 *B4 pp.16–18.*
 </details>
 
-### 22. Concepto de solución
+### 23. Concepto de solución
 
 <details><summary>Respuesta</summary>
 
@@ -312,7 +330,7 @@ Idea general de cómo satisfacer la necesidad, sin definir todos los elementos.
 *B4 pp.20–25.*
 </details>
 
-### 23. Valor
+### 24. Valor
 
 <details><summary>Respuesta</summary>
 
@@ -323,7 +341,7 @@ Relación entre **beneficio** (necesidades satisfechas, funcionalidad, valor per
 **Ojo:** valor no es «lo más barato». *B4 pp.26–27.*
 </details>
 
-### 24. Generar y seleccionar conceptos; arquitectura frente a diseño
+### 25. Generar y seleccionar conceptos; arquitectura frente a diseño
 
 <details><summary>Respuesta</summary>
 
