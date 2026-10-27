@@ -463,9 +463,10 @@ note("<b>Hipótesis</b> (dilas si te lo preguntan): el lastre va dentro de la es
 
 # ------------------------------------------------------------------ cierre
 h2("Anexo — Exámenes anteriores resueltos")
-P("A continuación se adjuntan, tal cual están en <i>examenes/</i>, los dos exámenes de ejercicios anteriores resueltos paso a paso (3 ejercicios de 2 puntos cada uno): "
-  "<b>1er Parcial 29-10-2025</b> (rebase + Rayleigh, sensores de presión, SEA/SWELL con conos) y <b>Final ordinario 13-01-2025</b> "
-  "(L₀ → T y L → h, runup con H<sub>max</sub> y u orbital, S(ω) por tramos). Sus páginas conservan su propia numeración.")
+P("A continuación se adjuntan, tal cual están en <i>examenes/</i>, los exámenes anteriores resueltos paso a paso: "
+  "<b>1er Parcial 29-10-2025</b> (rebase + Rayleigh, sensores de presión, SEA/SWELL con conos), <b>Final ordinario 13-01-2025</b> "
+  "(L₀ → T y L → h, runup con H<sub>max</sub> y u orbital, S(ω) por tramos) y la parte del 1er parcial del <b>2º Parcial 13-01-2026</b> "
+  "(régimen extremal frente a medio, oleaje en indefinidas, dispersión en h = 20 m y asomeramiento). Sus páginas conservan su propia numeración.")
 box("<b>Orden recomendado hoy (domingo) y el martes:</b> B3 y B2 → examen 29-10-2025 ej. 1 → C3 → examen 13-01-2025 ej. 3 → A1 → examen 13-01-2025 ej. 1. "
     "Si te sobra tiempo: A2, A5, A4, A3, C1, C2. D1 solo si ya lo tienes todo.")
 

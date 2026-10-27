@@ -10,6 +10,7 @@ EXAMENES = os.path.join(HERE, "..", "..", "examenes")
 ANEXOS = [
     ("Anexo 1 · Examen 1er Parcial 29-10-2025 (resuelto)", "Examen 1er Parcial 29-10-2025 (resuelto).pdf"),
     ("Anexo 2 · Examen Final ordinario 1er Parcial 13-01-2025 (resuelto)", "Examen Final ordinario 1er Parcial 13-01-2025 (resuelto).pdf"),
+    ("Anexo 3 · Examen 2º Parcial 13-01-2026, parte del 1er parcial (resuelto)", "Examen 2o Parcial 13-01-2026 - parte del 1er parcial (resuelto).pdf"),
 ]
 
 src, out = sys.argv[1], sys.argv[2]
