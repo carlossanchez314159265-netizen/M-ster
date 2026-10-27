@@ -17,6 +17,7 @@ Abre los archivos en este orden. Cada día dice qué leer, qué ejercicio hacer 
 | 10 | — | — | [**Ejercicios resueltos (todos)**](<10 - Ejercicios resueltos (todos).pdf>): los 5 de teoría de ondas, ejemplos de estadística (paso por cero, Rayleigh, Hmax), los 3 espectrales, el de la esfera de titanio y, como anexo, los 3 exámenes resueltos (del 2º parcial 13-01-2026, solo lo que entra en este) | Hecho |
 | 11 | — | — | [**Formulario 1er parcial**](<11 - Formulario 1er parcial.pdf>): todas las fórmulas con sus términos; ★ = lo que ha caído en examen | Hecho |
 | 14 | — | — | [**Formulario del profesor**](<14 - Formulario del profesor (hoja del examen).pdf>): la hoja de fórmulas que acompaña al examen, solo las filas del 1er parcial | Hecho |
+| 15 | — | — | [**Aula de Ondas Lineales**](<../02-mecanica-de-ondas/Aula de Ondas Lineales.html>): clase interactiva de teoría lineal en 13 lecciones con pizarras animadas (dispersión, órbitas, estacionarias, grupos, oleaje irregular…) y los 5 ejercicios de clase. GitHub solo muestra el código: descárgala y ábrela en el navegador | Hecho |
 
 **Exámenes anteriores resueltos y análisis de su estructura:** [`examenes/`](<../examenes/>). Los dos exámenes tienen 3 ejercicios de 2 puntos (6 de 10 → **los ejercicios pesan ~60 %, no 40 %**): dispersión/teoría lineal, Rayleigh + Hmax y espectral. Donde el planning general dice 60 % teoría / 40 % ejercicios, es al revés.
 

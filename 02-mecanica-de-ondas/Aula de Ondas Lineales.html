@@ -1,0 +1,765 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Aula de Ondas Lineales</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<script>
+window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},options:{enableMenu:false}};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js" async></script>
+<style>
+/* Layout: indice fijo a la izquierda + columna de clase; cada leccion alterna texto y "pizarra" interactiva (canal de oleaje) */
+:root{
+  --bg:#EDF2F3; --panel:#F9FBFB; --fg:#11232C; --muted:#566E78; --line:#C6D5DA;
+  --water:#1D6F8F; --water-soft:#D5E6EC; --deep:#163F55; --crest:#C9772A; --env:#BF3F38; --comp:#7262AC; --ok:#2C7F4F; --sand:#B89B6E;
+  --font-d:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-b:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --font-m:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C171D; --panel:#11212A; --fg:#DCE8ED; --muted:#8EA6B0; --line:#26404B;
+  --water:#5BB4D6; --water-soft:#163746; --deep:#0B2A38; --crest:#F0A54A; --env:#F0716A; --comp:#AE9EE6; --ok:#5CC48A; --sand:#8C744F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C171D; --panel:#11212A; --fg:#DCE8ED; --muted:#8EA6B0; --line:#26404B;
+  --water:#5BB4D6; --water-soft:#163746; --deep:#0B2A38; --crest:#F0A54A; --env:#F0716A; --comp:#AE9EE6; --ok:#5CC48A; --sand:#8C744F; color-scheme:dark}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-b);font-size:17px;line-height:1.6}
+.wrap{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px}
+aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;font-family:var(--font-d)}
+aside .kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+aside ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;counter-reset:l}
+aside a{display:flex;gap:10px;padding:6px 8px;border-radius:6px;color:var(--fg);text-decoration:none;font-size:15px;line-height:1.3}
+aside a:hover,aside a:focus-visible{background:var(--water-soft)}
+aside a span{font-family:var(--font-m);font-size:12px;color:var(--water);padding-top:2px;min-width:20px}
+main{min-width:0;display:flex;flex-direction:column;gap:56px}
+header.hero{display:flex;flex-direction:column;gap:10px}
+.course{font-family:var(--font-d);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--font-d);font-weight:800;font-size:clamp(34px,5vw,56px);line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--water)}
+.lede{max-width:66ch;font-size:19px;color:var(--fg);margin:0}
+h2{font-family:var(--font-d);font-weight:700;font-size:clamp(26px,3.2vw,34px);line-height:1.1;margin:0;text-wrap:balance}
+h2 .num{font-family:var(--font-m);font-size:15px;color:var(--water);display:block;margin-bottom:6px;font-weight:600}
+h3{font-family:var(--font-d);font-weight:700;font-size:22px;margin:0;text-wrap:balance}
+section.lesson{display:flex;flex-direction:column;gap:18px;scroll-margin-top:20px}
+.sub{display:flex;flex-direction:column;gap:14px;padding-top:12px;border-top:1px solid var(--line)}
+p{margin:0;max-width:68ch}
+.text{display:flex;flex-direction:column;gap:12px}
+ul.pts{margin:0;padding-left:1.2em;max-width:68ch;display:flex;flex-direction:column;gap:4px}
+.eq{overflow-x:auto;overflow-y:hidden;padding:4px 0;max-width:100%}
+.idea{background:var(--water-soft);border-radius:8px;padding:14px 18px;max-width:72ch;display:flex;flex-direction:column;gap:6px}
+.idea b.lab,.warn b.lab{font-family:var(--font-d);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--water)}
+.warn{border:1px solid var(--env);border-radius:8px;padding:12px 16px;max-width:72ch}
+.warn b.lab{color:var(--env)}
+/* pizarra */
+.board{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:14px}
+.board .bh{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px}
+.board .bh b{font-family:var(--font-d);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+canvas{width:100%;display:block;border-radius:8px;max-width:100%}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 22px;font-family:var(--font-d);font-size:14px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{display:flex;justify-content:space-between;gap:8px}
+.ctl output{font-family:var(--font-m);font-size:13px;color:var(--water);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--water)}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+button{font-family:var(--font-d);font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--water)}
+button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--water);outline-offset:2px}
+button.primary{background:var(--water);color:var(--panel);border-color:var(--water)}
+label.chk{display:flex;align-items:center;gap:6px;font-family:var(--font-d);font-size:14px}
+.read{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px 16px;font-family:var(--font-m);font-size:13px;font-variant-numeric:tabular-nums}
+.read div{display:flex;flex-direction:column;border-top:1px solid var(--line);padding-top:4px;min-width:0}
+.read span{color:var(--muted);font-family:var(--font-d);font-size:12px}
+.read strong{font-weight:600;font-size:15px}
+.pill{display:inline-block;font-family:var(--font-d);font-size:13px;font-weight:700;padding:3px 12px;border-radius:999px;color:var(--panel)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-family:var(--font-d);font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+table{border-collapse:collapse;font-size:15px;min-width:560px}
+.tbl{overflow-x:auto;max-width:100%}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--font-d);font-size:13px;letter-spacing:.04em;color:var(--muted);font-weight:700}
+details.ex{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:0}
+details.ex summary{cursor:pointer;padding:14px 18px;font-family:var(--font-d);font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.ex summary::-webkit-details-marker{display:none}
+details.ex summary::after{content:"+";font-family:var(--font-m);color:var(--water)}
+details.ex[open] summary::after{content:"−"}
+details.ex .body{padding:0 18px 18px;display:flex;flex-direction:column;gap:10px}
+ol.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;max-width:72ch}
+.enun{font-style:italic;color:var(--muted);max-width:72ch}
+footer{font-family:var(--font-d);font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:4px}
+footer a{color:var(--water)}
+@media (max-width:900px){
+  .wrap{grid-template-columns:minmax(0,1fr);gap:24px}
+  aside{position:static}
+  aside ol{flex-direction:row;overflow-x:auto;padding-bottom:6px}
+  aside a{white-space:nowrap;background:var(--panel);border:1px solid var(--line)}
+  .two{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+
+<div class="wrap">
+<aside aria-label="Índice de la clase">
+  <div class="kicker">Índice de la clase</div>
+  <ol>
+    <li><a href="#l1"><span>01</span>La onda progresiva</a></li>
+    <li><a href="#l2"><span>02</span>Dispersión y profundidad</a></li>
+    <li><a href="#l3"><span>03</span>El periodo se conserva</a></li>
+    <li><a href="#l4"><span>04</span>Órbitas y presiones</a></li>
+    <li><a href="#l5"><span>05</span>Onda estacionaria</a></li>
+    <li><a href="#l6"><span>06</span>Cuasi-estacionaria</a></li>
+    <li><a href="#l7"><span>07</span>Crestas cortas</a></li>
+    <li><a href="#l8"><span>08</span>Grupos de ondas</a></li>
+    <li><a href="#l9"><span>09</span>Oleaje irregular</a></li>
+    <li><a href="#l10"><span>10</span>Onda y corriente</a></li>
+    <li><a href="#l11"><span>11</span>Energía y flujo</a></li>
+    <li><a href="#l12"><span>12</span>Ejercicios resueltos</a></li>
+    <li><a href="#l13"><span>13</span>Resumen</a></li>
+  </ol>
+</aside>
+
+<main>
+<header class="hero">
+  <div class="course">Oceanografía · MUINO-UPM · Bloque 2, mecánica de ondas</div>
+  <h1>Aula de ondas <em>lineales</em></h1>
+  <p class="lede">Clase guiada sobre teoría lineal (Airy): qué es una onda progresiva, cómo la profundidad decide su comportamiento y cómo se combinan varias ondas para dar estacionarias, cuasi-estacionarias, crestas cortas, grupos y oleaje irregular. Cada lección tiene una pizarra animada: mueve los controles y observa.</p>
+</header>
+
+<!-- 1 -->
+<section class="lesson" id="l1">
+  <h2><span class="num">Lección 01</span>La onda progresiva y sus magnitudes</h2>
+  <div class="text">
+    <p>En teoría lineal la superficie libre es un coseno que avanza. Un punto fijo (una boya) sube y baja con periodo \(T\); una foto instantánea muestra crestas separadas una longitud de onda \(L\).</p>
+    <div class="eq">\[\eta(x,t)=\frac H2\cos(kx-\omega t),\qquad k=\frac{2\pi}{L},\quad \omega=\frac{2\pi}{T},\quad C=\frac LT=\frac\omega k,\quad H=2a\]</div>
+  </div>
+  <div class="board">
+    <div class="bh"><b>Pizarra 1 · onda progresiva</b><div class="btns"><button data-play="ola">Pausar</button></div></div>
+    <canvas id="cv-ola" style="aspect-ratio:2.6/1" aria-label="Animación de una onda progresiva con L, H, a, C y una boya"></canvas>
+    <div class="legend"><span><i style="background:var(--water)"></i>superficie \(\eta\)</span><span><i style="background:var(--crest)"></i>boya fija: oscila con periodo T</span><span><i style="background:var(--muted)"></i>nivel en reposo (SWL)</span></div>
+  </div>
+  <div class="text">
+    <p>Tres números adimensionales clasifican cualquier onda:</p>
+    <ul class="pts">
+      <li>Peralte \(\varepsilon=H/L\): pendiente media de la ola. Si \(H/L\ll1\) la onda es lineal; en indefinidas rompe al llegar a \(H/L\approx0.142\approx1/7\).</li>
+      <li>Altura relativa \(\delta=H/h\): importancia de la oscilación frente al fondo. En someras rompe hacia \(H/h\approx0.78\).</li>
+      <li>Profundidad relativa \(\mu=h/L\) (o \(kh\)): cuánto "siente" la onda el fondo. Es el parámetro que decide casi todo.</li>
+    </ul>
+    <div class="eq">\[U_r=\frac{HL^2}{h^3}=\frac{\delta}{\mu^2}\qquad\text{(Ursell: si }U_r\gtrsim26\text{ la onda deja de ser sinusoidal: crestas agudas, valles planos)}\]</div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="lesson" id="l2">
+  <h2><span class="num">Lección 02</span>Ecuación de la dispersión y profundidad relativa</h2>
+  <div class="text">
+    <p>Al imponer las condiciones de contorno linealizadas a la solución de Laplace aparece la relación que liga periodo, longitud de onda y profundidad:</p>
+    <div class="eq">\[\boxed{\omega^2=gk\tanh kh}\qquad\Longleftrightarrow\qquad L=\frac{gT^2}{2\pi}\tanh\frac{2\pi h}{L},\qquad \frac L{L_0}=\frac C{C_0}=\tanh kh\]</div>
+    <p>Es trascendente: se resuelve iterando (Newton). En los dos extremos \(\tanh kh\) se simplifica y la ecuación se vuelve explícita.</p>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Profundidad</th><th>Criterio</th><th>Dispersión</th><th>Celeridad</th><th>Grupo</th><th>Qué significa</th></tr>
+    <tr><td>Indefinidas</td><td>\(h/L \gt 1/2\), \(kh \gt \pi\)</td><td>\(\omega^2=gk_0\)</td><td>\(C_0=\frac{gT}{2\pi}=1.56T\)</td><td>\(C_g=C_0/2\)</td><td>No siente el fondo. Dispersiva: las olas largas van más rápido.</td></tr>
+    <tr><td>Intermedias</td><td>\(1/20 \lt h/L \lt 1/2\)</td><td>\(\omega^2=gk\tanh kh\)</td><td>\(C_0\tanh kh\)</td><td>\(C_g=nC\)</td><td>\(C\) y \(L\) dependen de \(T\) y de \(h\).</td></tr>
+    <tr><td>Reducidas</td><td>\(h/L \lt 1/20\), \(kh \lt \pi/10\)</td><td>\(\omega^2=gk^2h\)</td><td>\(\sqrt{gh}\)</td><td>\(C_g=C\)</td><td>No dispersiva: todas las frecuencias viajan igual.</td></tr>
+  </table></div>
+  <div class="eq">\[n=\frac{C_g}{C}=\frac12\left(1+\frac{2kh}{\sinh 2kh}\right)\qquad\left(n=\tfrac12\text{ en indefinidas},\ n=1\text{ en reducidas}\right)\]</div>
+
+  <div class="board" id="lab">
+    <div class="bh"><b>Laboratorio · resuelve la dispersión</b><span id="lab-pill" class="pill" style="background:var(--water)">Intermedias</span></div>
+    <div class="controls">
+      <div class="ctl"><label for="lab-T"><span>Periodo T</span> <output id="o-lab-T"></output></label><input type="range" id="lab-T" min="2" max="20" step="0.01" value="10"></div>
+      <div class="ctl"><label for="lab-h"><span>Profundidad h</span> <output id="o-lab-h"></output></label><input type="range" id="lab-h" min="0" max="1000" step="1" value="500"></div>
+      <div class="ctl"><label for="lab-H"><span>Altura H</span> <output id="o-lab-H"></output></label><input type="range" id="lab-H" min="0.1" max="15" step="0.05" value="2"></div>
+    </div>
+    <div class="read" id="lab-read"></div>
+    <div id="lab-warn" class="legend"></div>
+    <div class="two">
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+        <canvas id="cv-lm" style="aspect-ratio:1.25/1" aria-label="Diagrama de Le Méhauté con el punto del laboratorio"></canvas>
+        <div class="legend">Diagrama de validez (Le Méhauté): ejes \(h/gT^2\) y \(H/gT^2\) en escala log.</div>
+      </div>
+      <div class="text" style="font-size:16px">
+        <p>Prueba esto:</p>
+        <ul class="pts">
+          <li>Con \(h=10\) m sube \(T\) de 2 a 20 s: \(L\) y \(C\) crecen, pero \(C\) se satura en \(\sqrt{gh}=9.9\) m/s.</li>
+          <li>Con \(T=10\) s baja \(h\) de 300 a 2 m: \(L\) pasa de 156 a 44 m. Ese acortamiento es el origen de la refracción.</li>
+          <li>Sube \(H\) hasta que aparezca el aviso de rotura: el punto cruza la curva superior del diagrama.</li>
+          <li>En someras con \(H\) grande el punto entra en la zona cnoidal (\(U_r \gt 26\)): la teoría lineal ya no describe bien la forma.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="lesson" id="l3">
+  <h2><span class="num">Lección 03</span>Hacia la costa: el periodo se conserva</h2>
+  <div class="text">
+    <p>Cuando la ola entra en aguas menos profundas no cambia su periodo. Por un punto fijo pasan cada segundo las mismas crestas que por cualquier otro (si no, se acumularían crestas entre ambos). La ecuación de la dispersión sigue siendo la misma: \(\omega\) está fija, \(h\) cambia y lo que se ajusta es \(k\).</p>
+    <div class="eq">\[\omega=\text{cte},\quad h\downarrow\ \Rightarrow\ k\uparrow,\ L\downarrow,\ C\downarrow;\qquad E\,C_g=\text{cte}\ \Rightarrow\ K_s=\frac H{H_0}=\sqrt{\frac{C_{g0}}{C_g}}\ \text{(asomeramiento)}\]</div>
+  </div>
+  <div class="board">
+    <div class="bh"><b>Pizarra 3 · propagación sobre un fondo en pendiente</b><div class="btns"><button data-play="shoal">Pausar</button></div></div>
+    <canvas id="cv-shoal" style="aspect-ratio:2.5/1" aria-label="Ola acortándose sobre un fondo inclinado con periodo constante"></canvas>
+    <div class="controls">
+      <div class="ctl"><label for="sh-T"><span>Periodo T</span> <output id="o-sh-T"></output></label><input type="range" id="sh-T" min="5" max="16" step="0.1" value="10"></div>
+    </div>
+    <div class="legend"><span>Escala vertical exagerada. Las etiquetas muestran h, L y C locales; T es el mismo en todo el dominio. Las boyas de color marcan que todas oscilan al mismo ritmo.</span></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="lesson" id="l4">
+  <h2><span class="num">Lección 04</span>Cinemática: órbitas, velocidades y presiones</h2>
+  <div class="text">
+    <p>Cada partícula describe una elipse cerrada alrededor de su posición media. Los semiejes salen del potencial lineal:</p>
+    <div class="eq">\[\alpha=a\frac{\cosh k(h+z)}{\sinh kh}\ \text{(horizontal)},\qquad \beta=a\frac{\sinh k(h+z)}{\sinh kh}\ \text{(vertical)},\qquad \frac\beta\alpha=\tanh k(h+z)\]</div>
+    <div class="eq">\[u=a\omega\frac{\cosh k(h+z)}{\sinh kh}\cos\theta,\qquad w=a\omega\frac{\sinh k(h+z)}{\sinh kh}\sin\theta,\qquad p=-\rho gz+\rho g\eta\,\underbrace{\frac{\cosh k(h+z)}{\cosh kh}}_{K_p}\]</div>
+  </div>
+  <div class="board">
+    <div class="bh"><b>Pizarra 4 · órbitas de las partículas</b><div class="btns"><button data-play="orb">Pausar</button></div></div>
+    <canvas id="cv-orb" style="aspect-ratio:2.2/1" aria-label="Órbitas de partículas bajo una onda según profundidad relativa"></canvas>
+    <div class="controls">
+      <div class="ctl"><label for="orb-hl"><span>Profundidad relativa h/L</span> <output id="o-orb-hl"></output></label><input type="range" id="orb-hl" min="0" max="1000" step="1" value="560"></div>
+      <div class="ctl" style="justify-content:flex-end"><div class="btns"><button data-hl="0.04">Reducidas</button><button data-hl="0.15">Intermedias</button><button data-hl="0.7">Indefinidas</button></div></div>
+      <label class="chk"><input type="checkbox" id="orb-vel" checked> Vectores velocidad</label>
+    </div>
+    <div class="read" id="orb-read"></div>
+    <div class="legend"><span>Los semiejes se dibujan con la misma escala en horizontal y vertical, así que la forma de cada elipse es real. Panel derecho: perfiles de \(\alpha\), \(\beta\) y \(K_p\) con la profundidad.</span></div>
+  </div>
+  <div class="idea"><b class="lab">Lo que debes ver</b>
+    <p>Indefinidas: círculos que se apagan como \(e^{kz}\) (a \(z=-L/2\) el radio es el 4 % del de superficie). Reducidas: elipses aplastadas, el movimiento horizontal casi igual en toda la columna y el vertical nulo en el fondo. En el fondo \(w=0\) siempre, pero \(u\neq0\): fluido no viscoso, desliza. \(u\) es máxima bajo cresta y seno; \(w\), en los pasos por cero.</p></div>
+</section>
+
+<!-- 5 -->
+<section class="lesson" id="l5">
+  <h2><span class="num">Lección 05</span>Onda estacionaria: reflexión total</h2>
+  <div class="text">
+    <p>Una onda que choca contra una pared vertical impermeable se refleja entera. La incidente y la reflejada tienen la misma altura y viajan en sentidos opuestos. Su suma ya no avanza: espacio y tiempo quedan desacoplados.</p>
+    <div class="eq">\[\eta=\frac H2\cos(kx-\omega t)+\frac H2\cos(kx+\omega t)=\boxed{H\cos kx\,\cos\omega t}\]</div>
+    <ul class="pts">
+      <li>Nodos (\(\eta=0\) siempre): \(kx=(2n+1)\pi/2\). Antinodos (oscilación \(\pm H\)): \(kx=n\pi\). Distancia nodo–antinodo: \(L/4\).</li>
+      <li>La amplitud en el antinodo es el doble que la de cada onda: \(2a=H\).</li>
+      <li>La velocidad horizontal es máxima en los nodos y nula en los antinodos; la vertical al revés. En la pared siempre hay antinodo.</li>
+      <li>La dispersión es la misma que la de la progresiva; no hay transporte neto de energía.</li>
+    </ul>
+  </div>
+  <div class="board">
+    <div class="bh"><b>Pizarra 5 · estacionaria frente a una pared</b><div class="btns"><button data-play="st">Pausar</button></div></div>
+    <canvas id="cv-st" style="aspect-ratio:2.4/1" aria-label="Onda estacionaria con nodos, antinodos y velocidades"></canvas>
+    <div class="controls">
+      <label class="chk"><input type="checkbox" id="st-comp" checked> Mostrar incidente y reflejada</label>
+      <label class="chk"><input type="checkbox" id="st-vel" checked> Mostrar velocidades</label>
+      <label class="chk"><input type="checkbox" id="st-trail"> Mostrar envolvente ±H</label>
+    </div>
+    <div class="legend"><span><i style="background:var(--water)"></i>suma \(\eta\)</span><span><i style="background:var(--comp)"></i>incidente (→)</span><span><i style="background:var(--crest)"></i>reflejada (←)</span><span>N: nodo · A: antinodo</span></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="lesson" id="l6">
+  <h2><span class="num">Lección 06</span>Onda cuasi-estacionaria: reflexión parcial</h2>
+  <div class="text">
+    <p>Un dique en talud, una escollera o una barrera porosa disipan o transmiten parte de la energía: la reflejada es menor (\(H_r \lt H_i\)) y puede ir desfasada \(\varepsilon\). El resultado está entre una progresiva y una estacionaria: los nodos ya no son de amplitud cero.</p>
+    <div class="eq">\[\eta=\frac{H_i}2\cos(kx-\omega t)+\frac{H_r}2\cos(kx+\omega t+\varepsilon)\]</div>
+    <div class="eq">\[\eta_{max}=\tfrac12(H_i+H_r)\ \text{(antinodo)},\qquad \eta_{min}=\tfrac12(H_i-H_r)\ \text{(cuasi-nodo)},\qquad K_r=\frac{H_r}{H_i}=\frac{\eta_{max}-\eta_{min}}{\eta_{max}+\eta_{min}}\]</div>
+    <p>Midiendo la envolvente (como en el ejercicio 4) se obtienen \(H_i\), \(H_r\) y, con la distancia \(L/4\) entre máximo y mínimo, también \(L\).</p>
+  </div>
+  <div class="board">
+    <div class="bh"><b>Pizarra 6 · reflexión parcial</b><div class="btns"><button data-play="qs">Pausar</button></div></div>
+    <canvas id="cv-qs" style="aspect-ratio:2.4/1" aria-label="Onda cuasi-estacionaria con envolvente"></canvas>
+    <div class="controls">
+      <div class="ctl"><label for="qs-kr"><span>Coeficiente de reflexión K<sub>r</sub></span> <output id="o-qs-kr"></output></label><input type="range" id="qs-kr" min="0" max="1" step="0.01" value="0.5"></div>
+      <div class="ctl"><label for="qs-eps"><span>Desfase ε</span> <output id="o-qs-eps"></output></label><input type="range" id="qs-eps" min="0" max="360" step="1" value="0"></div>
+    </div>
+    <div class="read" id="qs-read"></div>
+    <div class="legend"><span><i style="background:var(--water)"></i>\(\eta(x,t)\)</span><span><i style="background:var(--env)"></i>envolvente</span><span>Kr = 0: progresiva pura (envolvente plana). Kr = 1: estacionaria (nodos a cero).</span></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="lesson" id="l7">
+  <h2><span class="num">Lección 07</span>Crestas cortas: dos trenes oblicuos</h2>
+  <div class="text">
+    <p>Si una onda incide con un ángulo \(\theta\) sobre una pared (o se cruzan dos trenes iguales con direcciones \(\pm\theta\)), la suma es progresiva a lo largo de la pared y estacionaria en la dirección perpendicular. Vista en planta aparece un tablero de "montículos" que avanza.</p>
+    <div class="eq">\[\eta=a\cos(kx\cos\theta+ky\sin\theta-\omega t)+a\cos(kx\cos\theta-ky\sin\theta-\omega t)=\boxed{2a\cos(k_yy)\cos(k_xx-\omega t)}\]</div>
+    <div class="eq">\[k_x=k\cos\theta,\quad k_y=k\sin\theta,\qquad L_x=\frac L{\cos\theta},\quad L_y=\frac L{\sin\theta},\qquad C_x=\frac{C}{\cos\theta}\]</div>
+  </div>
+  <div class="board">
+    <div class="bh"><b>Pizarra 7 · vista en planta (pared en el borde inferior)</b><div class="btns"><button data-play="cc">Pausar</button></div></div>
+    <canvas id="cv-cc" style="aspect-ratio:2/1" aria-label="Mapa en planta de la superficie con crestas cortas"></canvas>
+    <div class="controls">
+      <div class="ctl"><label for="cc-th"><span>Ángulo θ respecto a la pared</span> <output id="o-cc-th"></output></label><input type="range" id="cc-th" min="0" max="90" step="1" value="35"></div>
+    </div>
+    <div class="read" id="cc-read"></div>
+    <div class="legend"><span>Color cálido: cresta · color oscuro: seno. Líneas discontinuas: líneas nodales (\(\cos k_yy=0\)), sin movimiento vertical. θ = 0°: incidencia rasante (progresiva pura a lo largo de la pared). θ = 90°: incidencia normal (estacionaria pura).</span></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="lesson" id="l8">
+  <h2><span class="num">Lección 08</span>Grupos de ondas y celeridad de grupo</h2>
+  <div class="text">
+    <p>Dos ondas de igual altura y frecuencias parecidas \(\omega_1\approx\omega_2\) se refuerzan y se anulan alternativamente. La identidad \(\cos A+\cos B=2\cos\frac{A+B}2\cos\frac{A-B}2\) separa la señal en una portadora rápida y una envolvente lenta:</p>
+    <div class="eq">\[\eta=H\underbrace{\cos(\bar kx-\bar\omega t)}_{\text{portadora}}\ \underbrace{\cos\!\Big[\tfrac12(\Delta k\,x-\Delta\omega\,t)\Big]}_{\text{envolvente (modulante)}},\qquad \bar\omega=\frac{\omega_1+\omega_2}2,\ \ \bar k=\frac{k_1+k_2}2\]</div>
+    <div class="eq">\[C=\frac{\bar\omega}{\bar k},\qquad C_g=\frac{\Delta\omega}{\Delta k}\ \xrightarrow{\Delta k\to0}\ \frac{d\omega}{dk}=nC,\qquad T_g=\frac{2\pi}{\Delta\omega},\quad L_g=\frac{2\pi}{\Delta k},\quad T_{mod}=\frac{4\pi}{\Delta\omega}=2T_g\]</div>
+    <ul class="pts">
+      <li>La portadora oscila a la frecuencia media (no a la mayor) y avanza con \(C\). La envolvente avanza con \(C_g\).</li>
+      <li>El grupo se repite cada \(T_g\), no cada \(T_{mod}\): la altura depende de \(|\cos|\), que se repite en medio ciclo.</li>
+      <li>En indefinidas \(C_g=C/2\): las olas nacen en la cola del grupo, lo atraviesan y mueren en el frente. La energía viaja con \(C_g\) porque por los nodos no puede pasar.</li>
+      <li>En un espectro (FFT) solo hay dos picos, en \(\omega_1\) y \(\omega_2\). Portadora y envolvente son la forma en que vemos la suma en el tiempo.</li>
+    </ul>
+  </div>
+  <div class="board">
+    <div class="bh"><b>Pizarra 8 · grupo bicromático</b><div class="btns"><button id="g-ej5">Cargar Ej. 5</button><button data-play="gr">Pausar</button></div></div>
+    <canvas id="cv-gr" style="aspect-ratio:1.9/1" aria-label="Grupo de ondas: componentes, suma, envolvente y registro en un punto"></canvas>
+    <div class="controls">
+      <div class="ctl"><label for="g-T1"><span>T<sub>1</sub></span> <output id="o-g-T1"></output></label><input type="range" id="g-T1" min="4" max="14" step="0.05" value="5.7"></div>
+      <div class="ctl"><label for="g-dT"><span>ΔT = T<sub>1</sub> − T<sub>2</sub></span> <output id="o-g-dT"></output></label><input type="range" id="g-dT" min="0.1" max="1.5" step="0.01" value="0.3"></div>
+      <div class="ctl"><label for="g-h"><span>Profundidad h</span> <output id="o-g-h"></output></label><input type="range" id="g-h" min="0" max="1000" step="1" value="830"></div>
+      <div class="ctl"><label for="g-sp"><span>Velocidad de reproducción</span> <output id="o-g-sp"></output></label><input type="range" id="g-sp" min="0.25" max="4" step="0.05" value="1"></div>
+    </div>
+    <div class="read" id="g-read"></div>
+    <div class="legend"><span><i style="background:var(--comp)"></i>componentes 1 y 2</span><span><i style="background:var(--water)"></i>suma</span><span><i style="background:var(--env)"></i>envolvente (C<sub>g</sub>)</span><span><i style="background:var(--crest)"></i>punto de fase de una cresta (C)</span></div>
+  </div>
+  <div class="idea"><b class="lab">Aplicación: eólica flotante</b><p>Los periodos naturales de surge, sway y yaw de un flotante amarrado (60–200 s) están muy lejos del periodo de las olas, pero cerca de \(T_g\). Las fuerzas de deriva lenta (segundo orden, \(\propto\) envolvente\(^2\)) excitan esa resonancia: en el ejercicio 5 la plataforma oscila en surge con \(T\approx T_g\approx103\) s.</p></div>
+</section>
+
+<!-- 9 -->
+<section class="lesson" id="l9">
+  <h2><span class="num">Lección 09</span>Oleaje irregular: superposición de muchas componentes</h2>
+  <div class="text">
+    <p>Llevando la superposición al límite, el mar real es la suma de infinitas ondas de distinta frecuencia, dirección y fase aleatoria. Cada componente cumple su propia dispersión y aporta su varianza \(a_i^2/2\): se suman energías, no alturas.</p>
+    <div class="eq">\[\eta(t)=\sum_i a_i\cos(\omega_it+\varphi_i),\qquad a_i=\sqrt{2S(\omega_i)\Delta\omega},\quad \varphi_i\sim U[0,2\pi),\qquad m_0=\sum\frac{a_i^2}2=\sigma_\eta^2,\quad H_{m0}=4\sqrt{m_0}\]</div>
+  </div>
+  <div class="board">
+    <div class="bh"><b>Pizarra 9 · síntesis por fases aleatorias (JONSWAP)</b><div class="btns"><button id="ir-seed">Nuevas fases</button><button data-play="ir">Pausar</button></div></div>
+    <canvas id="cv-ir" style="aspect-ratio:2.1/1" aria-label="Registro de oleaje irregular y su espectro"></canvas>
+    <div class="controls">
+      <div class="ctl"><label for="ir-hs"><span>H<sub>m0</sub></span> <output id="o-ir-hs"></output></label><input type="range" id="ir-hs" min="0.5" max="10" step="0.1" value="4"></div>
+      <div class="ctl"><label for="ir-tp"><span>T<sub>p</sub></span> <output id="o-ir-tp"></output></label><input type="range" id="ir-tp" min="4" max="18" step="0.1" value="10"></div>
+      <div class="ctl"><label for="ir-g"><span>γ (apuntamiento)</span> <output id="o-ir-g"></output></label><input type="range" id="ir-g" min="1" max="10" step="0.1" value="3.3"></div>
+    </div>
+    <div class="read" id="ir-read"></div>
+    <div class="legend"><span>Arriba: registro en una boya (últimos 150 s). Abajo: espectro S(f) y las componentes usadas. Con γ alto (swell) aparecen grupos muy marcados; con γ = 1 (Pierson-Moskowitz) el mar es más desordenado.</span></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="lesson" id="l10">
+  <h2><span class="num">Lección 10</span>Onda en presencia de una corriente</h2>
+  <div class="text">
+    <p>Una corriente uniforme \(U\) arrastra el sistema de ondas. Un observador fijo mide la frecuencia absoluta \(\omega\) (se conserva); el agua "ve" la frecuencia intrínseca \(\sigma\), que es la que cumple la dispersión:</p>
+    <div class="eq">\[\sigma^2=(\omega-\vec k\cdot\vec U)^2=gk\tanh kh\]</div>
+    <p>Corriente a favor: la ola se alarga y se aplana. Corriente en contra: se acorta y se peralta; si \(U\) en contra supera aproximadamente \(C_g\), la energía no puede remontar y la ola se bloquea (rompe).</p>
+  </div>
+  <div class="board">
+    <div class="bh"><b>Pizarra 10 · misma T, con y sin corriente</b><div class="btns"><button data-play="cu">Pausar</button></div></div>
+    <canvas id="cv-cu" style="aspect-ratio:2.4/1" aria-label="Comparación de una ola con y sin corriente"></canvas>
+    <div class="controls">
+      <div class="ctl"><label for="cu-T"><span>Periodo absoluto T</span> <output id="o-cu-T"></output></label><input type="range" id="cu-T" min="4" max="14" step="0.1" value="8"></div>
+      <div class="ctl"><label for="cu-U"><span>Corriente U (+ a favor)</span> <output id="o-cu-U"></output></label><input type="range" id="cu-U" min="-4" max="4" step="0.05" value="-1.5"></div>
+      <div class="ctl"><label for="cu-h"><span>Profundidad h</span> <output id="o-cu-h"></output></label><input type="range" id="cu-h" min="2" max="100" step="1" value="40"></div>
+    </div>
+    <div class="read" id="cu-read"></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="lesson" id="l11">
+  <h2><span class="num">Lección 11</span>Magnitudes promediadas: energía y flujo de energía</h2>
+  <div class="text">
+    <p>Promediando en un periodo los términos cuadráticos se obtienen las magnitudes que usa el ingeniero:</p>
+    <div class="eq">\[\bar E_c=\bar E_p=\tfrac1{16}\rho gH^2,\qquad E=\tfrac18\rho gH^2\ (\mathrm{J/m^2}),\qquad \bar F=E\,C_g=E\,nC\ (\mathrm{W/m}),\qquad M=\frac EC\]</div>
+    <div class="eq">\[\text{Indefinidas: }\bar F=\frac{\rho g^2H^2T}{32\pi}\qquad\text{Reducidas: }\bar F=\tfrac18\rho gH^2\sqrt{gh}\qquad\text{Oleaje irregular: }P\approx0.49\,H_{m0}^2T_e\ \mathrm{(kW/m)}\]</div>
+    <ul class="pts">
+      <li>La energía por unidad de superficie solo depende de \(H\), no de \(T\) ni de \(h\). Se reparte a partes iguales entre cinética y potencial.</li>
+      <li>La energía viaja con \(C_g\), no con \(C\). Por eso, al conservar \(E C_g\) hacia la costa, la altura cambia (asomeramiento).</li>
+      <li>Las órbitas lineales son cerradas, pero la velocidad bajo la cresta es algo mayor que bajo el seno: hay un transporte neto de masa \(M\) (deriva de Stokes).</li>
+    </ul>
+    <p>El laboratorio de la lección 02 calcula \(E\) y \(\bar F\) en vivo para los valores que elijas.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="lesson" id="l12">
+  <h2><span class="num">Lección 12</span>Ejercicios de teoría de ondas resueltos</h2>
+  <p>Ábrelos uno a uno e intenta cada paso antes de leerlo. Los botones llevan los datos a la pizarra correspondiente.</p>
+
+  <details class="ex"><summary>Ejercicio 1 · Profundidad de la plataforma a partir de L</summary><div class="body">
+    <p class="enun">Por teledetección se mide \(L=312\) m en indefinidas y \(L=200\) m sobre la plataforma continental. Calcula la profundidad de la plataforma.</p>
+    <ol class="steps">
+      <li>En indefinidas \(L_0=gT^2/2\pi\): \(T=\sqrt{2\pi\cdot312/9.81}=14.14\) s.</li>
+      <li>El periodo se conserva al entrar en la plataforma (lección 03).</li>
+      <li>Como \(L/L_0=\tanh kh\): \(kh=\operatorname{artanh}(200/312)=\operatorname{artanh}(0.641)=\tfrac12\ln\frac{1.641}{0.359}=0.760\).</li>
+      <li>\(k=2\pi/200=0.0314\ \mathrm{m^{-1}}\) \(\Rightarrow\) \(h=0.760/0.0314=\mathbf{24.2\ m}\) (intermedias, \(h/L=0.12\)).</li>
+    </ol>
+    <div class="btns"><button data-goto="ej1">Ver en el laboratorio</button></div>
+  </div></details>
+
+  <details class="ex"><summary>Ejercicio 2 · La ola a partir de una órbita</summary><div class="body">
+    <p class="enun">Canal de \(h=1\) m. A media profundidad las partículas describen elipses de semieje mayor 0.1 m y menor 0.05 m. Calcula \(H\), \(T\) y \(L\).</p>
+    <ol class="steps">
+      <li>\(\beta/\alpha=\tanh k(h+z)\) con \(h+z=0.5\) m: \(0.5=\tanh(0.5k)\).</li>
+      <li>\(0.5k=\operatorname{artanh}0.5=\tfrac12\ln3=0.5493\Rightarrow k=1.0986\ \mathrm{m^{-1}}\), \(L=\mathbf{5.72\ m}\).</li>
+      <li>Dispersión: \(\omega^2=9.81\cdot1.0986\tanh(1.0986)\Rightarrow\omega=2.936\) rad/s, \(T=\mathbf{2.14\ s}\).</li>
+      <li>\(\alpha=\frac H2\frac{\cosh(0.5k)}{\sinh k}\Rightarrow0.1=\frac H2\cdot\frac{1.155}{1.333}\Rightarrow H=\mathbf{0.23\ m}\).</li>
+    </ol>
+    <div class="btns"><button data-goto="ej2">Ver las órbitas (h/L = 0.175)</button></div>
+  </div></details>
+
+  <details class="ex"><summary>Ejercicio 3 · Hora de llegada de un tsunami</summary><div class="body">
+    <p class="enun">Se detecta un tsunami a las 12:00 en el borde de la plataforma (\(h=200\) m). El fondo sube con pendiente 0.005 hasta la costa. ¿Cuándo llega?</p>
+    <ol class="steps">
+      <li>Onda muy larga \(\Rightarrow\) reducidas: \(C=\sqrt{gh}\), con \(h(x)=200-0.005x\). Distancia: \(200/0.005=40\) km.</li>
+      <li>\(C\) varía con \(x\), hay que integrar: \(t=\displaystyle\int_0^{40000}\frac{dx}{\sqrt{g(200-0.005x)}}=\frac{2\sqrt{g\cdot200}}{0.005\,g}=1806\) s.</li>
+      <li>\(t\approx30\) min \(\Rightarrow\) llegada hacia las \(\mathbf{12{:}30}\).</li>
+    </ol>
+    <div class="warn"><b class="lab">Error típico</b><p>Usar la celeridad con la profundidad media (100 m) da 1277 s, un 30 % menos: \(1/C\) no es lineal en \(h\).</p></div>
+  </div></details>
+
+  <details class="ex"><summary>Ejercicio 4 · Reflexión y transmisión en un puerto</summary><div class="body">
+    <p class="enun">Se miden las envolventes de la superficie libre a ambos lados de una barrera fija. Calcula el oleaje reflejado, el transmitido y el cambio de profundidad.</p>
+    <ol class="steps">
+      <li>A ambos lados hay onda cuasi-estacionaria. Distancia máximo–mínimo de la envolvente \(=L/4\): barlomar \(L_1=4\cdot4.17=16.67\) m (\(k_1=0.377\)); sotamar \(L_2=4\cdot3.65=14.6\) m (\(k_2=0.430\)).</li>
+      <li>Donde \(h=2\) m es conocida (\(k=0.430\)): \(\omega=\sqrt{gk\tanh kh}=1.715\) rad/s, \(T=3.66\) s, igual en ambas zonas.</li>
+      <li>Barlomar: \(\tfrac12(H_i+H_r)=0.15\), \(\tfrac12(H_i-H_r)=0.05\Rightarrow H_i=0.20\) m, \(H_r=\mathbf{0.10\ m}\) (\(K_r=0.5\)).</li>
+      <li>Sotamar: \(\tfrac12(H_i+H_r)=0.129\), \(\tfrac12(H_i-H_r)=0.061\Rightarrow H_t=\mathbf{0.19\ m}\), \(H_r=0.068\) m.</li>
+      <li>Profundidad en la zona de \(k=0.377\) con \(T=3.66\) s: \(h\approx2.88\) m. Diferencia \(\approx0.85\)–0.88 m: el puerto es más somero.</li>
+    </ol>
+    <div class="warn"><b class="lab">Revisión de la solución de clase</b><p>En el último paso aparece \(k=0.43\) pero \(h=2.85\) m corresponde a \(k=0.377\). Regla: a igual \(T\), la zona con menor \(L\) es la más somera.</p></div>
+    <div class="btns"><button data-goto="ej4">Ver K<sub>r</sub> = 0.5 en la pizarra</button></div>
+  </div></details>
+
+  <details class="ex"><summary>Ejercicio 5 · Grupo bicromático sobre una plataforma flotante</summary><div class="body">
+    <p class="enun">\(H_1=H_2=2\) m, \(T_1=5.7\) s, \(T_2=5.4\) s, \(h=102\) m. Calcula portadora, modulante y grupo, y el periodo de respuesta en surge.</p>
+    <ol class="steps">
+      <li>\(\omega_1=1.1023\), \(\omega_2=1.1636\) rad/s \(\Rightarrow\bar\omega=1.1329\) rad/s, \(T=5.55\) s. Dispersión: \(\bar k=0.1308\ \mathrm{m^{-1}}\), \(C=8.66\) m/s (indefinidas, \(kh=13.3\)).</li>
+      <li>\(k_1=0.1238\) (\(L_1=50.7\) m), \(k_2=0.1380\) (\(L_2=45.5\) m): \(\Delta k=0.0141\ \mathrm{m^{-1}}\), \(\Delta\omega=0.0612\) rad/s.</li>
+      <li>Modulante: \(T_{mod}=4\pi/\Delta\omega=205\) s. Grupo: \(T_g=2\pi/\Delta\omega=\mathbf{102.6\ s}\), \(L_g=444\) m, \(C_g=\Delta\omega/\Delta k=4.33\) m/s \(=C/2\).</li>
+      <li>La plataforma responde en surge a la frecuencia del grupo: periodo \(\approx103\) s.</li>
+    </ol>
+    <div class="btns"><button data-goto="ej5">Cargar en la pizarra de grupos</button></div>
+  </div></details>
+</section>
+
+<!-- 13 -->
+<section class="lesson" id="l13">
+  <h2><span class="num">Lección 13</span>Resumen de soluciones por superposición</h2>
+  <div class="tbl"><table>
+    <tr><th>Tipo</th><th>Se forma con</th><th>Fórmula característica</th><th>Comportamiento clave</th></tr>
+    <tr><td>Progresiva</td><td>1 onda</td><td>\(\eta=\frac H2\cos(kx-\omega t)\)</td><td>Avanza con \(C\); energía con \(C_g\)</td></tr>
+    <tr><td>Estacionaria</td><td>2 iguales, sentidos opuestos</td><td>\(\eta=H\cos kx\cos\omega t\)</td><td>Nodos fijos cada \(L/2\); no avanza; \(K_r=1\)</td></tr>
+    <tr><td>Cuasi-estacionaria</td><td>\(H_r \lt H_i\), sentidos opuestos</td><td>\(\eta_{max,min}=\frac12(H_i\pm H_r)\)</td><td>Cuasi-nodos con amplitud \(\neq0\); \(0 \lt K_r \lt 1\)</td></tr>
+    <tr><td>Crestas cortas</td><td>2 iguales, direcciones \(\pm\theta\)</td><td>\(\eta=2a\cos(k_yy)\cos(k_xx-\omega t)\)</td><td>Progresiva en \(x\), estacionaria en \(y\)</td></tr>
+    <tr><td>Grupos</td><td>2 iguales, \(\omega_1\approx\omega_2\)</td><td>\(\eta=H\cos(\bar kx-\bar\omega t)\cos[\frac12(\Delta kx-\Delta\omega t)]\)</td><td>\(T_g=2\pi/\Delta\omega\), \(C_g=\Delta\omega/\Delta k=nC\)</td></tr>
+    <tr><td>Irregular</td><td>\(N\) componentes aleatorias</td><td>\(\eta=\sum a_i\cos(\omega_it+\varphi_i)\)</td><td>Proceso gaussiano; \(H_{m0}=4\sqrt{m_0}\)</td></tr>
+    <tr><td>Onda + corriente</td><td>Onda + \(U\) uniforme</td><td>\((\omega-\vec k\cdot\vec U)^2=gk\tanh kh\)</td><td>En contra: \(L\downarrow\), \(H\uparrow\), bloqueo</td></tr>
+  </table></div>
+  <footer>
+    <span>Basado en las presentaciones de Mecánica de ondas (R. Guanche, ETSIN-UPM) y en los ejercicios 1–5 de clase, con resultados recalculados.</span>
+    <span>Referencias: Dean y Dalrymple (1991), <a href="https://doi.org/10.1142/1232" target="_blank" rel="noopener">Water Wave Mechanics for Engineers and Scientists</a>; TU Delft, <a href="https://coastal.citg.tudelft.nl/book/notebooks/b-wave-dispersion-and-grouping" target="_blank" rel="noopener">Coastal Dynamics: wave dispersion and grouping</a>.</span>
+  </footer>
+</section>
+</main>
+</div>
+
+<script>
+(()=>{
+const g=9.81, TAU=Math.PI*2, RHO=1025;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $=id=>document.getElementById(id);
+
+/* ---------- física ---------- */
+function solveK(T,h){const w=TAU/T,k0=w*w/g;let k=k0/Math.sqrt(Math.tanh(k0*h))||k0;
+  for(let i=0;i<40;i++){const t=Math.tanh(k*h),f=g*k*t-w*w,df=g*t+g*k*h*(1-t*t),dk=f/df;k-=dk;if(Math.abs(dk)<1e-13*k)break;}return k;}
+function info(T,h){const k=solveK(T,h),w=TAU/T,kh=k*h,s=Math.sinh(2*kh),n=0.5*(1+(isFinite(s)?2*kh/s:0));
+  return{k,w,L:TAU/k,C:w/k,kh,n,Cg:n*w/k,L0:g*T*T/TAU};}
+function regime(hL){return hL>0.5?['Indefinidas','--water']:hL<0.05?['Reducidas','--env']:['Intermedias','--ok'];}
+const f2=(x,d=2)=>Number(x).toLocaleString('es-ES',{minimumFractionDigits:d,maximumFractionDigits:d});
+const logMap=(v,a,b)=>a*Math.pow(b/a,v/1000), logInv=(x,a,b)=>1000*Math.log(x/a)/Math.log(b/a);
+
+/* ---------- colores del tema ---------- */
+let COL={},stamp=0;
+function col(n){const now=performance.now();if(now-stamp>500){COL={};stamp=now;}
+  return COL[n]||(COL[n]=getComputedStyle(document.documentElement).getPropertyValue('--'+n).trim()||'#888');}
+function rgb(hex){hex=hex.replace('#','');if(hex.length===3)hex=hex.split('').map(c=>c+c).join('');const v=parseInt(hex,16);return[(v>>16)&255,(v>>8)&255,v&255];}
+function alpha(n,a){const[r,gg,b]=rgb(col(n));return`rgba(${r},${gg},${b},${a})`;}
+
+/* ---------- escenas ---------- */
+const scenes={};
+const io=new IntersectionObserver(es=>es.forEach(e=>{const s=e.target._scene;if(s)s.visible=e.isIntersecting;}),{rootMargin:'100px'});
+function scene(id,key,draw,opts={}){const cv=$(id),s={cv,ctx:cv.getContext('2d'),t:opts.t0||0,playing:!reduce&&!opts.still,visible:true,draw,speed:1,w:0,h:0,still:!!opts.still};
+  cv._scene=s;s.render=()=>{if(!s.w)return;const c=s.ctx;c.clearRect(0,0,s.w,s.h);c.fillStyle=col('panel');c.fillRect(0,0,s.w,s.h);s.draw(s,c);};
+  s.fit=()=>{const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);if(!r.width)return;cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d);s.ctx.setTransform(d,0,0,d,0,0);s.w=r.width;s.h=r.height;s.render();};
+  scenes[key]=s;io.observe(cv);new ResizeObserver(()=>s.fit()).observe(cv);s.fit();return s;}
+document.querySelectorAll('[data-play]').forEach(b=>{const k=b.dataset.play;const sync=()=>{const s=scenes[k];if(s)b.textContent=s.playing?'Pausar':'Reproducir';};
+  b.addEventListener('click',()=>{const s=scenes[k];if(!s)return;s.playing=!s.playing;sync();});setTimeout(sync,0);});
+let last=performance.now();
+function loop(now){const dt=Math.min(0.05,(now-last)/1000);last=now;
+  for(const k in scenes){const s=scenes[k];if(s.visible&&s.playing&&!s.still){s.t+=dt*s.speed;s.render();}}requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+const rerender=()=>{COL={};for(const k in scenes)scenes[k].render();};
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',rerender);
+new MutationObserver(rerender).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+/* utilidades de dibujo */
+function line(c,pts,color,w=2,dash){c.beginPath();c.strokeStyle=color;c.lineWidth=w;c.setLineDash(dash||[]);pts.forEach((p,i)=>i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]));c.stroke();c.setLineDash([]);}
+function txt(c,s,x,y,color,size=12,align='left',font='d'){c.fillStyle=color;c.font=`${font==='m'?'500':'600'} ${size}px ${font==='m'?'JetBrains Mono, monospace':'Bricolage Grotesque, system-ui, sans-serif'}`;c.textAlign=align;c.textBaseline='middle';const tw=c.measureText(s).width,bx=align==='right'?x-tw:align==='center'?x-tw/2:x;c.save();c.fillStyle=alpha('panel',0.85);c.fillRect(bx-3,y-size*0.65,tw+6,size*1.3);c.restore();c.fillStyle=color;c.fillText(s,x,y);}
+function arrow(c,x1,y1,x2,y2,color,w=1.6,head=6){const a=Math.atan2(y2-y1,x2-x1);c.strokeStyle=color;c.fillStyle=color;c.lineWidth=w;c.beginPath();c.moveTo(x1,y1);c.lineTo(x2,y2);c.stroke();
+  c.beginPath();c.moveTo(x2,y2);c.lineTo(x2-head*Math.cos(a-0.45),y2-head*Math.sin(a-0.45));c.lineTo(x2-head*Math.cos(a+0.45),y2-head*Math.sin(a+0.45));c.closePath();c.fill();}
+function dbl(c,x1,y1,x2,y2,color){arrow(c,x1,y1,x2,y2,color,1.4,5);arrow(c,x2,y2,x1,y1,color,1.4,5);}
+function waterFill(c,pts,bottomY,color){c.beginPath();c.moveTo(pts[0][0],bottomY);pts.forEach(p=>c.lineTo(p[0],p[1]));c.lineTo(pts[pts.length-1][0],bottomY);c.closePath();c.fillStyle=color;c.fill();}
+function bind(id,fmt,fn,map){const el=$(id),o=$('o-'+id);const up=()=>{const v=map?map(+el.value):+el.value;if(o)o.textContent=fmt(v);fn&&fn(v);};el.addEventListener('input',up);up();return{el,get v(){return map?map(+el.value):+el.value},set(v){el.value=map&&map.inv?map.inv(v):v;up();}};}
+
+/* ===== 1. onda progresiva ===== */
+scene('cv-ola','ola',(s,c)=>{const W=s.w,H=s.h,Lp=W/2.35,k=TAU/Lp,Tn=3.2,w=TAU/Tn,a=H*0.15,y0=H*0.5;
+  const eta=x=>a*Math.cos(k*x-w*s.t);const pts=[];for(let x=0;x<=W;x+=2)pts.push([x,y0-eta(x)]);
+  waterFill(c,pts,H,alpha('water',0.14));line(c,[[0,y0],[W,y0]],col('muted'),1,[5,5]);line(c,pts,col('water'),2.6);
+  txt(c,'nivel en reposo',W-8,y0+12,col('muted'),11,'right');
+  let xc=((w*s.t/k)%Lp+Lp)%Lp;if(xc<Lp*0.12)xc+=Lp;const yc=y0-a,yt=y0+a;
+  dbl(c,xc,yc-24,xc+Lp,yc-24,col('fg'));txt(c,'L',xc+Lp/2,yc-36,col('fg'),15,'center');
+  line(c,[[xc,yc-30],[xc,yc]],col('muted'),1,[3,3]);line(c,[[xc+Lp,yc-30],[xc+Lp,yc]],col('muted'),1,[3,3]);
+  const xt=xc+Lp/2;line(c,[[xt-50,yc],[xt+40,yc]],col('muted'),1,[3,3]);dbl(c,xt,yc,xt,yt,col('env'));txt(c,'H = 2a',xt+8,y0+a*0.45,col('env'),13);
+  dbl(c,xc-14,y0,xc-14,yc,col('ok'));txt(c,'a',xc-24,y0-a/2,col('ok'),13,'right');
+  txt(c,'cresta',xc,yc-10+ (yc-10<20?30:0),col('muted'),11,'center');txt(c,'seno',xt,yt+14,col('muted'),11,'center');
+  arrow(c,W*0.06,H*0.12,W*0.06+70,H*0.12,col('water'),2,8);txt(c,'C = L/T',W*0.06+78,H*0.12,col('water'),13);
+  const xb=W*0.86,yb=y0-eta(xb);c.fillStyle=col('crest');c.beginPath();c.arc(xb,yb,7,0,TAU);c.fill();line(c,[[xb,yb+7],[xb,H-6]],alpha('crest',0.5),1,[2,3]);
+  txt(c,'boya',xb,yb-16,col('crest'),12,'center');
+  txt(c,`t = ${f2(s.t/Tn,2)} T`,10,H-12,col('muted'),12,'left','m');
+});
+
+/* ===== 2. laboratorio ===== */
+const lab={T:10,h:30,H:2};
+function drawLM(s,c){const W=s.w,H=s.h,m={l:52,r:12,t:12,b:40},x0=3e-4,x1=0.3,y0=3e-5,y1=0.06;
+  const X=v=>m.l+(W-m.l-m.r)*Math.log(v/x0)/Math.log(x1/x0),Y=v=>H-m.b-(H-m.t-m.b)*Math.log(v/y0)/Math.log(y1/y0);
+  c.strokeStyle=alpha('muted',0.18);c.lineWidth=1;
+  for(let e=-4;e<=0;e++)for(const d of[1,2,5]){const v=d*10**e;if(v>=x0&&v<=x1){c.beginPath();c.moveTo(X(v),m.t);c.lineTo(X(v),H-m.b);c.stroke();}if(v>=y0&&v<=y1){c.beginPath();c.moveTo(m.l,Y(v));c.lineTo(W-m.r,Y(v));c.stroke();}}
+  const khOf=x=>{const k0h=4*Math.PI*Math.PI*x;let kh=Math.max(Math.sqrt(k0h),k0h);for(let i=0;i<40;i++){const t=Math.tanh(kh),f=kh*t-k0h,df=t+kh*(1-t*t);kh-=f/df;}return kh;};
+  const brk=[],urs=[];for(let i=0;i<=200;i++){const x=x0*Math.pow(x1/x0,i/200),kh=khOf(x),Lg=TAU*x/kh;brk.push([X(x),Y(0.142*Math.tanh(kh)*Lg)]);const yu=26*x*x*x/(Lg*Lg);if(yu<y1*2)urs.push([X(x),Y(Math.max(yu,y0*0.5))]);}
+  c.save();c.beginPath();c.rect(m.l,m.t,W-m.l-m.r,H-m.t-m.b);c.clip();
+  c.beginPath();c.moveTo(brk[0][0],m.t);brk.forEach(p=>c.lineTo(p[0],p[1]));c.lineTo(W,m.t);c.closePath();c.fillStyle=alpha('env',0.12);c.fill();
+  line(c,brk,col('env'),2);line(c,urs,col('comp'),2,[6,4]);
+  const xd=Math.PI*Math.tanh(Math.PI)/(4*Math.PI**2),xs=(Math.PI/10)*Math.tanh(Math.PI/10)/(4*Math.PI**2);
+  line(c,[[X(xd),m.t],[X(xd),H-m.b]],col('muted'),1,[4,4]);line(c,[[X(xs),m.t],[X(xs),H-m.b]],col('muted'),1,[4,4]);
+  txt(c,'ROTURA',X(0.02),Y(0.035),col('env'),12,'center');txt(c,'Lineal / Stokes',X(0.03),Y(0.0004),col('water'),12,'center');
+  txt(c,'Cnoidal',X(0.0007),Y(0.004),col('comp'),12,'center');txt(c,'Ur = 26',X(0.0045),Y(0.0045),col('comp'),11,'left');
+  txt(c,'someras',X(xs)-4,m.t+10,col('muted'),10,'right');txt(c,'profundas',X(xd)+4,m.t+10,col('muted'),10,'left');
+  const px=lab.h/(g*lab.T*lab.T),py=lab.H/(g*lab.T*lab.T);
+  if(px>=x0&&px<=x1&&py>=y0&&py<=y1){c.fillStyle=col('crest');c.beginPath();c.arc(X(px),Y(py),7,0,TAU);c.fill();c.strokeStyle=col('panel');c.lineWidth=2;c.stroke();}
+  c.restore();
+  c.strokeStyle=col('line');c.strokeRect(m.l,m.t,W-m.l-m.r,H-m.t-m.b);
+  for(const v of[1e-3,1e-2,1e-1])txt(c,v.toExponential(0).replace('e','e'),X(v),H-m.b+12,col('muted'),10,'center','m');
+  for(const v of[1e-4,1e-3,1e-2])txt(c,v.toExponential(0),m.l-4,Y(v),col('muted'),10,'right','m');
+  txt(c,'h / gT²',m.l+(W-m.l-m.r)/2,H-10,col('fg'),12,'center');
+  c.save();c.translate(12,m.t+(H-m.t-m.b)/2);c.rotate(-Math.PI/2);txt(c,'H / gT²',0,0,col('fg'),12,'center');c.restore();}
+const lmScene=scene('cv-lm','lm',drawLM,{still:true});
+function updLab(){const I=info(lab.T,lab.h),hL=lab.h/I.L,[rn,rc]=regime(hL),Ur=lab.H*I.L*I.L/lab.h**3,E=RHO*g*lab.H**2/8;
+  const pill=$('lab-pill');pill.textContent=rn;pill.style.background=`var(${rc})`;
+  const rows=[['L₀ = gT²/2π',f2(I.L0,1)+' m'],['L',f2(I.L,1)+' m'],['k',f2(I.k,4)+' m⁻¹'],['kh',f2(I.kh,3)],['h/L',f2(hL,3)],['C',f2(I.C,2)+' m/s'],['n = Cg/C',f2(I.n,3)],['Cg',f2(I.Cg,2)+' m/s'],
+    ['peralte H/L',f2(lab.H/I.L,4)],['H/h',f2(lab.H/lab.h,3)],['Ursell',f2(Ur,Ur<10?2:0)],['E = ρgH²/8',f2(E/1000,2)+' kJ/m²'],['F = E·Cg',f2(E*I.Cg/1000,1)+' kW/m']];
+  $('lab-read').innerHTML=rows.map(r=>`<div><span>${r[0]}</span><strong>${r[1]}</strong></div>`).join('');
+  const w=[];const lim=0.142*Math.tanh(I.kh);if(lab.H/I.L>lim)w.push('<span style="color:var(--env)">Supera el peralte límite (Miche): la ola rompe.</span>');
+  if(lab.H/lab.h>0.78)w.push('<span style="color:var(--env)">H/h > 0.78: rotura por fondo.</span>');
+  if(Ur>26&&hL<0.5)w.push('<span style="color:var(--comp)">Ur > 26: régimen de onda larga no lineal (cnoidal).</span>');
+  if(!w.length)w.push('<span>Onda lineal válida: peralte y Ursell pequeños.</span>');$('lab-warn').innerHTML=w.join('');lmScene.render();}
+const hMap=v=>logMap(v,1,300);hMap.inv=x=>logInv(x,1,300);
+const labT=bind('lab-T',v=>f2(v,2)+' s',v=>{lab.T=v;updLab();});
+const labh=bind('lab-h',v=>f2(v,v<10?2:1)+' m',v=>{lab.h=v;updLab();},hMap);
+const labH=bind('lab-H',v=>f2(v,2)+' m',v=>{lab.H=v;updLab();});
+
+/* ===== 3. asomeramiento ===== */
+const sh={T:10};
+scene('cv-shoal','shoal',(s,c)=>{const W=s.w,H=s.h,T=sh.T,L0=g*T*T/TAU,X=4.6*L0,h0=0.42*L0,h1=0.025*L0,w=TAU/T;
+  const N=500,ys=H*0.24,zs=(H*0.7)/h0,xs=W/X;const Cg0=g*T/(4*Math.PI),H0=0.01*L0,vex=(H*0.07)/(H0/2);
+  let th=0;const pts=[],bot=[],data=[];let kPrev=null;
+  for(let i=0;i<=N;i++){const x=X*i/N,h=h0+(h1-h0)*x/X,I=info(T,h);if(i>0)th+=0.5*(I.k+kPrev)*(X/N);kPrev=I.k;
+    const Ks=Math.sqrt(Cg0/I.Cg),Hl=H0*Ks;const eta=(Hl/2)*Math.cos(th-w*s.t);pts.push([x*xs,ys-eta*vex]);bot.push([x*xs,ys+h*zs]);data.push({x,h,I,Hl,th});}
+  c.beginPath();c.moveTo(pts[0][0],pts[0][1]);pts.forEach(p=>c.lineTo(p[0],p[1]));for(let i=bot.length-1;i>=0;i--)c.lineTo(bot[i][0],bot[i][1]);c.closePath();c.fillStyle=alpha('water',0.14);c.fill();
+  c.beginPath();c.moveTo(bot[0][0],bot[0][1]);bot.forEach(p=>c.lineTo(p[0],p[1]));c.lineTo(W,H);c.lineTo(0,H);c.closePath();c.fillStyle=alpha('sand',0.55);c.fill();
+  line(c,pts,col('water'),2.4);
+  [0.08,0.5,0.9].forEach((f,j)=>{const d=data[Math.round(f*N)],xp=d.x*xs;const yb=ys-(d.Hl/2)*Math.cos(d.th-w*s.t)*vex;
+    c.fillStyle=col('crest');c.beginPath();c.arc(xp,yb,5,0,TAU);c.fill();
+    const lx=Math.min(Math.max(xp,70),W-70),ly=ys+d.h*zs*0.5+18;const hL=d.h/d.I.L;
+    txt(c,`h = ${f2(d.h,1)} m`,lx,H-46,col('fg'),12,'center','m');txt(c,`L = ${f2(d.I.L,1)} m`,lx,H-30,col('fg'),12,'center','m');txt(c,`C = ${f2(d.I.C,2)} m/s`,lx,H-14,col('fg'),12,'center','m');
+    txt(c,regime(hL)[0],lx,ys-H*0.13,col(regime(hL)[1].slice(2)),12,'center');
+    txt(c,`H = ${f2(d.Hl,2)} m`,lx,ys-H*0.13-15,col('muted'),11,'center','m');});
+  txt(c,`T = ${f2(T,1)} s en todo el dominio`,12,ys+H*0.16,col('fg'),14,'left');txt(c,'costa →',W-8,H-62,col('fg'),12,'right');
+},{});
+bind('sh-T',v=>f2(v,1)+' s',v=>{sh.T=v;scenes.shoal&&scenes.shoal.render();});
+
+/* ===== 4. órbitas ===== */
+const orb={hl:0.15,vel:true};
+const hlMap=v=>logMap(v,0.02,1.2);hlMap.inv=x=>logInv(x,0.02,1.2);
+scene('cv-orb','orb',(s,c)=>{const W=s.w,H=s.h,pw=Math.min(170,W*0.26),Wm=W-pw-10,hl=orb.hl,k=TAU,Tn=3,w=TAU/Tn,ph=w*s.t;
+  const showD=Math.min(hl,0.6),top=H*0.16,bottomY=H-14,zs=(bottomY-top)/showD,xs=Wm/1.5;
+  const sinhKH=Math.sinh(k*hl);const amax=Math.cosh(k*hl)/sinhKH;const nlev=5,dz=showD/nlev;const spx=Math.min(0.42*dz*zs,0.11*Wm)/Math.max(amax,1);
+  const eta=x=>spx*Math.cos(k*x-ph);const pts=[];for(let px=0;px<=Wm;px+=2){pts.push([px,top-eta(px/xs)]);}
+  waterFill(c,pts,bottomY,alpha('water',0.12));line(c,pts,col('water'),2.4);line(c,[[0,top],[Wm,top]],col('muted'),1,[4,4]);
+  if(hl<=0.6){c.fillStyle=alpha('sand',0.7);c.fillRect(0,bottomY,Wm,H-bottomY);}else{line(c,[[0,bottomY],[Wm,bottomY]],col('muted'),1,[2,6]);txt(c,`el fondo sigue hasta h = ${f2(hl,2)} L`,Wm-6,bottomY-8,col('muted'),11,'right');}
+  for(let j=0;j<nlev;j++){const z=-(j+0.5)*dz;const al=Math.cosh(k*(hl+z))/sinhKH,be=Math.sinh(k*(hl+z))/sinhKH;
+    for(let i=0;i<10;i++){const x0=(i+0.5)*1.5/10,cx=x0*xs,cy=top-z*zs,th=k*x0-ph;
+      c.strokeStyle=alpha('water',0.35);c.lineWidth=1;c.beginPath();c.ellipse(cx,cy,Math.max(al*spx,0.4),Math.max(be*spx,0.4),0,0,TAU);c.stroke();
+      const xi=-al*spx*Math.sin(th),ze=be*spx*Math.cos(th),Y=cy-ze;
+      if(orb.vel){const u=al*Math.cos(th),wv=be*Math.sin(th),sc=spx*0.9;arrow(c,cx+xi,Y,cx+xi+u*sc,Y-wv*sc,col('env'),1.2,4);}
+      c.fillStyle=col('crest');c.beginPath();c.arc(cx+xi,Y,3.2,0,TAU);c.fill();}}
+  const x0p=Wm+10,pt=top,pb=bottomY;c.strokeStyle=col('line');c.strokeRect(x0p,pt,pw,pb-pt);
+  const prof=f=>{const p=[];for(let i=0;i<=60;i++){const z=-showD*i/60;p.push([x0p+6+(pw-12)*f(z),pt+(-z)*zs]);}return p;};
+  line(c,prof(z=>Math.cosh(k*(hl+z))/Math.cosh(k*hl)),col('water'),2);line(c,prof(z=>Math.sinh(k*(hl+z))/Math.sinh(k*hl)),col('crest'),2,[5,3]);
+  line(c,prof(z=>Math.cosh(k*(hl+z))/Math.cosh(k*hl)),col('comp'),1.4,[2,3]);
+  txt(c,'α/α₀ = Kp',x0p+6,pt-24,col('water'),11);txt(c,'β/β₀',x0p+6,pt-10,col('crest'),11);txt(c,'0',x0p+6,pb+8,col('muted'),10,'left','m');txt(c,'1',x0p+pw-6,pb+8,col('muted'),10,'right','m');
+  const[rn,rc]=regime(hl);txt(c,rn+`  ·  h/L = ${f2(hl,3)}`,8,14,col(rc.slice(2)),13);
+},{});
+function updOrb(){const hl=orb.hl,k=TAU,mid=-hl/2;const r=[['h/L',f2(hl,3)],['kh',f2(k*hl,2)],['β/α a media altura',f2(Math.tanh(k*(hl+mid)),3)],['α fondo / α superficie',f2(1/Math.cosh(k*hl),3)],['u fondo / u superficie',f2(1/Math.cosh(k*hl),3)],['w fondo','0']];
+  $('orb-read').innerHTML=r.map(x=>`<div><span>${x[0]}</span><strong>${x[1]}</strong></div>`).join('');scenes.orb&&scenes.orb.render();}
+const orbHL=bind('orb-hl',v=>f2(v,3),v=>{orb.hl=v;updOrb();},hlMap);
+document.querySelectorAll('[data-hl]').forEach(b=>b.addEventListener('click',()=>orbHL.set(+b.dataset.hl)));
+$('orb-vel').addEventListener('change',e=>{orb.vel=e.target.checked;scenes.orb.render();});
+
+/* ===== 5. estacionaria ===== */
+const st={comp:true,vel:true,env:false};
+scene('cv-st','st',(s,c)=>{const W=s.w,H=s.h,xw=W-28,Lp=xw/2,k=TAU/Lp,w=TAU/3,ph=w*s.t,a=H*0.11,y0=H*0.38;
+  const X=x=>x;const ei=x=>a*Math.cos(k*(x-xw)-ph),er=x=>a*Math.cos(k*(x-xw)+ph);const pts=[],pi=[],pr=[];
+  for(let x=0;x<=xw;x+=2){pts.push([x,y0-ei(x)-er(x)]);pi.push([x,y0-ei(x)]);pr.push([x,y0-er(x)]);}
+  waterFill(c,pts,H,alpha('water',0.12));
+  c.fillStyle=col('fg');c.fillRect(xw,H*0.08,W-xw,H);txt(c,'pared',xw-6,H*0.06+2,col('muted'),11,'right');
+  if(st.env){const e1=[],e2=[];for(let x=0;x<=xw;x+=2){const A=2*a*Math.cos(k*(x-xw));e1.push([x,y0-Math.abs(A)]);e2.push([x,y0+Math.abs(A)]);}line(c,e1,col('env'),1.4,[5,4]);line(c,e2,col('env'),1.4,[5,4]);}
+  line(c,[[0,y0],[xw,y0]],col('muted'),1,[4,4]);
+  if(st.comp){line(c,pi,col('comp'),1.4);line(c,pr,col('crest'),1.4);}
+  line(c,pts,col('water'),2.8);
+  for(let m=0;m<=4;m++){const xa=xw-m*Lp/2;if(xa<0)break;txt(c,'A',xa,H*0.08,col('fg'),12,'center');line(c,[[xa,H*0.11],[xa,H*0.15]],col('muted'),1);}
+  for(let m=0;m<4;m++){const xn=xw-(m+0.5)*Lp/2;if(xn<0)break;c.fillStyle=col('env');c.beginPath();c.arc(xn,y0,4,0,TAU);c.fill();txt(c,'N',xn,y0+16,col('env'),12,'center');}
+  if(st.vel){const lev=[0.62,0.78,0.92];lev.forEach((ly,li)=>{const z=-(ly*H-y0)/(Lp);const dec=Math.exp(k*Lp*z*0.9);
+    for(let i=0;i<=16;i++){const x=xw*i/16;const u=Math.sin(k*(x-xw))*Math.sin(ph)*dec,wv=Math.cos(k*(x-xw))*Math.sin(ph)*dec;const sc=H*0.09;
+      if(Math.hypot(u,wv)>0.03)arrow(c,x,ly*H,x+u*sc,ly*H+wv*sc,alpha('fg',0.75),1.2,4);else{c.fillStyle=alpha('fg',0.4);c.fillRect(x-1,ly*H-1,2,2);}}});
+    txt(c,'velocidades (u máxima en N, w máxima en A)',8,H-10,col('muted'),11);}
+  txt(c,'nodo–antinodo = L/4',8,14,col('fg'),12);
+},{});
+$('st-comp').addEventListener('change',e=>{st.comp=e.target.checked;scenes.st.render();});
+$('st-vel').addEventListener('change',e=>{st.vel=e.target.checked;scenes.st.render();});
+$('st-trail').addEventListener('change',e=>{st.env=e.target.checked;scenes.st.render();});
+
+/* ===== 6. cuasi-estacionaria ===== */
+const qs={kr:0.5,eps:0};
+scene('cv-qs','qs',(s,c)=>{const W=s.w,H=s.h,xw=W-22,Lp=xw/2.2,k=TAU/Lp,w=TAU/3,ph=w*s.t,a=H*0.13,y0=H*0.5,ar=a*qs.kr,ep=qs.eps*Math.PI/180;
+  const pts=[],e1=[],e2=[];for(let x=0;x<=xw;x+=2){const xx=x-xw;const v=a*Math.cos(k*xx-ph)+ar*Math.cos(k*xx+ph+ep);pts.push([x,y0-v]);
+    const A=Math.sqrt(a*a+ar*ar+2*a*ar*Math.cos(2*k*xx+ep));e1.push([x,y0-A]);e2.push([x,y0+A]);}
+  waterFill(c,pts,H,alpha('water',0.12));c.fillStyle=alpha('fg',0.25+0.6*qs.kr);c.fillRect(xw,H*0.12,W-xw,H);
+  line(c,[[0,y0],[xw,y0]],col('muted'),1,[4,4]);line(c,e1,col('env'),1.6,[6,4]);line(c,e2,col('env'),1.6,[6,4]);line(c,pts,col('water'),2.8);
+  line(c,[[0,y0-(a+ar)],[xw,y0-(a+ar)]],alpha('muted',0.6),1,[2,4]);line(c,[[0,y0-(a-ar)],[xw,y0-(a-ar)]],alpha('muted',0.6),1,[2,4]);
+  txt(c,'ηmax = ½(Hi+Hr)',6,y0-(a+ar)-9,col('fg'),12);txt(c,'ηmin = ½(Hi−Hr)',6,y0-(a-ar)+10,col('fg'),12);
+  const xm=xw+(-ep/2)/k;let xA=xm;while(xA>xw)xA-=Lp/2;while(xA<Lp*0.6)xA+=Lp/2;const xN=xA-Lp/4;
+  if(xN>0){dbl(c,xN,H-18,xA,H-18,col('fg'));txt(c,'L/4',(xN+xA)/2,H-30,col('fg'),12,'center');}
+  txt(c,'estructura parcialmente reflejante',xw-6,H*0.08,col('muted'),11,'right');
+},{});
+function updQS(){const kr=qs.kr,mx=(1+kr),mn=(1-kr);$('qs-read').innerHTML=[['Hi (relativa)','1.00'],['Hr = Kr·Hi',f2(kr)],['ηmax / (Hi/2)',f2(mx)],['ηmin / (Hi/2)',f2(mn)],['(ηmax−ηmin)/(ηmax+ηmin)',f2((mx-mn)/(mx+mn))],['tipo',kr<0.02?'progresiva':kr>0.98?'estacionaria':'cuasi-estacionaria']].map(x=>`<div><span>${x[0]}</span><strong>${x[1]}</strong></div>`).join('');scenes.qs&&scenes.qs.render();}
+const qsKr=bind('qs-kr',v=>f2(v,2),v=>{qs.kr=v;updQS();});
+bind('qs-eps',v=>v+'°',v=>{qs.eps=v;updQS();});
+
+/* ===== 7. crestas cortas ===== */
+const cc={th:35};let ccBuf=null;
+scene('cv-cc','cc',(s,c)=>{const W=s.w,H=s.h,gw=200,gh=Math.round(200*H/W);if(!ccBuf||ccBuf.width!==gw||ccBuf.height!==gh){ccBuf=document.createElement('canvas');ccBuf.width=gw;ccBuf.height=gh;}
+  const bc=ccBuf.getContext('2d'),img=bc.createImageData(gw,gh),Lp=W/4.2,k=TAU/Lp,th=cc.th*Math.PI/180,kx=k*Math.cos(th),ky=k*Math.sin(th),ph=TAU/3*s.t;
+  const cA=rgb(col('deep')),cB=rgb(col('panel')),cC=rgb(col('crest'));
+  for(let j=0;j<gh;j++){const y=(gh-1-j)/gh*H;const A=Math.cos(ky*y);for(let i=0;i<gw;i++){const x=i/gw*W;const v=A*Math.cos(kx*x-ph);const t=Math.max(-1,Math.min(1,v));
+    const[c1,c2,f]=t<0?[cB,cA,-t]:[cB,cC,t];const o=(j*gw+i)*4;img.data[o]=c1[0]+(c2[0]-c1[0])*f;img.data[o+1]=c1[1]+(c2[1]-c1[1])*f;img.data[o+2]=c1[2]+(c2[2]-c1[2])*f;img.data[o+3]=255;}}
+  bc.putImageData(img,0,0);c.imageSmoothingEnabled=true;c.drawImage(ccBuf,0,0,W,H);
+  c.fillStyle=col('fg');c.fillRect(0,H-6,W,6);
+  if(ky>1e-6){const Ly=TAU/ky;for(let n=0;;n++){const y=(n+0.5)*Math.PI/ky;if(y>H)break;line(c,[[0,H-y],[W,H-y]],alpha('fg',0.6),1.2,[6,5]);}}
+  const ox=W*0.18,oy=H*0.42,r=46;arrow(c,ox,oy,ox+r*Math.cos(th),oy+r*Math.sin(th),col('comp'),2.2,8);arrow(c,ox,oy,ox+r*Math.cos(th),oy-r*Math.sin(th),col('water'),2.2,8);
+  txt(c,'incidente',ox+r*Math.cos(th)+6,oy+r*Math.sin(th)+6,col('comp'),12);txt(c,'reflejada',ox+r*Math.cos(th)+6,oy-r*Math.sin(th)-6,col('water'),12);
+  txt(c,'pared',8,H-14,col('fg'),11);
+},{});
+function updCC(){const th=cc.th*Math.PI/180;$('cc-read').innerHTML=[['Lx / L = 1/cosθ',th>=Math.PI/2-1e-6?'∞':f2(1/Math.cos(th),3)],['Ly / L = 1/sinθ',th<1e-6?'∞':f2(1/Math.sin(th),3)],['Cx / C',th>=Math.PI/2-1e-6?'∞ (no avanza)':f2(1/Math.cos(th),3)],['amplitud máxima','2a']].map(x=>`<div><span>${x[0]}</span><strong>${x[1]}</strong></div>`).join('');scenes.cc&&scenes.cc.render();}
+bind('cc-th',v=>v+'°',v=>{cc.th=v;updCC();});
+
+/* ===== 8. grupos ===== */
+const gr={T1:5.7,dT:0.3,h:102,sp:1};let G={};
+function calcG(){const T1=gr.T1,T2=Math.max(gr.T1-gr.dT,1),I1=info(T1,gr.h),I2=info(T2,gr.h),wb=(I1.w+I2.w)/2,kb=(I1.k+I2.k)/2,dw=I2.w-I1.w,dk=I2.k-I1.k,Ib=info(TAU/wb,gr.h);
+  G={T1,T2,w1:I1.w,w2:I2.w,k1:I1.k,k2:I2.k,wb,kb,dw,dk,C:wb/kb,Cg:dw/dk,nC:Ib.Cg,Tg:TAU/dw,Lg:TAU/dk,Tm:2*TAU/dw,Lb:TAU/kb,hL:gr.h/Ib.L};G.X=1.55*G.Lg;}
+scene('cv-gr','gr',(s,c)=>{const W=s.w,H=s.h,t=s.t,a=1;const X=G.X,xs=W/X;
+  const rows={c1:[H*0.07,H*0.07],c2:[H*0.2,H*0.07],m:[H*0.47,H*0.15],ts:[H*0.865,H*0.085]};
+  const comp=(y,amp,f)=>{const p=[];for(let i=0;i<=W;i+=1.5){p.push([i,y-amp*f(i/xs)]);}return p;};
+  line(c,comp(rows.c1[0],rows.c1[1],x=>Math.cos(G.k1*x-G.w1*t)),col('comp'),1.2);line(c,comp(rows.c2[0],rows.c2[1],x=>Math.cos(G.k2*x-G.w2*t)),col('comp'),1.2);
+  txt(c,`η₁ (T₁ = ${f2(G.T1,2)} s)`,W-6,rows.c1[0]-rows.c1[1]-6,col('comp'),11,'right');txt(c,`η₂ (T₂ = ${f2(G.T2,2)} s)`,W-6,rows.c2[0]-rows.c2[1]-6,col('comp'),11,'right');
+  txt(c,'+',10,(rows.c2[0]+rows.m[0])/2-12,col('muted'),16);
+  const ym=rows.m[0],am=rows.m[1];const sum=comp(ym,am/2,x=>Math.cos(G.k1*x-G.w1*t)+Math.cos(G.k2*x-G.w2*t));
+  const env=f=>comp(ym,am,x=>f*Math.abs(Math.cos(0.5*(G.dk*x-G.dw*t))));
+  waterFill(c,sum,ym+am*1.35,alpha('water',0.1));line(c,env(1),col('env'),1.6,[6,4]);line(c,env(-1),col('env'),1.6,[6,4]);line(c,sum,col('water'),2);
+  let x0=(G.Cg*t)%G.Lg;if(x0<0)x0+=G.Lg;for(let x=x0-G.Lg;x<=X;x+=G.Lg){if(x<0)continue;const px=x*xs;c.fillStyle=col('env');c.beginPath();c.moveTo(px,ym-am-14);c.lineTo(px-6,ym-am-24);c.lineTo(px+6,ym-am-24);c.closePath();c.fill();}
+  const xc=((G.C*t)%X+X)%X,vc=Math.cos(G.k1*xc-G.w1*t)+Math.cos(G.k2*xc-G.w2*t);c.fillStyle=col('crest');c.beginPath();c.arc(xc*xs,ym-am/2*vc,6,0,TAU);c.fill();
+  txt(c,'suma = portadora × envolvente',W-6,ym-am-30,col('fg'),12,'right');
+  const xn1=((G.Cg*t)%(G.Lg/2)+G.Lg/2)%(G.Lg/2);if(xn1+G.Lg<=X*1.001){dbl(c,xn1*xs,ym+am+10,(xn1+G.Lg)*xs,ym+am+10,col('fg'));txt(c,`Lg = ${f2(G.Lg,0)} m`,(xn1+G.Lg/2)*xs,ym+am+22,col('fg'),12,'center','m');}
+  const yt=rows.ts[0],at=rows.ts[1],Tw=2.3*G.Tg;line(c,[[0,yt],[W,yt]],alpha('muted',0.5),1,[3,4]);
+  const ts=[],te=[];for(let i=0;i<=W;i+=1.5){const tau=t-Tw*(1-i/W);ts.push([i,yt-at/2*(Math.cos(G.w1*tau)+Math.cos(G.w2*tau))]);te.push([i,yt-at*Math.abs(Math.cos(0.5*G.dw*tau))]);}
+  line(c,te,col('env'),1.3,[5,4]);line(c,ts,col('water'),1.4);
+  txt(c,`registro en una boya fija (últimos ${f2(Tw,0)} s, Tg = ${f2(G.Tg,1)} s)`,6,yt-at-10,col('fg'),12);
+  const tn=((t-G.Tg/2)%G.Tg+G.Tg)%G.Tg;const tA=t-tn;const pA=W*(1-(t-tA)/Tw),pB=W*(1-(t-tA+G.Tg)/Tw);if(pB>0)dbl(c,pB,yt+at+8,pA,yt+at+8,col('fg'));
+},{});
+function updG(){calcG();const sp=Math.max(G.X/G.Cg/12,0.5)*gr.sp;if(scenes.gr){scenes.gr.speed=sp;scenes.gr.render();}$('o-g-sp').textContent='×'+f2(sp,1);
+  $('g-read').innerHTML=[['ω₁ / ω₂',f2(G.w1,4)+' / '+f2(G.w2,4)],['k₁ / k₂',f2(G.k1,4)+' / '+f2(G.k2,4)],['ω̄ (portadora)',f2(G.wb,4)+' rad/s'],['T portadora',f2(TAU/G.wb,2)+' s'],['k̄ · L̄',f2(G.kb,4)+' · '+f2(G.Lb,1)+' m'],['C = ω̄/k̄',f2(G.C,2)+' m/s'],
+   ['Δω · Δk',f2(G.dw,4)+' · '+f2(G.dk,4)],['Cg = Δω/Δk',f2(G.Cg,2)+' m/s'],['nC (teoría)',f2(G.nC,2)+' m/s'],['Cg / C',f2(G.Cg/G.C,3)],['Tg = 2π/Δω',f2(G.Tg,1)+' s'],['Tmod = 4π/Δω',f2(G.Tm,1)+' s'],['Lg = 2π/Δk',f2(G.Lg,0)+' m'],['olas por grupo',f2(G.Lg/G.Lb,1)],['h/L̄',f2(G.hL,3)]]
+   .map(x=>`<div><span>${x[0]}</span><strong>${x[1]}</strong></div>`).join('');}
+const gT1=bind('g-T1',v=>f2(v,2)+' s',v=>{gr.T1=v;updG();});const gdT=bind('g-dT',v=>f2(v,2)+' s',v=>{gr.dT=v;updG();});
+const ghMap=v=>logMap(v,2,200);ghMap.inv=x=>logInv(x,2,200);const gh=bind('g-h',v=>f2(v,v<10?1:0)+' m',v=>{gr.h=v;updG();},ghMap);
+$('g-sp').addEventListener('input',e=>{gr.sp=+e.target.value;updG();});
+function loadEj5(){gT1.set(5.7);gdT.set(0.3);gh.set(102);if(scenes.gr)scenes.gr.t=0;updG();}
+$('g-ej5').addEventListener('click',loadEj5);
+
+/* ===== 9. irregular ===== */
+const ir={hs:4,tp:10,gam:3.3,seed:1,comp:[]};
+function rnd(seed){let x=seed*2654435761%4294967296;return()=>{x=(1664525*x+1013904223)%4294967296;return x/4294967296;};}
+function calcIr(){const fp=1/ir.tp,N=90,f0=0.55*fp,f1=3*fp,df=(f1-f0)/N,R=rnd(ir.seed);let m0=0;const cs=[];
+  for(let i=0;i<N;i++){const f=f0+(i+0.5)*df,sg=f<=fp?0.07:0.09,S=Math.pow(f,-5)*Math.exp(-1.25*Math.pow(f/fp,-4))*Math.pow(ir.gam,Math.exp(-Math.pow(f/fp-1,2)/(2*sg*sg)));cs.push({f,S,ph:R()*TAU});m0+=S*df;}
+  const sc=Math.pow(ir.hs/4,2)/m0;cs.forEach(o=>{o.S*=sc;o.a=Math.sqrt(2*o.S*df);o.w=TAU*o.f;});ir.comp=cs;ir.df=df;ir.Smax=Math.max(...cs.map(o=>o.S));}
+scene('cv-ir','ir',(s,c)=>{const W=s.w,H=s.h,t=s.t+200,Tw=150,yt=H*0.32,amp=H*0.26/Math.max(ir.hs*0.9,0.5);
+  line(c,[[0,yt],[W,yt]],alpha('muted',0.5),1,[3,4]);const pts=[];let mx=-1e9,mn=1e9,ss=0,n=0;
+  for(let i=0;i<=W;i+=1.5){const tau=t-Tw*(1-i/W);let v=0;for(const o of ir.comp)v+=o.a*Math.cos(o.w*tau+o.ph);pts.push([i,yt-v*amp]);mx=Math.max(mx,v);mn=Math.min(mn,v);ss+=v*v;n++;}
+  line(c,pts,col('water'),1.6);line(c,[[0,yt-ir.hs/2*amp],[W,yt-ir.hs/2*amp]],alpha('env',0.6),1,[6,4]);txt(c,'Hm0/2',W-6,yt-ir.hs/2*amp-9,col('env'),11,'right');
+  txt(c,'η(t) en la boya',6,12,col('fg'),12);ir.win={mx,mn,rms:Math.sqrt(ss/n)};
+  const sy=H-22,sh=H*0.3,f0=0,f1=3.2/ir.tp,X=f=>12+(W-24)*(f-f0)/(f1-f0);
+  line(c,[[12,sy],[W-12,sy]],col('line'),1);ir.comp.forEach(o=>{const hh=sh*o.S/ir.Smax;c.fillStyle=alpha('water',0.55);c.fillRect(X(o.f)-1,sy-hh,2,hh);});
+  const cv=[];for(let i=0;i<=200;i++){const f=0.5/ir.tp+i/200*(f1-0.5/ir.tp);const fp=1/ir.tp,sg=f<=fp?0.07:0.09;cv.push([X(f),sy-sh*(Math.pow(f,-5)*Math.exp(-1.25*Math.pow(f/fp,-4))*Math.pow(ir.gam,Math.exp(-Math.pow(f/fp-1,2)/(2*sg*sg))))/ir.Sref]);}
+  line(c,cv,col('crest'),1.6);txt(c,'S(f)',6,sy-sh-10,col('fg'),12);txt(c,`fp = ${f2(1/ir.tp,3)} Hz`,X(1/ir.tp),sy+11,col('muted'),10,'center','m');
+  if(s._u!==Math.floor(s.t*2)){s._u=Math.floor(s.t*2);updIrRead();}
+},{});
+function updIrRead(){const m0=ir.comp.reduce((a,o)=>a+o.a*o.a/2,0),w=ir.win||{mx:0,mn:0,rms:0};
+  $('ir-read').innerHTML=[['componentes',ir.comp.length],['m₀ = Σ a²/2',f2(m0,3)+' m²'],['Hm0 = 4√m₀',f2(4*Math.sqrt(m0),2)+' m'],['4·η_rms (ventana)',f2(4*w.rms,2)+' m'],['cresta máx. en ventana',f2(w.mx,2)+' m'],['Δf · repetición',f2(ir.df,4)+' Hz · '+f2(1/ir.df,0)+' s']].map(x=>`<div><span>${x[0]}</span><strong>${x[1]}</strong></div>`).join('');}
+function updIr(){calcIr();const fp=1/ir.tp;let mx=0;for(let i=0;i<=600;i++){const f=0.5*fp+i/600*3*fp,sg=f<=fp?0.07:0.09;mx=Math.max(mx,Math.pow(f,-5)*Math.exp(-1.25*Math.pow(f/fp,-4))*Math.pow(ir.gam,Math.exp(-Math.pow(f/fp-1,2)/(2*sg*sg))));}ir.Sref=mx;
+  if(scenes.ir){scenes.ir.speed=2;scenes.ir.render();}updIrRead();}
+bind('ir-hs',v=>f2(v,1)+' m',v=>{ir.hs=v;updIr();});bind('ir-tp',v=>f2(v,1)+' s',v=>{ir.tp=v;updIr();});bind('ir-g',v=>f2(v,1),v=>{ir.gam=v;updIr();});
+$('ir-seed').addEventListener('click',()=>{ir.seed=Math.floor(Math.random()*1e6)+2;updIr();});
+
+/* ===== 10. corriente ===== */
+const cu={T:8,U:-1.5,h:40};
+function kCurrent(T,h,U){const w=TAU/T,F=k=>(w-k*U)-Math.sqrt(g*k*Math.tanh(k*h));const kmax=U>0?w/U*0.999999:60*w*w/g+20/h;
+  let kp=1e-6,fp=F(kp);const N=4000;for(let i=1;i<=N;i++){const k=1e-6*Math.pow(kmax/1e-6,i/N),f=F(k);if(fp>0&&f<=0){let a=kp,b=k;for(let j=0;j<80;j++){const m=(a+b)/2;F(m)>0?a=m:b=m;}return(a+b)/2;}kp=k;fp=f;}return null;}
+scene('cv-cu','cu',(s,c)=>{const W=s.w,H=s.h,w=TAU/cu.T,k0=solveK(cu.T,cu.h),k=kCurrent(cu.T,cu.h,cu.U),L0=TAU/k0,X=3.2*L0,xs=W/X,t=s.t,A=H*0.08;
+  const strip=(y,kk,lab)=>{line(c,[[0,y],[W,y]],alpha('muted',0.5),1,[3,4]);if(!kk){txt(c,'BLOQUEO: no hay solución, la ola no puede remontar la corriente',W/2,y,col('env'),13,'center');return;}
+    const p=[];for(let i=0;i<=W;i+=2){p.push([i,y-A*Math.cos(kk*i/xs-w*t)]);}waterFill(c,p,y+H*0.2,alpha('water',0.1));line(c,p,col('water'),2.2);
+    let xc=((w*t/kk)%(TAU/kk)+TAU/kk)%(TAU/kk);for(let x=xc;x<=X;x+=TAU/kk){c.fillStyle=col('crest');c.beginPath();c.arc(x*xs,y-A,3.5,0,TAU);c.fill();}
+    txt(c,lab,6,y-A-16,col('fg'),12);txt(c,`L = ${f2(TAU/kk,1)} m`,W-6,y-A-16,col('fg'),12,'right','m');};
+  strip(H*0.3,k0,'sin corriente');strip(H*0.75,k,`con corriente U = ${f2(cu.U,2)} m/s`);
+  if(Math.abs(cu.U)>0.01){const sp=cu.U*xs*0.6,ph=((t*sp)%40+40)%40;for(let x=-40+ph;x<W;x+=40){const y=H*0.94;const d=Math.sign(cu.U)*10;line(c,[[x-d,y-5],[x,y],[x-d,y+5]],alpha('comp',0.8),1.6);}}
+},{});
+function updCu(){const w=TAU/cu.T,k0=solveK(cu.T,cu.h),k=kCurrent(cu.T,cu.h,cu.U),I0=info(cu.T,cu.h);let r;
+  if(k){const sg=w-k*cu.U;r=[['L sin corriente',f2(TAU/k0,1)+' m'],['L con corriente',f2(TAU/k,1)+' m'],['L / L₀',f2(k0/k,3)],['σ = ω − kU',f2(sg,3)+' rad/s'],['T intrínseco 2π/σ',f2(TAU/sg,2)+' s'],['C absoluta ω/k',f2(w/k,2)+' m/s'],['Cg sin corriente',f2(I0.Cg,2)+' m/s']];}
+  else r=[['L sin corriente',f2(TAU/k0,1)+' m'],['estado','bloqueo'],['Cg sin corriente',f2(I0.Cg,2)+' m/s']];
+  $('cu-read').innerHTML=r.map(x=>`<div><span>${x[0]}</span><strong>${x[1]}</strong></div>`).join('');scenes.cu&&scenes.cu.render();}
+bind('cu-T',v=>f2(v,1)+' s',v=>{cu.T=v;updCu();});bind('cu-U',v=>(v>0?'+':'')+f2(v,2)+' m/s',v=>{cu.U=v;updCu();});bind('cu-h',v=>v+' m',v=>{cu.h=v;updCu();});
+
+/* ---------- inicialización y enlaces de ejercicios ---------- */
+updLab();updOrb();updQS();updCC();updG();updIr();updCu();
+const go=id=>$(id).scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>{const e=b.dataset.goto;
+  if(e==='ej1'){labT.set(14.14);labh.set(24.2);labH.set(2);go('lab');}
+  if(e==='ej2'){orbHL.set(1/5.72);go('l4');}
+  if(e==='ej4'){qsKr.set(0.5);go('l6');}
+  if(e==='ej5'){loadEj5();go('l8');}}));
+for(const k in scenes)scenes[k].render();
+})();
+</script>
+
+</body></html>
