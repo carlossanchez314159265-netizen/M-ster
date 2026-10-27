@@ -70,6 +70,6 @@ Autoexamen final: ¿podrías hacer ahora, sin mirar, un ejercicio de dispersión
 
 ## Antes de dormir
 
-[Audio del espectral](<../03-analisis-del-oleaje/audios/Guion audio Dia 4 - Analisis espectral.mp3?raw=1>) (10 min) para fijar lo del día ([todos los audios](<08 - Audios de repaso.md>)); deja el formulario y las tarjetas preparados para los 30 min del miércoles.
+[Audio del espectral](https://github.com/carlossanchez314159265-netizen/M-ster/raw/oceanografia/03-analisis-del-oleaje/audios/Guion%20audio%20Dia%204%20-%20Analisis%20espectral.mp3) (10 min) para fijar lo del día ([todos los audios](<08 - Audios de repaso.md>)); deja el formulario y las tarjetas preparados para los 30 min del miércoles.
 
 **Ejercicios resueltos y formulario:** Parte C (espectral) y anexo de exámenes de [10 - Ejercicios resueltos (todos)](<10 - Ejercicios resueltos (todos).pdf>); formulario en [11 - Formulario 1er parcial](<11 - Formulario 1er parcial.pdf>).
