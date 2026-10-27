@@ -10,7 +10,7 @@ Un PDF por examen: enunciados transcritos de las fotos y resolución paso a paso
 
 Estructura común: hoja de ejercicios con **3 ejercicios de 2 puntos** — (A) dispersión/teoría lineal, (B) Rayleigh + Hmax, (C) espectral.
 
-**Audio:** [Lo que cae en el examen — recetas y trampas](<audios/Guion audio - Lo que cae en el examen (recetas y trampas).mp3>) ([guion](<audios/Guion audio - Lo que cae en el examen (recetas y trampas).md>)), 9 min.
+**Audio:** [Lo que cae en el examen — recetas y trampas](<audios/Guion audio - Lo que cae en el examen (recetas y trampas).mp3?raw=1>) ([guion](<audios/Guion audio - Lo que cae en el examen (recetas y trampas).md>)), 7 min.
 
 **Flashcards:** [Recetas y trampas del examen](<flashcards/Flashcards - Recetas y trampas del examen.md>) (15 tarjetas; también en [Anki](<anki/Oceanografia - Examen - Recetas y trampas.apkg>)).
 
