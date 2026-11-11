@@ -19,6 +19,7 @@ end
 
 t   = t(:);                  % asegurar vectores columna
 sup = sup(:);
+fs  = 1/(t(2) - t(1));       % frecuencia de muestreo (100 Hz)
 
 % ---------------------------------------------------------
 % 1. TRAMO DE ANÁLISIS
@@ -131,3 +132,101 @@ fprintf('Hmax/Hs Rayleigh (N=%d):   %.3f\n', n, Hmax_Hs_ray)
 fprintf('\n--- COMPROBACIÓN RAYLEIGH ---\n')
 fprintf('Hs/Hrms:   %.3f  (Rayleigh: 1.416)\n', Hs/Hrms)
 fprintf('Hmed/Hrms: %.3f  (Rayleigh: 0.886)\n', Hmed/Hrms)
+
+% ---------------------------------------------------------
+% 7. ESPECTRO (método de Welch: promedio de segmentos)
+% ---------------------------------------------------------
+nseg = 4096;                 % muestras por segmento (40.96 s)
+paso = nseg/2;               % solape del 50 %
+ventana = 0.5*(1 - cos(2*pi*(0:nseg-1)'/(nseg-1)));   % ventana de Hann
+U = sum(ventana.^2);
+
+nv = floor((length(eta) - nseg)/paso) + 1;   % número de segmentos
+Sf = zeros(nseg/2 + 1, 1);
+for k = 1:nv
+    i0 = (k-1)*paso + 1;
+    x  = eta(i0:i0+nseg-1);
+    x  = x - mean(x);
+    X  = fft(x .* ventana);
+    p  = abs(X).^2 / (fs*U);
+    p  = p(1:nseg/2+1);
+    p(2:end-1) = 2*p(2:end-1);           % espectro de un solo lado
+    Sf = Sf + p;
+end
+Sf = Sf/nv;                          % S(f) en m^2/Hz
+f  = (0:nseg/2)' * fs/nseg;          % frecuencias en Hz
+
+omega = 2*pi*f;                      % rad/s
+Sw    = Sf/(2*pi);                   % S(omega) en m^2*s/rad
+
+% ---------------------------------------------------------
+% 8. MOMENTOS Y PARÁMETROS ESPECTRALES
+% ---------------------------------------------------------
+fmin = 0.05;  fmax = 2;              % rango de integración (Hz)
+mk = (f >= fmin) & (f <= fmax);
+
+m = zeros(5,1);                      % m(1)=m0, m(2)=m1, ..., m(5)=m4
+for n = 0:4
+    m(n+1) = trapz(omega(mk), omega(mk).^n .* Sw(mk));
+end
+m0 = m(1); m1 = m(2); m2 = m(3); m4 = m(5);
+
+rho = 1000;  g = 9.81;               % agua dulce del canal
+Hm0 = 4*sqrt(m0);
+E   = rho*g*m0;                      % J/m^2
+
+[~, ip] = max(Sw);
+wp = omega(ip);
+Tp = 2*pi/wp;
+
+T01   = 2*pi*m0/m1;
+Tz    = 2*pi*sqrt(m0/m2);
+T24   = 2*pi*sqrt(m2/m4);
+epsil = sqrt(1 - m2^2/(m0*m4));
+
+% ---------------------------------------------------------
+% 9. ESPECTRO TEÓRICO JONSWAP (Hm0, Tp, gamma = 3.3)
+% ---------------------------------------------------------
+gam = 3.3;
+sig = 0.07*ones(size(omega));
+sig(omega > wp) = 0.09;
+Ag  = 1 - 0.287*log(gam);            % factor de normalización
+
+SJ = Ag*(5/16)*Hm0^2*wp^4 .* omega.^(-5) .* exp(-1.25*(omega/wp).^(-4)) ...
+     .* gam.^exp(-(omega - wp).^2 ./ (2*sig.^2*wp^2));
+SJ(omega == 0) = 0;
+
+Hm0_J = 4*sqrt(trapz(omega(mk), SJ(mk)));
+
+% ---------------------------------------------------------
+% 10. GRÁFICAS DEL ESPECTRO
+% ---------------------------------------------------------
+figure
+plot(omega, Sw, 'LineWidth', 1.2)
+xlabel('\omega (rad/s)'), ylabel('S(\omega) (m^2 s/rad)')
+title('Ensayo #8 - espectro de energía')
+grid on, xlim([0 2*pi*fmax])
+
+figure
+plot(omega, Sw, 'LineWidth', 1.2)
+hold on
+plot(omega, SJ, 'r--', 'LineWidth', 1.5)
+xlabel('\omega (rad/s)'), ylabel('S(\omega) (m^2 s/rad)')
+legend('Observado', 'JONSWAP (\gamma = 3.3)')
+title('Ensayo #8 - espectro observado frente a JONSWAP')
+grid on, xlim([0 2*pi*fmax])
+
+% ---------------------------------------------------------
+% 11. RESULTADOS ESPECTRALES
+% ---------------------------------------------------------
+fprintf('\n--- ANÁLISIS ESPECTRAL ---\n')
+fprintf('Segmentos promediados:     %d (df = %.4f Hz)\n', nv, fs/nseg)
+fprintf('m0:                        %.4e m^2\n', m0)
+fprintf('Hm0:                       %.4f m\n', Hm0)
+fprintf('E = rho*g*m0:              %.2f J/m^2\n', E)
+fprintf('Tp:                        %.3f s\n', Tp)
+fprintf('T01:                       %.3f s\n', T01)
+fprintf('Tz:                        %.3f s\n', Tz)
+fprintf('T24:                       %.3f s\n', T24)
+fprintf('epsilon:                   %.3f\n', epsil)
+fprintf('Hm0 del JONSWAP:           %.4f m\n', Hm0_J)
