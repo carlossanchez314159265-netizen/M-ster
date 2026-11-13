@@ -7,7 +7,7 @@
 | Parte | Tipo | Material en el repo |
 |---|---|---|
 | Elena Seco | Test + ejercicio | `Apuntes/Contabilidad de costes`, `Apuntes/Macroeconomia`, `Ejercicios/`, `Tests/` |
-| Puertos | Solo test | `Apuntes/Puertos y gobernanza` |
+| Puertos (menos peso) | Solo test | `Apuntes/Puertos y gobernanza` |
 | Desarrollo (por confirmar) | Preguntas a desarrollar | `Apuntes/Economia y comercio maritimo`, `PREGUNTAS_DESARROLLO_ANGELA.pdf` |
 
 ## Semana 1 – Base y Elena Seco
@@ -16,11 +16,12 @@
 - [ ] Rehacer los ejercicios de `Ejercicios/Enunciados` sin mirar la solución; corregir con `Soluciones/`.
 - [ ] Hacer `test0.pdf` y `test1.pdf`, anotar los fallos.
 
-## Semana 2 – Puertos
-- [ ] Leer `TEMA. Ley de puertos.pdf` y subrayar artículos, órganos y competencias.
-- [ ] Leer `TEMA. MODELOS DE GOBERNANZA_23.pdf` y hacer cuadro comparativo de modelos.
-- [ ] Hacer tarjetas de repaso (datos que caen en test).
-- [ ] Test de práctica propio sobre puertos (20 preguntas).
+## Semana 2 – Puertos (prioridad baja)
+Es la parte que menos vale: dedícale poco tiempo, unas 2–3 h en total.
+- [ ] Leer por encima `TEMA. Ley de puertos.pdf` y `TEMA. MODELOS DE GOBERNANZA_23.pdf`.
+- [ ] Hacer un cuadro resumen de los modelos de gobernanza.
+- [ ] Un test corto de práctica (10 preguntas) la semana 4.
+- El resto de la semana se dedica a reforzar Elena Seco y el desarrollo.
 
 ## Semana 3 – Desarrollo
 - [ ] Estudiar `5. Comercio marítimo`, `6. Comercio internacional-marítimo-datos` y balanza de fletes.
@@ -31,7 +32,7 @@
 ## Semana 4 – Repaso final
 - [ ] Hacer `test2.pdf` y `test3.pdf` en condiciones de examen (con tiempo).
 - [ ] Rehacer los ejercicios que fallaste.
-- [ ] Repasar los fallos de test de todas las partes.
+- [ ] Repasar los fallos de test de todas las partes (puertos solo un repaso rápido).
 - [ ] Simulacro completo (test + ejercicio + desarrollo).
 
 ## Rutina semanal sugerida
