@@ -20,6 +20,8 @@ Dedicación completa a esta parte; el resto se deja para después.
 - [ ] Rehacer los ejercicios de `Ejercicios/Enunciados` sin mirar la solución; corregir con `Soluciones/`.
 
 **18–21 nov: práctica**
+- [ ] Hacer `Estudio/Test_Elena_Seco.html` (tema por tema; repetir fallos hasta ≥ 90 %).
+- [ ] Repasar `Estudio/Esquema_Ejercicios_Elena_Seco.md` y resolver cada caso tipo sin mirar.
 - [ ] Rehacer los ejercicios del coste del transporte marítimo y modalidades de explotación hasta que salgan sin mirar la solución.
 - [ ] Hacer tests propios (por ejemplo, pedirme que los genere) de organización de la industria, coste del transporte y emisiones, y anotar los fallos.
 
