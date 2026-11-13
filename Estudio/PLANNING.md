@@ -1,32 +1,35 @@
 # Planning de estudio – Economía y Gestión Marítimo-Portuaria
 
-> Hoy: 13 nov 2026. **Examen Elena Seco: fecha por confirmar** (se asume ~27 nov; ajusta las fechas). **Resto de la asignatura: 17 dic 2026.**
+> Hoy: 13 nov 2026. **Examen Elena Seco: 23 nov 2026**. **Resto de la asignatura: 17 dic 2026.**
 
 ## Partes
 
 | Parte | Tipo | Cuándo | Material |
 |---|---|---|---|
-| Elena Seco | Test + ejercicio | Primero (fecha por confirmar) | `Apuntes/Contabilidad de costes`, `Apuntes/Macroeconomia`, `Ejercicios/`, `Tests/` |
+| Elena Seco | Test + ejercicio | 23 nov | `Apuntes/Contabilidad de costes`, `Apuntes/Macroeconomia`, `Ejercicios/`, `Tests/` |
 | Desarrollo (por confirmar) | Preguntas a desarrollar | 17 dic | `Apuntes/Economia y comercio maritimo`, `PREGUNTAS_DESARROLLO_ANGELA.pdf` |
 | Puertos (menos peso) | Solo test | 17 dic | `Apuntes/Puertos y gobernanza` |
 
-## Fase 1 – Elena Seco (13 nov → examen)
+## Fase 1 – Elena Seco (13 → 23 nov)
 Dedicación completa a esta parte; el resto se deja para después.
 
-**Semana 13–19 nov**
+**13–17 nov: teoría y ejercicios**
 - [ ] Leer `Contabilidad de costes.pdf` y hacer resumen de una página con fórmulas (`-Formulario.pdf`).
 - [ ] Repasar `Ciclos económicos.pdf` y `Semana 1 Macroeconomía`.
 - [ ] Rehacer los ejercicios de `Ejercicios/Enunciados` sin mirar la solución; corregir con `Soluciones/`.
-- [ ] Hacer `test0.pdf` y `test1.pdf`, anotar los fallos.
 
-**Semana 20–27 nov**
-- [ ] Hacer `test2.pdf` y `test3.pdf` con tiempo de examen.
-- [ ] Rehacer los ejercicios fallados y repasar los fallos de test.
-- [ ] Simulacro completo (test + ejercicio) 2 días antes.
-- [ ] Último día: solo formulario y fallos frecuentes.
+**18–21 nov: práctica**
+- [ ] Hacer `test0.pdf`, `test1.pdf`, `test2.pdf` y `test3.pdf` (uno al día, con tiempo de examen) y anotar los fallos.
+- [ ] Rehacer los ejercicios fallados.
 
-## Fase 2 – Desarrollo y puertos (tras Elena Seco → 17 dic)
-**Semana 28 nov – 4 dic: descanso corto y lectura**
+**22 nov: simulacro**
+- [ ] Simulacro completo (test + ejercicio) y repaso de fallos.
+
+**23 nov: examen**
+- [ ] Por la mañana solo formulario y fallos frecuentes.
+
+## Fase 2 – Desarrollo y puertos (24 nov → 17 dic)
+**24 nov – 4 dic: descanso corto y lectura**
 - [ ] Leer `5. Comercio marítimo`, `6. Comercio internacional-marítimo-datos` y balanza de fletes.
 - [ ] Leer `Organización y estructura de la industria marítima` y `Emisiones a la atmósfera`.
 
