@@ -1,0 +1,42 @@
+¿Qué diferencia hay entre coste, gasto y pago?	Coste: recursos consumidos en producir. Gasto: equivalente monetario de lo adquirido. Pago: salida de tesorería. Ejemplo: la amortización es coste pero no pago; la devolución de principal es pago pero no coste.
+CAPEX	Costes de capital (costes del propietario) = amortización contable + costes financieros (intereses). No incluye la devolución del principal.
+Pagos de capital del ejercicio	Devolución del principal + intereses. Sale de caja; no es lo mismo que el CAPEX.
+OPEX	Costes fijos corrientes o de operación (costes del armador): tripulación, técnicos (mantenimiento, reparaciones, pertrechos, lubricantes), seguros y administración.
+¿Qué NO es OPEX aunque parezca?	Combustible, tasas de puerto, canales y comisiones (son costes de viaje) y carga/descarga.
+Coste fijo por día de operación	(CAPEX + OPEX) anuales / 350 días. Se devengan 365 días pero se cobra flete unos 350 (≈ 15 días fuera de servicio).
+Costes variables o de viaje (VOYEX)	Los del naviero: consumos (proporcionales a la actividad) y puertos, canales y comisiones (no proporcionales).
+Amortización lineal	(Precio × (1 − % residual)) / años de vida. Igual todos los años.
+Sistema alemán	Cuota de principal constante = préstamo / años de devolución. Intereses = tipo × principal pendiente al inicio del año (decrecen).
+Carencia	Los años de carencia solo se pagan intereses y el principal pendiente no cambia. Con 10 años + 2 de carencia, la cuota sigue siendo préstamo/10.
+Casco desnudo (bare boat charter)	Arrendamiento, no fletamento. El propietario soporta el CAPEX; el arrendatario es el armador y soporta el OPEX. El alquiler mínimo cubre el CAPEX.
+Time charter	Fletante (armador): CAPEX + OPEX y gestión náutica. Fletador (naviero): gestión comercial y VOYEX. Flete en $/día.
+Voyage charter	El fletante (naviero) soporta CAPEX + OPEX + costes de viaje; flete en $/t. La carga y descarga solo corre por su cuenta si no es FIOS.
+FIOS	Free In Out Stowed: carga, descarga y estiba por cuenta del fletador/cargador. Habitual en tramp.
+Liner terms muelle-muelle	La manipulación en puerto corre por cuenta del naviero (línea regular). Movimientos por TEU = 2 (carga y descarga).
+Trip charter	Time charter por la duración de un viaje; flete en $/día.
+COA	Contract of Affreightment: transportar una cantidad en los viajes necesarios, con uno o más buques; flete en $/t y costes como en V/C.
+Servicio de línea regular	El naviero asume CAPEX + OPEX + costes de viaje + carga/descarga.
+TCE	Time Charter Equivalent = (ingresos netos − costes de viaje) / duración (días). Permite comparar viajes con T/C.
+Número de tramos en lastre	Con n cargamentos y contrato que acaba tras la última descarga: n tramos en carga y n − 1 en lastre.
+Duración de un tramo de navegación	Millas / nudos / 24 = días.
+Flete bruto y neto con comisión del bróker	Neto = bruto × (1 − c). Para obtener el bruto: bruto = neto / (1 − c). Si la comisión se paga además del flete: total = flete × (1 + c).
+Tonnage tax	Impuesto calculado sobre el arqueo neto, no sobre el beneficio: cantidad fija anual en los ejercicios.
+Fondos mínimos iniciales	Pago inicial (fondos propios = % no financiado × precio) + déficit máximo acumulado de tesorería, si lo hay.
+Propietario / armador / naviero	Propietario: titular registral. Armador: posee y arma el buque (gestión técnico-náutica). Naviero: gestión comercial. Un buque tiene un solo armador.
+Fletante y fletador	Fletante: quien cede el buque (armador en T/C; naviero en V/C). Fletador: quien lo toma (naviero en T/C; cargador/exportador/importador en V/C).
+Consignatario, agente de carga, bróker, transitario	Consignatario: representa al buque en puerto. Agente de carga: capta carga para líneas regulares. Bróker: intermedia fletamentos por comisión. Transitario: organiza transporte multimodal por cuenta del cargador.
+Comisario y liquidador de averías	Comisario: peritaje de daños (por cuenta del seguro o parte). Liquidador: liquida una avería gruesa.
+Tráficos tramp	≈ 75 % del tonelaje; graneles de bajo valor (< 500 $/t) en grandes partidas, fletados por viaje o tiempo.
+Líneas regulares	≈ 25 % del tonelaje, carga general (≈ 70 % en contenedores); suman más fletes por el mayor valor y coste de manipulación.
+OMI y OIT	OMI: Londres, 1948 (ONU), seguridad y contaminación. OIT: 1919, normas laborales, tripartita. Sus convenios no son leyes directamente aplicables.
+IACS	Fundada 1968, 12 miembros, > 90 % de la clasificación mundial; estatus consultivo en la OMI desde 1969.
+Límites de azufre	0,5 % global desde 2020 (antes 3,5 %); 0,1 % en SECA desde 2015; carretera 10 ppm. Mediterráneo SECA desde 1 mayo 2025.
+Límites de NOx	Tier I < 2011; Tier II (−20 %) desde 2011; Tier III (−80 % sobre Tier I) solo en NECAs. Tecnologías: SCR (urea) y EGR.
+EEDI, EEXI, CII, SEEMP	EEDI: buques nuevos ≥ 400 GT. EEXI: existentes ≥ 400 GT desde 2023. CII: ≥ 5.000 GT, anual, clase A–E. SEEMP: plan de gestión, todos los buques.
+CII: reducciones	−5 % en 2023 y −2 % anual hasta 2026 (−11 % sobre 2019); 2,625 % anual desde 2027 hasta −21,5 % en 2030. D tres años o E: plan correctivo.
+MRV y DCS	MRV (UE, 757/2015, desde 2018): buques ≥ 5.000 GT en puertos EEE; verificador acreditado y publicidad. DCS (OMI): desde 2019.
+EU ETS marítimo	Desde 2024, ≥ 5.000 GT: 50 % de emisiones UE↔tercer país, 100 % intra-UE y 100 % en puerto UE. Implantación 40 % (2024), 70 % (2025), 100 % (2026). Cap and trade.
+Coste del EU ETS	t CO₂ computables = t de combustible × factor de emisión × % aplicable. Coste = t CO₂ × precio € × tipo de cambio.
+FuelEU Maritime	Reglamento 2023/1805. Límite de intensidad de GEI: −2 % 2025, −6 % 2030, −14,5 % 2035, −31 % 2040, −62 % 2045, −80 % 2050. Pooling, banking, borrowing; OPS desde 2030.
+Estrategia OMI y NZF	Cero neto hacia 2050; −20 % (2030) y −70 % (2040); 5 % energías ZNZ en 2030. NZF aprobado en abril 2025, adopción aplazada; sin fuerza obligatoria todavía.
+Vías para cumplir el azufre	Destilados/VLSFO (sencillo, caro), scrubber con HFO (reduce SOx 90–95 %, 2–4 M€) o combustibles alternativos (GNL, metanol).
