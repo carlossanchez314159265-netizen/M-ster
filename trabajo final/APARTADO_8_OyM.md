@@ -9,15 +9,11 @@ Una jornada típica comienza con la **revisión previa a la salida** (niveles, p
 
 ***Actividades básicas de mantenimiento***
 
-| Tipo | Actividad | Subsistema | Quién |
-|-----|--------------------------|-----|------------|
-| Diario | Revisión previa a la salida, limpieza de la cesta y de la cubierta | C, D, A | Tripulación |
-| Periódico | Revisión de motores, hélice de proa y circuito hidráulico de la grúa y la cesta | B, C, D | Personal de mantenimiento |
-| Periódico | Vaciado y limpieza de la bodega y del tanque de aguas oleosas | C | Personal de mantenimiento + gestor autorizado |
-| Periódico | Comprobación y calibración de los sensores de nivel, GPS y AIS | E | Personal de mantenimiento |
-| Varada | Inspección del casco de aluminio, la defensa de caucho y la protección contra la corrosión | A | Astillero |
-| Reglamentario | Reconocimientos de la sociedad de clasificación y revisión de equipos salvavidas y contraincendios | A | Sociedad de clasificación |
-| Correctivo | Sustitución de equipos averiados | Todos | Personal de mantenimiento + proveedores |
+- La tripulación hará diariamente una revisión previa a la salida, además de la limpieza de la cesta y de la cubierta.
+- El personal de mantenimiento, con la periodicidad acordada, revisará los motores, la hélice de proa, el circuito hidráulico de la grúa y la cesta, y comprobará y calibrará los sensores, el GPS y el AIS. Junto con el gestor autorizado, se hará la limpieza de la bodega y del tanque de aguas oleosas.
+- Cuando toque varada, el astillero hará la inspección del casco, de la defensa de caucho y de la protección contra la corrosión.
+- La sociedad de clasificación revisará los equipos salvavidas y contraincendios.
+- Cuando un equipo se averíe, el personal de mantenimiento lo sustituirá lo antes posible.
 
 ***Equipos accesibles, sustituibles o desmontables***
 
