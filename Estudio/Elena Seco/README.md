@@ -9,9 +9,9 @@ Las preguntas son originales, elaboradas a partir de esos apuntes. **No son de e
 | [Resumen](RESUMEN.md) | Entender y consultar los tres bloques |
 | [Esquema de ejercicios](ESQUEMA_EJERCICIOS.md) | Cómo resolver cada tipo de ejercicio, paso a paso |
 | [Flashcards](FLASHCARDS.md) · [para Anki](flashcards_anki.tsv) | 42 tarjetas de definiciones y fórmulas |
-| [Práctica](PRACTICA.md) | 20 casos prácticos tipo test y 3 mini-ejercicios con solución |
+| [Práctica](PRACTICA.md) | 19 casos prácticos tipo test y 3 mini-ejercicios con solución |
 | [Test ampliado](TEST_AMPLIADO.md) | 93 preguntas tipo test por tema, con solución plegada |
-| [Test interactivo](test_interactivo.html) | Las 113 preguntas autocorregibles: descarga el archivo y ábrelo en el navegador |
+| [Test interactivo](test_interactivo.html) | Las 112 preguntas autocorregibles: descarga el archivo y ábrelo en el navegador |
 
 ## Plan sugerido
 

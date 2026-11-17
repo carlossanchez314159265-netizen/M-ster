@@ -1,8 +1,8 @@
-# Práctica · 20 casos tipo test y 3 mini-ejercicios
+# Práctica · 19 casos tipo test y 3 mini-ejercicios
 
 Preguntas originales de aplicación (cálculos y situaciones), **no de exámenes anteriores**. Una sola respuesta correcta. Hazlo sin apuntes en unos 30 minutos y luego los mini-ejercicios con el [esquema de ejercicios](ESQUEMA_EJERCICIOS.md) abierto.
 
-## Test: 20 casos prácticos
+## Test: 19 casos prácticos
 
 ### 1. Una naviera compra un buque con un préstamo. ¿Cuál de estas partidas NO figura como coste en la cuenta de explotación del año?
 
