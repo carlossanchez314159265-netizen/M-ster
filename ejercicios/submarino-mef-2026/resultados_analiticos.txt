@@ -1,0 +1,47 @@
+=== CÁLCULOS ANALÍTICOS DE REFERENCIA — SUBMARINO A 250 m ===
+Presión exterior p = rho*g*h = 2.5138 MPa  (25.14 bar)
+Variación hidrostática entre quilla y cubierta (10 m): 0.1006 MPa (4.0 % de p) -> se puede usar p uniforme
+
+--- Geometría
+Eslora total = 28500 mm
+Semiángulo del cono alpha = 22.62 grados; generatriz = 6500.0 mm
+Volumen encerrado = 1747.5 m3 (semiesfera proa 261.8, cilindro 1178.1, cono 274.9, semiesfera popa 32.7)
+
+--- Tensiones de membrana (lejos de uniones, cuadernas y huecos); compresión
+Cilindro:   sigma_theta = pR/t = 359.1   sigma_x = pR/2t = 179.6   von Mises = 311.0 MPa  (ratio sy/vm = 1.77)
+Semiesfera proa (R=5000): sigma = pR/2t = 179.6 MPa (von Mises = 179.6)
+Semiesfera popa (R=2500): sigma = pR/2t = 89.8 MPa
+Cono r=5000: sigma_theta = pr/(t cos a) = 389.0  sigma_meridiano = 194.5  von Mises = 336.9 MPa
+Cono r=3750: sigma_theta = pr/(t cos a) = 291.8  sigma_meridiano = 145.9  von Mises = 252.7 MPa
+Cono r=2500: sigma_theta = pr/(t cos a) = 194.5  sigma_meridiano = 97.3  von Mises = 168.5 MPa
+Unión cilindro-cono: empuje radial de la membrana del cono = N_mer*sin(a) = 2619 N/mm -> flexión local alta: revisar tensiones Top/Bottom en x=15000
+
+--- Cuadernas T 150x150x15
+Área de la T = 4500 mm2 frente a s*t = 105000 mm2 de chapa por vano -> rigidizado muy ligero
+Tensión circunferencial media (reparto por igual deformación) ~ 344 MPa
+
+--- Cambio dimensional (membrana, sin cuadernas ni mamparos: cota superior)
+Cilindro: w radial = pR^2(1-nu/2)/(Et) = 7.27 mm hacia dentro -> diámetro 10000 -> 9985.5 mm (Delta D = -14.5 mm)
+Cilindro: eps_x = -pR(1/2-nu)/(Et) = -3.420e-04 -> Delta L = -5.13 mm
+Semiesferas: w = pR^2(1-nu)/(2Et) = 2.99 mm (proa), 0.75 mm (popa)
+Cono: cambio de longitud axial aprox. = +0.50 mm (la contracción radial, mayor en la base grande, lo alarga)
+Eslora total: Delta L ~ -8.4 mm  (cilindro + cono + retroceso de los dos polos)
+Delta V ~ -5.00 m3 (-0.29 % del volumen) -> pérdida de empuje ~ 5.12 t
+
+--- Pandeo (elástico, lineal; comparar con los autovalores de SOL 105)
+Entre cuadernas, cilindro (von Mises, L=s=3000): p_cr = 1.462 MPa con n = 11 lóbulos -> lambda = 0.582 -> 145 m
+   (Windenburg-Trilling aproximada: 1.446 MPa)
+   Tensión de pandeo p_cr R/t = 209 MPa < sy -> elástico
+Cono (cilindro equivalente R=4063, L=3250, con cuaderna en x=18000): p_cr ~ 1.831 MPa, n=9 -> lambda ~ 0.73
+Cono (cilindro equivalente R=4063, L=6500, sin cuaderna): p_cr ~ 0.881 MPa, n=7 -> lambda ~ 0.35
+Semiesfera proa R=5000: clásico p_cr = 12.46 MPa (lambda=4.95); con factor 0.3 por imperfecciones ~ 3.74 MPa
+Semiesfera popa R=2500: clásico p_cr = 49.82 MPa (lambda=19.82); con factor 0.3 por imperfecciones ~ 14.95 MPa
+Inestabilidad general (Bryant, L_mamparos=12000, chapa colaborante 653 mm, I_e=81.5e6 mm4): p_cr = 1.35 MPa con n=5 -> lambda = 0.54
+
+--- Mamparos planos y cubierta (aviso para interpretar SOL 105)
+Empuje radial del casco sobre el borde del mamparo de R=5000: q ~ 1233 N/mm -> compresión en su plano ~ 49 MPa
+Pandeo de placa circular 25 mm, R=5000, borde apoyado: N_cr = 50 N/mm -> lambda ~ 0.04
+Pandeo de placa circular 25 mm, R=5000, borde empotrado: N_cr = 176 N/mm -> lambda ~ 0.14
+=> Es de esperar que los PRIMEROS modos de SOL 105 sean de los mamparos planos sin refuerzos
+   (y quizá de la cubierta), con lambda << 1, antes que los modos del casco.
+Cubierta 20 mm entre baos (b=3000): sigma_cr placa (k=4) = 33.7 MPa frente a la compresión axial del casco ~ 72 MPa + compresión transversal
