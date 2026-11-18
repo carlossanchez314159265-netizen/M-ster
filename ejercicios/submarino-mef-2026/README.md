@@ -13,6 +13,7 @@ Archivos de esta carpeta:
 | `calculos_analiticos.py` | Cálculos de comprobación: tensiones, cambio dimensional y pandeo |
 | `resultados_analiticos.txt` | Salida del script anterior |
 | `dibujo_geometria.py` | Script que genera la figura |
+| `pasos_malla_a_resultados.md` | Pasos desde la malla hasta los resultados, en los ejes del modelo de Femap (vertical = −Y, cubierta en y = +1500, simetría z = 0) |
 
 > Los valores analíticos **no son resultados de Femap**: no se ha ejecutado Femap ni Nastran para preparar esta carpeta. Sirven para comprobar que tu modelo da el orden de magnitud correcto y para comentar los resultados en el informe.
 
