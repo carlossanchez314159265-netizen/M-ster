@@ -45,7 +45,7 @@ El enunciado deja varias cosas abiertas. Esta es la interpretación adoptada; **
 | Cubierta | Plana, 20 mm, a **z = −1500**, desde x = 0 (C1) hasta x = 21000 (M3), cortada por el casco | No se da la altura. A z = 0 cortaría los huecos «centrados» de los mamparos; a −1500 los deja libres. Llega al cono porque el enunciado pide bao en la cuaderna del cono |
 | Baos | Bajo la cubierta, en cada cuaderna (x = 0, 3000, 6000, 9000, 12000, 18000), mismo perfil T 150×150×15 | «Baos correspondientes a las cuadernas» |
 | Escotilla | Agujero de Ø2000 en la parte alta, **centrado en x = 6000** (C3). C3 queda interrumpida dentro del agujero | «Simétrico proa-popa respecto del plano de la cuaderna» |
-| Brazola | Cilindro vertical de radio 1000, **35 mm**, que sube hasta **z = 5250** (250 mm sobre la parte más alta del casco) | No se da el espesor; se toma el del casco |
+| Brazola | Tubo vertical de radio 1000, **35 mm**, extruido **250 mm hacia arriba desde el borde del agujero** en todo su contorno (borde superior también en «silla de montar») | No se da el espesor; se toma el del casco. Al extruir el propio borde del agujero, la brazola queda unida al casco |
 | Material | Acero HY80 / HS56: E = 210000 MPa, ν = 0,3, ρ = 7,85e-9 t/mm³, σy ≈ 550 MPa | HY80 = 80 ksi = 552 MPa; 56 kp/mm² = 549 MPa |
 | Presión | p = ρ g h = 1,025e-9 · 9810 · 250000 = **2,514 MPa** manométrica, uniforme | La variación entre quilla y techo (0,10 MPa, 4 %) es despreciable para este ejercicio |
 
@@ -113,9 +113,10 @@ Plano z = −1500 de x = 0 a x = 21000. En el cilindro sus bordes son las rectas
 
 ### 3.5 Escotilla y brazola
 
-1. Crea un cilindro vertical de radio 1000, eje paralelo a Z por (6000, 0), desde z = 4500 hasta z = 5250.
-2. Interséctalo con el casco: la curva de intersección es la «silla de montar» por la que se corta el agujero.
-3. Elimina el trozo de casco interior al agujero y el trozo de cilindro bajo el casco. La brazola mide 250 mm en proa y popa del agujero (x = 5000 y 7000) y unos 351 mm en los costados (y = ±1000, donde el casco está en z = 4899).
+1. Crea un cilindro vertical auxiliar de radio 1000, eje paralelo a Z por (6000, 0), desde z = 4500 hasta z = 5250.
+2. Interséctalo con el casco (`Geometry → Curve - From Surface → Intersect…`): la curva de intersección es la «silla de montar» por la que se corta el agujero.
+3. Elimina el trozo de casco interior al agujero y el cilindro auxiliar.
+4. Extruye el borde del agujero 250 mm en +Z (`Geometry → Surface → Extrude…`, vector (0,0,0)→(0,0,250)): esa superficie es la brazola, de 250 mm de altura en todo su contorno y unida al casco por la misma curva.
 
 ### 3.6 Conectar todo
 
