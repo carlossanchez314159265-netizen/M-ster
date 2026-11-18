@@ -22,8 +22,11 @@ ax1.plot(R*np.cos(th), R*np.sin(th), color=hull, lw=1.8)
 ax1.plot([0, 15000, 21000], [R, R, r2], color=hull, lw=1.8); ax1.plot([0, 15000, 21000], [-R, -R, -r2], color=hull, lw=1.8)
 th = np.linspace(-np.pi/2, np.pi/2, 100)
 ax1.plot(21000 + r2*np.cos(th), r2*np.sin(th), color=hull, lw=1.8)
-for x, r in ((3000, R), (15000, R), (21000, r2)):
-    ax1.plot([x, x], [-r, r], color="#e03131", lw=1.2, alpha=0.6)
+for x, r, hz in ((3000, R, 1000), (15000, R, 1000), (21000, r2, 400)):
+    ax1.plot([x, x], [hz, r], color="#e03131", lw=1.6); ax1.plot([x, x], [-r, -hz], color="#e03131", lw=1.6)
+ax1.text(3150, 0, "Ø2000", color="#e03131", fontsize=8, va="center")
+ax1.text(15150, 0, "elipse\n2000 alto", color="#e03131", fontsize=8, va="center")
+ax1.text(21150, 0, "Ø800", color="#e03131", fontsize=8, va="center")
 ax1.plot([0, 21000], [zd, zd], color=deck, lw=4)
 ax1.axhline(0, color="0.6", ls="-.", lw=0.8)
 ax1.annotate("CUBIERTA  z = −1500\nde x = 0 a x = 21000", (10500, zd), (10500, -3900), ha="center",
@@ -65,9 +68,16 @@ for x, ls, lab in ((0, "-", "cilindro (x = 0…15000)"), (18000, "--", "x = 1800
 ax3.annotate("", (-half_w(0), zd - 900), (half_w(0), zd - 900), arrowprops=dict(arrowstyle="<->", color=deck))
 ax3.text(0, zd - 1350, "9539 en el cilindro", ha="center", color=deck, fontsize=10, va="top")
 ax3.text(0, zd + 200, "6874 en x=18000 · 4000 en x=21000", ha="center", color=deck, fontsize=8.5)
-ax3.plot(0, 0, "+", color="k"); ax3.text(150, 150, "eje", fontsize=8)
+from matplotlib.patches import Ellipse, Circle
+ax3.add_patch(Ellipse((0, 0), 1000, 2000, fill=False, ec="#e03131", lw=2))
+ax3.add_patch(Circle((0, 0), 1000, fill=False, ec="#e03131", lw=1, ls="--"))
+ax3.add_patch(Circle((0, 0), 400, fill=False, ec="#e03131", lw=1, ls=":"))
+ax3.text(650, 1300, "elipse M1: 1000 (Y) × 2000 (Z)", color="#e03131", fontsize=8.5)
+ax3.text(1050, -250, "agujero M2 Ø2000 (- -)", color="#e03131", fontsize=8)
+ax3.text(1050, -650, "agujero M3 Ø800 (···)", color="#e03131", fontsize=8)
+ax3.text(-2600, 0, "la cubierta queda\n500 mm por debajo\nde la elipse", fontsize=8, color=deck, ha="center", va="center")
 ax3.legend(loc="upper center", fontsize=8, frameon=False, bbox_to_anchor=(0.5, 1.02))
-ax3.set_title("3 · Sección vista desde proa (plano YZ)", fontsize=12, pad=28)
+ax3.set_title("3 · Sección vista desde proa (plano YZ) con los agujeros", fontsize=12, pad=28)
 ax3.set_aspect("equal"); ax3.set_xlim(-5800, 5800); ax3.set_ylim(-6200, 5600); ax3.axis("off")
 
 fig.text(0.5, 0.01, "Esquema ilustrativo (no captura de Femap). Ejes: X a lo largo del submarino hacia popa, Y a babor, Z hacia arriba; "
