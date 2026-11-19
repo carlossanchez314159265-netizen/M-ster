@@ -1,15 +1,15 @@
-# Práctica · 19 casos tipo test y 3 mini-ejercicios
+# Práctica · 20 casos tipo test y 3 mini-ejercicios
 
 Preguntas originales de aplicación (cálculos y situaciones), **no de exámenes anteriores**. Una sola respuesta correcta. Hazlo sin apuntes en unos 30 minutos y luego los mini-ejercicios con el [esquema de ejercicios](ESQUEMA_EJERCICIOS.md) abierto.
 
-## Test: 19 casos prácticos
+## Test: 20 casos prácticos
 
 ### 1. Una naviera compra un buque con un préstamo. ¿Cuál de estas partidas NO figura como coste en la cuenta de explotación del año?
 
-- **A.** Los salarios de la tripulación
+- **A.** Los salarios y la manutención de la tripulación
 - **B.** La devolución del principal del préstamo
-- **C.** La amortización del buque
-- **D.** Los intereses del préstamo
+- **C.** La amortización del buque, que refleja su desgaste
+- **D.** Los intereses del préstamo de financiación
 
 <details><summary>Solución</summary>
 
@@ -32,9 +32,9 @@ Preguntas originales de aplicación (cálculos y situaciones), **no de exámenes
 
 ### 3. En un time charter el fletador reclama porque el buque llegó con una avería de máquinas y sin certificados. ¿Qué obligación del fletante se ha incumplido?
 
-- **A.** Pagar el combustible
-- **B.** Contratar la carga
-- **C.** Pagar los costes portuarios
+- **A.** Pagar el combustible y los costes de puerto durante el contrato
+- **B.** Contratar la carga y negociar los fletes con los cargadores
+- **C.** Abonar las tasas portuarias y los servicios de remolque y amarre
 - **D.** Mantener el buque armado, tripulado y navegable, física y documentalmente
 
 <details><summary>Solución</summary>
@@ -97,10 +97,10 @@ Preguntas originales de aplicación (cálculos y situaciones), **no de exámenes
 
 ### 8. V/C: 6 viajes × 50.000 t a 14 $/t, comisión 2,5 %, costes de viaje 1,2 M$, duración 200 días. T/C alternativo: 14.000 $/día bruto con la misma comisión. ¿Qué conviene?
 
-- **A.** V/C: TCE 21.000 $/día
-- **B.** Son equivalentes
-- **C.** V/C: TCE 14.475 $/día frente a 13.650 netos
-- **D.** T/C: 14.000 frente a 14.475
+- **A.** V/C: TCE de 21.000 $/día frente a 13.650
+- **B.** Equivalentes: ambas opciones dan el mismo ingreso diario
+- **C.** V/C: TCE de 14.475 $/día, frente a 13.650 netos
+- **D.** T/C: 14.000 $/día frente a 14.475 del viaje
 
 <details><summary>Solución</summary>
 
@@ -162,10 +162,10 @@ Preguntas originales de aplicación (cálculos y situaciones), **no de exámenes
 
 ### 13. Un granelero de 8.000 GT, bandera de Panamá, hace escala en Valencia. Respecto al EU ETS marítimo:
 
-- **A.** Solo está incluido si es de bandera UE
-- **B.** Está incluido: el criterio es ≥ 5.000 GT y escala en puertos UE, con independencia de la bandera
-- **C.** Queda excluido por ser de bandera extranjera
-- **D.** Queda excluido por ser granelero
+- **A.** Solo está incluido si es de bandera de un Estado miembro de la UE
+- **B.** Está incluido: basta ≥ 5.000 GT y escala en un puerto UE, sin importar la bandera
+- **C.** Queda excluido por ser de bandera extranjera, como Panamá
+- **D.** Queda excluido por ser un granelero y no un buque de pasaje
 
 <details><summary>Solución</summary>
 
@@ -175,10 +175,10 @@ Preguntas originales de aplicación (cálculos y situaciones), **no de exámenes
 
 ### 14. En 2026, un buque navega por el Mediterráneo (SECA desde mayo de 2025) con combustible de 0,5 % de azufre. ¿Es suficiente?
 
-- **A.** No: el límite en SECA es 0,1 %; necesita MGO/destilado o un scrubber
-- **B.** Sí: 0,5 % es el límite global y vale en todas partes
-- **C.** Sí, si lo comunica con un FONAR
-- **D.** No hay límite en el Mediterráneo
+- **A.** No: el límite en SECA es 0,1 %, y necesita MGO o destilado o un scrubber
+- **B.** Sí: el 0,5 % es el límite global, que vale en todas las zonas del mundo
+- **C.** Sí, siempre que comunique un FONAR al Estado de bandera
+- **D.** No existe ningún límite de azufre específico en el Mediterráneo
 
 <details><summary>Solución</summary>
 
@@ -188,9 +188,9 @@ Preguntas originales de aplicación (cálculos y situaciones), **no de exámenes
 
 ### 15. Un buque de 20.000 GT recibe calificación CII «E». ¿Qué debe hacer?
 
-- **A.** Nada: el CII solo es informativo
-- **B.** Pagar el Fondo de la OMI
-- **C.** Dejar de navegar
+- **A.** Nada, porque el CII es un dato meramente informativo
+- **B.** Pagar una tasa al Fondo de Cero Emisiones Netas de la OMI
+- **C.** Dejar de navegar hasta que el buque cumpla el nivel exigido
 - **D.** Presentar un plan de acción correctiva
 
 <details><summary>Solución</summary>
@@ -201,10 +201,10 @@ Preguntas originales de aplicación (cálculos y situaciones), **no de exámenes
 
 ### 16. Un granelero entregado en 2010 de 30.000 GT. ¿Qué índice de eficiencia energética le es exigible?
 
-- **A.** Ninguno
-- **B.** Solo el CII y no el EEXI
-- **C.** EEXI desde 2023 (no EEDI, porque se contrató antes de 2013)
-- **D.** EEDI
+- **A.** Ninguno, porque es anterior a la entrada en vigor del Anexo VI
+- **B.** Solo el CII, y no el EEXI, porque no es un buque nuevo
+- **C.** EEXI desde 2023, y no EEDI, porque se contrató antes de 2013
+- **D.** EEDI, porque se aplica a todos los buques de más de 400 GT
 
 <details><summary>Solución</summary>
 
@@ -228,9 +228,9 @@ Preguntas originales de aplicación (cálculos y situaciones), **no de exámenes
 ### 18. Quien capta carga para una línea regular y firma los conocimientos de embarque en nombre del naviero es:
 
 - **A.** El agente de carga
-- **B.** El consignatario
-- **C.** El transitario
-- **D.** El bróker
+- **B.** El consignatario del buque
+- **C.** El transitario del cargador
+- **D.** El bróker de fletamentos
 
 <details><summary>Solución</summary>
 

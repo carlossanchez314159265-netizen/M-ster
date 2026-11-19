@@ -42,10 +42,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 3. ¿Quién es el propietario del buque?
 
-- **A.** Quien realiza la gestión comercial
-- **B.** Quien lo toma en fletamento por tiempo
+- **A.** La empresa que se ocupa de buscar cargas y contratarlas con los clientes
+- **B.** El fletador que toma el buque por un periodo fijo y decide sus viajes
 - **C.** El titular registral del buque, con independencia de quién lo explote
-- **D.** Quien lo arma y nombra al capitán
+- **D.** La persona que arma el buque, nombra al capitán y mantiene a la tripulación a bordo
 
 <details><summary>Solución</summary>
 
@@ -55,10 +55,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 4. El armador es quien:
 
-- **A.** Contrata cargas y clientes (gestión comercial)
-- **B.** Representa al buque en un puerto concreto
-- **C.** Intermedia entre fletante y fletador a cambio de comisión
-- **D.** Posee el buque y lo dedica a la navegación en su nombre; se ocupa de la gestión técnico-náutica
+- **A.** Contrata cargas y clientes, y se ocupa de la gestión comercial del buque en nombre del fletador
+- **B.** Representa al buque en un puerto
+- **C.** Intermedia entre fletante y fletador por comisión
+- **D.** Posee el buque y lo dedica a la navegación en su nombre; gestión técnico-náutica
 
 <details><summary>Solución</summary>
 
@@ -81,10 +81,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 6. El naviero es la figura que realiza:
 
-- **A.** El peritaje de averías
-- **B.** La gestión comercial del buque (búsqueda de cargas y contratación con clientes)
-- **C.** La gestión técnico-náutica
-- **D.** La representación en puerto
+- **A.** El peritaje de las averías por cuenta del seguro o de una de las partes
+- **B.** La gestión comercial del buque: búsqueda de cargas y contratación con los clientes
+- **C.** La gestión técnico-náutica del buque: dotación, mantenimiento y certificados
+- **D.** La representación del buque ante las autoridades de un puerto concreto
 
 <details><summary>Solución</summary>
 
@@ -107,10 +107,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 8. En un fletamento por viaje, el fletador es:
 
-- **A.** El armador
-- **B.** El propietario
-- **C.** El práctico
-- **D.** Quien contrata el servicio para un viaje concreto (exportador, importador, comerciante…)
+- **A.** El armador, que arma el buque y lo pone a disposición del naviero para sus viajes
+- **B.** El propietario registral del buque
+- **C.** El práctico que asesora al capitán
+- **D.** Quien contrata el servicio para un viaje concreto: exportador, importador o comerciante
 
 <details><summary>Solución</summary>
 
@@ -120,10 +120,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 9. El gestor naval (ship manager):
 
-- **A.** Gestiona parte de la explotación del buque por cuenta del armador, normalmente la gestión náutica, y no es fletador
-- **B.** Es el fletador por tiempo del buque
-- **C.** Es la máxima autoridad a bordo
-- **D.** Sólo existe en España
+- **A.** Gestiona parte de la explotación por cuenta del armador y no es fletador
+- **B.** Toma el buque en fletamento por tiempo y se encarga de su gestión comercial, actuando por cuenta propia
+- **C.** Es la máxima autoridad a bordo y firma los conocimientos de embarque
+- **D.** Es una figura que solo existe en España
 
 <details><summary>Solución</summary>
 
@@ -133,10 +133,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 10. El consignatario:
 
-- **A.** Tramita importaciones ante la Aduana
-- **B.** Representa al armador o naviero en un puerto y contrata servicios portuarios por su cuenta
-- **C.** Capta carga para una línea regular
-- **D.** Organiza el transporte multimodal por cuenta del cargador
+- **A.** Tramita las importaciones y exportaciones ante la Aduana en nombre del comerciante
+- **B.** Representa al armador o naviero en un puerto y contrata los servicios portuarios por su cuenta
+- **C.** Capta y contrata carga para los buques de una línea regular en nombre de la naviera
+- **D.** Organiza y coordina el transporte multimodal por cuenta del cargador
 
 <details><summary>Solución</summary>
 
@@ -146,10 +146,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 11. El agente de carga (cargo agent):
 
-- **A.** Es el intermediario en fletamentos tramp
-- **B.** Hace de práctico
-- **C.** Capta y contrata carga por cuenta de una naviera para sus buques de línea regular y firma los conocimientos de embarque
-- **D.** Representa al buque en puerto
+- **A.** Es el intermediario en los fletamentos tramp
+- **B.** Hace de práctico en el puerto
+- **C.** Capta carga por cuenta de una naviera de línea regular y firma los conocimientos
+- **D.** Representa al buque en un puerto y contrata los servicios portuarios en nombre del armador
 
 <details><summary>Solución</summary>
 
@@ -159,10 +159,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 12. El corredor marítimo (bróker) es:
 
-- **A.** El intermediario en seguros
-- **B.** El que hace el peritaje de averías
-- **C.** El agente de aduanas
-- **D.** El intermediario comercial entre fletante y fletador, a cambio de comisión
+- **A.** El intermediario libre en la contratación de las pólizas de seguro del buque
+- **B.** El técnico que valora los daños y causas de una avería por cuenta del seguro
+- **C.** El mandatario que hace los trámites aduaneros de importación y exportación
+- **D.** El intermediario comercial entre fletante y fletador, que cobra una comisión
 
 <details><summary>Solución</summary>
 
@@ -172,10 +172,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 13. El transitario (freight forwarder):
 
-- **A.** Organiza y coordina el transporte, frecuentemente multimodal, por cuenta de cargadores
-- **B.** Representa a la naviera en puerto
-- **C.** Es el máximo responsable a bordo
-- **D.** Realiza la liquidación de la avería gruesa
+- **A.** Organiza y coordina el transporte, frecuentemente multimodal, por cuenta de los cargadores
+- **B.** Representa a la naviera en un puerto y contrata los servicios que necesita el buque
+- **C.** Es el máximo responsable a bordo y representa al armador en la mar
+- **D.** Interviene como profesional libre en la liquidación de una avería gruesa
 
 <details><summary>Solución</summary>
 
@@ -187,7 +187,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 - **A.** Agente de aduanas
 - **B.** Comisario de averías (marine surveyor)
-- **C.** Liquidador de averías
+- **C.** Liquidador de averías, que interviene en la liquidación de un acto de avería gruesa
 - **D.** Práctico
 
 <details><summary>Solución</summary>
@@ -198,10 +198,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 15. El práctico (pilot) es:
 
-- **A.** El representante del armador en puerto
-- **B.** El que estiba la carga
+- **A.** El representante del armador en un puerto, que contrata servicios portuarios
+- **B.** La empresa encargada de las operaciones de estiba y desestiba de la carga
 - **C.** Un técnico asesor náutico del capitán en las entradas y salidas de puerto
-- **D.** El jefe técnico del buque
+- **D.** El jefe técnico del buque y representante del armador en la mar
 
 <details><summary>Solución</summary>
 
@@ -224,10 +224,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 17. La diferencia entre «dotación» y «tripulación» es que:
 
-- **A.** La dotación incluye a todo el personal que trabaja habitualmente a bordo; «tripulación» suele referirse solo al personal técnico-náutico
-- **B.** Son exactamente lo mismo
-- **C.** La tripulación incluye a los pasajeros
-- **D.** La dotación es solo el personal de máquinas
+- **A.** La dotación es todo el personal que trabaja a bordo; «tripulación» suele ser solo el técnico-náutico
+- **B.** La tripulación es todo el personal que trabaja a bordo, incluidos asistentes de cabina y músicos, y la dotación solo el técnico-náutico
+- **C.** Son exactamente lo mismo y la ley los usa indistintamente
+- **D.** La dotación es solo el personal de máquinas y la tripulación el de cubierta
 
 <details><summary>Solución</summary>
 
@@ -237,10 +237,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 18. Los elementos reales del transporte marítimo son:
 
-- **A.** La OMI y la OIT
+- **A.** La OMI, la OIT y las sociedades de clasificación
 - **B.** El buque, las infraestructuras, la carga y el flete
-- **C.** Armador, naviero y capitán
-- **D.** El bróker y el transitario
+- **C.** El armador, el naviero, el capitán y el consignatario
+- **D.** El bróker, el transitario y el agente de aduanas
 
 <details><summary>Solución</summary>
 
@@ -250,10 +250,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 19. El «cambio de forma de la carga» consiste en:
 
-- **A.** Licuar el petróleo
-- **B.** Cambiar el puerto de destino
-- **C.** Dotar a la carga de características que permitan manipularla como si fuera granel de fácil manejo (paletización, contenerización, ro-ro…)
-- **D.** Cambiar la carga de un buque a otro
+- **A.** Cambiar el puerto de destino de la carga durante el viaje para adaptarse a las condiciones del mercado
+- **B.** Licuar el petróleo y los gases para transportarlos a granel
+- **C.** Dotar a la carga de forma que se maneje como un granel fácil: paletización, contenedor, ro-ro…
+- **D.** Trasladar la carga de un buque a otro durante el viaje para aprovechar mejor las bodegas y cumplir los plazos de entrega
 
 <details><summary>Solución</summary>
 
@@ -263,7 +263,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 20. ¿Qué es el flete?
 
-- **A.** La carga transportada
+- **A.** La carga transportada en el buque, que en inglés se denomina también «freight»
 - **B.** El coste del combustible
 - **C.** La comisión del bróker
 - **D.** El precio del servicio de transporte marítimo
@@ -276,10 +276,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 21. La OMI (Organización Marítima Internacional):
 
-- **A.** Tiene su sede en Londres y se encarga de la seguridad, la protección y la prevención de la contaminación marina
-- **B.** Tiene su sede en Ginebra y regula las normas laborales
+- **A.** Tiene sede en Londres y se ocupa de la seguridad y la prevención de la contaminación marina
+- **B.** Tiene su sede en Ginebra y elabora las normas laborales internacionales con carácter tripartito entre Estados, empleadores y trabajadores
 - **C.** Es una agencia de la UE
-- **D.** Es una asociación privada de navieros
+- **D.** Es una asociación privada de navieras
 
 <details><summary>Solución</summary>
 
@@ -289,10 +289,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 22. Los convenios internacionales de la OMI y la OIT:
 
-- **A.** Solo regulan la tripulación
+- **A.** Regulan solo las condiciones laborales de la tripulación, no la seguridad del buque
 - **B.** No son leyes de aplicación directa: son modelos que cada Estado desarrolla en su legislación
-- **C.** Son leyes directamente aplicables en todos los países
-- **D.** Solo obligan a los países de la UE
+- **C.** Son leyes directamente aplicables en todos los países que los han firmado, sin desarrollo posterior
+- **D.** Obligan solo a los países de la Unión Europea, que los incorporan por directiva
 
 <details><summary>Solución</summary>
 
@@ -302,10 +302,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 23. La IACS (Asociación Internacional de Sociedades de Clasificación):
 
-- **A.** Representa a los armadores de petroleros
-- **B.** Es una agencia de la UE
+- **A.** Representa a los armadores independientes de buques tanque en los foros internacionales
+- **B.** Es una agencia de la Unión Europea que verifica la seguridad marítima en los puertos
 - **C.** Se creó en 1968, tiene 12 miembros y controla más del 90 % del mercado de clasificación
-- **D.** Se creó en 1948 y regula la contaminación
+- **D.** Se creó en 1948, tiene sede en Londres y regula la prevención de la contaminación
 
 <details><summary>Solución</summary>
 
@@ -328,8 +328,8 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 25. BIMCO es conocida sobre todo por:
 
-- **A.** Elaborar formularios-modelo de contratos marítimos (pólizas de fletamento, conocimientos…) que son estándar del mercado
-- **B.** Agrupar a los clubes P&I
+- **A.** Elaborar formularios modelo de contratos marítimos, estándar del mercado
+- **B.** Agrupar a los clubes de protección e indemnización de las principales navieras de todo el mundo
 - **C.** Representar a los marinos
 - **D.** Clasificar los buques
 
@@ -341,10 +341,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 26. Los clubes de Protección e Indemnización (P&I) son:
 
-- **A.** Asociaciones de brókeres
-- **B.** Mutuas de seguros de las propias navieras que cubren responsabilidades derivadas de la explotación del buque
-- **C.** Aseguradoras de mercancías
-- **D.** Sociedades de clasificación
+- **A.** Asociaciones de brókeres que fijan las comisiones habituales de los fletamentos
+- **B.** Mutuas de seguros de las propias navieras que cubren las responsabilidades derivadas de la explotación
+- **C.** Compañías aseguradoras que cubren los daños y pérdidas de las mercancías transportadas
+- **D.** Sociedades de clasificación que certifican que el buque está bien construido y mantenido
 
 <details><summary>Solución</summary>
 
@@ -354,10 +354,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 27. Tráficos tramp: ¿qué afirmación es correcta?
 
-- **A.** Son el 25 % del tonelaje y los de mayor suma de fletes
-- **B.** Se transportan siempre en contenedores
-- **C.** Mueven grandes partidas de graneles de bajo valor específico (normalmente < 500 $/t), unos 75 % del tonelaje transportado
-- **D.** Mueven carga general con salidas anunciadas
+- **A.** Suponen el 25 % del tonelaje pero los fletes totales más elevados de todo el mercado
+- **B.** Se transportan siempre en contenedores por los grandes armadores de línea regular
+- **C.** Mueven grandes partidas de graneles de bajo valor (normalmente < 500 $/t), unos 75 % del tonelaje
+- **D.** Mueven carga general en pequeñas partidas, con itinerarios y salidas previamente anunciados
 
 <details><summary>Solución</summary>
 
@@ -367,10 +367,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 28. Servicios de línea regular: ¿qué es cierto?
 
-- **A.** Mueven el 75 % del tonelaje
-- **B.** Los fletes totales son menores que en graneles
-- **C.** Se contratan por viaje con flete $/t
-- **D.** Mueven carga general (≈70 % en contenedores), alrededor del 25 % del tonelaje, pero pagan en conjunto más fletes que los graneles
+- **A.** Suponen el 75 % del tonelaje total y pagan menos fletes en conjunto que los graneles, por su menor valor
+- **B.** Mueven graneles en grandes partidas
+- **C.** Se contratan siempre con flete en $/t en FIOS
+- **D.** Carga general (≈ 70 % en contenedores), ≈ 25 % del tonelaje y más fletes en conjunto
 
 <details><summary>Solución</summary>
 
@@ -419,10 +419,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 32. Dentro de la economía azul, ¿qué sector tiene mayor relevancia económica?
 
-- **A.** La pesca
+- **A.** La pesca y la acuicultura, que generan la mayor parte del empleo directo del sector marítimo
 - **B.** El turismo costero
 - **C.** La construcción naval
-- **D.** El transporte marítimo (más del 60 % de la cifra de negocio de las actividades marítimas)
+- **D.** El transporte marítimo (> 60 % de la cifra de negocio marítima)
 
 <details><summary>Solución</summary>
 
@@ -433,9 +433,9 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 ### 33. Una característica económica del transporte marítimo es que:
 
 - **A.** Es intensivo en capital y muy cíclico: oferta rígida a corto plazo y fletes muy volátiles
-- **B.** Tiene oferta muy flexible a corto plazo
-- **C.** Está poco regulado internacionalmente
-- **D.** Es un mercado monopolístico
+- **B.** Tiene una oferta muy flexible a corto plazo, por lo que los fletes casi no varían
+- **C.** Está poco regulado, ya que cada país aplica libremente sus propias normas
+- **D.** Es un mercado monopolístico controlado por unas pocas grandes navieras
 
 <details><summary>Solución</summary>
 
@@ -449,10 +449,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 34. La amortización contable es:
 
-- **A.** Ni pago ni coste
-- **B.** Un coste (y gasto) pero no un pago
-- **C.** Un pago pero no un coste
-- **D.** Un pago y un coste
+- **A.** Ni un coste ni un pago, porque es solo un apunte de balance
+- **B.** Un coste y un gasto, pero no un pago
+- **C.** Un pago y también un coste, porque supone una salida de caja
+- **D.** Un pago, pero no un coste, porque no aparece en la cuenta de explotación
 
 <details><summary>Solución</summary>
 
@@ -462,10 +462,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 35. La devolución del principal de un préstamo es:
 
-- **A.** Parte del CAPEX
-- **B.** Parte del OPEX
-- **C.** Un pago (salida de caja) pero no un coste ni un gasto
-- **D.** Un coste que figura en la cuenta de explotación
+- **A.** Una parte del CAPEX, junto con la amortización contable
+- **B.** Una parte del OPEX, porque forma parte de los costes fijos anuales
+- **C.** Un pago (salida de caja) que no es un coste ni un gasto
+- **D.** Un coste que figura en la cuenta de explotación junto con los intereses
 
 <details><summary>Solución</summary>
 
@@ -475,9 +475,9 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 36. CAPEX =
 
-- **A.** Devolución de principal + intereses
-- **B.** OPEX + intereses
-- **C.** Amortización + devolución de principal
+- **A.** Devolución del principal + intereses del préstamo
+- **B.** OPEX + amortización contable del buque
+- **C.** Amortización contable + devolución del principal del préstamo
 - **D.** Amortización contable + costes financieros (intereses)
 
 <details><summary>Solución</summary>
@@ -501,10 +501,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 38. El OPEX comprende:
 
-- **A.** Carga y descarga
+- **A.** Carga, descarga, estiba y desestiba de las mercancías
 - **B.** Tripulación, costes técnicos (M+R+P+L), seguros y administración
-- **C.** Combustible y costes de puerto
-- **D.** Amortización e intereses
+- **C.** Combustible, tasas portuarias, costes de canales y comisiones de fletamento
+- **D.** Amortización, intereses y devolución del principal del préstamo
 
 <details><summary>Solución</summary>
 
@@ -514,10 +514,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 39. Para repartir los costes fijos por día de operación se divide el total anual por:
 
-- **A.** 360 días
-- **B.** Los días del contrato
-- **C.** 350 días (se supone que el buque está unos 15 días fuera de servicio)
-- **D.** 365 días
+- **A.** 360 días, año comercial de doce meses de 30 días
+- **B.** Los días de duración del contrato concreto que se esté calculando
+- **C.** 350 días, suponiendo unos 15 días al año fuera de servicio
+- **D.** 365 días, porque los costes se devengan todos los días del año
 
 <details><summary>Solución</summary>
 
@@ -566,10 +566,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 43. El arrendamiento a casco desnudo:
 
-- **A.** Es un fletamento por viaje
-- **B.** El propietario sigue armando y tripulando el buque
-- **C.** No es un fletamento; se cede la posesión del buque y el arrendatario es su armador
-- **D.** Es un tipo de fletamento por tiempo
+- **A.** Es un fletamento por viaje en el que el fletante soporta el combustible
+- **B.** Es un contrato en el que el propietario sigue armando y tripulando el buque
+- **C.** No es un fletamento: se cede la posesión del buque y el arrendatario pasa a ser su armador
+- **D.** Es una modalidad de fletamento por tiempo, en la que el fletante mantiene armado el buque
 
 <details><summary>Solución</summary>
 
@@ -579,10 +579,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 44. En el fletamento por tiempo (time charter):
 
-- **A.** El fletador asume la gestión náutica
+- **A.** El fletador asume la gestión náutica y paga además los costes de capital y de operación del buque durante el contrato
 - **B.** El fletante paga el combustible
 - **C.** El flete se expresa en $/t
-- **D.** El fletante retiene la gestión náutica y el fletador asume la gestión comercial y los costes de viaje
+- **D.** El fletante retiene la gestión náutica; el fletador asume la comercial y los costes de viaje
 
 <details><summary>Solución</summary>
 
@@ -592,10 +592,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 45. El trip charter es:
 
-- **A.** Un caso especial de time charter cuya duración es la del viaje y con flete en $/día
-- **B.** Un fletamento por viaje con flete en $/t
-- **C.** Un contrato de línea regular
-- **D.** Un arrendamiento a casco desnudo
+- **A.** Un caso especial de time charter, de duración la del viaje y flete en $/día
+- **B.** Un fletamento por viaje con flete en $/t y costes de viaje a cargo del fletante
+- **C.** Un contrato de transporte en línea regular con conocimiento de embarque
+- **D.** Un arrendamiento a casco desnudo por la duración de un viaje concreto
 
 <details><summary>Solución</summary>
 
@@ -605,9 +605,9 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 46. El contrato de transporte COA (Contract of Affreightment):
 
-- **A.** Fija el flete en $/día
-- **B.** Fleta uno o más buques para transportar una cantidad determinada de mercancía en los viajes necesarios; flete $/t y reparto de costes de V/C
-- **C.** Es un T/C de larga duración
+- **A.** Es un contrato de línea regular
+- **B.** Fleta uno o más buques para transportar una cantidad de carga en los viajes necesarios, con flete en $/t
+- **C.** Es un time charter de larga duración, con flete en $/día y costes de viaje a cargo del fletador
 - **D.** Es un contrato de casco desnudo
 
 <details><summary>Solución</summary>
@@ -618,10 +618,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 47. Condiciones FIOS (Free In Out Stowed):
 
-- **A.** Solo la carga corre a cargo del cargador
-- **B.** Todo corre a cargo del armador
-- **C.** Los costes de carga, descarga y estiba corren a cargo del fletador/cargador
-- **D.** Los costes de carga y descarga corren a cargo del naviero
+- **A.** Solo la carga corre a cargo del cargador; la descarga corre por cuenta del naviero
+- **B.** Todos esos costes corren a cargo del armador, que los incluye en el flete
+- **C.** Los costes de carga, descarga y estiba corren a cargo del fletador o cargador
+- **D.** Los costes de carga y descarga corren a cargo del naviero que transporta la carga
 
 <details><summary>Solución</summary>
 
@@ -657,10 +657,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 50. Régimen de tonnage tax:
 
-- **A.** Solo se paga si hay pérdidas
-- **B.** La base imponible depende del tonelaje de arqueo neto, no del beneficio; se paga una cantidad fija
-- **C.** Se paga un % del beneficio
-- **D.** No se paga impuesto
+- **A.** Solo se paga cuando el ejercicio cierra con pérdidas, como compensación
+- **B.** La base imponible depende del tonelaje de arqueo neto y no del beneficio, con una cuota fija
+- **C.** Se paga un porcentaje del beneficio de explotación, como en el régimen general
+- **D.** No se paga impuesto de sociedades mientras el buque esté bajo bandera nacional
 
 <details><summary>Solución</summary>
 
@@ -670,10 +670,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 51. En un régimen fiscal normal, si se eligen criterios de cálculo que aumentan los costes:
 
-- **A.** Se pagan más impuestos
-- **B.** No cambia nada
+- **A.** Se pagan más impuestos porque aumenta la base imponible
+- **B.** No cambia nada, porque el impuesto no depende del resultado
 - **C.** Disminuye el beneficio y se pagan menos impuestos
-- **D.** Aumenta el beneficio
+- **D.** Aumenta el beneficio contable, aunque se paguen más impuestos
 
 <details><summary>Solución</summary>
 
@@ -683,10 +683,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 52. En el sistema alemán de amortización de un préstamo:
 
-- **A.** La cuota total es constante
-- **B.** Los intereses son constantes
-- **C.** Se devuelve todo al final
-- **D.** La cuota de principal es constante y los intereses decrecen
+- **A.** La cuota total (principal + intereses) es constante durante todo el préstamo
+- **B.** Los intereses son constantes y el principal va aumentando cada año
+- **C.** Se devuelve todo el principal en el último año y solo se pagan intereses antes
+- **D.** La cuota de principal es constante y los intereses van decreciendo
 
 <details><summary>Solución</summary>
 
@@ -696,10 +696,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 53. Un préstamo a 10 años «con 2 años de carencia» (sistema alemán):
 
-- **A.** Durante los 2 años de carencia solo se pagan intereses; después se devuelve el principal en cuotas constantes
-- **B.** No se pagan intereses en los 2 primeros años
-- **C.** Se devuelve todo el principal en el año 3
-- **D.** Los intereses son menores
+- **A.** En los años de carencia solo se pagan intereses; después, cuotas constantes de principal
+- **B.** En los dos primeros años no se paga nada, ni principal ni intereses, y después se devuelve todo en cuotas constantes
+- **C.** Todo el principal se devuelve de una vez en el tercer año
+- **D.** Los intereses son menores porque se capitalizan
 
 <details><summary>Solución</summary>
 
@@ -787,10 +787,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 60. TCE de un viaje = 
 
-- **A.** Ingresos brutos / días
-- **B.** Ingresos netos / días sin restar nada
-- **C.** (ingresos − OPEX) / días
-- **D.** (ingresos netos de comisión − costes de viaje) / días
+- **A.** Ingresos brutos del flete dividido entre los días del viaje
+- **B.** Ingresos netos de comisión divididos entre los días, sin restar costes
+- **C.** (Ingresos netos − OPEX) / días del contrato
+- **D.** (Ingresos netos de comisión − costes de viaje) / días
 
 <details><summary>Solución</summary>
 
@@ -813,10 +813,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 62. En un servicio de línea regular, el naviero soporta:
 
-- **A.** Solo carga/descarga
+- **A.** Solo la manipulación de la carga en los puertos de escala
 - **B.** CAPEX + OPEX + costes de viaje + carga/descarga
-- **C.** Solo CAPEX + OPEX
-- **D.** Solo costes de viaje
+- **C.** Solo CAPEX y OPEX; los costes de viaje corren a cargo del cargador
+- **D.** Solo los costes de viaje; el CAPEX y el OPEX los paga el fletante
 
 <details><summary>Solución</summary>
 
@@ -826,10 +826,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 63. Ejercicio ContSea, buque en T/C: ¿qué NO se incluye en los costes?
 
-- **A.** Combustible
-- **B.** Tasas portuarias
-- **C.** CAPEX y OPEX del buque
-- **D.** Flete T/C bruto
+- **A.** El combustible de navegación y de puerto
+- **B.** Las tasas y servicios portuarios y la manipulación
+- **C.** Los CAPEX y OPEX del buque, porque se paga el flete T/C
+- **D.** El flete T/C bruto, que incluye la comisión del bróker
 
 <details><summary>Solución</summary>
 
@@ -839,10 +839,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 64. Un T/C de 6 meses con flete neto de 12.500 $/día (6 meses × 30 días) y comisión del 3 %. Flete bruto total:
 
-- **A.** 2.250.000 $
-- **B.** 2.317.500 $
-- **C.** 2.182.500 $
-- **D.** ≈ 2.319.588 $
+- **A.** 2.250.000 $, porque el neto es el flete total
+- **B.** 2.317.500 $ (2.250.000 × 1,03)
+- **C.** 2.182.500 $ (2.250.000 × 0,97)
+- **D.** ≈ 2.319.588 $ (2.250.000 / 0,97)
 
 <details><summary>Solución</summary>
 
@@ -852,10 +852,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 65. Fondos mínimos iniciales para abordar la compra de un buque: se calculan como:
 
-- **A.** Pago inicial (fondos propios) + déficit máximo acumulado de tesorería
-- **B.** Solo la devolución de principal
+- **A.** El pago inicial con fondos propios más el déficit máximo acumulado de tesorería
+- **B.** Solo la devolución de principal del primer año del préstamo, más los intereses del primer ejercicio completo
 - **C.** Solo el OPEX del primer año
-- **D.** El valor residual
+- **D.** El valor residual del buque
 
 <details><summary>Solución</summary>
 
@@ -869,10 +869,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 66. El transporte marítimo representa aproximadamente, del total global, el…
 
-- **A.** 50 % de NOx
-- **B.** 2,4 % de las emisiones de CO₂, 11 % de las de SOx y 19 % de las de NOx
-- **C.** 2,4 % de SOx y 19 % de CO₂
-- **D.** 11 % de CO₂
+- **A.** 50 % del NOx y 20 % del SOx mundiales, y casi nada del CO₂
+- **B.** 2,4 % del CO₂, 11 % del SOx y 19 % del NOx mundiales
+- **C.** 2,4 % del SOx, 11 % del NOx y 19 % del CO₂ mundiales
+- **D.** 11 % del CO₂, 19 % del SOx y 2,4 % del NOx mundiales
 
 <details><summary>Solución</summary>
 
@@ -895,8 +895,8 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 68. El Anexo VI de MARPOL regula:
 
-- **A.** Los vertidos de hidrocarburos
-- **B.** Las aguas de lastre
+- **A.** Los vertidos de hidrocarburos de los buques tanque
+- **B.** La gestión de las aguas de lastre y sedimentos
 - **C.** La seguridad de la vida humana en el mar
 - **D.** Las emisiones a la atmósfera de los buques
 
@@ -908,10 +908,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 69. Los gases contaminantes (SOx, NOx, PM) se diferencian de los GEI en que:
 
-- **A.** Sus efectos son locales o regionales; los GEI actúan a escala planetaria
-- **B.** Sus efectos son planetarios
-- **C.** Los GEI causan lluvia ácida
-- **D.** No afectan a la salud
+- **A.** Los contaminantes tienen efectos locales o regionales; los GEI actúan a escala planetaria
+- **B.** Los contaminantes tienen efectos planetarios; los GEI actúan a escala local
+- **C.** Los GEI producen la lluvia ácida y los contaminantes el cambio climático
+- **D.** Los contaminantes no afectan a la salud, solo al medioambiente
 
 <details><summary>Solución</summary>
 
@@ -923,8 +923,8 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 - **A.** Marinos
 - **B.** Graníticos (norte de Europa); los calcáreos la neutralizan
-- **C.** Calcáreos (sur de Europa)
-- **D.** Arenosos
+- **C.** Calcáreos, típicos del sur de Europa y de la mayor parte de España, porque se disuelven con facilidad
+- **D.** Arenosos de la costa
 
 <details><summary>Solución</summary>
 
@@ -934,10 +934,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 71. Efectos cruzados entre emisiones:
 
-- **A.** Reducir SOx baja el CO₂ siempre
-- **B.** No hay efectos cruzados
-- **C.** Reducir azufre con desulfuración en refinería consume energía y genera más CO₂
-- **D.** Reducir NOx baja el consumo
+- **A.** Reducir el SOx reduce siempre también el CO₂ de los buques
+- **B.** No hay efectos cruzados: cada contaminante se regula por separado
+- **C.** Desulfurar en la refinería consume energía y produce más CO₂
+- **D.** Reducir el NOx baja el consumo de combustible y por tanto el CO₂
 
 <details><summary>Solución</summary>
 
@@ -973,10 +973,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 74. El FONAR es:
 
-- **A.** Un plan de eficiencia
+- **A.** Un plan de eficiencia energética que debe llevar el buque a bordo
 - **B.** El informe de indisponibilidad de combustible que cumpla los límites de azufre
-- **C.** Una exención automática
-- **D.** Un certificado de clase
+- **C.** Una exención automática de cumplir el límite de azufre en un puerto
+- **D.** El certificado de clase que acredita que el buque está bien mantenido
 
 <details><summary>Solución</summary>
 
@@ -999,10 +999,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 76. Límites de NOx de MARPOL (Tier):
 
-- **A.** Tier III se aplica en todos los mares
-- **B.** Tier I: −80 %
-- **C.** Tier II es −50 %
-- **D.** Tier II: −20 % respecto a Tier I (buques desde 2011); Tier III: −80 % respecto a Tier I, solo en NECAs
+- **A.** Tier III se aplica a todos los buques que navegan, en cualquier zona
+- **B.** Tier I supone ya una reducción del 80 % respecto al nivel anterior
+- **C.** Tier II supone una reducción del 50 % y se aplica solo en NECAs
+- **D.** Tier II: −20 % sobre Tier I (desde 2011); Tier III: −80 %, solo en zonas NECA
 
 <details><summary>Solución</summary>
 
@@ -1012,10 +1012,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 77. Para cumplir el límite de NOx de Tier III sin cambiar de combustible, las dos tecnologías principales son:
 
-- **A.** SCR (reducción catalítica selectiva, con urea) y EGR (recirculación de gases)
-- **B.** Scrubber y GNL
-- **C.** Scrubber húmedo y seco
-- **D.** Vela y baterías
+- **A.** SCR (con urea) y EGR (recirculación de gases de escape)
+- **B.** Scrubber de gases de escape y combustible GNL para el ciclo Otto
+- **C.** Scrubber húmedo y scrubber seco
+- **D.** Velas auxiliares y baterías en puerto
 
 <details><summary>Solución</summary>
 
@@ -1025,10 +1025,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 78. El EEDI se aplica a:
 
-- **A.** Solo petroleros
-- **B.** Buques nuevos de GT > 400 con contrato desde 1.1.2013 o entrega desde 1.7.2015
-- **C.** Todos los buques existentes
-- **D.** Buques de más de 5.000 GT existentes
+- **A.** Solo los petroleros nuevos que naveguen en zonas de control de emisiones
+- **B.** Buques nuevos > 400 GT con contrato desde 1.1.2013 o entrega desde 1.7.2015
+- **C.** Todos los buques existentes, desde 2013, con independencia de su tamaño
+- **D.** Los buques existentes de más de 5.000 GT, desde el 1 de enero de 2023
 
 <details><summary>Solución</summary>
 
@@ -1038,10 +1038,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 79. El SEEMP:
 
-- **A.** Es un índice de proyecto
-- **B.** Es un impuesto
-- **C.** Es un plan de gestión de la eficiencia energética que deben llevar a bordo todos los buques, con 4 fases
-- **D.** Solo es obligatorio para buques nuevos
+- **A.** Un índice que mide la eficiencia del proyecto del buque y se calcula una sola vez
+- **B.** Un impuesto sobre el combustible que financia el fondo de descarbonización
+- **C.** Un plan de gestión de la eficiencia energética que llevan todos los buques, con cuatro fases
+- **D.** Un plan exigible solo a los buques nuevos, que debe estar aprobado por la clase
 
 <details><summary>Solución</summary>
 
@@ -1051,9 +1051,9 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 80. El DCS de la OMI:
 
-- **A.** Entró en vigor en 2018
-- **B.** Verifica por un tercero acreditado y publica datos
-- **C.** Solo se aplica en la UE
+- **A.** Sistema europeo de seguimiento de emisiones, en vigor desde el 1 enero 2018
+- **B.** Sistema que exige un verificador acreditado y la publicación de los datos por empresa
+- **C.** Sistema que se aplica solo a los buques que escalan en puertos de la UE
 - **D.** Sistema de recopilación de datos de consumo de combustible, en vigor desde el 1 enero 2019
 
 <details><summary>Solución</summary>
@@ -1064,10 +1064,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 81. EEXI y CII (desde 1 enero 2023): ¿cuál es correcta?
 
-- **A.** EEXI: buques existentes ≥ 400 GT, índice intrínseco que se obtiene una vez. CII: buques ≥ 5.000 GT, índice operacional anual
-- **B.** EEXI se calcula cada año y CII una vez
-- **C.** Ambos se aplican a ≥ 400 GT
-- **D.** El CII solo se aplica a buques nuevos
+- **A.** EEXI: existentes ≥ 400 GT, índice intrínseco, una vez; CII: ≥ 5.000 GT, índice operacional anual
+- **B.** EEXI se calcula cada año con la operación real y el CII una sola vez para el buque
+- **C.** Ambos se aplican solo a buques de ≥ 400 GT y se certifican una sola vez
+- **D.** El CII se aplica solo a buques nuevos y el EEXI solo a buques de pasaje
 
 <details><summary>Solución</summary>
 
@@ -1077,10 +1077,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 82. Reducción exigida del CII:
 
-- **A.** −11 % en 2023
-- **B.** −5 % en 2023 y −2 % anual hasta 2026 (−11 % sobre 2019); desde 2027, 2,625 % anual hasta −21,5 % en 2030
-- **C.** −2 % en 2023
-- **D.** −50 % en 2030
+- **A.** −50 % en 2030 sobre 2008, sin objetivos intermedios
+- **B.** −5 % en 2023 y −2 % anual hasta 2026 (−11 % sobre 2019); 2,625 % anual desde 2027
+- **C.** −2 % en 2023 y −5 % anual hasta 2026, hasta llegar a −11 % sobre 2019, con un objetivo posterior de −21,5 % en 2030
+- **D.** −11 % en 2023 y −2,625 % anual hasta 2030
 
 <details><summary>Solución</summary>
 
@@ -1090,10 +1090,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 83. Reglamento MRV (UE) 757/2015: ¿a quién se aplica?
 
-- **A.** Solo a buques de bandera UE
-- **B.** A buques ≥ 400 GT
-- **C.** Buques ≥ 5.000 GT que escalan en puertos del EEE y transportan carga/pasajeros con fines comerciales
-- **D.** A todos los buques de la UE
+- **A.** Solo los de bandera UE que naveguen entre puertos europeos
+- **B.** Los buques ≥ 400 GT que escalan en puertos de la UE
+- **C.** Buques ≥ 5.000 GT que escalan en puertos del EEE y transportan carga o pasajeros
+- **D.** Todos los buques de bandera de un Estado miembro, con independencia de su tamaño y de los puertos que toquen
 
 <details><summary>Solución</summary>
 
@@ -1103,10 +1103,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 84. El EU ETS marítimo desde el 1 enero 2024 cubre, para buques ≥ 5.000 GT:
 
-- **A.** 100 % de todos los viajes
-- **B.** 50 % de los intracomunitarios
-- **C.** Solo las emisiones en puerto
-- **D.** 50 % de emisiones de viajes UE ↔ tercer país, 100 % de los intracomunitarios y 100 % de las producidas en puerto UE
+- **A.** 100 % de las emisiones de todos los viajes que tengan escala en un puerto europeo
+- **B.** 50 % de las emisiones de los viajes intracomunitarios y 100 % de las extracomunitarias
+- **C.** Solo las emisiones producidas durante la estancia del buque atracado en puerto
+- **D.** 50 % de las emisiones UE ↔ tercer país, 100 % de las intra-UE y 100 % de las producidas en puerto UE
 
 <details><summary>Solución</summary>
 
@@ -1129,10 +1129,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 86. El EU ETS es un sistema:
 
-- **A.** Voluntario
-- **B.** Cap and trade: tope global de emisiones y compraventa de derechos; reducción anual del tope del 4,2 %
-- **C.** De impuesto fijo
-- **D.** De subvenciones
+- **A.** Un sistema voluntario de compensación de emisiones
+- **B.** Cap and trade: tope global de emisiones y compraventa de derechos
+- **C.** Un impuesto fijo por tonelada de CO₂ emitida, igual para todos los sectores y todos los buques de la flota
+- **D.** Un sistema de subvenciones a los armadores que instalen scrubbers
 
 <details><summary>Solución</summary>
 
@@ -1142,10 +1142,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 87. El Reglamento FuelEU Maritime (2023/1805):
 
-- **A.** Regula el azufre
-- **B.** Es un impuesto sobre el fueloil
-- **C.** Limita la intensidad media anual de GEI de la energía utilizada (−2 % 2025, −6 % 2030, −14,5 % 2035, −31 % 2040, −62 % 2045, −80 % 2050)
-- **D.** Prohíbe los motores diésel
+- **A.** Regula el contenido máximo de azufre de los combustibles marinos en aguas de la UE
+- **B.** Es un impuesto europeo sobre el fueloil, que se paga en cada escala
+- **C.** Limita la intensidad media anual de GEI de la energía usada (−2 % en 2025 hasta −80 % en 2050)
+- **D.** Prohíbe el uso de motores diésel en los buques que escalen en puertos europeos desde 2030
 
 <details><summary>Solución</summary>
 
@@ -1155,8 +1155,8 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 88. El CBAM afecta a:
 
-- **A.** Los combustibles marinos
-- **B.** El tráfico de cruceros
+- **A.** Los combustibles marinos suministrados a los buques de las navieras europeas en puertos de la UE
+- **B.** Los cruceros
 - **C.** La exportación de petróleo
 - **D.** Importaciones de cemento, electricidad, fertilizantes, aluminio, hidrógeno, hierro y acero
 
@@ -1169,9 +1169,9 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 ### 89. Objetivos de la Estrategia de GEI de la OMI (2023):
 
 - **A.** Cero emisiones netas hacia 2050; −20 % en 2030 y −70 % en 2040; 5 % de energía ZNZ en 2030
-- **B.** −50 % en 2050
-- **C.** Cero neto en 2030
-- **D.** Solo reducir el azufre
+- **B.** Reducir un 50 % las emisiones absolutas en 2050 respecto a 2008, sin metas intermedias
+- **C.** Cero emisiones netas en 2030 y reducción del 90 % de las emisiones de azufre
+- **D.** Reducir solo el azufre y el NOx, dejando el CO₂ para un acuerdo posterior
 
 <details><summary>Solución</summary>
 
@@ -1181,10 +1181,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 90. Tres vías para reducir las emisiones de CO₂ del transporte marítimo:
 
-- **A.** Solo scrubbers
+- **A.** Prohibir el transporte de graneles y ampliar la flota de contenedores
 - **B.** Reducir la actividad, reducir las emisiones unitarias y compensar económicamente
-- **C.** Aumentar velocidad, calado y potencia
-- **D.** Solo cambiar de combustible
+- **C.** Aumentar la velocidad, el calado y la potencia instalada de los buques
+- **D.** Cambiar de combustible, instalar scrubbers y reducir el comercio mundial
 
 <details><summary>Solución</summary>
 
@@ -1194,10 +1194,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 91. Marco de Cero Neto de la OMI (NZF):
 
-- **A.** Fue rechazado definitivamente
-- **B.** Es una tasa fija por tonelada
-- **C.** Aprobado en abril de 2025 (MEPC 83); su adopción se aplazó un año en octubre de 2025 y sigue pendiente; no es aún obligatorio
-- **D.** Ya en vigor desde 2025
+- **A.** Fue rechazado definitivamente por la OMI en octubre de 2025
+- **B.** Es una tasa fija por tonelada de CO₂
+- **C.** Aprobado en abril de 2025; adopción aplazada en octubre de 2025 y aún no obligatorio
+- **D.** Está en vigor desde 2025 y ya obliga a todos los buques de ≥ 5.000 GT que escalen en puertos de países miembros
 
 <details><summary>Solución</summary>
 
@@ -1207,10 +1207,10 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 ### 92. Vías para cumplir los límites de azufre:
 
-- **A.** Solo scrubbers
-- **B.** Solo cambiar de ruta
-- **C.** Solo reducir velocidad
-- **D.** Combustibles bajos en azufre (VLSFO/MGO), HFO con scrubber o combustibles alternativos (GNL, metanol…)
+- **A.** Instalar solo scrubbers, que son la única opción técnica aceptada por la OMI
+- **B.** Cambiar de ruta para evitar las zonas de control de emisiones
+- **C.** Reducir la velocidad por debajo de 10 nudos en todas las zonas
+- **D.** Combustibles bajos en azufre, HFO con scrubber o combustibles alternativos (GNL, metanol…)
 
 <details><summary>Solución</summary>
 
@@ -1221,9 +1221,9 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 ### 93. El ejercicio del parcial incluyó el EU ETS: ¿qué emisiones computan en un viaje San Lorenzo ↔ Tarragona?
 
 - **A.** 50 % de las de navegación y 100 % de las de las escalas en el puerto de la UE
-- **B.** 100 % de las de navegación
-- **C.** 50 % de las de la escala en Tarragona
-- **D.** Solo las de la escala en San Lorenzo
+- **B.** 100 % de las de navegación y 50 % de las de las escalas en puertos
+- **C.** Solo las de navegación, porque las escalas no computan para el ETS
+- **D.** Las de navegación y las de las escalas en ambos puertos, San Lorenzo incluido
 
 <details><summary>Solución</summary>
 
