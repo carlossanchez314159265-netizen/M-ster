@@ -22,7 +22,7 @@ Resumen de una página con lo que más probablemente cae en el test. El detalle 
 | **EEXI** | Existentes ≥ 400 GT, desde 2023; índice **intrínseco**, se calcula una vez. |
 | **CII** | ≥ 5.000 GT, desde 2023; **operacional**, anual; clases **A–E**. **D tres años seguidos o E ⇒ plan correctivo**. |
 | **CII: reducción** | −5 % en 2023 y −2 % anual hasta 2026 (−11 % sobre 2019); 2,625 % anual desde 2027 hasta −21,5 % en 2030. |
-| **Estrategia 2023** | Cero neto hacia 2050; −20 % en 2030 y −70 % en 2040 (respecto a 2008); 5 % de energía ZNZ en 2030. |
+| **Estrategia 2023** | Cero neto hacia 2050; −20 % en 2030 y −70 % en 2040; 5 % de energía ZNZ en 2030. |
 | **NZF** | Aprobado en abril de 2025 (MEPC 83). Adopción **aplazada** en octubre de 2025 (57 a favor, 49 en contra). **Aún no es obligatorio.** Remedial Units: 100 $/t (nivel 1) y 380 $/t (nivel 2). |
 
 ## 3. Unión Europea
