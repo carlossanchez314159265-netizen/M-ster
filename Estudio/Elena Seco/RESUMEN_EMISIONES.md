@@ -1,6 +1,6 @@
 # Emisiones a la atmósfera · lo más importante
 
-Resumen de una página con lo que más probablemente cae en el test. El detalle está en [RESUMEN.md](RESUMEN.md) y en los apuntes de `Apuntes/Elena Seco`.
+Resumen corto con lo que más probablemente cae en el test. El detalle está en [RESUMEN.md](RESUMEN.md) y en los apuntes de `Apuntes/Elena Seco`.
 
 ## 1. Ideas de fondo (se pregunta mucho)
 - **Absoluto frente a específico.** El marítimo emite el 2,4 % del CO₂ mundial, el 6 % de la materia particulada, el 11 % de los SOx y el 19 % de los NOx. Por t·km es el modo más eficiente en CO₂; sus puntos débiles son **SOx y NOx**.

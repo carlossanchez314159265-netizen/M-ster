@@ -7,7 +7,7 @@ Las preguntas son originales, elaboradas a partir de esos apuntes. **No son de e
 | Archivo | Para qué usarlo |
 |---|---|
 | [Resumen](RESUMEN.md) | Entender y consultar los tres bloques |
-| [Resumen de emisiones](RESUMEN_EMISIONES.md) | Una página con lo más importante del tema 3 |
+| [Resumen de emisiones](RESUMEN_EMISIONES.md) | Lo más importante del tema 3, también en [PDF](RESUMEN_EMISIONES.pdf) |
 | [Esquema de ejercicios](ESQUEMA_EJERCICIOS.md) | Cómo resolver cada tipo de ejercicio, paso a paso |
 | [Flashcards](FLASHCARDS.md) · [para Anki](flashcards_anki.tsv) | 42 tarjetas de definiciones y fórmulas |
 | [Práctica](PRACTICA.md) | 19 casos prácticos tipo test y 3 mini-ejercicios con solución |
