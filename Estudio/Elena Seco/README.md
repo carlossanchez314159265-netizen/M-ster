@@ -10,6 +10,7 @@ Las preguntas son originales, elaboradas a partir de esos apuntes. **No son de e
 | [Esquema de ejercicios](ESQUEMA_EJERCICIOS.md) | Cómo resolver cada tipo de ejercicio, paso a paso |
 | [Flashcards](FLASHCARDS.md) · [para Anki](flashcards_anki.tsv) | 42 tarjetas de definiciones y fórmulas |
 | [Práctica](PRACTICA.md) | 19 casos prácticos tipo test y 3 mini-ejercicios con solución |
+| [Ejercicio propio 1](EJERCICIO_PROPIO_1.md) | Ejercicio completo con trampas (FIOS, partidas que no son OPEX, comisión, lastre…), solución plegada |
 | [Test ampliado](TEST_AMPLIADO.md) | 93 preguntas tipo test por tema, con solución plegada |
 | [Test interactivo](test_interactivo.html) | Las 112 preguntas autocorregibles: descarga el archivo y ábrelo en el navegador |
 
