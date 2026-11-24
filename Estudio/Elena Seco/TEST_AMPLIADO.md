@@ -1,4 +1,4 @@
-# Test ampliado · 93 preguntas
+# Test ampliado · 133 preguntas
 
 Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones plegadas bajo cada pregunta. Preguntas originales elaboradas a partir de los apuntes de Elena Seco: **no son de exámenes anteriores**.
 
@@ -7,7 +7,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 | Tema | Preguntas |
 |---|---|
 | 1. Organización de la industria marítima | 33 |
-| 2. Coste del transporte y modalidades de explotación | 32 |
+| 2. Coste del transporte y modalidades de explotación | 72 |
 | 3. Emisiones a la atmósfera | 28 |
 
 ---
@@ -863,11 +863,531 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
+### 66. Un salario que se paga a mes vencido es un ejemplo de:
+
+- **A.** Un gasto que no es coste
+- **B.** Un coste anterior al pago
+- **C.** Un pago anterior al coste
+- **D.** Un pago que no es gasto
+
+<details><summary>Solución</summary>
+
+**B.** El trabajo se consume durante el mes (coste) y se paga después. Al revés ocurre con los alquileres pagados por anticipado: pago anterior al coste.
+
+</details>
+
+### 67. Un alquiler que se paga por anticipado es un ejemplo de:
+
+- **A.** Un coste sin ningún pago
+- **B.** Un pago que nunca es coste
+- **C.** Un pago anterior al coste
+- **D.** Un coste anterior al pago
+
+<details><summary>Solución</summary>
+
+**C.** Sales dinero (pago) antes de consumir el servicio (coste).
+
+</details>
+
+### 68. Un ejemplo de pago que no deriva de un gasto de la empresa es:
+
+- **A.** La amortización contable del buque, que es un apunte sin salida de caja
+- **B.** El consumo de combustible en la navegación de un viaje
+- **C.** La nómina mensual de la tripulación del buque
+- **D.** Los impuestos retenidos y abonados a Hacienda
+
+<details><summary>Solución</summary>
+
+**D.** La empresa retiene impuestos a terceros y los ingresa: sale caja pero no es un gasto propio.
+
+</details>
+
+### 69. Para poder hablar de coste, los bienes o servicios adquiridos deben:
+
+- **A.** Consumirse o aplicarse a la producción
+- **B.** Haberse pagado al contado
+- **C.** Figurar en el balance de la empresa
+- **D.** Estar sujetos a algún impuesto
+
+<details><summary>Solución</summary>
+
+**A.** Hasta que no se consumen no hay coste. El gasto es la adquisición; el coste, su consumo.
+
+</details>
+
+### 70. El cálculo de un coste exige dos fases, que son:
+
+- **A.** Repartir los costes en fijos y variables y calcular el coste medio
+- **B.** Cuantificar los recursos usados y valorarlos en dinero
+- **C.** Estimar el precio de venta del servicio y restarle el margen comercial
+- **D.** Calcular la amortización del buque y sumarle los intereses del préstamo
+
+<details><summary>Solución</summary>
+
+**B.** A veces la valoración es inmediata y otras exige criterios, como FIFO o precio medio ponderado para las existencias.
+
+</details>
+
+### 71. Los costes tienen un carácter «convencional» porque:
+
+- **A.** Los fija la legislación para cada tipo de buque
+- **B.** Se calculan siempre con la misma fórmula
+- **C.** Pueden variar según criterios contables admisibles
+- **D.** Son idénticos para toda empresa del mismo sector
+
+<details><summary>Solución</summary>
+
+**C.** Vida útil, valor residual, valoración de existencias o criterios de imputación pueden cambiar el coste de un mismo servicio.
+
+</details>
+
+### 72. Respecto a los criterios de cálculo de costes, lo más importante es:
+
+- **A.** Elegir siempre el criterio que minimice los costes
+- **B.** Cambiar de criterio cada ejercicio para ajustarse al mercado
+- **C.** Aplicar el criterio de la competencia principal
+- **D.** Mantener un criterio uniforme a largo plazo
+
+<details><summary>Solución</summary>
+
+**D.** No hay un criterio mejor en abstracto; lo que importa es la coherencia en el tiempo, fijada en la política de empresa.
+
+</details>
+
+### 73. Si una empresa, en régimen fiscal normal, elige criterios que minimizan sus costes:
+
+- **A.** Aumenta su beneficio y paga más impuestos
+- **B.** Disminuye su beneficio contable y paga menos impuestos al reducirse la base imponible
+- **C.** Su beneficio no cambia y paga lo mismo
+- **D.** Paga menos impuestos por tributar por arqueo
+
+<details><summary>Solución</summary>
+
+**A.** Base imponible = ingresos − costes. Menos costes, más beneficio y más impuesto.
+
+</details>
+
+### 74. Son costes fijos del transporte marítimo los que:
+
+- **A.** Se producen solo cuando el buque está en puerto
+- **B.** Se producen aunque el buque no realice transporte
+- **C.** Dependen de las toneladas transportadas
+- **D.** Dependen de las millas navegadas en cada viaje
+
+<details><summary>Solución</summary>
+
+**B.** Su objetivo es mantener el buque en condiciones de prestar servicio (tripulación, mantenimiento).
+
+</details>
+
+### 75. Son costes variables o de viaje los que:
+
+- **A.** Se reparten por igual todos los días del año
+- **B.** Cubren el desgaste del buque por antigüedad
+- **C.** Solo se producen si se realiza transporte
+- **D.** Se producen aunque el buque esté amarrado
+
+<details><summary>Solución</summary>
+
+**C.** Dependen del viaje concreto y de las condiciones del servicio: combustible, costes de puerto.
+
+</details>
+
+### 76. Los costes fijos totales divididos entre los días de explotación al año dan:
+
+- **A.** El flete por tonelada que debe cobrarse para cubrir un viaje completo
+- **B.** El coste variable medio por cada milla que navega el buque
+- **C.** El alquiler máximo que puede pagar un arrendatario a casco desnudo
+- **D.** El coste fijo diario, mínimo que debe cobrar el fletante en un T/C
+
+<details><summary>Solución</summary>
+
+**D.** Es el importe diario por debajo del cual el armador fletante pierde dinero.
+
+</details>
+
+### 77. Los costes de capital se llaman «costes del propietario» y los corrientes de operación:
+
+- **A.** Costes del armador
+- **B.** Costes del naviero
+- **C.** Costes del fletador
+- **D.** Costes del cargador
+
+<details><summary>Solución</summary>
+
+**A.** CAPEX = propietario; OPEX = armador; costes de viaje = naviero.
+
+</details>
+
+### 78. Las comisiones de financiación y las garantías de un préstamo para adquirir el buque se incluyen en:
+
+- **A.** La amortización contable del buque
+- **B.** Los costes financieros, dentro del CAPEX
+- **C.** El OPEX, dentro de los costes de administración
+- **D.** Los costes de viaje de cada contrato
+
+<details><summary>Solución</summary>
+
+**B.** Los costes financieros son intereses, comisiones por la financiación y otros gastos financieros como las garantías. No incluyen la devolución del principal.
+
+</details>
+
+### 79. En el análisis de necesidades de tesorería, el valor residual del buque es:
+
+- **A.** Un coste fijo anual
+- **B.** Un gasto financiero
+- **C.** Un ingreso, al final de su vida
+- **D.** Un pago adicional del propietario
+
+<details><summary>Solución</summary>
+
+**C.** La tesorería incluye el pago inicial, la devolución de principal y los intereses; el valor residual entra como ingreso.
+
+</details>
+
+### 80. En el OPEX, los costes de tripulación incluyen:
+
+- **A.** Solo los salarios del capitán y los oficiales, sin cargas sociales
+- **B.** El combustible consumido por los grupos auxiliares durante la navegación
+- **C.** Los costes de carga y descarga de la mercancía que se embarca
+- **D.** Salarios, seguridad social a cargo del empleador, manutención y viajes
+
+<details><summary>Solución</summary>
+
+**D.** Retribuciones, cuotas a la seguridad social a cargo del empleador y costes adicionales como manutención o viajes.
+
+</details>
+
+### 81. Los costes técnicos del OPEX comprenden:
+
+- **A.** Mantenimiento, reparaciones, pertrechos y lubricantes
+- **B.** Combustible, lubricantes y tasas portuarias
+- **C.** Amortización y reparaciones extraordinarias
+- **D.** Pertrechos, carga y descarga de la mercancía
+
+<details><summary>Solución</summary>
+
+**A.** Se abrevian M+R+P+L. El combustible no es OPEX.
+
+</details>
+
+### 82. Dentro del OPEX, los costes de seguros comprenden:
+
+- **A.** El seguro de crédito de los fletadores
+- **B.** Casco y máquinas, P&I y riesgos de guerra, huelgas o piratería
+- **C.** Solo el seguro de casco y máquinas del buque
+- **D.** Los seguros de la mercancía transportada en cada viaje y de su manipulación en terminales
+
+<details><summary>Solución</summary>
+
+**B.** Entre los seguros están P&I y los de guerra, huelgas y piratería.
+
+</details>
+
+### 83. Los costes generales o de administración del OPEX incluyen:
+
+- **A.** Las tasas de los puertos de escala y los servicios de remolque y amarre
+- **B.** La manipulación de la carga en la terminal, con estiba y desestiba
+- **C.** Oficinas, personal de tierra, publicidad y comunicaciones
+- **D.** Los salarios y la manutención de la tripulación que trabaja a bordo del buque
+
+<details><summary>Solución</summary>
+
+**C.** Es lo que cuesta la estructura de tierra de la empresa.
+
+</details>
+
+### 84. Se suele suponer que un buque está fuera de servicio unos 15 días al año por mantenimiento, por lo que:
+
+- **A.** Opera y cobra flete unos 365 días
+- **B.** Opera unos 330 días y cobra 350
+- **C.** Cobra flete durante los 15 días de reparaciones
+- **D.** Opera y cobra flete unos 350 días
+
+<details><summary>Solución</summary>
+
+**D.** Los costes fijos se devengan los 365 días, así que se reparten entre los 350 días operativos.
+
+</details>
+
+### 85. Los costes de viaje proporcionales a la actividad son los que:
+
+- **A.** Dependen de la distancia navegada o de los días de viaje
+- **B.** Se pagan siempre que el buque entra en un puerto
+- **C.** Se pagan por tránsito en un canal
+- **D.** Corresponden a las comisiones de los brókeres
+
+<details><summary>Solución</summary>
+
+**A.** Son los consumos, en navegación y en puerto. Los no proporcionales son los costes de puerto, canales y comisiones.
+
+</details>
+
+### 86. Entre los costes relacionados con la carga se cuentan:
+
+- **A.** Las comisiones del bróker de fletamentos y de los agentes
+- **B.** Tasas a la mercancía, carga y descarga, estiba, grúas y almacenaje
+- **C.** El combustible y los lubricantes que consume el buque en el viaje
+- **D.** Las tasas de atraque y los servicios de remolque y practicaje al buque
+
+<details><summary>Solución</summary>
+
+**B.** Son los costes de la manipulación portuaria de las mercancías, no del buque.
+
+</details>
+
+### 87. Las tres facetas en la gestión del buque son:
+
+- **A.** Gestión náutica, mantenimiento y seguros
+- **B.** Gestión comercial, administrativa y fiscal
+- **C.** Propiedad, gestión náutica y gestión comercial
+- **D.** Propiedad, financiación y gestión de tripulación
+
+<details><summary>Solución</summary>
+
+**C.** El reparto de esas tres facetas entre las partes da lugar a las distintas modalidades de explotación.
+
+</details>
+
+### 88. Las modalidades de explotación del buque son:
+
+- **A.** Casco desnudo, time charter y voyage charter, sin ninguna otra modalidad
+- **B.** Fletamento por tiempo, por viaje y por tonelada de arqueo neto
+- **C.** Arrendamiento, fletamento y subfletamento obligatorio para el cargador
+- **D.** Casco desnudo, fletamento por tiempo o por viaje y contrato de transporte en línea regular
+
+<details><summary>Solución</summary>
+
+**D.** Las líneas regulares se contratan con conocimiento de embarque.
+
+</details>
+
+### 89. En el arrendamiento a casco desnudo, el arrendatario recibe:
+
+- **A.** El derecho de posesión del buque, no el de propiedad
+- **B.** La propiedad del buque durante el contrato
+- **C.** Solo el derecho a gestionarlo comercialmente
+- **D.** El buque armado y tripulado por el propietario
+
+<details><summary>Solución</summary>
+
+**A.** El arrendatario arma y equipa el buque y se convierte en su armador.
+
+</details>
+
+### 90. En un arrendamiento a casco desnudo, quien arma y equipa el buque es:
+
+- **A.** El cargador
+- **B.** El arrendatario
+- **C.** El propietario
+- **D.** El fletador
+
+<details><summary>Solución</summary>
+
+**B.** Por eso el arrendatario es el armador (salvo que subarriende).
+
+</details>
+
+### 91. En el arrendamiento a casco desnudo, el arrendatario puede ceder la gestión comercial mediante:
+
+- **A.** Un contrato de línea regular obligatorio
+- **B.** La cesión de la propiedad registral
+- **C.** Un fletamento por tiempo a un tercero
+- **D.** Un nuevo arrendamiento a casco desnudo al propietario
+
+<details><summary>Solución</summary>
+
+**C.** También cabe el subarrendamiento del buque.
+
+</details>
+
+### 92. La diferencia fundamental entre el fletamento por tiempo y el arrendamiento es que en el T/C:
+
+- **A.** El fletador arma y tripula el buque y paga el OPEX durante el contrato
+- **B.** El flete se expresa siempre en $/t transportada y no en $/día
+- **C.** El fletante no soporta ningún coste fijo del buque durante el contrato
+- **D.** El fletante, además de ceder el buque, lo mantiene armado, tripulado y navegable
+
+<details><summary>Solución</summary>
+
+**D.** Junto con la puesta a disposición, hay una prestación de servicios del fletante.
+
+</details>
+
+### 93. En un time charter, quién decide los viajes que hará el buque es:
+
+- **A.** El fletador
+- **B.** El fletante
+- **C.** El propietario
+- **D.** El consignatario
+
+<details><summary>Solución</summary>
+
+**A.** El armador solo se compromete a la navegabilidad. El fletador es quien explota comercialmente el buque.
+
+</details>
+
+### 94. En el time charter, el buque debe estar navegable desde el punto de vista:
+
+- **A.** Solo fiscal
+- **B.** Físico y jurídico o documental
+- **C.** Solo físico
+- **D.** Solo comercial
+
+<details><summary>Solución</summary>
+
+**B.** Debe tener todos los certificados estatutarios y seguros necesarios para el tráfico previsto.
+
+</details>
+
+### 95. En un time charter, el titular de la empresa de navegación, que se convierte en el naviero, es:
+
+- **A.** El propietario del buque
+- **B.** El consignatario
+- **C.** El fletador
+- **D.** El armador fletante
+
+<details><summary>Solución</summary>
+
+**C.** La gestión comercial pasa al fletador.
+
+</details>
+
+### 96. El flete en un time charter debería cubrir, en condiciones de mercado normales:
+
+- **A.** Solo el CAPEX más un margen
+- **B.** CAPEX, OPEX y costes de viaje
+- **C.** Solo el OPEX más los costes financieros
+- **D.** CAPEX + OPEX más un margen de beneficio
+
+<details><summary>Solución</summary>
+
+**D.** No siempre es posible en todas las situaciones del mercado.
+
+</details>
+
+### 97. Un fletador por tiempo que a su vez fleta el buque por viaje a un cargador actúa como:
+
+- **A.** Fletante en el segundo contrato
+- **B.** Fletador en ambos contratos
+- **C.** Armador del buque en el segundo contrato
+- **D.** Arrendador del buque
+
+<details><summary>Solución</summary>
+
+**A.** Es la cadena de contratos: fletador del armador y fletante del cargador.
+
+</details>
+
+### 98. En un fletamento por viaje, el fletante asume una «promesa de resultado», que consiste en:
+
+- **A.** Pagar los costes de carga y descarga de la mercancía en los puertos de escala
+- **B.** Navegar entre puertos prefijados y entregar la mercancía como la recibió
+- **C.** Poner el buque a disposición del fletador durante un periodo de tiempo pactado
+- **D.** Alcanzar un número mínimo de viajes al año con el buque contratado
+
+<details><summary>Solución</summary>
+
+**B.** En el T/C, en cambio, el compromiso es de medios (mantener el buque listo).
+
+</details>
+
+### 99. En un fletamento por viaje, el fletante puede ser:
+
+- **A.** Solo el cargador de la mercancía que contrata el transporte
+- **B.** Solo una empresa de línea regular con servicio de contenedores
+- **C.** Propietario-armador, arrendatario-armador o fletador por tiempo
+- **D.** Solo el propietario registral del buque, que debe además ser su armador
+
+<details><summary>Solución</summary>
+
+**C.** Lo esencial es que disponga del buque por cualquiera de esas vías.
+
+</details>
+
+### 100. Los fletamentos por viajes consecutivos se caracterizan porque:
+
+- **A.** Se fleta el buque por un periodo fijo con flete expresado en $/día
+- **B.** El flete se expresa en $/TEU y se aplican condiciones liner terms
+- **C.** El fletador paga todos los costes de viaje del buque durante los viajes
+- **D.** Se contratan varios viajes seguidos, normalmente entre los mismos puertos
+
+<details><summary>Solución</summary>
+
+**D.** Se pueden pactar «todos los viajes que dé tiempo en un año», con el reparto de costes del V/C y flete en $/t.
+
+</details>
+
+### 101. En un COA el fletante puede cumplir el contrato:
+
+- **A.** Con buques propios o tomados en fletamento de terceros
+- **B.** Solo con buques propios, y siempre con un único buque designado
+- **C.** Solo con un buque concreto designado en el contrato por el fletador
+- **D.** Solo con buques de la bandera del cargador, por razones de cabotaje
+
+<details><summary>Solución</summary>
+
+**A.** Es un contrato por una cantidad de mercancía, no por un buque concreto.
+
+</details>
+
+### 102. El arrendamiento a casco desnudo es para el propietario una actividad:
+
+- **A.** Portuaria, con costes de carga
+- **B.** Meramente financiera, con solo costes de capital
+- **C.** Comercial, con costes de viaje
+- **D.** Náutica, con costes de operación
+
+<details><summary>Solución</summary>
+
+**B.** Cede la gestión técnico-náutica y comercial; solo soporta CAPEX.
+
+</details>
+
+### 103. Decir «fletamento a casco desnudo» es incorrecto porque:
+
+- **A.** El casco desnudo es un tipo de COA
+- **B.** El casco desnudo no existe en derecho español
+- **C.** El arrendamiento no es un fletamento; el error viene del inglés, donde ambos son «charter»
+- **D.** El fletamento solo existe por viaje
+
+<details><summary>Solución</summary>
+
+**C.** Hay que decir «arrendamiento a casco desnudo».
+
+</details>
+
+### 104. El fletamento por viaje con condiciones FIOS se usa casi siempre en:
+
+- **A.** Líneas regulares
+- **B.** Servicios de pasaje
+- **C.** Cruceros
+- **D.** Tráficos tramp
+
+<details><summary>Solución</summary>
+
+**D.** En línea regular la manipulación corre por cuenta del naviero.
+
+</details>
+
+### 105. El Impuesto de Sociedades se calcula, en régimen normal, como:
+
+- **A.** Base imponible × tipo, con base = ingresos − costes
+- **B.** Tonelaje de arqueo neto del buque multiplicado por una cuota fija anual
+- **C.** Ingresos totales del ejercicio multiplicados por el tipo impositivo
+- **D.** Costes totales del ejercicio multiplicados por el tipo impositivo
+
+<details><summary>Solución</summary>
+
+**A.** En régimen de tonnage tax la base depende del arqueo neto, no del resultado.
+
+</details>
+
 ---
 
 ## 3. Emisiones a la atmósfera
 
-### 66. El transporte marítimo representa aproximadamente, del total global, el…
+### 106. El transporte marítimo representa aproximadamente, del total global, el…
 
 - **A.** 50 % del NOx y 20 % del SOx mundiales, y casi nada del CO₂
 - **B.** 2,4 % del CO₂, 11 % del SOx y 19 % del NOx mundiales
@@ -880,7 +1400,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 67. Emisiones específicas (g/t·km): el modo con mayores emisiones de casi todos los gases es:
+### 107. Emisiones específicas (g/t·km): el modo con mayores emisiones de casi todos los gases es:
 
 - **A.** El ferrocarril
 - **B.** La carretera
@@ -893,7 +1413,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 68. El Anexo VI de MARPOL regula:
+### 108. El Anexo VI de MARPOL regula:
 
 - **A.** Los vertidos de hidrocarburos de los buques tanque
 - **B.** La gestión de las aguas de lastre y sedimentos
@@ -906,7 +1426,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 69. Los gases contaminantes (SOx, NOx, PM) se diferencian de los GEI en que:
+### 109. Los gases contaminantes (SOx, NOx, PM) se diferencian de los GEI en que:
 
 - **A.** Los contaminantes tienen efectos locales o regionales; los GEI actúan a escala planetaria
 - **B.** Los contaminantes tienen efectos planetarios; los GEI actúan a escala local
@@ -919,7 +1439,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 70. La lluvia ácida es más dañina en suelos:
+### 110. La lluvia ácida es más dañina en suelos:
 
 - **A.** Marinos
 - **B.** Graníticos (norte de Europa); los calcáreos la neutralizan
@@ -932,7 +1452,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 71. Efectos cruzados entre emisiones:
+### 111. Efectos cruzados entre emisiones:
 
 - **A.** Reducir el SOx reduce siempre también el CO₂ de los buques
 - **B.** No hay efectos cruzados: cada contaminante se regula por separado
@@ -945,7 +1465,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 72. Límite general de azufre en los combustibles marinos desde el 1 enero 2020:
+### 112. Límite general de azufre en los combustibles marinos desde el 1 enero 2020:
 
 - **A.** 3,5 %
 - **B.** 0,1 %
@@ -958,7 +1478,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 73. Límite de azufre en las zonas SECA desde el 1 enero 2015:
+### 113. Límite de azufre en las zonas SECA desde el 1 enero 2015:
 
 - **A.** 0,1 % (1.000 ppm)
 - **B.** 0,5 %
@@ -971,7 +1491,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 74. El FONAR es:
+### 114. El FONAR es:
 
 - **A.** Un plan de eficiencia energética que debe llevar el buque a bordo
 - **B.** El informe de indisponibilidad de combustible que cumpla los límites de azufre
@@ -984,7 +1504,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 75. Zonas de control de emisiones: ¿cuál es SECA desde el 1 mayo 2025?
+### 115. Zonas de control de emisiones: ¿cuál es SECA desde el 1 mayo 2025?
 
 - **A.** El Atlántico nororiental
 - **B.** El mar de Noruega
@@ -997,7 +1517,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 76. Límites de NOx de MARPOL (Tier):
+### 116. Límites de NOx de MARPOL (Tier):
 
 - **A.** Tier III se aplica a todos los buques que navegan, en cualquier zona
 - **B.** Tier I supone ya una reducción del 80 % respecto al nivel anterior
@@ -1010,7 +1530,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 77. Para cumplir el límite de NOx de Tier III sin cambiar de combustible, las dos tecnologías principales son:
+### 117. Para cumplir el límite de NOx de Tier III sin cambiar de combustible, las dos tecnologías principales son:
 
 - **A.** SCR (con urea) y EGR (recirculación de gases de escape)
 - **B.** Scrubber de gases de escape y combustible GNL para el ciclo Otto
@@ -1023,7 +1543,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 78. El EEDI se aplica a:
+### 118. El EEDI se aplica a:
 
 - **A.** Solo los petroleros nuevos que naveguen en zonas de control de emisiones
 - **B.** Buques nuevos > 400 GT con contrato desde 1.1.2013 o entrega desde 1.7.2015
@@ -1036,7 +1556,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 79. El SEEMP:
+### 119. El SEEMP:
 
 - **A.** Un índice que mide la eficiencia del proyecto del buque y se calcula una sola vez
 - **B.** Un impuesto sobre el combustible que financia el fondo de descarbonización
@@ -1049,7 +1569,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 80. El DCS de la OMI:
+### 120. El DCS de la OMI:
 
 - **A.** Sistema europeo de seguimiento de emisiones, en vigor desde el 1 enero 2018
 - **B.** Sistema que exige un verificador acreditado y la publicación de los datos por empresa
@@ -1062,7 +1582,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 81. EEXI y CII (desde 1 enero 2023): ¿cuál es correcta?
+### 121. EEXI y CII (desde 1 enero 2023): ¿cuál es correcta?
 
 - **A.** EEXI: existentes ≥ 400 GT, índice intrínseco, una vez; CII: ≥ 5.000 GT, índice operacional anual
 - **B.** EEXI se calcula cada año con la operación real y el CII una sola vez para el buque
@@ -1075,7 +1595,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 82. Reducción exigida del CII:
+### 122. Reducción exigida del CII:
 
 - **A.** −50 % en 2030 sobre 2008, sin objetivos intermedios
 - **B.** −5 % en 2023 y −2 % anual hasta 2026 (−11 % sobre 2019); 2,625 % anual desde 2027
@@ -1088,7 +1608,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 83. Reglamento MRV (UE) 757/2015: ¿a quién se aplica?
+### 123. Reglamento MRV (UE) 757/2015: ¿a quién se aplica?
 
 - **A.** Solo los de bandera UE que naveguen entre puertos europeos
 - **B.** Los buques ≥ 400 GT que escalan en puertos de la UE
@@ -1101,7 +1621,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 84. El EU ETS marítimo desde el 1 enero 2024 cubre, para buques ≥ 5.000 GT:
+### 124. El EU ETS marítimo desde el 1 enero 2024 cubre, para buques ≥ 5.000 GT:
 
 - **A.** 100 % de las emisiones de todos los viajes que tengan escala en un puerto europeo
 - **B.** 50 % de las emisiones de los viajes intracomunitarios y 100 % de las extracomunitarias
@@ -1114,7 +1634,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 85. Con el EU ETS, un precio de 80 €/t CO₂ y un factor de 3,114 t CO₂/t de fueloil, entregar derechos por 1 t de combustible cuesta aproximadamente:
+### 125. Con el EU ETS, un precio de 80 €/t CO₂ y un factor de 3,114 t CO₂/t de fueloil, entregar derechos por 1 t de combustible cuesta aproximadamente:
 
 - **A.** 250 €
 - **B.** 80 €
@@ -1127,7 +1647,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 86. El EU ETS es un sistema:
+### 126. El EU ETS es un sistema:
 
 - **A.** Un sistema voluntario de compensación de emisiones
 - **B.** Cap and trade: tope global de emisiones y compraventa de derechos
@@ -1140,7 +1660,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 87. El Reglamento FuelEU Maritime (2023/1805):
+### 127. El Reglamento FuelEU Maritime (2023/1805):
 
 - **A.** Regula el contenido máximo de azufre de los combustibles marinos en aguas de la UE
 - **B.** Es un impuesto europeo sobre el fueloil, que se paga en cada escala
@@ -1153,7 +1673,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 88. El CBAM afecta a:
+### 128. El CBAM afecta a:
 
 - **A.** Los combustibles marinos suministrados a los buques de las navieras europeas en puertos de la UE
 - **B.** Los cruceros
@@ -1166,7 +1686,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 89. Objetivos de la Estrategia de GEI de la OMI (2023):
+### 129. Objetivos de la Estrategia de GEI de la OMI (2023):
 
 - **A.** Cero emisiones netas hacia 2050; −20 % en 2030 y −70 % en 2040; 5 % de energía ZNZ en 2030
 - **B.** Reducir un 50 % las emisiones absolutas en 2050 respecto a 2008, sin metas intermedias
@@ -1179,7 +1699,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 90. Tres vías para reducir las emisiones de CO₂ del transporte marítimo:
+### 130. Tres vías para reducir las emisiones de CO₂ del transporte marítimo:
 
 - **A.** Prohibir el transporte de graneles y ampliar la flota de contenedores
 - **B.** Reducir la actividad, reducir las emisiones unitarias y compensar económicamente
@@ -1192,7 +1712,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 91. Marco de Cero Neto de la OMI (NZF):
+### 131. Marco de Cero Neto de la OMI (NZF):
 
 - **A.** Fue rechazado definitivamente por la OMI en octubre de 2025
 - **B.** Es una tasa fija por tonelada de CO₂
@@ -1205,7 +1725,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 92. Vías para cumplir los límites de azufre:
+### 132. Vías para cumplir los límites de azufre:
 
 - **A.** Instalar solo scrubbers, que son la única opción técnica aceptada por la OMI
 - **B.** Cambiar de ruta para evitar las zonas de control de emisiones
@@ -1218,7 +1738,7 @@ Banco de preguntas por tema, con **una sola respuesta correcta**. Soluciones ple
 
 </details>
 
-### 93. El ejercicio del parcial incluyó el EU ETS: ¿qué emisiones computan en un viaje San Lorenzo ↔ Tarragona?
+### 133. El ejercicio del parcial incluyó el EU ETS: ¿qué emisiones computan en un viaje San Lorenzo ↔ Tarragona?
 
 - **A.** 50 % de las de navegación y 100 % de las de las escalas en el puerto de la UE
 - **B.** 100 % de las de navegación y 50 % de las de las escalas en puertos
