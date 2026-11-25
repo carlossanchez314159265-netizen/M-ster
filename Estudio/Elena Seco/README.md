@@ -13,7 +13,7 @@ Las preguntas son originales, elaboradas a partir de esos apuntes. **No son de e
 | [Práctica](PRACTICA.md) | 19 casos prácticos tipo test y 3 mini-ejercicios con solución |
 | [Ejercicio propio 1](EJERCICIO_PROPIO_1.md) | Ejercicio completo con trampas (FIOS, partidas que no son OPEX, comisión, lastre…), solución plegada |
 | [Test ampliado](TEST_AMPLIADO.md) | 133 preguntas tipo test por tema, con solución plegada |
-| [Test interactivo](test_interactivo.html) | Las 152 preguntas autocorregibles: descarga el archivo y ábrelo en el navegador |
+| [Test interactivo](test_elena_seco.html) | Las 152 preguntas autocorregibles: descarga el archivo y ábrelo en el navegador |
 
 ## Plan sugerido
 
