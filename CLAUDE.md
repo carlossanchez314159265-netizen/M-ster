@@ -6,7 +6,7 @@ Repositorio de estudio del máster (UPM Navales). Cada asignatura vive en su pro
 
 Hazlo **siempre** con la herramienta del repositorio, nunca a mano:
 
-1. Escribe el banco de preguntas en `herramientas/bancos/<nombre>.json` (formato explicado al principio de `herramientas/generar_test.py`; usa `herramientas/bancos/elena_seco_2.json` como ejemplo).
+1. Escribe el banco de preguntas en `herramientas/bancos/<nombre>.json` (formato explicado al principio de `herramientas/generar_test.py`; usa `herramientas/bancos/ejemplo.json` como ejemplo).
 2. Genera el test:
    ```bash
    python3 herramientas/generar_test.py herramientas/bancos/<nombre>.json --html "<carpeta>/test_<nombre>.html" --md "<carpeta>/TEST_<NOMBRE>.md"
@@ -32,3 +32,14 @@ Después, añade el test al `README.md` de la carpeta de la asignatura y súbelo
 
 - Responde en español.
 - Material de estudio en `Estudio/<Asignatura>/`.
+
+## Llevar estas normas a otra rama
+
+La fuente de estas normas es la rama `normas_claude`. Claude solo lee el `CLAUDE.md` de la rama en la que trabaja, así que en una rama que todavía no lo tenga hay que traerlo:
+
+```bash
+git fetch origin normas_claude
+git checkout origin/normas_claude -- CLAUDE.md herramientas/generar_test.py herramientas/plantilla_test.html herramientas/README.md
+```
+
+Si cambian las normas, actualízalas primero en `normas_claude` y después cópialas así a las ramas de las asignaturas.
