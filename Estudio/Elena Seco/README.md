@@ -14,6 +14,7 @@ Las preguntas son originales, elaboradas a partir de esos apuntes. **No son de e
 | [Ejercicio propio 1](EJERCICIO_PROPIO_1.md) · [PDF](EJERCICIO_PROPIO_1.pdf) | Ejercicio completo con trampas (FIOS, partidas que no son OPEX, comisión, lastre…). En el PDF la solución empieza en la página 3 |
 | [Test ampliado](TEST_AMPLIADO.md) | 133 preguntas tipo test por tema, con solución plegada |
 | [Test interactivo](test_elena_seco.html) | Las 152 preguntas autocorregibles: descarga el archivo y ábrelo en el navegador |
+| [Test 2 interactivo](test_elena_seco_2.html) · [versión Markdown](TEST_2.md) | 90 preguntas nuevas, solo de teoría y sin cálculos, filtrables por tema |
 
 ## Plan sugerido
 
