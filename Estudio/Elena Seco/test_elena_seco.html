@@ -78,6 +78,14 @@ code{font-family:var(--mono);font-size:.9em}
 .fails .ans{color:var(--ok);font-weight:600}
 .empty{color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.bar>i{transition:none}}
+
+.hist-row .btn{padding:8px 12px;font-size:14px}
+.tag.warn{color:var(--bad);border-color:var(--bad)}
+.hlist{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.hlist li{border-top:1px solid var(--line);padding-top:10px;display:grid;gap:4px}
+.hlist .meta{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.hlist .ans{color:var(--ok);font-weight:600}
+.hlist .exp{font-size:14px;color:var(--muted)}
 </style>
 
 <div class="wrap">
@@ -107,6 +115,11 @@ code{font-family:var(--mono);font-size:.9em}
       <label class="toggle"><input type="checkbox" id="shuffle-q"> Barajar preguntas</label>
       <label class="toggle"><input type="checkbox" id="shuffle-o"> Barajar opciones</label>
     </div>
+    <div class="row hist-row" role="group" aria-label="Historial de fallos">
+      <span class="row-label">Repaso</span>
+      <button class="btn" id="h-pend">Repasar falladas (0)</button>
+      <button class="btn" id="h-list">Ver mis fallos</button>
+    </div>
     <div class="status">
       <span id="pos">Pregunta 1 de 152</span>
       <span class="score" id="score">✓ <span class="ok">0</span> · ✗ <span class="bad">0</span></span>
@@ -128,6 +141,54 @@ const KEY = "elena-seco-quiz";
 let state = {set:"all", b:0, shq:false, sho:false};
 try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch(e) {}
 function save(){ try { localStorage.setItem(KEY, JSON.stringify({set:state.set,b:state.b,shq:state.shq,sho:state.sho})); } catch(e) {} }
+
+
+const HKEY = KEY + "-historial";
+let hist = {};
+try { hist = JSON.parse(localStorage.getItem(HKEY) || "{}"); } catch(e) {}
+function hsave(){ try { localStorage.setItem(HKEY, JSON.stringify(hist)); } catch(e) {} }
+function hrec(q, ok){
+  const h = hist[q.q] ??= {f:0, k:0, last:""};
+  if (ok) h.k++; else h.f++;
+  h.last = ok ? "ok" : "bad"; h.t = Date.now();
+  hsave(); hbuttons();
+}
+function pending(){ return DATA.filter(q => hist[q.q] && hist[q.q].last === "bad"); }
+function everFailed(){ return DATA.filter(q => hist[q.q] && hist[q.q].f > 0); }
+function hbuttons(){
+  const p = document.getElementById("h-pend"); if (!p) return;
+  const n = pending().length;
+  p.textContent = `Repasar falladas (${n})`; p.disabled = !n;
+  document.getElementById("h-list").textContent = `Ver mis fallos (${everFailed().length})`;
+}
+function renderHist(){
+  const main = document.getElementById("main");
+  const qs = everFailed().sort((a,b) => (hist[b.q].last==="bad") - (hist[a.q].last==="bad") || hist[b.q].f - hist[a.q].f);
+  const items = qs.map(q => { const h = hist[q.q];
+    return `<li><span class="meta">${BNAMES[q.b]} · fallada ${h.f} ${h.f===1?"vez":"veces"} · acertada ${h.k} · ${h.last==="bad"?"<b style='color:var(--bad)'>pendiente</b>":"última vez bien"}</span>
+      <b>${q.q}</b><span class="ans">✓ ${q.o[q.a]}</span><span class="exp">${q.e}</span></li>`; }).join("");
+  main.innerHTML = `<article class="card summary">
+    <h2>Mis fallos</h2>
+    <p class="empty">Se guardan en este navegador cada vez que respondes. Una pregunta deja de estar <b>pendiente</b> cuando la aciertas en un repaso, pero sigue en la lista con su contador.</p>
+    <div class="nav">
+      <button class="btn primary" id="hl-go" ${pending().length?"":"disabled"}>Repasar las ${pending().length} pendientes</button>
+      <button class="btn" id="hl-dl" ${qs.length?"":"disabled"}>Descargar lista</button>
+      <button class="btn" id="hl-clear" ${qs.length?"":"disabled"}>Borrar historial</button>
+      <button class="btn" id="hl-back">Volver al test</button>
+    </div>
+    ${qs.length?`<ul class="hlist">${items}</ul>`:`<p class="empty">Todavía no has fallado ninguna pregunta.</p>`}
+  </article>`;
+  document.getElementById("hl-go").onclick = () => build(pending().map(q=>q.id));
+  document.getElementById("hl-back").onclick = () => build();
+  document.getElementById("hl-clear").onclick = () => { if (confirm("¿Borrar todo el historial de fallos de este test?")) { hist = {}; hsave(); hbuttons(); renderHist(); } };
+  document.getElementById("hl-dl").onclick = () => {
+    const txt = "# Mis fallos · " + document.title + "\n\n" + qs.map((q,i) => { const h = hist[q.q];
+      return `## ${i+1}. ${q.q}\n\n- Tema: ${BNAMES[q.b]}\n- Fallada ${h.f} · acertada ${h.k}${h.last==="bad"?" · pendiente":""}\n- Respuesta: **${q.o[q.a]}**\n\n${q.e}\n`; }).join("\n");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([txt], {type:"text/markdown"}));
+    a.download = "mis_fallos_" + KEY + ".md"; document.body.appendChild(a); a.click(); a.remove();
+  };
+}
 
 let deck = [], idx = 0, answers = {}, onlyIds = null;
 
@@ -179,7 +240,7 @@ function render(){
   const rightPos = LETTERS[order.indexOf(q.a)];
   const fb = ans ? `<div class="feedback ${ans.ok?"":"bad"}" role="status"><strong class="v">${ans.ok?"Correcta.":"Incorrecta. La buena es la "+rightPos+"."}</strong><p class="exp">${q.e}</p></div>` : "";
   main.innerHTML = `<article class="card">
-    <div class="qmeta"><span class="tag">${SETNAMES[q.s]} · nº ${q.n}</span><span class="tag">${BNAMES[q.b]}</span></div>
+    <div class="qmeta"><span class="tag">${SETNAMES[q.s]} · nº ${q.n}</span><span class="tag">${BNAMES[q.b]}</span>${hist[q.q]&&hist[q.q].f?`<span class="tag warn">Fallada ${hist[q.q].f}×</span>`:""}</div>
     <h2 class="qtext">${q.q}</h2>
     <ul class="opts">${opts}</ul>
     ${fb}
@@ -197,6 +258,7 @@ function pick(oi){
   const {q} = deck[idx];
   if (answers[q.id]) return;
   answers[q.id] = {pick: oi, ok: oi===q.a};
+  hrec(q, oi===q.a);
   render();
   const n = document.getElementById("next"); if (n) n.focus();
 }
@@ -239,5 +301,8 @@ document.addEventListener("keydown", e => {
   if (e.key==="ArrowLeft" && idx>0) { idx--; render(); e.preventDefault(); }
 });
 
+document.getElementById("h-pend").onclick = () => build(pending().map(q=>q.id));
+document.getElementById("h-list").onclick = () => renderHist();
+hbuttons();
 build();
 </script>

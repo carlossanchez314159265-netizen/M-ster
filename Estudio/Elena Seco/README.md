@@ -16,6 +16,8 @@ Las preguntas son originales, elaboradas a partir de esos apuntes. **No son de e
 | [Test interactivo](test_elena_seco.html) | Las 152 preguntas autocorregibles: descarga el archivo y ábrelo en el navegador |
 | [Test 2 interactivo](test_elena_seco_2.html) · [versión Markdown](TEST_2.md) | 90 preguntas nuevas, solo de teoría y sin cálculos, filtrables por tema |
 
+**Historial de fallos:** los dos tests interactivos guardan en el navegador las preguntas que fallas. Con «Repasar falladas» practicas solo las pendientes, y con «Ver mis fallos» ves la lista con la respuesta correcta y la explicación, y la puedes descargar. El historial se guarda en el navegador y el ordenador donde abras el archivo; si cambias de navegador o borras los datos del sitio, empieza de cero.
+
 ## Plan sugerido
 
 1. **13–17 nov:** leer el resumen y los apuntes; flashcards de conceptos y de fórmulas.
