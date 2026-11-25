@@ -1,0 +1,1009 @@
+{
+ "titulo": "Test Elena Seco 2",
+ "asignatura": "Economía y Gestión de Empresas Marítimas · UPM Navales",
+ "descripcion": "90 preguntas nuevas, solo de teoría y sin cálculos. No repiten las del primer test. Elige una opción y verás al momento si es correcta y por qué.",
+ "etiqueta": "Test 2",
+ "clave": "elena-seco-quiz-2",
+ "temas": {
+  "1": "Organización de la industria marítima",
+  "2": "Costes y modalidades de explotación",
+  "3": "Emisiones a la atmósfera"
+ },
+ "temas_cortos": {
+  "1": "Organización",
+  "2": "Costes y modalidades",
+  "3": "Emisiones"
+ },
+ "preguntas": [
+  {
+   "tema": 1,
+   "pregunta": "En los tráficos tramp, el número de cargadores por buque suele ser:",
+   "correcta": "Uno o muy pocos, con cargamentos homogéneos",
+   "incorrectas": [
+    "Numerosos, incluso miles en un solo buque",
+    "Siempre más de diez por cada escala realizada",
+    "Variable, pero siempre con carga contenerizada"
+   ],
+   "explicacion": "En línea regular hay numerosos cargadores (incluso miles por buque) con cargamentos heterogéneos."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Los itinerarios de los servicios de línea regular son:",
+   "correcta": "Fijos y predeterminados, con salidas anunciadas",
+   "incorrectas": [
+    "Discrecionales, según la carga que aparezca en cada momento",
+    "Decididos por cada cargador en cada viaje",
+    "Los mismos que los de los buques tramp"
+   ],
+   "explicacion": "En tramp los itinerarios son discrecionales; de ahí su nombre (tramp = vagabundo)."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El mercado de línea regular se caracteriza por estar:",
+   "correcta": "Concentrado, con cooperación mediante alianzas y consorcios",
+   "incorrectas": [
+    "Muy atomizado, con fletes negociados caso por caso mediante brókeres",
+    "Fijado por la OMI para cada ruta y tipo de carga",
+    "Totalmente regulado por los Estados de bandera"
+   ],
+   "explicacion": "El tramp, en cambio, es muy transparente y competitivo: oferta y demanda fijan directamente los fletes."
+  },
+  {
+   "tema": 1,
+   "pregunta": "En línea regular, las condiciones y fletes se recogen en:",
+   "correcta": "Un contrato de adhesión",
+   "incorrectas": [
+    "Una póliza negociada por bróker en cada caso",
+    "Un convenio de la OMI",
+    "Un acuerdo bilateral entre Estados"
+   ],
+   "explicacion": "En tramp los fletes se negocian en cada caso, normalmente mediante brókeres."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El documento contractual típico del tráfico tramp es:",
+   "correcta": "Póliza de fletamento + conocimiento de embarque",
+   "incorrectas": [
+    "Solo el conocimiento de embarque (bill of lading)",
+    "El certificado de clase del buque",
+    "El manifiesto de carga del consignatario"
+   ],
+   "explicacion": "En línea regular el documento es el conocimiento de embarque."
+  },
+  {
+   "tema": 1,
+   "pregunta": "¿Qué buques son típicos de los tráficos tramp?",
+   "correcta": "Buques tanque, graneleros y OBO",
+   "incorrectas": [
+    "Portacontenedores celulares y ro-ro",
+    "Ferries y buques de crucero",
+    "Cargueros frigoríficos de línea"
+   ],
+   "explicacion": "Los portacontenedores, ro-ro, polivalentes y frigoríficos son típicos de línea regular."
+  },
+  {
+   "tema": 1,
+   "pregunta": "La carga general convencional se denomina en inglés:",
+   "correcta": "Break bulk",
+   "incorrectas": [
+    "Dry bulk",
+    "Liquid bulk",
+    "Ro-ro cargo"
+   ],
+   "explicacion": "Junto con contenedores, carga rodada y refrigerada, es la carga típica de línea regular."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Una de las causas fundamentales del comercio internacional es:",
+   "correcta": "El desequilibrio económico entre regiones del mundo",
+   "incorrectas": [
+    "La existencia de flotas nacionales subvencionadas por los Estados",
+    "La regulación de la OMI sobre los fletes",
+    "La obligación de los Estados de exportar"
+   ],
+   "explicacion": "Países ricos en materias primas sin capital ni mano de obra y países industrializados sin recursos se complementan."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Los factores básicos que han propiciado la globalización de la economía son:",
+   "correcta": "El avance tecnológico y la liberalización de los intercambios",
+   "incorrectas": [
+    "El aumento de los aranceles y de los contingentes a la importación",
+    "La reducción del tamaño medio de los buques",
+    "La desaparición de las líneas regulares"
+   ],
+   "explicacion": "Sobre todo en comunicaciones, y la eliminación progresiva de barreras arancelarias y de contingentes."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Los servicios de pasaje de corta distancia (ferries) se regulan a menudo mediante:",
+   "correcta": "Concesiones o contratos con el Estado",
+   "incorrectas": [
+    "Pólizas de fletamento por viaje",
+    "Contratos de transporte COA",
+    "Convenios de la OIT sobre pasajeros"
+   ],
+   "explicacion": "Por las grandes inversiones y la fuerte estacionalidad de la demanda, como ocurre en España en algunos tráficos."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Atendiendo a la nacionalidad del armador, la mayor parte de los cruceros (en GT) la controlan empresas de:",
+   "correcta": "Estados Unidos",
+   "incorrectas": [
+    "Noruega",
+    "Italia",
+    "Japón"
+   ],
+   "explicacion": "A 1 de enero de 2026, el 34 % de los cruceros y el 64 % de las GT están controlados por empresas de EE. UU."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Tras el COVID, el número de pasajeros de crucero:",
+   "correcta": "Superó el máximo histórico en 2025, con 39 millones",
+   "incorrectas": [
+    "Sigue un 30 % por debajo de los niveles de 2019, sin recuperarse aún",
+    "No ha vuelto a superar los 20 millones anuales",
+    "Se estabilizó en unos 5 millones al año"
+   ],
+   "explicacion": "En 2023 se recuperaron las cifras prepandemia y en 2025 hubo un nuevo récord."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El Clúster Marítimo Español (CME) genera aproximadamente:",
+   "correcta": "El 2,7 % del PIB y el 4,7 % del empleo de España",
+   "incorrectas": [
+    "El 10 % del PIB y el 15 % del empleo de España",
+    "El 0,5 % del PIB y el 1 % del empleo de España",
+    "El 27 % del PIB y el 47 % del empleo directo e indirecto de España"
+   ],
+   "explicacion": "Creado en 2007, agrupa 138 miembros que reúnen a más de 3.000 empresas y ocupa a unas 900.000 personas."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Según el estudio «Blue Economy 2025», los sectores establecidos de la economía azul crean en la UE:",
+   "correcta": "El 2,4 % del empleo, con unos 4,9 millones de empleos directos",
+   "incorrectas": [
+    "El 10 % del empleo, con unos 20 millones de empleos directos",
+    "El 0,5 % del empleo, con unos 900.000 empleos directos",
+    "El 4,7 % del empleo, con unos 3.000 empleos directos"
+   ],
+   "explicacion": "Con un valor añadido de unos 263.000 millones de euros; el propio estudio califica las cifras de conservadoras."
+  },
+  {
+   "tema": 1,
+   "pregunta": "En materia de seguridad, ¿qué modo es responsable del 96 % de las muertes por accidentes de transporte?",
+   "correcta": "La carretera",
+   "incorrectas": [
+    "El ferrocarril",
+    "El transporte aéreo",
+    "El transporte marítimo"
+   ],
+   "explicacion": "La tasa marítima es de 1,4 muertos por cada 100 millones de pasajeros·km, frente a 100 en carretera y 40 en ferrocarril."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Desde el punto de vista jurídico, el buque es:",
+   "correcta": "Una cosa mueble, hipotecable, identificable y registrable, con nacionalidad",
+   "incorrectas": [
+    "Un bien inmueble que se inscribe en el registro de la propiedad del puerto base",
+    "Una persona jurídica con capacidad para contratar",
+    "Un servicio de transporte sin entidad propia"
+   ],
+   "explicacion": "Desde el punto de vista económico es un bien de equipo, una unidad de producción."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Una característica económica de las infraestructuras del transporte es:",
+   "correcta": "Elevado coste, larga duración y fuertes economías de escala",
+   "incorrectas": [
+    "Bajo coste inicial, pero costes de explotación muy altos durante su vida",
+    "Vida útil corta y sin economías de escala",
+    "Inversión pequeña recuperada en pocos meses"
+   ],
+   "explicacion": "Sus costes de explotación son relativamente reducidos comparados con la inversión que exigen."
+  },
+  {
+   "tema": 1,
+   "pregunta": "En inglés, el término «shipowner» puede referirse a:",
+   "correcta": "Propietario, armador o naviero, indistintamente",
+   "incorrectas": [
+    "Solo al propietario registral del buque",
+    "Solo al capitán del buque",
+    "Solo al fletador por viaje"
+   ],
+   "explicacion": "Para distinguir al naviero que hace la gestión comercial final a veces se usa «disponent owner»."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El corredor de seguros obtiene su retribución mediante:",
+   "correcta": "Una comisión que le pagan las aseguradoras sobre las primas",
+   "incorrectas": [
+    "Un salario fijo que le paga el armador",
+    "Un porcentaje del flete que le paga el fletador al cerrar cada contrato",
+    "Una tasa que cobra la autoridad portuaria"
+   ],
+   "explicacion": "Es un agente libre que intermedia en las pólizas de casco, P&I, mercancías…"
+  },
+  {
+   "tema": 1,
+   "pregunta": "Entre las funciones públicas del capitán está:",
+   "correcta": "Ser fedatario público y mantener el orden y la seguridad a bordo",
+   "incorrectas": [
+    "Negociar los fletes con los cargadores en nombre del naviero y firmar las pólizas",
+    "Fijar las tasas portuarias que debe pagar el buque",
+    "Clasificar el buque y emitir sus certificados"
+   ],
+   "explicacion": "Son funciones cada vez menos ejercidas, que el armador no puede recortar."
+  },
+  {
+   "tema": 1,
+   "pregunta": "La empresa estibadora se encarga de:",
+   "correcta": "La carga, descarga, estiba y desestiba en puerto",
+   "incorrectas": [
+    "La representación del buque ante las autoridades",
+    "La intermediación entre fletante y fletador",
+    "El peritaje de los daños de la carga"
+   ],
+   "explicacion": "Estibador es el trabajador portuario de esas empresas."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El agente de aduanas actúa:",
+   "correcta": "Como mandatario de expedidores o receptores ante la Administración",
+   "incorrectas": [
+    "Como representante del armador en el puerto",
+    "Como intermediario libre en la contratación de las pólizas de seguro del buque",
+    "Como asesor náutico del capitán"
+   ],
+   "explicacion": "Tramita importaciones y exportaciones, paga tasas y cobra desgravaciones en nombre de los comerciantes."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El organismo de la UE que presta asistencia técnica y operativa para aplicar la normativa marítima es:",
+   "correcta": "La EMSA (Agencia Europea de Seguridad Marítima)",
+   "incorrectas": [
+    "La IACS (Asociación de Sociedades de Clasificación)",
+    "El BIMCO (Consejo Marítimo Báltico e Internacional)",
+    "La ITF (Federación Internacional del Transporte)"
+   ],
+   "explicacion": "La DG MOVE de la Comisión lidera la política europea de transporte marítimo."
+  },
+  {
+   "tema": 1,
+   "pregunta": "En 2011 la ICS se fusionó con la ISF, que tradicionalmente se encargaba de:",
+   "correcta": "Los asuntos laborales y sociales",
+   "incorrectas": [
+    "La clasificación de buques",
+    "Los seguros de la mercancía",
+    "La formación de prácticos"
+   ],
+   "explicacion": "La ISF, creada en 1909, coordinaba la representación de los armadores en la OIT."
+  },
+  {
+   "tema": 1,
+   "pregunta": "INTERTANKO agrupa a armadores de buques tanque que son:",
+   "correcta": "Independientes: no estatales ni vinculados a refineras",
+   "incorrectas": [
+    "Filiales de las grandes compañías petroleras y de refino",
+    "Exclusivamente de bandera europea",
+    "Operadores de línea regular de contenedores"
+   ],
+   "explicacion": "Defiende un mercado de buques tanque libre y competitivo, la seguridad y el medioambiente."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Las sociedades de clasificación surgieron en el siglo XVIII por iniciativa de:",
+   "correcta": "Los aseguradores, para comprobar el estado de los buques",
+   "incorrectas": [
+    "Los Estados de bandera, para cobrar impuestos",
+    "Los sindicatos de marinos, para mejorar la seguridad de las tripulaciones",
+    "Los puertos, para controlar el atraque"
+   ],
+   "explicacion": "Es un mecanismo de autorregulación propio del sector marítimo."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El transporte marítimo y la carretera se complementan con la carga contenerizada porque permite:",
+   "correcta": "Transporte multimodal sin ruptura de carga",
+   "incorrectas": [
+    "Prescindir de los puertos en la cadena",
+    "Eliminar la necesidad de estibadores",
+    "Transportar graneles en pequeñas partidas"
+   ],
+   "explicacion": "Reduce tiempos en puerto y costes de manipulación y da seguridad frente a robos y daños."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un time charter, ¿quién paga el seguro P&I del buque?",
+   "correcta": "El armador fletante, porque es OPEX",
+   "incorrectas": [
+    "El fletador, porque es coste de viaje",
+    "El cargador, porque protege la mercancía",
+    "El bróker, a cambio de su comisión"
+   ],
+   "explicacion": "En T/C el fletante soporta CAPEX + OPEX; los seguros son OPEX."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un time charter, ¿quién paga el paso por un canal?",
+   "correcta": "El fletador (naviero)",
+   "incorrectas": [
+    "El armador fletante",
+    "El propietario del buque",
+    "El consignatario"
+   ],
+   "explicacion": "Los costes de canales son costes de viaje no proporcionales, a cargo del naviero."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un arrendamiento a casco desnudo, ¿quién paga los salarios de la tripulación?",
+   "correcta": "El arrendatario, que es el armador",
+   "incorrectas": [
+    "El propietario arrendador",
+    "El fletador por tiempo al que se haya subfletado el buque",
+    "El cargador de la mercancía"
+   ],
+   "explicacion": "El arrendatario asume el OPEX: tripulación, técnicos, seguros y administración."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un fletamento por viaje, el mantenimiento del buque lo soporta:",
+   "correcta": "El fletante, directa o indirectamente",
+   "incorrectas": [
+    "El fletador, al pagar el flete en $/t",
+    "El cargador, en condiciones FIOS",
+    "El consignatario del puerto de carga"
+   ],
+   "explicacion": "El fletante en V/C asume CAPEX + OPEX + costes de viaje, directamente o vía alquiler o T/C."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un time charter, el combustible lo paga:",
+   "correcta": "El fletador",
+   "incorrectas": [
+    "El armador fletante",
+    "El propietario",
+    "El bróker"
+   ],
+   "explicacion": "Es coste de viaje, a cargo del naviero fletador."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Si en un time charter el propietario no es el armador, el CAPEX:",
+   "correcta": "Lo asume el propietario y lo traslada al armador mediante el alquiler",
+   "incorrectas": [
+    "Lo asume directamente el fletador por tiempo, que lo incluye en el flete diario que paga",
+    "Desaparece, porque el buque está fletado",
+    "Lo paga el cargador incluido en el flete"
+   ],
+   "explicacion": "El armador soporta así, indirectamente, los costes de capital."
+  },
+  {
+   "tema": 2,
+   "pregunta": "El arrendatario a casco desnudo soporta el CAPEX:",
+   "correcta": "Indirectamente, al pagar el alquiler al propietario",
+   "incorrectas": [
+    "Directamente, como coste financiero propio",
+    "Nunca, porque el CAPEX es del propietario",
+    "Solo si además actúa como fletador por viaje"
+   ],
+   "explicacion": "Si además actúa como naviero, asume también los costes de viaje."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En time charter, el fletador asume además la manipulación de la carga:",
+   "correcta": "Especialmente si opera el buque en línea regular",
+   "incorrectas": [
+    "Nunca, porque el time charter siempre se pacta en condiciones FIOS",
+    "Solo si el buque es un granelero",
+    "Solo cuando lo paga el armador"
+   ],
+   "explicacion": "Los costes de viaje del naviero incluyen, en su caso, carga y descarga (sobre todo en líneas regulares)."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Los costes de viaje se conocen también como:",
+   "correcta": "Costes del naviero",
+   "incorrectas": [
+    "Costes del propietario",
+    "Costes del armador",
+    "Costes de armamento"
+   ],
+   "explicacion": "CAPEX = propietario; OPEX = armador («costes de armamento del buque»); VOYEX = naviero."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Los costes fijos (CAPEX + OPEX) se conocen como «costes de armamento» porque:",
+   "correcta": "Son los necesarios para tener el buque listo para navegar en todo momento",
+   "incorrectas": [
+    "Solo se producen cuando el buque va armado para navegar por zonas de piratería",
+    "Se pagan al astillero en el momento de la entrega",
+    "Dependen del armamento de la carga en cada viaje"
+   ],
+   "explicacion": "Mantienen el buque en condiciones de prestar servicio."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En el balance de una naviera, las «comisiones abonadas a brókers» son:",
+   "correcta": "Un coste de viaje, no un OPEX",
+   "incorrectas": [
+    "Un coste técnico dentro del OPEX",
+    "Un coste de capital",
+    "Un ingreso de explotación"
+   ],
+   "explicacion": "Por eso no se suman al calcular el OPEX en el ejercicio de clase."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En el balance de una naviera, los «ingresos por demoras» son:",
+   "correcta": "Ingresos, que no se incluyen en los costes",
+   "incorrectas": [
+    "Costes de administración dentro del OPEX del ejercicio",
+    "Costes de viaje del naviero",
+    "Costes financieros del CAPEX"
+   ],
+   "explicacion": "Las demoras son compensaciones que paga el fletador cuando se excede el tiempo de plancha."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En el balance, la partida «combustible a bordo» es:",
+   "correcta": "Una existencia del balance, no un OPEX",
+   "incorrectas": [
+    "Un coste técnico incluido en el OPEX",
+    "Un coste de capital del propietario",
+    "Un coste de administración"
+   ],
+   "explicacion": "El combustible se imputa como coste de viaje cuando se consume."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Adquirir un buque pagando una parte al contado y el resto a plazos es un ejemplo de:",
+   "correcta": "Diferencia temporal entre gasto y pagos",
+   "incorrectas": [
+    "Pago que no deriva de ningún gasto de la propia empresa",
+    "Coste que nunca genera pagos",
+    "Gasto que no es coste"
+   ],
+   "explicacion": "El gasto se produce en la adquisición; los pagos se reparten en el tiempo."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Para valorar el combustible consumido cuando se compró a precios distintos, se usan criterios como:",
+   "correcta": "FIFO o precio medio ponderado",
+   "incorrectas": [
+    "Valor residual o amortización lineal",
+    "Tonnage tax o base imponible",
+    "Liner terms o FIOS"
+   ],
+   "explicacion": "Es la segunda fase del cálculo del coste: la valoración monetaria."
+  },
+  {
+   "tema": 2,
+   "pregunta": "El régimen de tonnage tax es:",
+   "correcta": "Un régimen opcional en muchos países, incluida España",
+   "incorrectas": [
+    "Obligatorio para todas las navieras del mundo con buques de más de 5.000 GT",
+    "Exclusivo de los buques de pasaje",
+    "Un impuesto sobre el combustible"
+   ],
+   "explicacion": "La base imponible depende del arqueo neto de los buques y no del beneficio."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Los costes de capital y de operación se devengan:",
+   "correcta": "Todos los días del año, también cuando el buque no opera",
+   "incorrectas": [
+    "Solo los días en que el buque está operativo y cobrando flete al fletador",
+    "Solo durante los viajes en carga",
+    "Solo al cierre del ejercicio contable"
+   ],
+   "explicacion": "Por eso se reparten entre los ≈ 350 días operativos para imputarlos a un contrato."
+  },
+  {
+   "tema": 2,
+   "pregunta": "El arrendamiento a casco desnudo permite subarrendar el buque:",
+   "correcta": "Sí, cabe el subarrendamiento",
+   "incorrectas": [
+    "No, está prohibido por la ley",
+    "Solo si lo autoriza la OMI",
+    "Solo a una empresa estatal"
+   ],
+   "explicacion": "El arrendatario podría además ceder la gestión comercial mediante T/C."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un time charter, la responsabilidad por los actos de la tripulación corresponde a:",
+   "correcta": "El armador fletante, que nombra a la dotación",
+   "incorrectas": [
+    "El fletador, que decide los viajes y los puertos de escala del buque",
+    "El cargador, dueño de la mercancía",
+    "El consignatario del puerto"
+   ],
+   "explicacion": "El fletante retiene la gestión náutica."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En el fletamento por viaje, la carga y descarga normalmente corren por cuenta del fletador porque:",
+   "correcta": "El V/C se usa sobre todo en tramp con condiciones FIOS",
+   "incorrectas": [
+    "El naviero nunca paga costes de puerto en un fletamento por viaje",
+    "Así lo exige el convenio de la OMI",
+    "El flete se paga en $/día"
+   ],
+   "explicacion": "En línea regular, en cambio, la manipulación es del naviero."
+  },
+  {
+   "tema": 2,
+   "pregunta": "El servicio de línea regular se contrata mediante:",
+   "correcta": "Contrato de transporte bajo conocimiento de embarque",
+   "incorrectas": [
+    "Póliza de fletamento por tiempo con flete en $/día negociada por bróker",
+    "Arrendamiento a casco desnudo",
+    "Contrato COA con flete en $/día"
+   ],
+   "explicacion": "Es la cuarta modalidad de explotación del buque."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Las tasas portuarias «a la mercancía» son costes:",
+   "correcta": "Relacionados con la carga, no con el buque",
+   "incorrectas": [
+    "Del armador, dentro del OPEX, como los demás costes portuarios",
+    "Del propietario, dentro del CAPEX",
+    "Financieros, por el uso del puerto"
+   ],
+   "explicacion": "Se distinguen de las tasas y servicios al buque (atraque, remolque, practicaje), que son costes de viaje."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un contrato de fletamento por tiempo, la duración se fija:",
+   "correcta": "Por un periodo de tiempo pactado",
+   "incorrectas": [
+    "Por las toneladas que haya que transportar",
+    "Por el número de puertos de escala",
+    "Por la vida útil restante del buque"
+   ],
+   "explicacion": "En el trip charter, la excepción: la duración es la del viaje."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Un contrato de «todos los viajes que dé tiempo a efectuar en un año» con flete $/t es:",
+   "correcta": "Un fletamento por viajes consecutivos",
+   "incorrectas": [
+    "Un time charter de un año",
+    "Un arrendamiento a casco desnudo",
+    "Un servicio de línea regular"
+   ],
+   "explicacion": "Mantiene el reparto de costes del fletamento por viaje."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Si el alquiler de un casco desnudo no cubre el CAPEX, el propietario:",
+   "correcta": "Incurre en pérdida",
+   "incorrectas": [
+    "Obtiene beneficio igualmente",
+    "Traslada la pérdida al fletador por viaje",
+    "Cobra la diferencia al cargador"
+   ],
+   "explicacion": "El CAPEX es el umbral mínimo del alquiler; no siempre se alcanza según el mercado."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Los costes proporcionales del viaje son función de:",
+   "correcta": "La distancia navegada o los días de duración del viaje",
+   "incorrectas": [
+    "El número de puertos en los que hace escala el buque durante el contrato",
+    "El valor de la mercancía transportada",
+    "El tonelaje de arqueo del buque"
+   ],
+   "explicacion": "Son los consumos de combustible."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Según la IEA, la principal actividad emisora de CO₂ del mundo es:",
+   "correcta": "La generación de electricidad y calor (≈ 44 %)",
+   "incorrectas": [
+    "El transporte en su conjunto (≈ 44 %)",
+    "El transporte marítimo (≈ 22 %)",
+    "La industria y la construcción (≈ 60 %)"
+   ],
+   "explicacion": "El transporte en su conjunto es el segundo, con un 22 %."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El sector transporte en su conjunto es responsable de aproximadamente:",
+   "correcta": "El 53 % de las emisiones mundiales de NOx",
+   "incorrectas": [
+    "El 53 % de las emisiones mundiales de SOx",
+    "El 90 % de las emisiones mundiales de CO₂",
+    "El 5 % de las emisiones mundiales de NOx"
+   ],
+   "explicacion": "Los SOx proceden sobre todo de la industria y de la generación eléctrica (36 % cada una)."
+  },
+  {
+   "tema": 3,
+   "pregunta": "¿Por qué las emisiones del ferrocarril pueden parecer artificialmente bajas en las estadísticas?",
+   "correcta": "Porque muchas veces no incluyen las de generar la electricidad que usa",
+   "incorrectas": [
+    "Porque el ferrocarril, al ser eléctrico, no consume ninguna energía primaria",
+    "Porque solo transporta pasajeros",
+    "Porque está exento del Anexo VI de MARPOL"
+   ],
+   "explicacion": "Gran parte del ferrocarril es de tracción eléctrica."
+  },
+  {
+   "tema": 3,
+   "pregunta": "En emisiones absolutas de CO₂, el transporte marítimo:",
+   "correcta": "Supera a Alemania; solo cuatro países emiten más",
+   "incorrectas": [
+    "Emite menos que España",
+    "Emite más que China y Estados Unidos juntos",
+    "Es comparable a un país pequeño como Portugal"
+   ],
+   "explicacion": "Solo EE. UU., China, Rusia e India emiten más. Por eso, aunque sea eficiente por t·km, debe reducirlas."
+  },
+  {
+   "tema": 3,
+   "pregunta": "En las figuras que comparan emisiones por t·km con la carretera, el buque representado es:",
+   "correcta": "Un pequeño carguero costero de 2.000 a 8.000 tpm",
+   "incorrectas": [
+    "Un gran petrolero VLCC",
+    "Un portacontenedores de 20.000 TEU en la ruta Asia-Europa",
+    "Un crucero de pasaje"
+   ],
+   "explicacion": "En el promedio internacional el porte es muy superior y las emisiones por t·km, hasta 8 o 10 veces menores."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El Anexo VI de MARPOL se adoptó en 1997 y entró en vigor en:",
+   "correcta": "Mayo de 2005",
+   "incorrectas": [
+    "Enero de 2000",
+    "Enero de 2020",
+    "Julio de 2011"
+   ],
+   "explicacion": "Al entrar en vigor ya se consideraba desfasado y se abrió de inmediato su revisión."
+  },
+  {
+   "tema": 3,
+   "pregunta": "La decisión de no retrasar a 2025 el límite global de azufre del 0,5 % se tomó en:",
+   "correcta": "Octubre de 2016",
+   "incorrectas": [
+    "Enero de 2020",
+    "Mayo de 2005",
+    "Abril de 2025"
+   ],
+   "explicacion": "Estaba previsto un estudio de disponibilidad de combustible antes de 2018, pero se adelantó la decisión."
+  },
+  {
+   "tema": 3,
+   "pregunta": "¿Desde cuándo son NECA el Mar del Norte y el Báltico?",
+   "correcta": "Desde el 1 de enero de 2021",
+   "incorrectas": [
+    "Desde el 1 de enero de 2006",
+    "Desde el 1 de mayo de 2025",
+    "Desde el 1 de enero de 2016"
+   ],
+   "explicacion": "Las costas de EE. UU. y Canadá son NECA desde 2016. El Mediterráneo aún no es NECA."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Una ventaja de designar ECA en lugar de endurecer los límites en todo el mundo es que:",
+   "correcta": "Se concentra la reducción donde el daño es local, evitando más CO₂ global",
+   "incorrectas": [
+    "Se reducen por igual las emisiones de CO₂ y de SOx de todos los buques del mundo",
+    "Se eliminan las emisiones de CO₂ de las refinerías",
+    "Los buques pueden usar combustible sin límite fuera de ellas"
+   ],
+   "explicacion": "Los contaminantes actúan localmente, y desulfurar en todo el mundo aumentaría mucho el CO₂."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Respecto al EEDI, los datos muestran que la relación emisiones/transporte es:",
+   "correcta": "Mucho peor en los buques de pequeño porte",
+   "incorrectas": [
+    "Igual para todos los tamaños de buque",
+    "Mucho peor en los grandes petroleros",
+    "Mejor en buques de menos de 10.000 tpm"
+   ],
+   "explicacion": "Por eso se fija para cada tipo un tamaño mínimo a partir del cual es obligatorio."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Un buque existente que no cumple el EEXI puede cumplir, lo más fácilmente, mediante:",
+   "correcta": "La limitación de la potencia del motor",
+   "incorrectas": [
+    "La instalación de un scrubber",
+    "El cambio de bandera",
+    "La reducción de la tripulación"
+   ],
+   "explicacion": "La limitación de potencia puede anularse por seguridad con autorización del capitán."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El CII se expresa en:",
+   "correcta": "Gramos de CO₂ por tpm·milla (o por GT·milla)",
+   "incorrectas": [
+    "Toneladas de azufre por viaje",
+    "Kilovatios por nudo de velocidad",
+    "Euros por tonelada de combustible consumido durante el año"
+   ],
+   "explicacion": "Para cruceros, ferries y algunos ro-ro se usa GT en lugar de tpm."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El CII perjudica especialmente a los buques que:",
+   "correcta": "Hacen viajes muy cortos o pasan mucho tiempo en puerto",
+   "incorrectas": [
+    "Navegan rutas transoceánicas largas, con pocas escalas al año",
+    "Tienen motores diésel modernos",
+    "Transportan graneles a plena carga"
+   ],
+   "explicacion": "También penaliza a los refrigerados, los autodescargantes y los metaneros con turbina de vapor."
+  },
+  {
+   "tema": 3,
+   "pregunta": "En los metaneros con turbina de vapor, el CII:",
+   "correcta": "Mejora al aumentar la velocidad, al contrario que en el resto",
+   "incorrectas": [
+    "Empeora al aumentar la velocidad, igual que en todos los demás tipos de buque",
+    "No depende de la velocidad",
+    "No se aplica a este tipo de buque"
+   ],
+   "explicacion": "A baja velocidad parte del gas de evaporación se quema sin aprovecharse para la propulsión."
+  },
+  {
+   "tema": 3,
+   "pregunta": "En el reglamento MRV, los buques que hacen más de 300 viajes al año:",
+   "correcta": "Pueden informar solo anualmente",
+   "incorrectas": [
+    "Quedan exentos del reglamento",
+    "Deben informar de cada viaje dos veces",
+    "Solo informan de las emisiones en puerto"
+   ],
+   "explicacion": "Fue una concesión ante las quejas del sector naviero."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Una de las críticas del sector naviero al MRV europeo es:",
+   "correcta": "La publicidad de los datos por empresa, que el sistema de la OMI no contempla",
+   "incorrectas": [
+    "Que se aplique solo a los buques de bandera europea y no a los extranjeros que escalan en la UE",
+    "Que no exige verificar los datos de consumo",
+    "Que sustituyó al sistema DCS de la OMI"
+   ],
+   "explicacion": "También critican el informe por viaje y la verificación por un verificador acreditado."
+  },
+  {
+   "tema": 3,
+   "pregunta": "En el FuelEU Maritime, la penalización por no usar los combustibles exigidos:",
+   "correcta": "Permite obtener el certificado de cumplimiento y es distinta de la sanción",
+   "incorrectas": [
+    "Equivale a la retirada del certificado de clase",
+    "Es idéntica a la sanción por no cumplir y conlleva además la retirada del buque",
+    "Se paga a la OMI y no a la UE"
+   ],
+   "explicacion": "Pagando la penalización se obtiene el certificado de cumplimiento."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Según una primera estimación, en FuelEU la sanción del periodo 2025-2029 se anula usando aproximadamente:",
+   "correcta": "Un 3 % de biodiésel en el conjunto de la flota",
+   "incorrectas": [
+    "Un 50 % de GNL en todos los buques",
+    "Un 100 % de combustible sintético",
+    "Un 30 % de amoniaco en los motores"
+   ],
+   "explicacion": "En el periodo siguiente habría que subir al 8 %."
+  },
+  {
+   "tema": 3,
+   "pregunta": "De las propuestas del paquete «Fit for 55», la única que no salió adelante en la anterior legislatura es:",
+   "correcta": "La revisión de la Directiva sobre fiscalidad de la energía",
+   "incorrectas": [
+    "La inclusión del transporte marítimo en el EU ETS",
+    "El reglamento FuelEU Maritime",
+    "El mecanismo CBAM"
+   ],
+   "explicacion": "Preveía un tipo mínimo sobre los combustibles marinos, hoy exentos; sigue sobre la mesa."
+  },
+  {
+   "tema": 3,
+   "pregunta": "En el NZF de la OMI, los combustibles de emisiones cero o casi cero (ZNZ) se definen inicialmente con una intensidad de GEI no mayor que:",
+   "correcta": "19,0 g CO₂eq/MJ",
+   "incorrectas": [
+    "93,3 g CO₂eq/MJ",
+    "14,0 kg CO₂/t",
+    "3,114 t CO₂/t"
+   ],
+   "explicacion": "Luego bajaría a 14,0. El valor de referencia de 2008 es 93,3 g CO₂eq/MJ, similar al fueloil."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El principio que piden los países emergentes en la OMI se denomina:",
+   "correcta": "Responsabilidades comunes pero diferenciadas",
+   "incorrectas": [
+    "No more favourable treatment (mismo trato a todos los buques)",
+    "Quien contamina paga",
+    "Cap and trade"
+   ],
+   "explicacion": "La OMI se basa en cambio en dar el mismo trato a todos los buques, sea cual sea su bandera."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Los scrubbers húmedos pueden ser:",
+   "correcta": "De ciclo abierto, de ciclo cerrado o híbridos",
+   "incorrectas": [
+    "Solo de ciclo abierto con agua dulce",
+    "Secos o de urea",
+    "De recirculación de gases de escape"
+   ],
+   "explicacion": "Existen además scrubbers secos, que generan muchos residuos químicos."
+  },
+  {
+   "tema": 3,
+   "pregunta": "En octubre de 2026, los buques con scrubber representan:",
+   "correcta": "Menos del 6 % en número, pero más del 30 % en GT",
+   "incorrectas": [
+    "Más del 50 % en número y en GT",
+    "El 6 % en GT y el 30 % en número de buques de la flota mundial",
+    "Casi el 100 % de los buques nuevos"
+   ],
+   "explicacion": "Son buques de gran porte, con mayor consumo de combustible."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Un inconveniente de los scrubbers es que:",
+   "correcta": "Aumentan el consumo de combustible un 2-3 %",
+   "incorrectas": [
+    "Reducen la capacidad del motor a la mitad",
+    "No reducen las emisiones de SOx",
+    "Solo funcionan en zonas SECA"
+   ],
+   "explicacion": "Además inmovilizan el buque 2-6 semanas para instalarlos y su peso resta capacidad de carga."
+  },
+  {
+   "tema": 3,
+   "pregunta": "A igualdad de energía, el GNL ocupa respecto al HFO:",
+   "correcta": "Aproximadamente el doble de volumen",
+   "incorrectas": [
+    "Aproximadamente la mitad de volumen",
+    "El mismo volumen",
+    "Diez veces más volumen"
+   ],
+   "explicacion": "Si se mantiene también la opción de usar HFO o MGO, el espacio total es el triple."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Un buque nuevo propulsado por GNL cuesta, respecto a uno convencional:",
+   "correcta": "Un 10-15 % más",
+   "incorrectas": [
+    "Un 50 % más",
+    "Lo mismo",
+    "Un 10 % menos"
+   ],
+   "explicacion": "La diferencia ha ido bajando."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El hidrógeno como combustible marino es más probable en:",
+   "correcta": "Línea regular de corta distancia con escalas frecuentes",
+   "incorrectas": [
+    "Grandes graneleros tramp en rutas oceánicas",
+    "Petroleros VLCC entre continentes",
+    "Buques sin ninguna escala prevista"
+   ],
+   "explicacion": "Debe licuarse a −253 °C y ocupa casi cinco veces más espacio que los combustibles convencionales."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Un inconveniente importante del amoniaco como combustible es:",
+   "correcta": "Su elevada toxicidad y la posible emisión de N₂O",
+   "incorrectas": [
+    "Que no puede usarse en motores de combustión",
+    "Que genera mucho azufre",
+    "Que su densidad energética es superior a la del fueloil"
+   ],
+   "explicacion": "El N₂O tiene un efecto invernadero 283 veces mayor que el CO₂; además necesita un combustible piloto."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Una ventaja del metanol frente a otros combustibles alternativos es que:",
+   "correcta": "Se almacena líquido a temperatura y presión ambiente",
+   "incorrectas": [
+    "No emite nada de CO₂ al quemarse",
+    "No es tóxico en ningún caso",
+    "Tiene más densidad energética que el fueloil"
+   ],
+   "explicacion": "El metanol convencional procede de fósiles; el biometanol o el e-metanol reducen las emisiones de ciclo de vida."
+  },
+  {
+   "tema": 3,
+   "pregunta": "La acumulación de incrustaciones en el casco y la hélice puede aumentar el consumo:",
+   "correcta": "Un 10-20 % o más",
+   "incorrectas": [
+    "Un 1-2 % como máximo",
+    "Nada, solo afecta a la estética",
+    "Un 50-60 % siempre"
+   ],
+   "explicacion": "Supera con creces lo que ahorran muchas otras tecnologías."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Desde el punto de vista de la eficiencia energética, la velocidad óptima es:",
+   "correcta": "La de mínimo consumo por t·milla, que no es la velocidad mínima",
+   "incorrectas": [
+    "La velocidad más baja posible del buque",
+    "La velocidad máxima del motor",
+    "La que maximiza el beneficio del viaje, es decir, ingresos menos costes totales"
+   ],
+   "explicacion": "Bajar mucho la velocidad de proyecto causa vibraciones y hollín en el motor."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Optimizando de forma continua el calado y el trimado se pueden lograr ahorros de potencia de:",
+   "correcta": "Un 5-7 %, o más en casos extremos",
+   "incorrectas": [
+    "Un 40-50 % en todos los buques",
+    "Menos del 0,5 %",
+    "Un 25 % garantizado"
+   ],
+   "explicacion": "La inmersión del bulbo de proa influye decisivamente en la resistencia al avance."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Las toberas en la hélice son especialmente indicadas para:",
+   "correcta": "Buques lentos como remolcadores y pesqueros de arrastre",
+   "incorrectas": [
+    "Portacontenedores rápidos de más de 20 nudos",
+    "Buques de crucero de alta velocidad",
+    "Ferries rápidos de pasaje"
+   ],
+   "explicacion": "Se limitan normalmente a buques de menos de 14 nudos."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Los rotores Flettner se basan en:",
+   "correcta": "El efecto Magnus",
+   "incorrectas": [
+    "El principio de Arquímedes",
+    "El efecto Doppler",
+    "La ley de Miller"
+   ],
+   "explicacion": "Son cilindros giratorios verticales que funcionan con cualquier orientación del viento."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Gracias a las mejoras de los motores diésel, el consumo específico pasó de unos 240 g/kWh en 1975 a:",
+   "correcta": "Unos 155 g/kWh en 2010",
+   "incorrectas": [
+    "Unos 50 g/kWh en 2010",
+    "Unos 300 g/kWh en 2010",
+    "Unos 240 g/kWh, sin cambios"
+   ],
+   "explicacion": "Un rendimiento térmico del 54 %; desde entonces casi no ha mejorado por las normas de NOx."
+  },
+  {
+   "tema": 3,
+   "pregunta": "En 2019 (MEPC 74), Francia propuso a la OMI:",
+   "correcta": "Un límite de velocidad global para los buques",
+   "incorrectas": [
+    "Prohibir el fueloil pesado en todo el mundo",
+    "Un impuesto al queroseno de aviación",
+    "Eliminar las zonas ECA"
+   ],
+   "explicacion": "Las grandes organizaciones navieras se opusieron; prevaleció fijar objetivos y dejar elegir cómo cumplirlos."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Pasar de «el primero que llega, primero atendido» a la preasignación de atraques podría reducir el CO₂ mundial:",
+   "correcta": "Entre un 6 y un 10 %",
+   "incorrectas": [
+    "Más de un 50 %",
+    "Menos de un 0,1 %",
+    "Un 25 % exacto"
+   ],
+   "explicacion": "Permite reducir la velocidad sin tener que añadir buques al servicio."
+  }
+ ]
+}
