@@ -1,0 +1,745 @@
+{
+ "titulo": "Test Elena Seco 3 · Lo imprescindible",
+ "asignatura": "Economía y Gestión de Empresas Marítimas · UPM Navales",
+ "descripcion": "66 preguntas de lo que hay que saber sí o sí: figuras, tramp y línea regular, coste/gasto/pago, CAPEX/OPEX/costes de viaje, quién paga qué en cada modalidad y las normas básicas de emisiones. Sin cifras rebuscadas ni fechas de reuniones. Preguntas originales a partir de los apuntes, no de exámenes anteriores.",
+ "etiqueta": "Test 3",
+ "clave": "elena-seco-quiz-3",
+ "temas": {
+  "1": "Organización de la industria marítima",
+  "2": "Costes y modalidades de explotación",
+  "3": "Emisiones a la atmósfera"
+ },
+ "temas_cortos": {
+  "1": "Organización",
+  "2": "Costes y modalidades",
+  "3": "Emisiones"
+ },
+ "preguntas": [
+  {
+   "tema": 1,
+   "pregunta": "La diferencia básica entre armador y naviero es que:",
+   "correcta": "El armador hace la gestión náutica y el naviero la comercial",
+   "incorrectas": [
+    "El armador hace la gestión comercial y el naviero la náutica",
+    "El armador es siempre el propietario registral y el naviero el capitán",
+    "Son la misma figura con dos nombres, según el país de la bandera"
+   ],
+   "explicacion": "Armador: posee el buque, lo arma, tripula y mantiene navegable (gestión técnico-náutica). Naviero: busca cargas y contrata con los clientes (gestión comercial)."
+  },
+  {
+   "tema": 1,
+   "pregunta": "¿Puede el armador de un buque no ser su propietario?",
+   "correcta": "Sí, por ejemplo el arrendatario de un casco desnudo",
+   "incorrectas": [
+    "No, el armador tiene que figurar siempre como titular registral",
+    "Solo si el buque está hipotecado a favor de un banco",
+    "Solo en línea regular, nunca en los tráficos tramp"
+   ],
+   "explicacion": "En el arrendamiento a casco desnudo se cede la posesión: el arrendatario arma el buque y pasa a ser su armador, aunque la propiedad siga siendo de otro."
+  },
+  {
+   "tema": 1,
+   "pregunta": "En una cadena de contratos sobre el mismo buque, ¿qué figura puede haber varias veces?",
+   "correcta": "El naviero",
+   "incorrectas": [
+    "El armador",
+    "El propietario registral",
+    "Ninguna: cada figura es única por buque"
+   ],
+   "explicacion": "Armador solo hay uno por buque en cada momento; navieros puede haber varios encadenados (un fletador por tiempo que subfleta por viaje, etc.)."
+  },
+  {
+   "tema": 1,
+   "pregunta": "En un time charter, el fletante y el fletador suelen ser, respectivamente:",
+   "correcta": "El armador y el naviero",
+   "incorrectas": [
+    "El naviero y el cargador",
+    "El cargador y el armador",
+    "El propietario y el bróker"
+   ],
+   "explicacion": "En T/C el armador cede el buque armado y tripulado (fletante) y el fletador lo explota comercialmente, convirtiéndose en naviero."
+  },
+  {
+   "tema": 1,
+   "pregunta": "En un fletamento por viaje, el fletador suele ser:",
+   "correcta": "El cargador: exportador, importador o comerciante",
+   "incorrectas": [
+    "El armador que cede el buque con su tripulación",
+    "El consignatario del buque en el puerto de carga",
+    "La sociedad de clasificación que certifica el buque"
+   ],
+   "explicacion": "En V/C el fletante (naviero) se compromete a llevar la carga, y quien la contrata es el dueño de la mercancía."
+  },
+  {
+   "tema": 1,
+   "pregunta": "¿Quién representa al armador o naviero en un puerto concreto y le contrata los servicios portuarios?",
+   "correcta": "El consignatario",
+   "incorrectas": [
+    "El transitario",
+    "El corredor marítimo",
+    "El práctico"
+   ],
+   "explicacion": "El consignatario es el representante del buque en puerto. El transitario trabaja para el cargador, el bróker intermedia fletamentos y el práctico asesora al capitán en la maniobra."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El corredor marítimo (bróker):",
+   "correcta": "Pone en contacto a fletante y fletador y cobra una comisión",
+   "incorrectas": [
+    "Organiza el transporte puerta a puerta por cuenta del cargador",
+    "Representa al buque en el puerto y paga sus tasas portuarias",
+    "Asesora al capitán en las maniobras de entrada y salida de puerto"
+   ],
+   "explicacion": "El bróker es el intermediario de los fletamentos; su comisión es un porcentaje del flete bruto."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El transitario (freight forwarder) trabaja por cuenta de:",
+   "correcta": "Los cargadores",
+   "incorrectas": [
+    "Los armadores",
+    "Las autoridades portuarias",
+    "Las aseguradoras del casco"
+   ],
+   "explicacion": "El transitario organiza y coordina el transporte, a menudo multimodal, para el dueño de la carga."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El práctico es:",
+   "correcta": "Un asesor náutico del capitán para entrar y salir de puerto",
+   "incorrectas": [
+    "El oficial que sustituye al capitán durante la travesía",
+    "El inspector que certifica la navegabilidad del buque",
+    "El representante del naviero ante la autoridad portuaria"
+   ],
+   "explicacion": "El práctico sube a bordo en las maniobras portuarias y asesora al capitán, que mantiene el mando."
+  },
+  {
+   "tema": 1,
+   "pregunta": "¿Qué figura gestiona el buque por cuenta del armador sin ser fletador?",
+   "correcta": "El gestor naval (ship manager)",
+   "incorrectas": [
+    "El naviero",
+    "El consignatario",
+    "El agente de carga"
+   ],
+   "explicacion": "El ship manager presta un servicio de gestión (tripulación, mantenimiento…) al armador; no toma el buque en fletamento."
+  },
+  {
+   "tema": 1,
+   "pregunta": "¿Qué caracteriza a los tráficos tramp?",
+   "correcta": "Graneles en grandes partidas, sin itinerario fijo",
+   "incorrectas": [
+    "Carga general en contenedores con escalas anunciadas",
+    "Muchos cargadores por buque y fletes de tarifa pública",
+    "Pasajeros y carga rodada en rutas de corta distancia"
+   ],
+   "explicacion": "Tramp: pocos cargadores, cargamentos homogéneos (graneles de bajo valor) e itinerarios que dependen de la carga. Son unas tres cuartas partes del tonelaje."
+  },
+  {
+   "tema": 1,
+   "pregunta": "¿Qué caracteriza a la línea regular?",
+   "correcta": "Itinerario fijo y carga general, sobre todo en contenedores",
+   "incorrectas": [
+    "Graneles de bajo valor en grandes partidas con un solo cargador",
+    "Rutas que cambian en cada viaje según la carga disponible",
+    "Contratos siempre negociados uno a uno con póliza de fletamento"
+   ],
+   "explicacion": "Línea regular: salidas y escalas anunciadas, muchos cargadores y carga general (la mayoría contenerizada). Mueve menos toneladas que el tramp pero más fletes en total."
+  },
+  {
+   "tema": 1,
+   "pregunta": "En toneladas, ¿qué parte del transporte marítimo mueve el tramp, aproximadamente?",
+   "correcta": "Unas tres cuartas partes",
+   "incorrectas": [
+    "Aproximadamente una cuarta parte",
+    "Casi la mitad, igual que la línea regular",
+    "Menos del diez por ciento del total"
+   ],
+   "explicacion": "Tramp ≈ 75 % del tonelaje; línea regular ≈ 25 % del tonelaje pero más ingresos por fletes."
+  },
+  {
+   "tema": 1,
+   "pregunta": "¿Qué parte del comercio mundial, en toneladas, va por mar?",
+   "correcta": "Más del 80 %",
+   "incorrectas": [
+    "Alrededor del 50 %",
+    "Cerca del 30 %",
+    "Menos del 20 %"
+   ],
+   "explicacion": "Más del 80 % del comercio mundial en toneladas se transporta por mar."
+  },
+  {
+   "tema": 1,
+   "pregunta": "La OMI se ocupa principalmente de:",
+   "correcta": "La seguridad marítima y la prevención de la contaminación",
+   "incorrectas": [
+    "Las condiciones laborales y los salarios de las tripulaciones",
+    "Fijar los fletes de referencia de los mercados internacionales",
+    "Clasificar los buques y emitir sus certificados de clase"
+   ],
+   "explicacion": "La OMI (agencia de la ONU con sede en Londres) aprueba convenios como SOLAS o MARPOL. Lo laboral es de la OIT y la clasificación, de las sociedades de clasificación."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Los convenios de la OMI y la OIT:",
+   "correcta": "Tienen que incorporarse a la legislación de cada Estado",
+   "incorrectas": [
+    "Se aplican directamente a todos los buques sin que nadie los ratifique",
+    "Solo obligan a los buques con bandera de un país europeo",
+    "Son recomendaciones voluntarias sin efecto jurídico alguno"
+   ],
+   "explicacion": "No son leyes directas: los Estados los ratifican y los desarrollan en su legislación."
+  },
+  {
+   "tema": 1,
+   "pregunta": "BIMCO es conocida por:",
+   "correcta": "Sus formularios modelo de contratos de fletamento",
+   "incorrectas": [
+    "Ser el principal sindicato internacional de marinos",
+    "Clasificar los buques y certificar su construcción",
+    "Asegurar la responsabilidad civil de las navieras"
+   ],
+   "explicacion": "BIMCO elabora las pólizas tipo que usa el mercado. El sindicato es la ITF, la clasificación la hacen las sociedades de IACS y la responsabilidad la cubren los P&I."
+  },
+  {
+   "tema": 1,
+   "pregunta": "Los clubes P&I son:",
+   "correcta": "Mutuas de armadores que cubren su responsabilidad frente a terceros",
+   "incorrectas": [
+    "Aseguradoras del casco y la maquinaria contra daños propios",
+    "Sociedades de clasificación de los principales países",
+    "Asociaciones de cargadores que negocian los fletes"
+   ],
+   "explicacion": "Protection & Indemnity: las navieras se aseguran mutuamente las responsabilidades de la explotación (daños a la carga, contaminación, tripulación…). El casco y máquinas es otro seguro."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El flete es:",
+   "correcta": "El precio del transporte marítimo",
+   "incorrectas": [
+    "La mercancía que lleva el buque en sus bodegas",
+    "El seguro de la carga durante la travesía",
+    "La tasa que cobra el puerto por cada escala"
+   ],
+   "explicacion": "Flete = precio del servicio. La mercancía es la carga (en inglés, «freight» se usa para ambas cosas)."
+  },
+  {
+   "tema": 1,
+   "pregunta": "El transporte marítimo es una actividad:",
+   "correcta": "Intensiva en capital y muy cíclica",
+   "incorrectas": [
+    "Intensiva en mano de obra y muy estable",
+    "Con fletes regulados por cada Estado",
+    "Con oferta que se ajusta en pocas semanas"
+   ],
+   "explicacion": "Los buques son caros y tardan años en construirse, así que la oferta es rígida y los fletes oscilan mucho con la demanda."
+  },
+  {
+   "tema": 2,
+   "pregunta": "La amortización del buque es:",
+   "correcta": "Un coste, pero no un pago",
+   "incorrectas": [
+    "Un pago, pero no un coste",
+    "Un pago y también un coste",
+    "Ni un coste ni un gasto"
+   ],
+   "explicacion": "La amortización reparte el consumo del buque a lo largo de su vida (coste), pero no supone salida de dinero."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Devolver el principal de un préstamo es:",
+   "correcta": "Un pago, pero no un coste",
+   "incorrectas": [
+    "Un coste, pero no un pago",
+    "Un coste financiero del CAPEX",
+    "Un OPEX del ejercicio"
+   ],
+   "explicacion": "Sale dinero de caja, pero no se consume nada. Lo que sí es coste son los intereses."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Los intereses de un préstamo son:",
+   "correcta": "Coste y pago a la vez",
+   "incorrectas": [
+    "Solo un pago",
+    "Solo un coste",
+    "Parte del OPEX"
+   ],
+   "explicacion": "Los intereses entran en el CAPEX (coste financiero) y además salen de caja (pago)."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Diferencia entre coste, gasto y pago:",
+   "correcta": "Coste es consumir, gasto es adquirir y pago es la salida de caja",
+   "incorrectas": [
+    "Coste es adquirir, gasto es consumir y pago es la salida de caja",
+    "Los tres son lo mismo, pero contados en distinto ejercicio fiscal",
+    "Coste es la salida de caja, gasto es consumir y pago es adquirir"
+   ],
+   "explicacion": "Pueden no coincidir en el tiempo: un salario a mes vencido es coste antes que pago; un alquiler por anticipado es pago antes que coste."
+  },
+  {
+   "tema": 2,
+   "pregunta": "El CAPEX está formado por:",
+   "correcta": "Amortización + intereses",
+   "incorrectas": [
+    "Principal + intereses",
+    "Amortización + principal",
+    "Tripulación + seguros"
+   ],
+   "explicacion": "CAPEX = costes de capital. No confundir con los pagos de capital, que son principal + intereses."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Los pagos de capital de un año son:",
+   "correcta": "Principal devuelto + intereses",
+   "incorrectas": [
+    "Amortización + intereses",
+    "Amortización + principal devuelto",
+    "CAPEX + OPEX del ejercicio"
+   ],
+   "explicacion": "Es lo que sale de caja por el préstamo. La amortización no es un pago."
+  },
+  {
+   "tema": 2,
+   "pregunta": "¿Cuáles son las cuatro partidas del OPEX?",
+   "correcta": "Tripulación, costes técnicos, seguros y administración",
+   "incorrectas": [
+    "Tripulación, combustible, puertos y seguros",
+    "Amortización, intereses, seguros y administración",
+    "Combustible, canales, comisiones y tripulación"
+   ],
+   "explicacion": "OPEX = costes corrientes de tener el buque operativo. Combustible, puertos, canales y comisiones son costes de viaje; amortización e intereses son CAPEX."
+  },
+  {
+   "tema": 2,
+   "pregunta": "¿Cuál de estas partidas es un coste de viaje y no un OPEX?",
+   "correcta": "El combustible",
+   "incorrectas": [
+    "El seguro P&I",
+    "Los salarios de la tripulación",
+    "El mantenimiento y las reparaciones"
+   ],
+   "explicacion": "Combustible, tasas portuarias, canales y comisiones solo existen si el buque hace viajes: son costes de viaje."
+  },
+  {
+   "tema": 2,
+   "pregunta": "¿Cuál de estas partidas es OPEX?",
+   "correcta": "Los lubricantes",
+   "incorrectas": [
+    "El combustible",
+    "Las tasas portuarias",
+    "La comisión del bróker"
+   ],
+   "explicacion": "Los lubricantes van dentro de los costes técnicos (mantenimiento, reparaciones, pertrechos y lubricantes). Los otros tres son costes de viaje."
+  },
+  {
+   "tema": 2,
+   "pregunta": "La comisión del bróker se clasifica como:",
+   "correcta": "Coste de viaje",
+   "incorrectas": [
+    "OPEX de administración",
+    "Coste financiero del CAPEX",
+    "Coste fijo del armador"
+   ],
+   "explicacion": "Va ligada a cada contrato de fletamento y se calcula sobre el flete bruto: es un coste de viaje."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Costes fijos y variables del buque: ¿qué afirmación es correcta?",
+   "correcta": "CAPEX y OPEX se tienen aunque el buque no navegue",
+   "incorrectas": [
+    "Solo el CAPEX es fijo; el OPEX desaparece con el buque amarrado",
+    "Los costes de viaje se tienen aunque el buque esté parado",
+    "Todos los costes son variables si el buque está en tramp"
+   ],
+   "explicacion": "CAPEX y OPEX son costes fijos (de armamento) y se devengan todos los días. Los costes de viaje solo aparecen si hay transporte."
+  },
+  {
+   "tema": 2,
+   "pregunta": "¿Entre cuántos días se dividen los costes fijos anuales para obtener el coste fijo por día de operación?",
+   "correcta": "350",
+   "incorrectas": [
+    "365",
+    "300",
+    "360"
+   ],
+   "explicacion": "Se supone que el buque está unos 15 días al año fuera de servicio por mantenimiento, así que opera y cobra flete unos 350 días."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un arrendamiento a casco desnudo, el propietario soporta:",
+   "correcta": "Solo el CAPEX",
+   "incorrectas": [
+    "CAPEX + OPEX",
+    "CAPEX + OPEX + costes de viaje",
+    "Solo los costes de viaje"
+   ],
+   "explicacion": "El arrendatario arma, tripula y explota el buque, así que paga OPEX y costes de viaje. El alquiler debe cubrir al menos el CAPEX del propietario."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un time charter, el fletante soporta:",
+   "correcta": "CAPEX + OPEX",
+   "incorrectas": [
+    "Solo el CAPEX",
+    "Solo el OPEX",
+    "CAPEX + OPEX + costes de viaje"
+   ],
+   "explicacion": "El fletante entrega el buque armado y tripulado. El fletador paga combustible, puertos y canales, y el flete en $/día debe cubrir CAPEX + OPEX."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un fletamento por viaje, el fletante soporta:",
+   "correcta": "CAPEX + OPEX + costes de viaje",
+   "incorrectas": [
+    "CAPEX + OPEX, y el combustible lo paga el fletador",
+    "Solo el CAPEX, porque el resto lo paga el cargador",
+    "Solo los costes de viaje de ida y de vuelta"
+   ],
+   "explicacion": "En V/C el fletante se compromete a llevar la carga y asume todos los costes del buque. Con FIOS, la carga y descarga corre a cargo del fletador."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un time charter, el combustible y las tasas portuarias los paga:",
+   "correcta": "El fletador",
+   "incorrectas": [
+    "El fletante",
+    "El propietario",
+    "El consignatario"
+   ],
+   "explicacion": "Son costes de viaje, y en T/C los asume el fletador, que es quien decide los viajes."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En un arrendamiento a casco desnudo, los salarios de la tripulación los paga:",
+   "correcta": "El arrendatario",
+   "incorrectas": [
+    "El propietario",
+    "El fletador por viaje",
+    "El gestor naval"
+   ],
+   "explicacion": "El arrendatario es el armador: tripula el buque y paga el OPEX."
+  },
+  {
+   "tema": 2,
+   "pregunta": "¿En qué unidad se suele fijar el flete de cada modalidad?",
+   "correcta": "T/C en $/día y V/C en $/t",
+   "incorrectas": [
+    "T/C en $/t y V/C en $/día",
+    "Ambos en $/día de operación",
+    "Ambos en $ por milla navegada"
+   ],
+   "explicacion": "El time charter (y el trip charter) se paga por tiempo; el viaje, el COA y los viajes consecutivos, por tonelada transportada. La línea regular, por TEU o unidad de carga."
+  },
+  {
+   "tema": 2,
+   "pregunta": "¿Por qué el arrendamiento a casco desnudo no es un fletamento?",
+   "correcta": "Porque se cede la posesión del buque, no un servicio de transporte",
+   "incorrectas": [
+    "Porque solo puede durar un viaje y no un periodo de tiempo",
+    "Porque el propietario sigue tripulando y manteniendo el buque",
+    "Porque el flete se paga por tonelada y no por día de servicio"
+   ],
+   "explicacion": "El arrendatario recibe el buque vacío y pasa a ser su armador. El error de llamarlo fletamento viene del inglés «bareboat charter»."
+  },
+  {
+   "tema": 2,
+   "pregunta": "¿Qué es un trip charter?",
+   "correcta": "Un time charter por la duración de un viaje",
+   "incorrectas": [
+    "Un fletamento por viaje con flete en $/t",
+    "Un arrendamiento a casco desnudo corto",
+    "Un contrato de línea regular por TEU"
+   ],
+   "explicacion": "Funciona como un T/C (flete en $/día, el fletador paga los costes de viaje), pero dura lo que dure el viaje."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Un COA (contrato de transporte) consiste en:",
+   "correcta": "Llevar una cantidad de carga en los viajes necesarios, a $/t",
+   "incorrectas": [
+    "Ceder un buque concreto durante un año a cambio de un flete diario",
+    "Arrendar el buque sin tripulación para que lo explote otro",
+    "Reservar espacio en un portacontenedores de línea regular"
+   ],
+   "explicacion": "En el COA lo que se compromete es la cantidad de carga; el fletante puede usar buques propios o fletados."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Condiciones FIOS significa que:",
+   "correcta": "La carga, descarga y estiba las paga el fletador",
+   "incorrectas": [
+    "La carga, descarga y estiba las paga el fletante",
+    "El combustible lo paga el fletador por días",
+    "El buque viaja en lastre a la ida y a la vuelta"
+   ],
+   "explicacion": "Free In Out Stowed: el fletante queda libre de los costes de manipular la carga. Es lo habitual en tramp."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En línea regular (liner terms), la carga y descarga la paga:",
+   "correcta": "El naviero",
+   "incorrectas": [
+    "El cargador",
+    "El fletador por tiempo",
+    "La autoridad portuaria"
+   ],
+   "explicacion": "Con liner terms, la manipulación de la carga va incluida en el flete y la soporta el naviero (porteador)."
+  },
+  {
+   "tema": 2,
+   "pregunta": "El TCE (time charter equivalent) de un viaje se calcula como:",
+   "correcta": "(Ingresos netos − costes de viaje) / días del viaje",
+   "incorrectas": [
+    "(Ingresos brutos − CAPEX − OPEX) / días del año",
+    "Ingresos netos / toneladas transportadas en el viaje",
+    "(CAPEX + OPEX) / 350 días de operación al año"
+   ],
+   "explicacion": "Convierte el resultado de un viaje a $/día para compararlo con un flete por tiempo. La última opción es el coste fijo diario."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Si el bróker cobra un porcentaje c sobre el flete bruto, el flete bruto que hay que pedir para cobrar un neto dado es:",
+   "correcta": "Neto / (1 − c)",
+   "incorrectas": [
+    "Neto × (1 + c)",
+    "Neto × (1 − c)",
+    "Neto − c"
+   ],
+   "explicacion": "Como neto = bruto × (1 − c), se despeja bruto = neto / (1 − c). Multiplicar por (1 + c) da un resultado algo menor y no cubre la comisión."
+  },
+  {
+   "tema": 2,
+   "pregunta": "La amortización lineal anual del buque es:",
+   "correcta": "Precio × (1 − % residual) / años de vida",
+   "incorrectas": [
+    "Precio / años de vida, sin tener en cuenta el valor residual",
+    "(Precio + intereses del préstamo) / años de vida",
+    "Precio × % residual / años de vida"
+   ],
+   "explicacion": "Se amortiza solo la parte que se pierde: el precio menos el valor residual, repartido entre los años de vida."
+  },
+  {
+   "tema": 2,
+   "pregunta": "¿Cómo evolucionan las cuotas de un préstamo en sistema alemán?",
+   "correcta": "La cuota de principal es constante y los intereses bajan cada año",
+   "incorrectas": [
+    "La cuota total es constante y el principal sube cada año",
+    "Los intereses son constantes y el principal baja cada año",
+    "Todo el principal se devuelve de una vez el último año"
+   ],
+   "explicacion": "Principal anual = préstamo / años. Los intereses se calculan sobre lo que queda pendiente, que va bajando. La cuota total constante es el sistema francés."
+  },
+  {
+   "tema": 2,
+   "pregunta": "En los años de carencia de un préstamo:",
+   "correcta": "Solo se pagan intereses",
+   "incorrectas": [
+    "No se paga nada",
+    "Solo se paga principal",
+    "Se paga el doble de cuota"
+   ],
+   "explicacion": "Durante la carencia no se devuelve principal, pero los intereses sobre el préstamo completo sí se pagan."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Si un buque hace n cargamentos entre dos puertos y el contrato termina con la última descarga, los tramos en lastre son:",
+   "correcta": "n − 1",
+   "incorrectas": [
+    "n",
+    "n + 1",
+    "2n"
+   ],
+   "explicacion": "Tras cada descarga vuelve en lastre a cargar, salvo después de la última."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Los días de navegación de un tramo se calculan como:",
+   "correcta": "Millas / nudos / 24",
+   "incorrectas": [
+    "Millas × nudos / 24",
+    "Nudos / millas × 24",
+    "Millas / (nudos × 60)"
+   ],
+   "explicacion": "Un nudo es una milla por hora: millas / nudos da horas, y entre 24 se pasan a días."
+  },
+  {
+   "tema": 2,
+   "pregunta": "Con tonnage tax, el impuesto que paga la naviera depende de:",
+   "correcta": "El tonelaje del buque",
+   "incorrectas": [
+    "El beneficio obtenido",
+    "Los ingresos por flete",
+    "Los costes declarados"
+   ],
+   "explicacion": "La base imponible se calcula por el tonelaje neto, no por el beneficio, así que elegir criterios de coste no cambia el impuesto."
+  },
+  {
+   "tema": 3,
+   "pregunta": "¿Qué anexo de MARPOL regula las emisiones a la atmósfera de los buques?",
+   "correcta": "El Anexo VI",
+   "incorrectas": [
+    "El Anexo I",
+    "El Anexo IV",
+    "El Anexo V"
+   ],
+   "explicacion": "El Anexo VI regula SOx, NOx, sustancias que agotan el ozono y la eficiencia energética (EEDI, EEXI, CII, SEEMP)."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Límites de azufre del combustible marino en vigor:",
+   "correcta": "0,5 % en general y 0,1 % en las zonas SECA",
+   "incorrectas": [
+    "3,5 % en general y 0,5 % en las zonas SECA",
+    "0,1 % en general y 0,5 % en las zonas SECA",
+    "0,5 % en todas partes, sin zonas especiales"
+   ],
+   "explicacion": "Desde 2020 el límite global es 0,5 % (antes 3,5 %); en las SECA es 0,1 % desde 2015. El Mediterráneo es SECA desde mayo de 2025."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Contaminantes (SOx, NOx, PM) frente a gases de efecto invernadero (CO₂):",
+   "correcta": "Los contaminantes dañan a escala local; el CO₂ actúa a escala global",
+   "incorrectas": [
+    "Los contaminantes actúan a escala global; el CO₂, solo a escala local",
+    "Los dos tienen el mismo efecto y la OMI los regula con la misma norma",
+    "El CO₂ produce lluvia ácida y los contaminantes el calentamiento global"
+   ],
+   "explicacion": "SOx y NOx producen lluvia ácida y problemas de salud cerca de donde se emiten; el CO₂ calienta el planeta emita donde emita. Por eso las ECA tienen sentido para los contaminantes."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Por tonelada y kilómetro, en CO₂ el transporte marítimo es:",
+   "correcta": "El modo más eficiente; su punto débil son el SOx y el NOx",
+   "incorrectas": [
+    "El modo menos eficiente, por detrás del avión y del camión",
+    "Igual de eficiente que la carretera en casi todos los gases",
+    "Más eficiente que el resto también en SOx y en NOx emitidos"
+   ],
+   "explicacion": "Emite muy poco CO₂ por t·km, pero mucho SOx y NOx por el combustible pesado: ese es su «talón de Aquiles»."
+  },
+  {
+   "tema": 3,
+   "pregunta": "Para cumplir el límite de azufre, un buque puede:",
+   "correcta": "Usar combustible bajo en azufre, poner un scrubber o pasar a GNL",
+   "incorrectas": [
+    "Reducir la velocidad, que baja el contenido de azufre del combustible",
+    "Instalar un SCR con urea, que elimina el azufre de los gases",
+    "Presentar un SEEMP, que le exime del límite durante cinco años"
+   ],
+   "explicacion": "Las tres vías: combustible destilado o VLSFO, HFO con scrubber (lavador de gases) o combustibles alternativos como el GNL. El SCR es para NOx."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El límite Tier III de NOx:",
+   "correcta": "Solo se exige en las zonas NECA",
+   "incorrectas": [
+    "Se exige en todo el mundo",
+    "Solo se exige en puerto",
+    "Se aplica al azufre"
+   ],
+   "explicacion": "Tier III (−80 % sobre Tier I) solo rige en las NECA; para cumplirlo se usa SCR (urea) o EGR."
+  },
+  {
+   "tema": 3,
+   "pregunta": "¿Qué es un efecto cruzado entre emisiones?",
+   "correcta": "Reducir un contaminante puede aumentar otro, por ejemplo el CO₂",
+   "incorrectas": [
+    "Que las emisiones de un país acaben contaminando a sus vecinos",
+    "Que el NOx y el SOx se combinen en la atmósfera y se anulen",
+    "Que un buque pague dos veces por el mismo CO₂ en la OMI y la UE"
+   ],
+   "explicacion": "Desulfurar en refinería o bajar la temperatura de combustión para reducir NOx consume energía o empeora el rendimiento, y sube el CO₂."
+  },
+  {
+   "tema": 3,
+   "pregunta": "EEDI, EEXI y CII: ¿qué afirmación es correcta?",
+   "correcta": "EEDI para buques nuevos, EEXI para existentes y CII anual por operación",
+   "incorrectas": [
+    "EEDI para buques existentes, EEXI para nuevos y CII solo para petroleros",
+    "Los tres son planes de gestión que el buque lleva a bordo sin auditoría",
+    "Los tres son de la UE y solo afectan a buques que escalan en Europa"
+   ],
+   "explicacion": "EEDI y EEXI miden la eficiencia de diseño (nuevos y existentes); el CII mide la intensidad real de carbono de cada año y da una nota de A a E. Son de la OMI."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El SEEMP es:",
+   "correcta": "Un plan de eficiencia energética que lleva cada buque",
+   "incorrectas": [
+    "Un impuesto de la UE por tonelada de CO₂ emitida",
+    "Un índice de diseño que solo se calcula una vez",
+    "Una zona de control de emisiones de azufre"
+   ],
+   "explicacion": "Ship Energy Efficiency Management Plan: plan de gestión, obligatorio para todos los buques, que se completa con el CII."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El EU ETS marítimo es:",
+   "correcta": "Un mercado de derechos de CO₂ con tope (cap and trade)",
+   "incorrectas": [
+    "Un límite al contenido de azufre en los puertos europeos",
+    "Un impuesto fijo por tonelada de combustible comprado",
+    "Una obligación de usar un porcentaje de biocombustibles"
+   ],
+   "explicacion": "Las navieras deben entregar derechos por su CO₂; el tope baja cada año. La obligación de combustibles más limpios es FuelEU Maritime."
+  },
+  {
+   "tema": 3,
+   "pregunta": "En el EU ETS marítimo, ¿qué emisiones de un buque ≥ 5.000 GT computan?",
+   "correcta": "50 % de los viajes UE ↔ tercer país y 100 % intra-UE y en puerto UE",
+   "incorrectas": [
+    "100 % de todos sus viajes, entren o no en un puerto de la Unión Europea",
+    "Solo las de los buques con bandera de un Estado miembro de la UE",
+    "Solo las emisiones en puerto, nunca las de la navegación entre puertos"
+   ],
+   "explicacion": "Da igual la bandera: cuenta la escala en la UE. Los viajes con un extremo fuera de la UE computan al 50 %."
+  },
+  {
+   "tema": 3,
+   "pregunta": "FuelEU Maritime obliga a:",
+   "correcta": "Reducir la intensidad de GEI de la energía que usa el buque",
+   "incorrectas": [
+    "Comprar derechos de emisión por cada tonelada de CO₂ emitida",
+    "Usar combustible con menos de 0,1 % de azufre en alta mar",
+    "Limitar la potencia del motor de los buques ya existentes"
+   ],
+   "explicacion": "Exige reducir los gramos de CO₂eq por MJ de energía usada, de −2 % en 2025 hasta −80 % en 2050. Lo de comprar derechos es el ETS."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El reglamento MRV de la UE sirve para:",
+   "correcta": "Medir, informar y verificar el CO₂ de los buques",
+   "incorrectas": [
+    "Cobrar una tasa por cada tonelada de CO₂ emitida",
+    "Fijar el límite de azufre en los puertos de la UE",
+    "Certificar la eficiencia de diseño de buques nuevos"
+   ],
+   "explicacion": "MRV = Monitoring, Reporting and Verification, para buques ≥ 5.000 GT que escalan en la UE. Es la base de datos sobre la que se apoya el ETS."
+  },
+  {
+   "tema": 3,
+   "pregunta": "El objetivo de la estrategia de GEI de la OMI (2023) es:",
+   "correcta": "Cero emisiones netas hacia 2050",
+   "incorrectas": [
+    "Reducir un 50 % las emisiones en 2050",
+    "Cero emisiones netas en el año 2030",
+    "Mantener las emisiones de 2008"
+   ],
+   "explicacion": "Cero neto hacia 2050, con puntos de control de −20 % en 2030 y −70 % en 2040 (respecto a 2008)."
+  },
+  {
+   "tema": 3,
+   "pregunta": "¿Cuáles son las tres vías para reducir el CO₂ del transporte marítimo?",
+   "correcta": "Reducir la actividad, reducir las emisiones unitarias o compensar",
+   "incorrectas": [
+    "Usar combustible bajo en azufre, poner scrubbers o navegar por ECA",
+    "Instalar SCR, recircular los gases de escape o inyectar agua",
+    "Cambiar de bandera, de ruta o de sociedad de clasificación"
+   ],
+   "explicacion": "Reducir la actividad es poco realista; lo práctico es mejorar la eficiencia (técnica y operacional) y compensar en el mercado (ETS)."
+  }
+ ]
+}
