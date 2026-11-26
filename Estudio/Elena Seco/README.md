@@ -12,6 +12,7 @@ Las preguntas son originales, elaboradas a partir de esos apuntes. **No son de e
 | [Flashcards](FLASHCARDS.md) · [para Anki](flashcards_anki.tsv) | 42 tarjetas de definiciones y fórmulas |
 | [Práctica](PRACTICA.md) | 19 casos prácticos tipo test y 3 mini-ejercicios con solución |
 | [Ejercicio propio 1](EJERCICIO_PROPIO_1.md) · [PDF](EJERCICIO_PROPIO_1.pdf) | Ejercicio completo con trampas (FIOS, partidas que no son OPEX, comisión, lastre…). En el PDF la solución empieza en la página 3 |
+| [Ejercicio propio 2](EJERCICIO_PROPIO_2.md) · [PDF](EJERCICIO_PROPIO_2.pdf) | COA con EU ETS (ruta UE ↔ UE, 70 % de entrega), margen, tesorería y T/C máximo. En el PDF la solución empieza en la página 3 |
 | [Test ampliado](TEST_AMPLIADO.md) | 133 preguntas tipo test por tema, con solución plegada |
 | [Test interactivo](test_elena_seco.html) | Las 152 preguntas autocorregibles: descarga el archivo y ábrelo en el navegador |
 
