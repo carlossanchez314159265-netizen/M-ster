@@ -15,6 +15,10 @@ Las preguntas son originales, elaboradas a partir de esos apuntes. **No son de e
 | [Ejercicio propio 2](EJERCICIO_PROPIO_2.md) · [PDF](EJERCICIO_PROPIO_2.pdf) | COA con EU ETS (ruta UE ↔ UE, 70 % de entrega), margen, tesorería y T/C máximo. En el PDF la solución empieza en la página 3 |
 | [Test ampliado](TEST_AMPLIADO.md) | 133 preguntas tipo test por tema, con solución plegada |
 | [Test interactivo](test_elena_seco.html) | Las 152 preguntas autocorregibles: descarga el archivo y ábrelo en el navegador |
+| [Test 2 interactivo](test_elena_seco_2.html) · [versión Markdown](TEST_2.md) | 90 preguntas nuevas, solo de teoría y sin cálculos, filtrables por tema |
+| [Test 3 · lo imprescindible](test_elena_seco_3.html) · [versión Markdown](TEST_3.md) | 66 preguntas de lo básico que hay que saber sí o sí (figuras, coste/gasto/pago, quién paga qué en cada modalidad, fórmulas clave y normas de emisiones), sin cifras ni fechas rebuscadas |
+
+**Historial de fallos:** los tests interactivos guardan en el navegador las preguntas que fallas. Con «Repasar falladas» practicas solo las pendientes, y con «Ver mis fallos» ves la lista con la respuesta correcta y la explicación, y la puedes descargar. El historial se guarda en el navegador y el ordenador donde abras el archivo; si cambias de navegador o borras los datos del sitio, empieza de cero.
 
 ## Plan sugerido
 

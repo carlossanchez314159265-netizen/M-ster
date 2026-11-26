@@ -1,0 +1,305 @@
+<title>Test Elena Seco 3 · Lo imprescindible</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: una columna de estudio; barra de filtros arriba, una pregunta cada vez, resumen al terminar. Paleta de carta náutica: papel azulado, tinta marina, acento cobre. */
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --ink:#14232f; --muted:#5a6b78; --line:#d3dce2;
+  --accent:#b4572a; --accent-ink:#ffffff; --sel:#e3eaef;
+  --ok:#1f7a4d; --ok-bg:#e1f2e8; --bad:#b3261e; --bad-bg:#fbe5e3;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1820; --surface:#16222c; --ink:#e4ebf0; --muted:#93a4b1; --line:#2a3a47;
+  --accent:#e08a5c; --accent-ink:#1a0f08; --sel:#1f2f3b;
+  --ok:#5fcf93; --ok-bg:#15301f; --bad:#ff8a80; --bad-bg:#3a1a18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1820; --surface:#16222c; --ink:#e4ebf0; --muted:#93a4b1; --line:#2a3a47;
+  --accent:#e08a5c; --accent-ink:#1a0f08; --sel:#1f2f3b;
+  --ok:#5fcf93; --ok-bg:#15301f; --bad:#ff8a80; --bad-bg:#3a1a18; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+.wrap{max-width:720px;margin:0 auto;display:grid;gap:18px}
+header{display:grid;gap:4px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(26px,5vw,34px);line-height:1.1;margin:0;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+.controls{display:grid;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row-label{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:64px}
+.chip{font:500 14px/1 var(--body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip:focus-visible,.opt:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.toggle{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);cursor:pointer}
+.toggle input{accent-color:var(--accent);width:16px;height:16px}
+.status{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;justify-content:space-between;font-size:14px;color:var(--muted)}
+.score{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+.score .ok{color:var(--ok)} .score .bad{color:var(--bad)}
+.bar{height:4px;background:var(--line);border-radius:2px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--accent);width:0;transition:width .25s}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:14px;min-width:0}
+.qmeta{display:flex;gap:8px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.tag{border:1px solid var(--line);border-radius:4px;padding:2px 6px}
+.qtext{font-family:var(--display);font-weight:600;font-size:clamp(19px,3.6vw,22px);line-height:1.3;margin:0;text-wrap:balance}
+.opts{display:grid;gap:8px;list-style:none;margin:0;padding:0}
+.opt{width:100%;text-align:left;display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;font:400 16px/1.45 var(--body);color:var(--ink);
+  background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px;cursor:pointer}
+.opt:hover:not(:disabled){background:var(--sel)}
+.opt:disabled{cursor:default}
+.letter{font-family:var(--mono);font-weight:500;width:26px;height:26px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:13px}
+.opt.correct{background:var(--ok-bg);border-color:var(--ok)}
+.opt.correct .letter{background:var(--ok);border-color:var(--ok);color:var(--surface)}
+.opt.wrong{background:var(--bad-bg);border-color:var(--bad)}
+.opt.wrong .letter{background:var(--bad);border-color:var(--bad);color:var(--surface)}
+.opt.dim{opacity:.6}
+.feedback{border-left:3px solid var(--ok);padding:10px 12px;background:var(--ok-bg);border-radius:0 8px 8px 0}
+.feedback.bad{border-left-color:var(--bad);background:var(--bad-bg)}
+.feedback strong.v{display:block;margin-bottom:2px}
+.feedback .exp{margin:0}
+.nav{display:flex;gap:8px;justify-content:space-between;flex-wrap:wrap}
+.btn{font:600 15px/1 var(--body);border-radius:8px;padding:12px 16px;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:disabled{opacity:.45;cursor:default}
+.hint{font-size:13px;color:var(--muted);margin:0}
+code{font-family:var(--mono);font-size:.9em}
+.summary h2{font-family:var(--display);font-size:24px;margin:0}
+.big{font-family:var(--display);font-weight:700;font-size:44px;line-height:1;font-variant-numeric:tabular-nums}
+.blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.blk{border:1px solid var(--line);border-radius:8px;padding:10px;display:grid;gap:2px}
+.blk b{font-family:var(--mono);font-size:12px;color:var(--muted);font-weight:500}
+.blk span{font-variant-numeric:tabular-nums;font-weight:600}
+.fails{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.fails li{border-top:1px solid var(--line);padding-top:8px;font-size:15px}
+.fails .ans{color:var(--ok);font-weight:600}
+.empty{color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.bar>i{transition:none}}
+
+.hist-row .btn{padding:8px 12px;font-size:14px}
+.tag.warn{color:var(--bad);border-color:var(--bad)}
+.hlist{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.hlist li{border-top:1px solid var(--line);padding-top:10px;display:grid;gap:4px}
+.hlist .meta{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.hlist .ans{color:var(--ok);font-weight:600}
+.hlist .exp{font-size:14px;color:var(--muted)}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Economía y Gestión de Empresas Marítimas · UPM Navales</span>
+    <h1>Test Elena Seco 3 · Lo imprescindible</h1>
+    <p class="lede">66 preguntas de lo que hay que saber sí o sí: figuras, tramp y línea regular, coste/gasto/pago, CAPEX/OPEX/costes de viaje, quién paga qué en cada modalidad y las normas básicas de emisiones. Sin cifras rebuscadas ni fechas de reuniones. Preguntas originales a partir de los apuntes, no de exámenes anteriores.</p>
+  </header>
+
+  <section class="controls" aria-label="Opciones del test">
+    <div class="row" role="group" aria-label="Conjunto de preguntas">
+      <span class="row-label">Test</span>
+      <button class="chip" id="set-all" data-set="all" aria-pressed="true">Todas (66)</button>
+    </div>
+    <div class="row" role="group" aria-label="Tema">
+      <span class="row-label">Tema</span>
+      <button class="chip" id="b-0" data-b="0" aria-pressed="true">Todos</button>
+      <button class="chip" id="b-1" data-b="1" aria-pressed="false">Organización (20)</button>
+      <button class="chip" id="b-2" data-b="2" aria-pressed="false">Costes y modalidades (31)</button>
+      <button class="chip" id="b-3" data-b="3" aria-pressed="false">Emisiones (15)</button>
+    </div>
+    <div class="row">
+      <span class="row-label">Orden</span>
+      <label class="toggle"><input type="checkbox" id="shuffle-q"> Barajar preguntas</label>
+      <label class="toggle"><input type="checkbox" id="shuffle-o"> Barajar opciones</label>
+    </div>
+    <div class="row hist-row" role="group" aria-label="Historial de fallos">
+      <span class="row-label">Repaso</span>
+      <button class="btn" id="h-pend">Repasar falladas (0)</button>
+      <button class="btn" id="h-list">Ver mis fallos</button>
+    </div>
+    <div class="status">
+      <span id="pos">Pregunta 1 de 66</span>
+      <span class="score" id="score">✓ <span class="ok">0</span> · ✗ <span class="bad">0</span></span>
+    </div>
+    <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+  </section>
+
+  <main id="main"></main>
+  <p class="hint">Teclado: <code>A</code>–<code>D</code> o <code>1</code>–<code>4</code> para responder, <code>Intro</code> o <code>→</code> para seguir.</p>
+</div>
+
+<script>
+const DATA = [{"id": "T1", "n": 1, "s": "T", "b": 1, "q": "La diferencia básica entre armador y naviero es que:", "o": ["El armador hace la gestión comercial y el naviero la náutica", "El armador es siempre el propietario registral y el naviero el capitán", "El armador hace la gestión náutica y el naviero la comercial", "Son la misma figura con dos nombres, según el país de la bandera"], "a": 2, "e": "Armador: posee el buque, lo arma, tripula y mantiene navegable (gestión técnico-náutica). Naviero: busca cargas y contrata con los clientes (gestión comercial)."}, {"id": "T2", "n": 2, "s": "T", "b": 1, "q": "¿Puede el armador de un buque no ser su propietario?", "o": ["No, el armador tiene que figurar siempre como titular registral", "Solo si el buque está hipotecado a favor de un banco", "Solo en línea regular, nunca en los tráficos tramp", "Sí, por ejemplo el arrendatario de un casco desnudo"], "a": 3, "e": "En el arrendamiento a casco desnudo se cede la posesión: el arrendatario arma el buque y pasa a ser su armador, aunque la propiedad siga siendo de otro."}, {"id": "T3", "n": 3, "s": "T", "b": 1, "q": "En una cadena de contratos sobre el mismo buque, ¿qué figura puede haber varias veces?", "o": ["El armador", "El propietario registral", "El naviero", "Ninguna: cada figura es única por buque"], "a": 2, "e": "Armador solo hay uno por buque en cada momento; navieros puede haber varios encadenados (un fletador por tiempo que subfleta por viaje, etc.)."}, {"id": "T4", "n": 4, "s": "T", "b": 1, "q": "En un time charter, el fletante y el fletador suelen ser, respectivamente:", "o": ["El propietario y el bróker", "El cargador y el armador", "El armador y el naviero", "El naviero y el cargador"], "a": 2, "e": "En T/C el armador cede el buque armado y tripulado (fletante) y el fletador lo explota comercialmente, convirtiéndose en naviero."}, {"id": "T5", "n": 5, "s": "T", "b": 1, "q": "En un fletamento por viaje, el fletador suele ser:", "o": ["El armador que cede el buque con su tripulación", "La sociedad de clasificación que certifica el buque", "El consignatario del buque en el puerto de carga", "El cargador: exportador, importador o comerciante"], "a": 3, "e": "En V/C el fletante (naviero) se compromete a llevar la carga, y quien la contrata es el dueño de la mercancía."}, {"id": "T6", "n": 6, "s": "T", "b": 1, "q": "¿Quién representa al armador o naviero en un puerto concreto y le contrata los servicios portuarios?", "o": ["El consignatario", "El transitario", "El práctico", "El corredor marítimo"], "a": 0, "e": "El consignatario es el representante del buque en puerto. El transitario trabaja para el cargador, el bróker intermedia fletamentos y el práctico asesora al capitán en la maniobra."}, {"id": "T7", "n": 7, "s": "T", "b": 1, "q": "El corredor marítimo (bróker):", "o": ["Asesora al capitán en las maniobras de entrada y salida de puerto", "Representa al buque en el puerto y paga sus tasas portuarias", "Organiza el transporte puerta a puerta por cuenta del cargador", "Pone en contacto a fletante y fletador y cobra una comisión"], "a": 3, "e": "El bróker es el intermediario de los fletamentos; su comisión es un porcentaje del flete bruto."}, {"id": "T8", "n": 8, "s": "T", "b": 1, "q": "El transitario (freight forwarder) trabaja por cuenta de:", "o": ["Los cargadores", "Las autoridades portuarias", "Los armadores", "Las aseguradoras del casco"], "a": 0, "e": "El transitario organiza y coordina el transporte, a menudo multimodal, para el dueño de la carga."}, {"id": "T9", "n": 9, "s": "T", "b": 1, "q": "El práctico es:", "o": ["El representante del naviero ante la autoridad portuaria", "El inspector que certifica la navegabilidad del buque", "El oficial que sustituye al capitán durante la travesía", "Un asesor náutico del capitán para entrar y salir de puerto"], "a": 3, "e": "El práctico sube a bordo en las maniobras portuarias y asesora al capitán, que mantiene el mando."}, {"id": "T10", "n": 10, "s": "T", "b": 1, "q": "¿Qué figura gestiona el buque por cuenta del armador sin ser fletador?", "o": ["El naviero", "El gestor naval (ship manager)", "El consignatario", "El agente de carga"], "a": 1, "e": "El ship manager presta un servicio de gestión (tripulación, mantenimiento…) al armador; no toma el buque en fletamento."}, {"id": "T11", "n": 11, "s": "T", "b": 1, "q": "¿Qué caracteriza a los tráficos tramp?", "o": ["Graneles en grandes partidas, sin itinerario fijo", "Carga general en contenedores con escalas anunciadas", "Muchos cargadores por buque y fletes de tarifa pública", "Pasajeros y carga rodada en rutas de corta distancia"], "a": 0, "e": "Tramp: pocos cargadores, cargamentos homogéneos (graneles de bajo valor) e itinerarios que dependen de la carga. Son unas tres cuartas partes del tonelaje."}, {"id": "T12", "n": 12, "s": "T", "b": 1, "q": "¿Qué caracteriza a la línea regular?", "o": ["Itinerario fijo y carga general, sobre todo en contenedores", "Contratos siempre negociados uno a uno con póliza de fletamento", "Graneles de bajo valor en grandes partidas con un solo cargador", "Rutas que cambian en cada viaje según la carga disponible"], "a": 0, "e": "Línea regular: salidas y escalas anunciadas, muchos cargadores y carga general (la mayoría contenerizada). Mueve menos toneladas que el tramp pero más fletes en total."}, {"id": "T13", "n": 13, "s": "T", "b": 1, "q": "En toneladas, ¿qué parte del transporte marítimo mueve el tramp, aproximadamente?", "o": ["Aproximadamente una cuarta parte", "Unas tres cuartas partes", "Casi la mitad, igual que la línea regular", "Menos del diez por ciento del total"], "a": 1, "e": "Tramp ≈ 75 % del tonelaje; línea regular ≈ 25 % del tonelaje pero más ingresos por fletes."}, {"id": "T14", "n": 14, "s": "T", "b": 1, "q": "¿Qué parte del comercio mundial, en toneladas, va por mar?", "o": ["Más del 80 %", "Menos del 20 %", "Alrededor del 50 %", "Cerca del 30 %"], "a": 0, "e": "Más del 80 % del comercio mundial en toneladas se transporta por mar."}, {"id": "T15", "n": 15, "s": "T", "b": 1, "q": "La OMI se ocupa principalmente de:", "o": ["La seguridad marítima y la prevención de la contaminación", "Fijar los fletes de referencia de los mercados internacionales", "Las condiciones laborales y los salarios de las tripulaciones", "Clasificar los buques y emitir sus certificados de clase"], "a": 0, "e": "La OMI (agencia de la ONU con sede en Londres) aprueba convenios como SOLAS o MARPOL. Lo laboral es de la OIT y la clasificación, de las sociedades de clasificación."}, {"id": "T16", "n": 16, "s": "T", "b": 1, "q": "Los convenios de la OMI y la OIT:", "o": ["Solo obligan a los buques con bandera de un país europeo", "Son recomendaciones voluntarias sin efecto jurídico alguno", "Se aplican directamente a todos los buques sin que nadie los ratifique", "Tienen que incorporarse a la legislación de cada Estado"], "a": 3, "e": "No son leyes directas: los Estados los ratifican y los desarrollan en su legislación."}, {"id": "T17", "n": 17, "s": "T", "b": 1, "q": "BIMCO es conocida por:", "o": ["Clasificar los buques y certificar su construcción", "Sus formularios modelo de contratos de fletamento", "Ser el principal sindicato internacional de marinos", "Asegurar la responsabilidad civil de las navieras"], "a": 1, "e": "BIMCO elabora las pólizas tipo que usa el mercado. El sindicato es la ITF, la clasificación la hacen las sociedades de IACS y la responsabilidad la cubren los P&I."}, {"id": "T18", "n": 18, "s": "T", "b": 1, "q": "Los clubes P&I son:", "o": ["Mutuas de armadores que cubren su responsabilidad frente a terceros", "Aseguradoras del casco y la maquinaria contra daños propios", "Sociedades de clasificación de los principales países", "Asociaciones de cargadores que negocian los fletes"], "a": 0, "e": "Protection & Indemnity: las navieras se aseguran mutuamente las responsabilidades de la explotación (daños a la carga, contaminación, tripulación…). El casco y máquinas es otro seguro."}, {"id": "T19", "n": 19, "s": "T", "b": 1, "q": "El flete es:", "o": ["El seguro de la carga durante la travesía", "La mercancía que lleva el buque en sus bodegas", "El precio del transporte marítimo", "La tasa que cobra el puerto por cada escala"], "a": 2, "e": "Flete = precio del servicio. La mercancía es la carga (en inglés, «freight» se usa para ambas cosas)."}, {"id": "T20", "n": 20, "s": "T", "b": 1, "q": "El transporte marítimo es una actividad:", "o": ["Con oferta que se ajusta en pocas semanas", "Intensiva en mano de obra y muy estable", "Con fletes regulados por cada Estado", "Intensiva en capital y muy cíclica"], "a": 3, "e": "Los buques son caros y tardan años en construirse, así que la oferta es rígida y los fletes oscilan mucho con la demanda."}, {"id": "T21", "n": 21, "s": "T", "b": 2, "q": "La amortización del buque es:", "o": ["Un pago y también un coste", "Un pago, pero no un coste", "Ni un coste ni un gasto", "Un coste, pero no un pago"], "a": 3, "e": "La amortización reparte el consumo del buque a lo largo de su vida (coste), pero no supone salida de dinero."}, {"id": "T22", "n": 22, "s": "T", "b": 2, "q": "Devolver el principal de un préstamo es:", "o": ["Un pago, pero no un coste", "Un OPEX del ejercicio", "Un coste financiero del CAPEX", "Un coste, pero no un pago"], "a": 0, "e": "Sale dinero de caja, pero no se consume nada. Lo que sí es coste son los intereses."}, {"id": "T23", "n": 23, "s": "T", "b": 2, "q": "Los intereses de un préstamo son:", "o": ["Parte del OPEX", "Coste y pago a la vez", "Solo un coste", "Solo un pago"], "a": 1, "e": "Los intereses entran en el CAPEX (coste financiero) y además salen de caja (pago)."}, {"id": "T24", "n": 24, "s": "T", "b": 2, "q": "Diferencia entre coste, gasto y pago:", "o": ["Coste es consumir, gasto es adquirir y pago es la salida de caja", "Los tres son lo mismo, pero contados en distinto ejercicio fiscal", "Coste es la salida de caja, gasto es consumir y pago es adquirir", "Coste es adquirir, gasto es consumir y pago es la salida de caja"], "a": 0, "e": "Pueden no coincidir en el tiempo: un salario a mes vencido es coste antes que pago; un alquiler por anticipado es pago antes que coste."}, {"id": "T25", "n": 25, "s": "T", "b": 2, "q": "El CAPEX está formado por:", "o": ["Tripulación + seguros", "Amortización + principal", "Amortización + intereses", "Principal + intereses"], "a": 2, "e": "CAPEX = costes de capital. No confundir con los pagos de capital, que son principal + intereses."}, {"id": "T26", "n": 26, "s": "T", "b": 2, "q": "Los pagos de capital de un año son:", "o": ["Principal devuelto + intereses", "Amortización + principal devuelto", "Amortización + intereses", "CAPEX + OPEX del ejercicio"], "a": 0, "e": "Es lo que sale de caja por el préstamo. La amortización no es un pago."}, {"id": "T27", "n": 27, "s": "T", "b": 2, "q": "¿Cuáles son las cuatro partidas del OPEX?", "o": ["Tripulación, combustible, puertos y seguros", "Amortización, intereses, seguros y administración", "Combustible, canales, comisiones y tripulación", "Tripulación, costes técnicos, seguros y administración"], "a": 3, "e": "OPEX = costes corrientes de tener el buque operativo. Combustible, puertos, canales y comisiones son costes de viaje; amortización e intereses son CAPEX."}, {"id": "T28", "n": 28, "s": "T", "b": 2, "q": "¿Cuál de estas partidas es un coste de viaje y no un OPEX?", "o": ["El combustible", "El mantenimiento y las reparaciones", "Los salarios de la tripulación", "El seguro P&I"], "a": 0, "e": "Combustible, tasas portuarias, canales y comisiones solo existen si el buque hace viajes: son costes de viaje."}, {"id": "T29", "n": 29, "s": "T", "b": 2, "q": "¿Cuál de estas partidas es OPEX?", "o": ["Las tasas portuarias", "La comisión del bróker", "El combustible", "Los lubricantes"], "a": 3, "e": "Los lubricantes van dentro de los costes técnicos (mantenimiento, reparaciones, pertrechos y lubricantes). Los otros tres son costes de viaje."}, {"id": "T30", "n": 30, "s": "T", "b": 2, "q": "La comisión del bróker se clasifica como:", "o": ["Coste de viaje", "Coste fijo del armador", "Coste financiero del CAPEX", "OPEX de administración"], "a": 0, "e": "Va ligada a cada contrato de fletamento y se calcula sobre el flete bruto: es un coste de viaje."}, {"id": "T31", "n": 31, "s": "T", "b": 2, "q": "Costes fijos y variables del buque: ¿qué afirmación es correcta?", "o": ["Solo el CAPEX es fijo; el OPEX desaparece con el buque amarrado", "Los costes de viaje se tienen aunque el buque esté parado", "Todos los costes son variables si el buque está en tramp", "CAPEX y OPEX se tienen aunque el buque no navegue"], "a": 3, "e": "CAPEX y OPEX son costes fijos (de armamento) y se devengan todos los días. Los costes de viaje solo aparecen si hay transporte."}, {"id": "T32", "n": 32, "s": "T", "b": 2, "q": "¿Entre cuántos días se dividen los costes fijos anuales para obtener el coste fijo por día de operación?", "o": ["350", "360", "300", "365"], "a": 0, "e": "Se supone que el buque está unos 15 días al año fuera de servicio por mantenimiento, así que opera y cobra flete unos 350 días."}, {"id": "T33", "n": 33, "s": "T", "b": 2, "q": "En un arrendamiento a casco desnudo, el propietario soporta:", "o": ["Solo el CAPEX", "CAPEX + OPEX + costes de viaje", "CAPEX + OPEX", "Solo los costes de viaje"], "a": 0, "e": "El arrendatario arma, tripula y explota el buque, así que paga OPEX y costes de viaje. El alquiler debe cubrir al menos el CAPEX del propietario."}, {"id": "T34", "n": 34, "s": "T", "b": 2, "q": "En un time charter, el fletante soporta:", "o": ["Solo el OPEX", "Solo el CAPEX", "CAPEX + OPEX + costes de viaje", "CAPEX + OPEX"], "a": 3, "e": "El fletante entrega el buque armado y tripulado. El fletador paga combustible, puertos y canales, y el flete en $/día debe cubrir CAPEX + OPEX."}, {"id": "T35", "n": 35, "s": "T", "b": 2, "q": "En un fletamento por viaje, el fletante soporta:", "o": ["CAPEX + OPEX, y el combustible lo paga el fletador", "Solo el CAPEX, porque el resto lo paga el cargador", "CAPEX + OPEX + costes de viaje", "Solo los costes de viaje de ida y de vuelta"], "a": 2, "e": "En V/C el fletante se compromete a llevar la carga y asume todos los costes del buque. Con FIOS, la carga y descarga corre a cargo del fletador."}, {"id": "T36", "n": 36, "s": "T", "b": 2, "q": "En un time charter, el combustible y las tasas portuarias los paga:", "o": ["El fletador", "El consignatario", "El fletante", "El propietario"], "a": 0, "e": "Son costes de viaje, y en T/C los asume el fletador, que es quien decide los viajes."}, {"id": "T37", "n": 37, "s": "T", "b": 2, "q": "En un arrendamiento a casco desnudo, los salarios de la tripulación los paga:", "o": ["El arrendatario", "El gestor naval", "El propietario", "El fletador por viaje"], "a": 0, "e": "El arrendatario es el armador: tripula el buque y paga el OPEX."}, {"id": "T38", "n": 38, "s": "T", "b": 2, "q": "¿En qué unidad se suele fijar el flete de cada modalidad?", "o": ["T/C en $/día y V/C en $/t", "Ambos en $/día de operación", "T/C en $/t y V/C en $/día", "Ambos en $ por milla navegada"], "a": 0, "e": "El time charter (y el trip charter) se paga por tiempo; el viaje, el COA y los viajes consecutivos, por tonelada transportada. La línea regular, por TEU o unidad de carga."}, {"id": "T39", "n": 39, "s": "T", "b": 2, "q": "¿Por qué el arrendamiento a casco desnudo no es un fletamento?", "o": ["Porque se cede la posesión del buque, no un servicio de transporte", "Porque solo puede durar un viaje y no un periodo de tiempo", "Porque el propietario sigue tripulando y manteniendo el buque", "Porque el flete se paga por tonelada y no por día de servicio"], "a": 0, "e": "El arrendatario recibe el buque vacío y pasa a ser su armador. El error de llamarlo fletamento viene del inglés «bareboat charter»."}, {"id": "T40", "n": 40, "s": "T", "b": 2, "q": "¿Qué es un trip charter?", "o": ["Un fletamento por viaje con flete en $/t", "Un arrendamiento a casco desnudo corto", "Un contrato de línea regular por TEU", "Un time charter por la duración de un viaje"], "a": 3, "e": "Funciona como un T/C (flete en $/día, el fletador paga los costes de viaje), pero dura lo que dure el viaje."}, {"id": "T41", "n": 41, "s": "T", "b": 2, "q": "Un COA (contrato de transporte) consiste en:", "o": ["Arrendar el buque sin tripulación para que lo explote otro", "Ceder un buque concreto durante un año a cambio de un flete diario", "Reservar espacio en un portacontenedores de línea regular", "Llevar una cantidad de carga en los viajes necesarios, a $/t"], "a": 3, "e": "En el COA lo que se compromete es la cantidad de carga; el fletante puede usar buques propios o fletados."}, {"id": "T42", "n": 42, "s": "T", "b": 2, "q": "Condiciones FIOS significa que:", "o": ["La carga, descarga y estiba las paga el fletador", "El buque viaja en lastre a la ida y a la vuelta", "La carga, descarga y estiba las paga el fletante", "El combustible lo paga el fletador por días"], "a": 0, "e": "Free In Out Stowed: el fletante queda libre de los costes de manipular la carga. Es lo habitual en tramp."}, {"id": "T43", "n": 43, "s": "T", "b": 2, "q": "En línea regular (liner terms), la carga y descarga la paga:", "o": ["El fletador por tiempo", "La autoridad portuaria", "El cargador", "El naviero"], "a": 3, "e": "Con liner terms, la manipulación de la carga va incluida en el flete y la soporta el naviero (porteador)."}, {"id": "T44", "n": 44, "s": "T", "b": 2, "q": "El TCE (time charter equivalent) de un viaje se calcula como:", "o": ["(Ingresos brutos − CAPEX − OPEX) / días del año", "(Ingresos netos − costes de viaje) / días del viaje", "(CAPEX + OPEX) / 350 días de operación al año", "Ingresos netos / toneladas transportadas en el viaje"], "a": 1, "e": "Convierte el resultado de un viaje a $/día para compararlo con un flete por tiempo. La última opción es el coste fijo diario."}, {"id": "T45", "n": 45, "s": "T", "b": 2, "q": "Si el bróker cobra un porcentaje c sobre el flete bruto, el flete bruto que hay que pedir para cobrar un neto dado es:", "o": ["Neto − c", "Neto × (1 + c)", "Neto × (1 − c)", "Neto / (1 − c)"], "a": 3, "e": "Como neto = bruto × (1 − c), se despeja bruto = neto / (1 − c). Multiplicar por (1 + c) da un resultado algo menor y no cubre la comisión."}, {"id": "T46", "n": 46, "s": "T", "b": 2, "q": "La amortización lineal anual del buque es:", "o": ["Precio × (1 − % residual) / años de vida", "Precio / años de vida, sin tener en cuenta el valor residual", "(Precio + intereses del préstamo) / años de vida", "Precio × % residual / años de vida"], "a": 0, "e": "Se amortiza solo la parte que se pierde: el precio menos el valor residual, repartido entre los años de vida."}, {"id": "T47", "n": 47, "s": "T", "b": 2, "q": "¿Cómo evolucionan las cuotas de un préstamo en sistema alemán?", "o": ["La cuota total es constante y el principal sube cada año", "Todo el principal se devuelve de una vez el último año", "Los intereses son constantes y el principal baja cada año", "La cuota de principal es constante y los intereses bajan cada año"], "a": 3, "e": "Principal anual = préstamo / años. Los intereses se calculan sobre lo que queda pendiente, que va bajando. La cuota total constante es el sistema francés."}, {"id": "T48", "n": 48, "s": "T", "b": 2, "q": "En los años de carencia de un préstamo:", "o": ["Solo se pagan intereses", "Se paga el doble de cuota", "Solo se paga principal", "No se paga nada"], "a": 0, "e": "Durante la carencia no se devuelve principal, pero los intereses sobre el préstamo completo sí se pagan."}, {"id": "T49", "n": 49, "s": "T", "b": 2, "q": "Si un buque hace n cargamentos entre dos puertos y el contrato termina con la última descarga, los tramos en lastre son:", "o": ["n − 1", "2n", "n", "n + 1"], "a": 0, "e": "Tras cada descarga vuelve en lastre a cargar, salvo después de la última."}, {"id": "T50", "n": 50, "s": "T", "b": 2, "q": "Los días de navegación de un tramo se calculan como:", "o": ["Millas / (nudos × 60)", "Millas × nudos / 24", "Millas / nudos / 24", "Nudos / millas × 24"], "a": 2, "e": "Un nudo es una milla por hora: millas / nudos da horas, y entre 24 se pasan a días."}, {"id": "T51", "n": 51, "s": "T", "b": 2, "q": "Con tonnage tax, el impuesto que paga la naviera depende de:", "o": ["El tonelaje del buque", "Los ingresos por flete", "El beneficio obtenido", "Los costes declarados"], "a": 0, "e": "La base imponible se calcula por el tonelaje neto, no por el beneficio, así que elegir criterios de coste no cambia el impuesto."}, {"id": "T52", "n": 52, "s": "T", "b": 3, "q": "¿Qué anexo de MARPOL regula las emisiones a la atmósfera de los buques?", "o": ["El Anexo VI", "El Anexo IV", "El Anexo V", "El Anexo I"], "a": 0, "e": "El Anexo VI regula SOx, NOx, sustancias que agotan el ozono y la eficiencia energética (EEDI, EEXI, CII, SEEMP)."}, {"id": "T53", "n": 53, "s": "T", "b": 3, "q": "Límites de azufre del combustible marino en vigor:", "o": ["0,5 % en general y 0,1 % en las zonas SECA", "0,5 % en todas partes, sin zonas especiales", "3,5 % en general y 0,5 % en las zonas SECA", "0,1 % en general y 0,5 % en las zonas SECA"], "a": 0, "e": "Desde 2020 el límite global es 0,5 % (antes 3,5 %); en las SECA es 0,1 % desde 2015. El Mediterráneo es SECA desde mayo de 2025."}, {"id": "T54", "n": 54, "s": "T", "b": 3, "q": "Contaminantes (SOx, NOx, PM) frente a gases de efecto invernadero (CO₂):", "o": ["Los contaminantes dañan a escala local; el CO₂ actúa a escala global", "Los dos tienen el mismo efecto y la OMI los regula con la misma norma", "Los contaminantes actúan a escala global; el CO₂, solo a escala local", "El CO₂ produce lluvia ácida y los contaminantes el calentamiento global"], "a": 0, "e": "SOx y NOx producen lluvia ácida y problemas de salud cerca de donde se emiten; el CO₂ calienta el planeta emita donde emita. Por eso las ECA tienen sentido para los contaminantes."}, {"id": "T55", "n": 55, "s": "T", "b": 3, "q": "Por tonelada y kilómetro, en CO₂ el transporte marítimo es:", "o": ["El modo menos eficiente, por detrás del avión y del camión", "El modo más eficiente; su punto débil son el SOx y el NOx", "Igual de eficiente que la carretera en casi todos los gases", "Más eficiente que el resto también en SOx y en NOx emitidos"], "a": 1, "e": "Emite muy poco CO₂ por t·km, pero mucho SOx y NOx por el combustible pesado: ese es su «talón de Aquiles»."}, {"id": "T56", "n": 56, "s": "T", "b": 3, "q": "Para cumplir el límite de azufre, un buque puede:", "o": ["Instalar un SCR con urea, que elimina el azufre de los gases", "Usar combustible bajo en azufre, poner un scrubber o pasar a GNL", "Presentar un SEEMP, que le exime del límite durante cinco años", "Reducir la velocidad, que baja el contenido de azufre del combustible"], "a": 1, "e": "Las tres vías: combustible destilado o VLSFO, HFO con scrubber (lavador de gases) o combustibles alternativos como el GNL. El SCR es para NOx."}, {"id": "T57", "n": 57, "s": "T", "b": 3, "q": "El límite Tier III de NOx:", "o": ["Se exige en todo el mundo", "Se aplica al azufre", "Solo se exige en puerto", "Solo se exige en las zonas NECA"], "a": 3, "e": "Tier III (−80 % sobre Tier I) solo rige en las NECA; para cumplirlo se usa SCR (urea) o EGR."}, {"id": "T58", "n": 58, "s": "T", "b": 3, "q": "¿Qué es un efecto cruzado entre emisiones?", "o": ["Que el NOx y el SOx se combinen en la atmósfera y se anulen", "Que las emisiones de un país acaben contaminando a sus vecinos", "Reducir un contaminante puede aumentar otro, por ejemplo el CO₂", "Que un buque pague dos veces por el mismo CO₂ en la OMI y la UE"], "a": 2, "e": "Desulfurar en refinería o bajar la temperatura de combustión para reducir NOx consume energía o empeora el rendimiento, y sube el CO₂."}, {"id": "T59", "n": 59, "s": "T", "b": 3, "q": "EEDI, EEXI y CII: ¿qué afirmación es correcta?", "o": ["EEDI para buques existentes, EEXI para nuevos y CII solo para petroleros", "Los tres son planes de gestión que el buque lleva a bordo sin auditoría", "EEDI para buques nuevos, EEXI para existentes y CII anual por operación", "Los tres son de la UE y solo afectan a buques que escalan en Europa"], "a": 2, "e": "EEDI y EEXI miden la eficiencia de diseño (nuevos y existentes); el CII mide la intensidad real de carbono de cada año y da una nota de A a E. Son de la OMI."}, {"id": "T60", "n": 60, "s": "T", "b": 3, "q": "El SEEMP es:", "o": ["Un índice de diseño que solo se calcula una vez", "Una zona de control de emisiones de azufre", "Un plan de eficiencia energética que lleva cada buque", "Un impuesto de la UE por tonelada de CO₂ emitida"], "a": 2, "e": "Ship Energy Efficiency Management Plan: plan de gestión, obligatorio para todos los buques, que se completa con el CII."}, {"id": "T61", "n": 61, "s": "T", "b": 3, "q": "El EU ETS marítimo es:", "o": ["Un impuesto fijo por tonelada de combustible comprado", "Una obligación de usar un porcentaje de biocombustibles", "Un mercado de derechos de CO₂ con tope (cap and trade)", "Un límite al contenido de azufre en los puertos europeos"], "a": 2, "e": "Las navieras deben entregar derechos por su CO₂; el tope baja cada año. La obligación de combustibles más limpios es FuelEU Maritime."}, {"id": "T62", "n": 62, "s": "T", "b": 3, "q": "En el EU ETS marítimo, ¿qué emisiones de un buque ≥ 5.000 GT computan?", "o": ["100 % de todos sus viajes, entren o no en un puerto de la Unión Europea", "Solo las de los buques con bandera de un Estado miembro de la UE", "50 % de los viajes UE ↔ tercer país y 100 % intra-UE y en puerto UE", "Solo las emisiones en puerto, nunca las de la navegación entre puertos"], "a": 2, "e": "Da igual la bandera: cuenta la escala en la UE. Los viajes con un extremo fuera de la UE computan al 50 %."}, {"id": "T63", "n": 63, "s": "T", "b": 3, "q": "FuelEU Maritime obliga a:", "o": ["Comprar derechos de emisión por cada tonelada de CO₂ emitida", "Usar combustible con menos de 0,1 % de azufre en alta mar", "Limitar la potencia del motor de los buques ya existentes", "Reducir la intensidad de GEI de la energía que usa el buque"], "a": 3, "e": "Exige reducir los gramos de CO₂eq por MJ de energía usada, de −2 % en 2025 hasta −80 % en 2050. Lo de comprar derechos es el ETS."}, {"id": "T64", "n": 64, "s": "T", "b": 3, "q": "El reglamento MRV de la UE sirve para:", "o": ["Medir, informar y verificar el CO₂ de los buques", "Cobrar una tasa por cada tonelada de CO₂ emitida", "Certificar la eficiencia de diseño de buques nuevos", "Fijar el límite de azufre en los puertos de la UE"], "a": 0, "e": "MRV = Monitoring, Reporting and Verification, para buques ≥ 5.000 GT que escalan en la UE. Es la base de datos sobre la que se apoya el ETS."}, {"id": "T65", "n": 65, "s": "T", "b": 3, "q": "El objetivo de la estrategia de GEI de la OMI (2023) es:", "o": ["Mantener las emisiones de 2008", "Cero emisiones netas hacia 2050", "Cero emisiones netas en el año 2030", "Reducir un 50 % las emisiones en 2050"], "a": 1, "e": "Cero neto hacia 2050, con puntos de control de −20 % en 2030 y −70 % en 2040 (respecto a 2008)."}, {"id": "T66", "n": 66, "s": "T", "b": 3, "q": "¿Cuáles son las tres vías para reducir el CO₂ del transporte marítimo?", "o": ["Reducir la actividad, reducir las emisiones unitarias o compensar", "Usar combustible bajo en azufre, poner scrubbers o navegar por ECA", "Instalar SCR, recircular los gases de escape o inyectar agua", "Cambiar de bandera, de ruta o de sociedad de clasificación"], "a": 0, "e": "Reducir la actividad es poco realista; lo práctico es mejorar la eficiencia (técnica y operacional) y compensar en el mercado (ETS)."}];
+const LETTERS = "ABCD";
+const BNAMES = {"1": "Organización de la industria marítima", "2": "Costes y modalidades de explotación", "3": "Emisiones a la atmósfera"};
+const SETNAMES = {T:"Test 3"};
+const KEY = "elena-seco-quiz-3";
+
+let state = {set:"all", b:0, shq:false, sho:false};
+try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch(e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify({set:state.set,b:state.b,shq:state.shq,sho:state.sho})); } catch(e) {} }
+
+
+const HKEY = KEY + "-historial";
+let hist = {};
+try { hist = JSON.parse(localStorage.getItem(HKEY) || "{}"); } catch(e) {}
+function hsave(){ try { localStorage.setItem(HKEY, JSON.stringify(hist)); } catch(e) {} }
+function hrec(q, ok){
+  const h = hist[q.q] ??= {f:0, k:0, last:""};
+  if (ok) h.k++; else h.f++;
+  h.last = ok ? "ok" : "bad"; h.t = Date.now();
+  hsave(); hbuttons();
+}
+function pending(){ return DATA.filter(q => hist[q.q] && hist[q.q].last === "bad"); }
+function everFailed(){ return DATA.filter(q => hist[q.q] && hist[q.q].f > 0); }
+function hbuttons(){
+  const p = document.getElementById("h-pend"); if (!p) return;
+  const n = pending().length;
+  p.textContent = `Repasar falladas (${n})`; p.disabled = !n;
+  document.getElementById("h-list").textContent = `Ver mis fallos (${everFailed().length})`;
+}
+function renderHist(){
+  const main = document.getElementById("main");
+  const qs = everFailed().sort((a,b) => (hist[b.q].last==="bad") - (hist[a.q].last==="bad") || hist[b.q].f - hist[a.q].f);
+  const items = qs.map(q => { const h = hist[q.q];
+    return `<li><span class="meta">${BNAMES[q.b]} · fallada ${h.f} ${h.f===1?"vez":"veces"} · acertada ${h.k} · ${h.last==="bad"?"<b style='color:var(--bad)'>pendiente</b>":"última vez bien"}</span>
+      <b>${q.q}</b><span class="ans">✓ ${q.o[q.a]}</span><span class="exp">${q.e}</span></li>`; }).join("");
+  main.innerHTML = `<article class="card summary">
+    <h2>Mis fallos</h2>
+    <p class="empty">Se guardan en este navegador cada vez que respondes. Una pregunta deja de estar <b>pendiente</b> cuando la aciertas en un repaso, pero sigue en la lista con su contador.</p>
+    <div class="nav">
+      <button class="btn primary" id="hl-go" ${pending().length?"":"disabled"}>Repasar las ${pending().length} pendientes</button>
+      <button class="btn" id="hl-dl" ${qs.length?"":"disabled"}>Descargar lista</button>
+      <button class="btn" id="hl-clear" ${qs.length?"":"disabled"}>Borrar historial</button>
+      <button class="btn" id="hl-back">Volver al test</button>
+    </div>
+    ${qs.length?`<ul class="hlist">${items}</ul>`:`<p class="empty">Todavía no has fallado ninguna pregunta.</p>`}
+  </article>`;
+  document.getElementById("hl-go").onclick = () => build(pending().map(q=>q.id));
+  document.getElementById("hl-back").onclick = () => build();
+  document.getElementById("hl-clear").onclick = () => { if (confirm("¿Borrar todo el historial de fallos de este test?")) { hist = {}; hsave(); hbuttons(); renderHist(); } };
+  document.getElementById("hl-dl").onclick = () => {
+    const txt = "# Mis fallos · " + document.title + "\n\n" + qs.map((q,i) => { const h = hist[q.q];
+      return `## ${i+1}. ${q.q}\n\n- Tema: ${BNAMES[q.b]}\n- Fallada ${h.f} · acertada ${h.k}${h.last==="bad"?" · pendiente":""}\n- Respuesta: **${q.o[q.a]}**\n\n${q.e}\n`; }).join("\n");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([txt], {type:"text/markdown"}));
+    a.download = "mis_fallos_" + KEY + ".md"; document.body.appendChild(a); a.click(); a.remove();
+  };
+}
+
+let deck = [], idx = 0, answers = {}, onlyIds = null;
+
+function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+function build(ids){
+  onlyIds = ids || null;
+  let qs = DATA.filter(q => (state.set==="all"||q.s===state.set) && (!state.b||q.b===state.b));
+  if (onlyIds) qs = DATA.filter(q => onlyIds.includes(q.id));
+  if (state.shq) qs = shuffle(qs);
+  deck = qs.map(q => ({q, order: state.sho ? shuffle([0,1,2,3]) : [0,1,2,3]}));
+  idx = 0; answers = {};
+  syncControls(); render();
+}
+
+function syncControls(){
+  document.querySelectorAll("[data-set]").forEach(b => {
+    const n = b.dataset.set==="all" ? DATA.length : DATA.filter(q=>q.s===b.dataset.set).length;
+    b.setAttribute("aria-pressed", String(b.dataset.set===state.set && !onlyIds));
+  });
+  document.querySelectorAll("[data-b]").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.b===state.b && !onlyIds)));
+  document.getElementById("shuffle-q").checked = state.shq;
+  document.getElementById("shuffle-o").checked = state.sho;
+}
+
+function tally(){
+  let ok=0,bad=0; for (const id in answers){ answers[id].ok?ok++:bad++; } return {ok,bad};
+}
+function updateStatus(){
+  const t = tally(), done = t.ok+t.bad;
+  document.getElementById("score").innerHTML = `✓ <span class="ok">${t.ok}</span> · ✗ <span class="bad">${t.bad}</span>`;
+  document.getElementById("pos").textContent = idx < deck.length
+    ? `Pregunta ${idx+1} de ${deck.length}${onlyIds?" · repaso de falladas":""}`
+    : `Terminado · ${deck.length} preguntas`;
+  document.getElementById("bar").style.width = deck.length ? (100*done/deck.length)+"%" : "0";
+}
+
+function render(){
+  const main = document.getElementById("main");
+  updateStatus();
+  if (!deck.length){ main.innerHTML = `<div class="card"><p class="empty">No hay preguntas con este filtro. Prueba con otro tema o con «Todas».</p></div>`; return; }
+  if (idx >= deck.length) return renderSummary(main);
+  const {q, order} = deck[idx], ans = answers[q.id];
+  const opts = order.map((oi, pos) => {
+    let cls = "opt";
+    if (ans){ if (oi===q.a) cls+=" correct"; else if (oi===ans.pick) cls+=" wrong"; else cls+=" dim"; }
+    return `<li><button class="${cls}" data-oi="${oi}" ${ans?"disabled":""}><span class="letter">${LETTERS[pos]}</span><span>${q.o[oi]}</span></button></li>`;
+  }).join("");
+  const rightPos = LETTERS[order.indexOf(q.a)];
+  const fb = ans ? `<div class="feedback ${ans.ok?"":"bad"}" role="status"><strong class="v">${ans.ok?"Correcta.":"Incorrecta. La buena es la "+rightPos+"."}</strong><p class="exp">${q.e}</p></div>` : "";
+  main.innerHTML = `<article class="card">
+    <div class="qmeta"><span class="tag">${SETNAMES[q.s]} · nº ${q.n}</span><span class="tag">${BNAMES[q.b]}</span>${hist[q.q]&&hist[q.q].f?`<span class="tag warn">Fallada ${hist[q.q].f}×</span>`:""}</div>
+    <h2 class="qtext">${q.q}</h2>
+    <ul class="opts">${opts}</ul>
+    ${fb}
+    <div class="nav">
+      <button class="btn" id="prev" ${idx===0?"disabled":""}>← Anterior</button>
+      <button class="btn primary" id="next">${idx===deck.length-1?"Ver resultado":(ans?"Siguiente →":"Saltar →")}</button>
+    </div>
+  </article>`;
+  main.querySelectorAll(".opt").forEach(b => b.addEventListener("click", () => pick(+b.dataset.oi)));
+  document.getElementById("prev").onclick = () => { idx--; render(); };
+  document.getElementById("next").onclick = () => { idx++; render(); };
+}
+
+function pick(oi){
+  const {q} = deck[idx];
+  if (answers[q.id]) return;
+  answers[q.id] = {pick: oi, ok: oi===q.a};
+  hrec(q, oi===q.a);
+  render();
+  const n = document.getElementById("next"); if (n) n.focus();
+}
+
+function renderSummary(main){
+  const t = tally(), done = t.ok+t.bad, pct = done ? Math.round(100*t.ok/done) : 0;
+  const byB = {};
+  deck.forEach(({q}) => { const a = answers[q.id]; byB[q.b] ??= {ok:0,n:0,skip:0}; if (a){ byB[q.b].n++; if(a.ok) byB[q.b].ok++; } else byB[q.b].skip++; });
+  const blocks = Object.keys(byB).sort().map(b => `<div class="blk"><b>${BNAMES[b]}</b><span>${byB[b].ok} / ${byB[b].n}${byB[b].skip?` <small class="empty">(${byB[b].skip} sin responder)</small>`:""}</span></div>`).join("");
+  const failed = deck.filter(({q}) => answers[q.id] && !answers[q.id].ok).map(d => d.q);
+  const skipped = deck.filter(({q}) => !answers[q.id]).map(d => d.q);
+  const list = failed.map(q => `<li>${q.q}<br><span class="ans">${q.o[q.a]}</span> <span class="empty">· ${q.e.match(/B\d[^.]*p{1,2}\.[\d–, y]+/)?.[0] ?? ""}</span></li>`).join("");
+  main.innerHTML = `<article class="card summary">
+    <h2>Resultado</h2>
+    <div><span class="big">${t.ok}/${done}</span> <span class="empty">aciertos (${pct} %)${skipped.length?` · ${skipped.length} sin responder`:""}</span></div>
+    <div class="blocks">${blocks}</div>
+    <div class="nav">
+      <button class="btn primary" id="retry-fail" ${failed.length?"":"disabled"}>Repetir las ${failed.length} falladas</button>
+      <button class="btn" id="restart">Empezar de nuevo</button>
+    </div>
+    ${failed.length?`<h2 style="font-size:18px">Para repasar</h2><ul class="fails">${list}</ul>`:`<p class="empty">Sin fallos en las respondidas.</p>`}
+    <p class="hint">Es una puntuación diagnóstica: no predice la nota del examen.</p>
+  </article>`;
+  document.getElementById("retry-fail").onclick = () => build(failed.map(q=>q.id));
+  document.getElementById("restart").onclick = () => build();
+}
+
+document.querySelectorAll("[data-set]").forEach(b => b.onclick = () => { state.set=b.dataset.set; save(); build(); });
+document.querySelectorAll("[data-b]").forEach(b => b.onclick = () => { state.b=+b.dataset.b; save(); build(); });
+document.getElementById("shuffle-q").onchange = e => { state.shq=e.target.checked; save(); build(); };
+document.getElementById("shuffle-o").onchange = e => { state.sho=e.target.checked; save(); build(); };
+
+document.addEventListener("keydown", e => {
+  if (e.target.matches("input") || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (idx >= deck.length || !deck.length) return;
+  const k = e.key.toUpperCase();
+  let pos = "ABCD".indexOf(k); if (pos<0) pos = "1234".indexOf(k);
+  if (pos>=0 && !answers[deck[idx].q.id]) { pick(deck[idx].order[pos]); e.preventDefault(); return; }
+  if ((e.key==="Enter" && !e.target.matches("button")) || e.key==="ArrowRight") { idx++; render(); e.preventDefault(); }
+  if (e.key==="ArrowLeft" && idx>0) { idx--; render(); e.preventDefault(); }
+});
+
+document.getElementById("h-pend").onclick = () => build(pending().map(q=>q.id));
+document.getElementById("h-list").onclick = () => renderHist();
+hbuttons();
+build();
+</script>
